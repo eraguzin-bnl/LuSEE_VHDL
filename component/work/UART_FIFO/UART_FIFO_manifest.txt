@@ -1,0 +1,33 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2022.2 (Version 2022.2.0.10)
+
+Date      :  Sat Jan 14 14:01:05 2023
+Project   :  C:\share\LuSEE\FPGA\PF_EVAL_TEST32
+Component :  UART_FIFO
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO.vhd
+
+Stimulus files for all Simulation tools:
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/wave_vhdl.do
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/runall_vhdl.do
+
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/coreparameters.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_std_logic.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_misc.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/TB.vhd
+
+Constraint files:
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32/component/work/UART_FIFO\UART_FIFO_0\UART_FIFO_UART_FIFO_0_COREFIFO.sdc

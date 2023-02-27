@@ -1,0 +1,411 @@
+# Microsemi I/O Physical Design Constraints file
+
+# User I/O Constraints file 
+
+# Version: 2022.2 2022.2.0.10
+
+# Family: PolarFire , Die: MPF300T , Package: FCG1152
+
+# Date generated: Sat Jan 14 12:27:00 2023 
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+set_io -port_name ADC_CLKOUT_FiXi_P  \
+    -pin_name AB14                   \
+    -fixed true                      \
+    -io_std LVDS25                   \
+    -IN_DELAY 200                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_CLKOUT_FiXo_P  \
+    -pin_name B5                     \
+    -fixed true                      \
+    -io_std LVDS25                   \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_CLKOUT_Fixi_N  \
+    -pin_name AC13                   \
+    -fixed true                      \
+    -io_std LVDS25                   \
+    -IN_DELAY 200                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_CLKOUT_Fixo_N  \
+    -pin_name A5                     \
+    -fixed true                      \
+    -io_std LVDS25                   \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_CLKOUT_N  \
+    -pin_name E5                \
+    -fixed true                 \
+    -io_std LVDS25              \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_CLKOUT_P  \
+    -pin_name D5                \
+    -fixed true                 \
+    -io_std LVDS25              \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_CLK_MISC_IO  \
+    -pin_name G15                  \
+    -fixed true                    \
+    -io_std LVCMOS25               \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_CLK_N  \
+    -pin_name AB10           \
+    -fixed true              \
+    -io_std LVDS25           \
+    -LOCK_DOWN Yes           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_CLK_P  \
+    -pin_name AB11           \
+    -fixed true              \
+    -io_std LVDS25           \
+    -LOCK_DOWN Yes           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[0]}  \
+    -pin_name A9                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[1]}  \
+    -pin_name B6                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[2]}  \
+    -pin_name C8                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[3]}  \
+    -pin_name H12                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[4]}  \
+    -pin_name D6                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[5]}  \
+    -pin_name G11                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[6]}  \
+    -pin_name H11                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[7]}  \
+    -pin_name E11                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[8]}  \
+    -pin_name A10                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[9]}  \
+    -pin_name C9                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[10]}  \
+    -pin_name E8                       \
+    -fixed true                        \
+    -io_std LVDS25                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[11]}  \
+    -pin_name F10                      \
+    -fixed true                        \
+    -io_std LVDS25                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[12]}  \
+    -pin_name G7                       \
+    -fixed true                        \
+    -io_std LVDS25                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_N[13]}  \
+    -pin_name D1                       \
+    -fixed true                        \
+    -io_std LVDS25                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[0]}  \
+    -pin_name B9                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[1]}  \
+    -pin_name C6                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[2]}  \
+    -pin_name D8                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[3]}  \
+    -pin_name H13                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[4]}  \
+    -pin_name E6                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[5]}  \
+    -pin_name G12                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[6]}  \
+    -pin_name J11                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[7]}  \
+    -pin_name E10                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[8]}  \
+    -pin_name B10                     \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[9]}  \
+    -pin_name D9                      \
+    -fixed true                       \
+    -io_std LVDS25                    \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[10]}  \
+    -pin_name E7                       \
+    -fixed true                        \
+    -io_std LVDS25                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[11]}  \
+    -pin_name G10                      \
+    -fixed true                        \
+    -io_std LVDS25                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[12]}  \
+    -pin_name H7                       \
+    -fixed true                        \
+    -io_std LVDS25                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name {ADC_DATA_IN_P[13]}  \
+    -pin_name E1                       \
+    -fixed true                        \
+    -io_std LVDS25                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_Reset  \
+    -pin_name H16            \
+    -fixed true              \
+    -io_std LVCMOS25         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_SCLK  \
+    -pin_name J14           \
+    -fixed true             \
+    -io_std LVCMOS25        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_SDATA  \
+    -pin_name J13            \
+    -fixed true              \
+    -io_std LVCMOS25         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_SDOUT  \
+    -pin_name F12            \
+    -fixed true              \
+    -io_std LVCMOS25         \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_SEN  \
+    -pin_name E12          \
+    -fixed true            \
+    -io_std LVCMOS25       \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name RX  \
+    -pin_name H18     \
+    -fixed true       \
+    -DIRECTION INPUT
+
+
+set_io -port_name TX   \
+    -pin_name G17      \
+    -fixed true        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name clk_50MHz  \
+    -pin_name E25            \
+    -fixed true              \
+    -DIRECTION INPUT
+
+
+set_io -port_name {led[0]}  \
+    -pin_name F22           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {led[1]}  \
+    -pin_name B26           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {led[2]}  \
+    -pin_name C26           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {led[3]}  \
+    -pin_name D25           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {led[4]}  \
+    -pin_name C27           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {led[5]}  \
+    -pin_name F23           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {led[6]}  \
+    -pin_name H22           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {led[7]}  \
+    -pin_name H21           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name reset  \
+    -pin_name K22        \
+    -fixed true          \
+    -DIRECTION INPUT
+
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
+
+

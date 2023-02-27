@@ -1,0 +1,27 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2022.2 (Version 2022.2.0.10)
+
+Date      :  Wed Nov 30 17:32:55 2022
+Project   :  C:\share\LuSEE\FPGA\PF_EVAL_TEST\PF_EVAL_TEST
+Component :  COREUART_C0
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/components.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/CoreUART.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/coreuart_pkg.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/fifo_256x8_g5.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0.vhd
+
+Stimulus files for all Simulation tools:
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/mti/scripts/wave_vhdl.do
+
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/coreparameters.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd
+

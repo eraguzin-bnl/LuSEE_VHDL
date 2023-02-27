@@ -1,0 +1,921 @@
+# Reading pref.tcl
+# do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2022.2 Lib Mapping Utility 2022.04 Apr 26 2022
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2022.2 Lib Mapping Utility 2022.04 Apr 26 2022
+# vmap PolarFire C:/Microchip/Libero_SoC_v2022.3/Designer/lib/modelsimpro/precompiled/vlog/PolarFire 
+# Modifying modelsim.ini
+# INFO: Simulation library COREUART_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2022.2 Lib Mapping Utility 2022.04 Apr 26 2022
+# vmap COREUART_LIB COREUART_LIB 
+# Modifying modelsim.ini
+# INFO: Simulation library COREFIFO_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2022.2 Lib Mapping Utility 2022.04 Apr 26 2022
+# vmap COREFIFO_LIB COREFIFO_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:31 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SimpleDualPortRAM_generic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SimpleDualPortRAM_generic
+# -- Compiling architecture rtl of SimpleDualPortRAM_generic
+# End time: 20:08:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:31 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/average_instance_P1_fixpt.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity average_instance_P1_fixpt
+# -- Compiling architecture rtl of average_instance_P1_fixpt
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:31 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SimpleDualPortRAM_generic_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SimpleDualPortRAM_generic_block
+# -- Compiling architecture rtl of SimpleDualPortRAM_generic_block
+# End time: 20:08:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:31 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/deinterlace_instance_12_fixpt.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity deinterlace_instance_12_fixpt
+# -- Compiling architecture rtl of deinterlace_instance_12_fixpt
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_1
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_1
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_10.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_10
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_10
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_11.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_11
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_11
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_12.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_12
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_12
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_2
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_2
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_3
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_3
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_4
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_4
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_5
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_5
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_6.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_6
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_6
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_7
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_7
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_8
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_8
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_9.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_CTRL1_9
+# -- Compiling architecture rtl of RADIX22FFT_CTRL1_9
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator1
+# -- Compiling architecture rtl of SDFCommutator1
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_1
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_1
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator1
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Complex4Multiply_block3
+# -- Compiling architecture rtl of Complex4Multiply_block3
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator11.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator11
+# -- Compiling architecture rtl of SDFCommutator11
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:32 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_11.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_11
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_11
+# -- Loading entity Complex4Multiply_block3
+# -- Loading entity SDFCommutator11
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Complex4Multiply
+# -- Compiling architecture rtl of Complex4Multiply
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator3
+# -- Compiling architecture rtl of SDFCommutator3
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_3
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_3
+# -- Loading entity Complex4Multiply
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator3
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Complex4Multiply_block
+# -- Compiling architecture rtl of Complex4Multiply_block
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator5
+# -- Compiling architecture rtl of SDFCommutator5
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_5
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_5
+# -- Loading entity Complex4Multiply_block
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator5
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Complex4Multiply_block1
+# -- Compiling architecture rtl of Complex4Multiply_block1
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator7
+# -- Compiling architecture rtl of SDFCommutator7
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_7
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_7
+# -- Loading entity Complex4Multiply_block1
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator7
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Complex4Multiply_block2
+# -- Compiling architecture rtl of Complex4Multiply_block2
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator9.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator9
+# -- Compiling architecture rtl of SDFCommutator9
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Multiply_generic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Multiply_generic
+# -- Compiling architecture rtl of Multiply_generic
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_generic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Complex4Multiply_generic
+# -- Compiling architecture rtl of Complex4Multiply_generic
+# -- Loading entity Multiply_generic
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_9.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_9
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_9
+# -- Loading entity Complex4Multiply_generic
+# -- Loading entity Complex4Multiply_block2
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator9
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator10.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator10
+# -- Compiling architecture rtl of SDFCommutator10
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:33 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_10.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF2_10
+# -- Compiling architecture rtl of RADIX22FFT_SDF2_10
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator10
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator12.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator12
+# -- Compiling architecture rtl of SDFCommutator12
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_12.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF2_12
+# -- Compiling architecture rtl of RADIX22FFT_SDF2_12
+# -- Loading entity SDFCommutator12
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator2
+# -- Compiling architecture rtl of SDFCommutator2
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF2_2
+# -- Compiling architecture rtl of RADIX22FFT_SDF2_2
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator2
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator4
+# -- Compiling architecture rtl of SDFCommutator4
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF2_4
+# -- Compiling architecture rtl of RADIX22FFT_SDF2_4
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator4
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator6.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator6
+# -- Compiling architecture rtl of SDFCommutator6
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_6.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF2_6
+# -- Compiling architecture rtl of RADIX22FFT_SDF2_6
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator6
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator8
+# -- Compiling architecture rtl of SDFCommutator8
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF2_8
+# -- Compiling architecture rtl of RADIX22FFT_SDF2_8
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator8
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX2FFT_bitNatural.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX2FFT_bitNatural
+# -- Compiling architecture rtl of RADIX2FFT_bitNatural
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/sfft_fixpt_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package sfft_fixpt_pkg
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_11_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package sfft_fixpt_pkg
+# -- Compiling entity TWDLROM_11_1
+# -- Compiling architecture rtl of TWDLROM_11_1
+# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:34 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_3_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package sfft_fixpt_pkg
+# -- Compiling entity TWDLROM_3_1
+# -- Compiling architecture rtl of TWDLROM_3_1
+# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:35 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_5_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package sfft_fixpt_pkg
+# -- Compiling entity TWDLROM_5_1
+# -- Compiling architecture rtl of TWDLROM_5_1
+# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:35 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_7_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package sfft_fixpt_pkg
+# -- Compiling entity TWDLROM_7_1
+# -- Compiling architecture rtl of TWDLROM_7_1
+# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:35 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_9_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package sfft_fixpt_pkg
+# -- Compiling entity TWDLROM_9_1
+# -- Compiling architecture rtl of TWDLROM_9_1
+# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:35 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/dsphdl_FFT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package sfft_fixpt_pkg
+# -- Compiling entity dsphdl_FFT
+# -- Compiling architecture rtl of dsphdl_FFT
+# -- Loading entity RADIX22FFT_CTRL1_1
+# -- Loading entity RADIX22FFT_SDF1_1
+# -- Loading entity RADIX22FFT_CTRL1_2
+# -- Loading entity RADIX22FFT_SDF2_2
+# -- Loading entity TWDLROM_3_1
+# -- Loading entity RADIX22FFT_CTRL1_3
+# -- Loading entity RADIX22FFT_SDF1_3
+# -- Loading entity RADIX22FFT_CTRL1_4
+# -- Loading entity RADIX22FFT_SDF2_4
+# -- Loading entity TWDLROM_5_1
+# -- Loading entity RADIX22FFT_CTRL1_5
+# -- Loading entity RADIX22FFT_SDF1_5
+# -- Loading entity RADIX22FFT_CTRL1_6
+# -- Loading entity RADIX22FFT_SDF2_6
+# -- Loading entity TWDLROM_7_1
+# -- Loading entity RADIX22FFT_CTRL1_7
+# -- Loading entity RADIX22FFT_SDF1_7
+# -- Loading entity RADIX22FFT_CTRL1_8
+# -- Loading entity RADIX22FFT_SDF2_8
+# -- Loading entity TWDLROM_9_1
+# -- Loading entity RADIX22FFT_CTRL1_9
+# -- Loading entity RADIX22FFT_SDF1_9
+# -- Loading entity RADIX22FFT_CTRL1_10
+# -- Loading entity RADIX22FFT_SDF2_10
+# -- Loading entity TWDLROM_11_1
+# -- Loading entity RADIX22FFT_CTRL1_11
+# -- Loading entity RADIX22FFT_SDF1_11
+# -- Loading entity RADIX22FFT_CTRL1_12
+# -- Loading entity RADIX22FFT_SDF2_12
+# -- Loading entity RADIX2FFT_bitNatural
+# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:35 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/sfft_fixpt.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sfft_fixpt
+# -- Compiling architecture rtl of sfft_fixpt
+# -- Loading package sfft_fixpt_pkg
+# -- Loading entity dsphdl_FFT
+# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:35 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_fold_instance_1_fixpt.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity weight_fold_instance_1_fixpt
+# -- Compiling architecture rtl of weight_fold_instance_1_fixpt
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:35 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/spectrometer_fixpt_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package spectrometer_fixpt_pkg
+# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:35 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_streamer_fixpt.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package spectrometer_fixpt_pkg
+# -- Compiling entity weight_streamer_fixpt
+# -- Compiling architecture rtl of weight_streamer_fixpt
+# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:36 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/spectrometer_fixpt.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package spectrometer_fixpt_pkg
+# -- Compiling entity spectrometer_fixpt
+# -- Compiling architecture rtl of spectrometer_fixpt
+# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:36 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package fifo_pkg
+# -- Compiling package body fifo_pkg
+# -- Loading package fifo_pkg
+# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:36 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package COREUART_C0_COREUART_C0_0_components
+# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:36 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/coreuart_pkg.vhd 
+# -- Loading package STANDARD
+# -- Compiling package COREUART_C0_COREUART_C0_0_coreuart_pkg
+# -- Compiling package body COREUART_C0_COREUART_C0_0_coreuart_pkg
+# -- Loading package COREUART_C0_COREUART_C0_0_coreuart_pkg
+# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:36 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/LuSEE_Pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package LuSEE_Pkg
+# -- Compiling package body LuSEE_Pkg
+# -- Loading package LuSEE_Pkg
+# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:36 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_streamer_fixpt_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package weight_streamer_fixpt_pkg
+# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 20:08:36 on Feb 12,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/SPEC_TST.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPEC_TST
+# -- Compiling architecture behavioral of SPEC_TST
+# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB -t 1ps -pli "C:/Microchip/Libero_SoC_v2022.3/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll" presynth.SPEC_TST 
+# Start time: 20:08:36 on Feb 12,2023
+# //  ModelSim Microsemi Pro 2022.2 Apr 26 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim Microsemi Pro and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading presynth.spec_tst(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading presynth.spectrometer_fixpt_pkg
+# Loading presynth.spectrometer_fixpt(rtl)
+# ** Error: (vsim-3732) No default binding for component instance 'spectrometer_fixpt_0'.
+#    The following component ports are not on the entity:
+#           \pks[3]\
+#           \pks[2]\
+#           \pks[1]\
+#           \pks[0]\
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0 File: C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/SPEC_TST.vhd Line: 93
+# Loading presynth.weight_streamer_fixpt(rtl)
+# Loading presynth.weight_fold_instance_1_fixpt(rtl)
+# Loading presynth.simpledualportram_generic(rtl)
+# Loading presynth.sfft_fixpt_pkg
+# Loading presynth.sfft_fixpt(rtl)
+# Loading presynth.dsphdl_fft(rtl)
+# Loading presynth.radix22fft_ctrl1_1(rtl)
+# Loading presynth.radix22fft_sdf1_1(rtl)
+# Loading presynth.sdfcommutator1(rtl)
+# Loading presynth.radix22fft_ctrl1_2(rtl)
+# Loading presynth.radix22fft_sdf2_2(rtl)
+# Loading presynth.sdfcommutator2(rtl)
+# Loading presynth.twdlrom_3_1(rtl)
+# Loading presynth.radix22fft_ctrl1_3(rtl)
+# Loading presynth.radix22fft_sdf1_3(rtl)
+# Loading presynth.complex4multiply(rtl)
+# Loading presynth.sdfcommutator3(rtl)
+# Loading presynth.radix22fft_ctrl1_4(rtl)
+# Loading presynth.radix22fft_sdf2_4(rtl)
+# Loading presynth.sdfcommutator4(rtl)
+# Loading presynth.twdlrom_5_1(rtl)
+# Loading presynth.radix22fft_ctrl1_5(rtl)
+# Loading presynth.radix22fft_sdf1_5(rtl)
+# Loading presynth.complex4multiply_block(rtl)
+# Loading presynth.sdfcommutator5(rtl)
+# Loading presynth.radix22fft_ctrl1_6(rtl)
+# Loading presynth.radix22fft_sdf2_6(rtl)
+# Loading presynth.sdfcommutator6(rtl)
+# Loading presynth.twdlrom_7_1(rtl)
+# Loading presynth.radix22fft_ctrl1_7(rtl)
+# Loading presynth.radix22fft_sdf1_7(rtl)
+# Loading presynth.complex4multiply_block1(rtl)
+# Loading presynth.sdfcommutator7(rtl)
+# Loading presynth.radix22fft_ctrl1_8(rtl)
+# Loading presynth.radix22fft_sdf2_8(rtl)
+# Loading presynth.sdfcommutator8(rtl)
+# Loading presynth.twdlrom_9_1(rtl)
+# Loading presynth.radix22fft_ctrl1_9(rtl)
+# Loading presynth.radix22fft_sdf1_9(rtl)
+# Loading presynth.complex4multiply_generic(rtl)
+# Loading presynth.multiply_generic(rtl)
+# Loading presynth.complex4multiply_block2(rtl)
+# Loading presynth.sdfcommutator9(rtl)
+# Loading presynth.radix22fft_ctrl1_10(rtl)
+# Loading presynth.radix22fft_sdf2_10(rtl)
+# Loading presynth.sdfcommutator10(rtl)
+# Loading presynth.twdlrom_11_1(rtl)
+# Loading presynth.radix22fft_ctrl1_11(rtl)
+# Loading presynth.radix22fft_sdf1_11(rtl)
+# Loading presynth.complex4multiply_block3(rtl)
+# Loading presynth.sdfcommutator11(rtl)
+# Loading presynth.radix22fft_ctrl1_12(rtl)
+# Loading presynth.radix22fft_sdf2_12(rtl)
+# Loading presynth.sdfcommutator12(rtl)
+# Loading presynth.radix2fft_bitnatural(rtl)
+# Loading presynth.deinterlace_instance_12_fixpt(rtl)
+# Loading presynth.simpledualportram_generic_block(rtl)
+# Loading presynth.average_instance_p1_fixpt(rtl)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 94
+
+
+
+
+
+# End time: 20:13:34 on Feb 12,2023, Elapsed time: 0:04:58
+# Errors: 1, Warnings: 0

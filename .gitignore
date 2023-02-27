@@ -1,0 +1,5 @@
+synthesis/
+designer/
+make_libero.log
+*.kate-swp
+tooldata/libero*

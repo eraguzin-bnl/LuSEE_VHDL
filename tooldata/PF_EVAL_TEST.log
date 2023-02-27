@@ -1,0 +1,16 @@
+Project Name: PF_EVAL_TEST
+Location: C:\share\LuSEE\FPGA\PF_EVAL_TEST32
+Description: 
+Preferred HDL Type: VHDL
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : MPF300T-1FCG1152E
+Family         : PolarFire
+Die            : MPF300T
+Package        : FCG1152
+Speed          : -1
+Core Voltage   : 1.0
+Range          : EXT

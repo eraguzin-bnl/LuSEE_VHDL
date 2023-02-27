@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11e vcom 2022.2 2022.04, Apr 26 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/simulation
+Pfifo_pkg
+Z0 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
+Z2 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 17
+Z4 w1668548736
+Z5 dC:/share/LuSEE/FPGA/PF_EVAL_TEST/simulation
+Z6 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
+Z7 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
+l0
+L5 7
+V@MLFzo3Ljf1?QCaNB1T;D3
+!s100 VZ8O<JR0V4>h>[o3;Dz[G3
+Z8 OW;C;2022.2;75
+33
+b1
+Z9 !s110 1677175662
+!i10b 1
+Z10 !s108 1677175662.000000
+Z11 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
+Z12 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
+!i113 1
+Z13 o-2008 -explicit -work COREFIFO_LIB -O0
+Z14 tCvgOpt 0
+Bbody
+Z15 DPx4 work 8 fifo_pkg 0 22 @MLFzo3Ljf1?QCaNB1T;D3
+R0
+R1
+R2
+R3
+!i122 17
+l0
+Z16 L13 61
+Z17 V3jLTCPHMf79zR0Un`ba9[1
+Z18 !s100 DmlBVSC3nmBK^QkJWW04b0
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14

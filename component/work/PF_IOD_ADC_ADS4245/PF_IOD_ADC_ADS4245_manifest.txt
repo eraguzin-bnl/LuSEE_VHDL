@@ -1,0 +1,16 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2022.3 (Version 2022.3.0.8)
+
+Date      :  Thu Jan 19 12:58:30 2023
+Project   :  C:\share\LuSEE\FPGA\PF_EVAL_TEST32_INDV
+Component :  PF_IOD_ADC_ADS4245
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/PF_IOD_ADC_ADS4245/PF_IOD_RX/PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD.v
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v
+
+Constraint files:
+    C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/PF_IOD_ADC_ADS4245\PF_IOD_ADC_ADS4245.sdc

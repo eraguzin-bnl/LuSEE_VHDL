@@ -1,0 +1,2968 @@
+m255
+K4
+z2
+!s11e vcom 2022.2 2022.04, Apr 26 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/simulation
+Eads4245_cntl
+Z1 w1668113420
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
+Z3 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
+Z4 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z5 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 16
+R0
+Z6 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd
+Z7 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd
+l0
+Z8 L24 1
+VzVm@4PJ3?6ho`VY[3WV880
+!s100 4<D0zj[HmIBi_`kT7@A3b3
+Z9 OW;C;2022.2;75
+33
+Z10 !s110 1668113446
+!i10b 1
+Z11 !s108 1668113446.000000
+Z12 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd|
+Z13 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd|
+!i113 1
+Z14 o-2008 -explicit -work presynth -O0
+Z15 tCvgOpt 0
+Aarchitecture_ads4245_cntl
+R2
+R3
+R4
+R5
+DEx4 work 12 ads4245_cntl 0 22 zVm@4PJ3?6ho`VY[3WV880
+!i122 16
+l67
+L52 96
+VRTX=8c[dHNSmUYO5CzA720
+!s100 ]fKRK94TBo;E<`0df;EJW3
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Eads4245_tst
+Z16 w1668113239
+R4
+R5
+!i122 18
+R0
+Z17 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/stimulus/ADS4245_tst.vhd
+Z18 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/stimulus/ADS4245_tst.vhd
+l0
+Z19 L32 1
+V8RbQIC5mZK==XznPmjOYM2
+!s100 ^_EHdBS^bF^og[b^UXmU72
+R9
+33
+R10
+!i10b 1
+R11
+Z20 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/stimulus/ADS4245_tst.vhd|
+Z21 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/stimulus/ADS4245_tst.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R4
+R5
+DEx4 work 11 ads4245_tst 0 22 8RbQIC5mZK==XznPmjOYM2
+!i122 18
+l73
+L35 92
+VWKcz`6]o8[7M3eA8EKS=T3
+!s100 QdU9bc;Q=MHQmn`daSomE1
+R9
+33
+R10
+!i10b 1
+R11
+R20
+R21
+!i113 1
+R14
+R15
+Eaverage_instance_p1_fixpt
+Z22 w1676245425
+Z23 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+R4
+R5
+!i122 113
+Z24 dC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/simulation
+Z25 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/average_instance_P1_fixpt.vhd
+Z26 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/average_instance_P1_fixpt.vhd
+l0
+Z27 L43 1
+VnK`3DSP23J2Z5zHbn>lM^2
+!s100 dcI:boY>35hIBJS;m?3:T1
+R9
+33
+Z28 !s110 1676250511
+!i10b 1
+Z29 !s108 1676250511.000000
+Z30 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/average_instance_P1_fixpt.vhd|
+Z31 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/average_instance_P1_fixpt.vhd|
+!i113 1
+R14
+R15
+Artl
+Z32 DEx4 work 25 simpledualportram_generic 0 22 g=X;8cM4Se8^3J`ZkB:Zz1
+R23
+R4
+R5
+DEx4 work 25 average_instance_p1_fixpt 0 22 nK`3DSP23J2Z5zHbn>lM^2
+!i122 113
+l256
+L61 909
+V:R_YUMjzGiIl3MgB;b0LM2
+!s100 `hm345End7YaaF@Ed<OB]0
+R9
+33
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R14
+R15
+Ecomplex4multiply
+Z33 w1675271585
+R23
+R4
+R5
+!i122 364
+R24
+Z34 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply.vhd
+Z35 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply.vhd
+l0
+Z36 L23 1
+VQ4XMLKKl2GNhJdB=]1[[Y0
+!s100 P9@O^ziUlm9583YKG<O=F1
+R9
+33
+Z37 !s110 1676257487
+!i10b 1
+Z38 !s108 1676257487.000000
+Z39 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply.vhd|
+Z40 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+DEx4 work 16 complex4multiply 0 22 Q4XMLKKl2GNhJdB=]1[[Y0
+!i122 364
+l85
+Z41 L40 216
+V2LMcmGidaWd7fJm8YeOg21
+!s100 W25OD=gIP2?OBDAQRBoJ?2
+R9
+33
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R14
+R15
+Ecomplex4multiply_block
+R33
+R23
+R4
+R5
+!i122 367
+R24
+Z42 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block.vhd
+Z43 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block.vhd
+l0
+R36
+V5gHC8_T6A3IkJ^b@Y`IG30
+!s100 Jd=^YKFGaTMei0Q@M<3Y73
+R9
+33
+Z44 !s110 1676257488
+!i10b 1
+R38
+Z45 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block.vhd|
+Z46 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+DEx4 work 22 complex4multiply_block 0 22 5gHC8_T6A3IkJ^b@Y`IG30
+!i122 367
+l85
+R41
+VXH[GOFSib@=4:G2`^=0kS2
+!s100 gJfTI3J>DV_mea[lNQ6H;3
+R9
+33
+R44
+!i10b 1
+R38
+R45
+R46
+!i113 1
+R14
+R15
+Ecomplex4multiply_block1
+R33
+R23
+R4
+R5
+!i122 370
+R24
+Z47 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block1.vhd
+Z48 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block1.vhd
+l0
+R36
+VRYh;fl4mT4VkMIMKaJ`?d1
+!s100 T[ziebIWc9Q8^V2eoUD9N2
+R9
+33
+R44
+!i10b 1
+Z49 !s108 1676257488.000000
+Z50 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block1.vhd|
+Z51 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block1.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+DEx4 work 23 complex4multiply_block1 0 22 RYh;fl4mT4VkMIMKaJ`?d1
+!i122 370
+l85
+R41
+V=T0ZdhRQ<KzmhS4K`z9910
+!s100 DRgNfbd<CUY:78>1;0joT1
+R9
+33
+R44
+!i10b 1
+R49
+R50
+R51
+!i113 1
+R14
+R15
+Ecomplex4multiply_block2
+Z52 w1676256826
+R23
+R4
+R5
+!i122 373
+R24
+Z53 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block2.vhd
+Z54 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block2.vhd
+l0
+R36
+VMB`AW6LC61mg;>R15D96e1
+!s100 eoi@=fLenQaKAa1YBWT:f2
+R9
+33
+R44
+!i10b 1
+R49
+Z55 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block2.vhd|
+Z56 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block2.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+DEx4 work 23 complex4multiply_block2 0 22 MB`AW6LC61mg;>R15D96e1
+!i122 373
+l128
+L40 315
+V0RkUijQ_`Y:SI;0?5ZQ=[0
+!s100 7KPD?7J^K>X<DGCHmbdDR3
+R9
+33
+R44
+!i10b 1
+R49
+R55
+R56
+!i113 1
+R14
+R15
+Ecomplex4multiply_block3
+Z57 w1676242969
+R23
+R4
+R5
+!i122 361
+R24
+Z58 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block3.vhd
+Z59 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block3.vhd
+l0
+R36
+V_DZDV1jU^g2@SW=@lY_D`0
+!s100 0<B5idCMl7O`NVoI]5`231
+R9
+33
+R37
+!i10b 1
+R38
+Z60 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block3.vhd|
+Z61 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block3.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+DEx4 work 23 complex4multiply_block3 0 22 _DZDV1jU^g2@SW=@lY_D`0
+!i122 361
+l110
+L40 286
+VSCOSJ6c^KhCGBE8`TcQ2L0
+!s100 j4z:1IfK]?R9_cFUefa?U1
+R9
+33
+R37
+!i10b 1
+R38
+R60
+R61
+!i113 1
+R14
+R15
+Ecomplex4multiply_generic
+Z62 w1677088623
+R23
+R4
+R5
+!i122 735
+Z63 dC:/share/LuSEE/FPGA/PF_EVAL_TEST/simulation
+Z64 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd
+Z65 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd
+l0
+R36
+VmVJSIGCEXO`0?CT:8<P;Y0
+!s100 anEO`J_mHzI4I`PN;_A[33
+R9
+33
+Z66 !s110 1677175660
+!i10b 1
+Z67 !s108 1677175660.000000
+Z68 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd|
+Z69 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd|
+!i113 1
+R14
+R15
+Artl
+Z70 DEx4 work 16 multiply_generic 0 22 ;OQhLNOV7U0nZX07[Dm;52
+R23
+R4
+R5
+Z71 DEx4 work 24 complex4multiply_generic 0 22 mVJSIGCEXO`0?CT:8<P;Y0
+!i122 735
+l89
+L43 273
+VL^Z2BPT>fZW4HZ02WTXRD0
+!s100 KNS<;8n@AY397MLI@3dNW0
+R9
+33
+R66
+!i10b 1
+R67
+R68
+R69
+!i113 1
+R14
+R15
+Edeinterlace_instance_12_fixpt
+Z72 w1675272065
+R23
+R4
+R5
+!i122 115
+R24
+Z73 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/deinterlace_instance_12_fixpt.vhd
+Z74 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/deinterlace_instance_12_fixpt.vhd
+l0
+L46 1
+V3:6Yafk7_11zILkB;a`1i2
+!s100 832GL85MYW`a<Z>nGXi6g3
+R9
+33
+Z75 !s110 1676250512
+!i10b 1
+R29
+Z76 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/deinterlace_instance_12_fixpt.vhd|
+Z77 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/deinterlace_instance_12_fixpt.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+DEx4 work 29 deinterlace_instance_12_fixpt 0 22 3:6Yafk7_11zILkB;a`1i2
+!i122 115
+l188
+L64 439
+VHdJV:ML4^AZe7P[5dlG4E3
+!s100 ?7bmbV2m4L6KA:22TDjak2
+R9
+33
+R75
+!i10b 1
+R29
+R76
+R77
+!i113 1
+R14
+R15
+Edsphdl_fft
+Z78 w1677175627
+Z79 DPx4 work 22 spectrometer_fixpt_pkg 0 22 `2AVUh@BQ<TjM0a79E=XF0
+R23
+R4
+R5
+!i122 765
+R63
+Z80 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd
+Z81 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd
+l0
+L26 1
+Vog?]i538ZbShcLQUS_Z4T1
+!s100 k_hXn?TQgL_2>F^LI9b>X2
+R9
+33
+Z82 !s110 1677175662
+!i10b 1
+Z83 !s108 1677175662.000000
+Z84 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd|
+Z85 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd|
+!i113 1
+R14
+R15
+Artl
+Z86 DEx4 work 20 radix2fft_bitnatural 0 22 PZ:OJX[iDmk59>0oMdZAi0
+Z87 DEx4 work 18 radix22fft_sdf2_12 0 22 m5]`_CMnT?][:R_CaI[V[1
+Z88 DEx4 work 19 radix22fft_ctrl1_12 0 22 gdDlR=D;fHVzFgC`m@VFf1
+Z89 DEx4 work 18 radix22fft_sdf1_11 0 22 D:9?ZHkAD1JYAjz>Q7?:A3
+Z90 DEx4 work 19 radix22fft_ctrl1_11 0 22 G<XR=n<_n:PW?mK;PT;WM1
+Z91 DEx4 work 12 twdlrom_11_1 0 22 MchNae:Rn;SOPaP_i8IYo0
+Z92 DEx4 work 18 radix22fft_sdf2_10 0 22 []>W[[O<8Wd]Xh^WKU;Yd0
+Z93 DEx4 work 19 radix22fft_ctrl1_10 0 22 :CXRDbDNBJd3C[^ldQTbS3
+Z94 DEx4 work 17 radix22fft_sdf1_9 0 22 3lbY[Ck1Z0g@mK[]c;D[g3
+Z95 DEx4 work 18 radix22fft_ctrl1_9 0 22 l0ebzLnaEdf5j;;]hiZIR1
+Z96 DEx4 work 11 twdlrom_9_1 0 22 kPJZLOz7<gTYM<@PidhY<1
+Z97 DEx4 work 17 radix22fft_sdf2_8 0 22 f<jUDh1^GUTf3fY56=k?h3
+Z98 DEx4 work 18 radix22fft_ctrl1_8 0 22 LG:IoD7<Q@hV54YO;0A5=3
+Z99 DEx4 work 17 radix22fft_sdf1_7 0 22 6h6`zdU6P:2b7j9>iZJoe1
+Z100 DEx4 work 18 radix22fft_ctrl1_7 0 22 95kBdFb`4TTziP8:ajf0F1
+Z101 DEx4 work 11 twdlrom_7_1 0 22 ?^nk0fUgEXg3R@WMRFeMQ0
+Z102 DEx4 work 17 radix22fft_sdf2_6 0 22 LkAUZ0ge=E;UeR18ek5oG0
+Z103 DEx4 work 18 radix22fft_ctrl1_6 0 22 cQhk0<SFCB6JOJzEU99IP2
+Z104 DEx4 work 17 radix22fft_sdf1_5 0 22 ^E3SlHbXBBT`=3@z4XbSD3
+Z105 DEx4 work 18 radix22fft_ctrl1_5 0 22 ;LZ?K9fXM0UhKNkPaaG=b3
+Z106 DEx4 work 11 twdlrom_5_1 0 22 :YAENYMj0SEkf8c7cf_nR2
+Z107 DEx4 work 17 radix22fft_sdf2_4 0 22 F2Vf2d?eT8HzYnj><i>O^1
+Z108 DEx4 work 18 radix22fft_ctrl1_4 0 22 8oMdTkeAfUIBPH1=iCMgO0
+Z109 DEx4 work 17 radix22fft_sdf1_3 0 22 0O8bGC=[^^VV6mOck1=6i3
+Z110 DEx4 work 18 radix22fft_ctrl1_3 0 22 fKM<;?3`d=6LJKhEnA7^?1
+Z111 DEx4 work 11 twdlrom_3_1 0 22 lfbmD5JW0lF?o39K6i:dL1
+Z112 DEx4 work 17 radix22fft_sdf2_2 0 22 UQfK97ziARh]lQW[U0I=i3
+Z113 DEx4 work 18 radix22fft_ctrl1_2 0 22 GiGzE?okh<kbn>eTAFFf12
+Z114 DEx4 work 17 radix22fft_sdf1_1 0 22 n;i9?_c7NEla;cV3>]n1M1
+Z115 DEx4 work 18 radix22fft_ctrl1_1 0 22 Y8RmYoZ<^Dm6YKMDIe^SW1
+R79
+R23
+R4
+R5
+Z116 DEx4 work 10 dsphdl_fft 0 22 og?]i538ZbShcLQUS_Z4T1
+!i122 765
+l803
+L40 1626
+Vzfk;9IK^oW7Pk7>c=6mcC1
+!s100 ejJZlKi@@lYn;DLA@BFa@3
+R9
+33
+R82
+!i10b 1
+R83
+R84
+R85
+!i113 1
+R14
+R15
+Efft_tst
+Z117 w1676257464
+R2
+R3
+R4
+R5
+!i122 770
+R63
+Z118 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd
+Z119 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd
+l0
+L36 1
+VDNQF9YYI?:Q<U9473hQlZ3
+!s100 iQ3i^JZkj=z]lYiDLJL=m3
+R9
+33
+Z120 !s110 1677175663
+!i10b 1
+Z121 !s108 1677175663.000000
+Z122 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd|
+Z123 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R2
+R3
+R4
+R5
+Z124 DEx4 work 7 fft_tst 0 22 DNQF9YYI?:Q<U9473hQlZ3
+!i122 770
+l69
+Z125 L39 84
+Z126 VWBl8Z=ae:Wm^RI]@S0H8Y2
+Z127 !s100 m_PMUjeN8ah>QRcAYRV@j1
+R9
+33
+R120
+!i10b 1
+R121
+R122
+R123
+!i113 1
+R14
+R15
+Plusee_pkg
+R2
+R3
+R4
+R5
+!i122 767
+Z128 w1667331750
+R63
+Z129 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd
+Z130 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd
+l0
+L6 15
+V^@nN:fXPI?G:]@4BDDO2?2
+!s100 dKbXS9;Wnn4Ez_?^=:bfk1
+R9
+33
+R120
+!i10b 1
+R121
+Z131 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd|
+Z132 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd|
+!i113 1
+R14
+R15
+Bbody
+DPx4 work 9 lusee_pkg 0 22 ^@nN:fXPI?G:]@4BDDO2?2
+R2
+R3
+R4
+R5
+!i122 767
+l0
+L22 5
+Vn`I?;omAQl[U9>zj_=IzC1
+!s100 UZ4F0e0VgIRiXBg@<33_V0
+R9
+33
+R120
+!i10b 1
+R121
+R131
+R132
+!i113 1
+R14
+R15
+Emultiply_generic
+Z133 w1676245640
+R23
+R4
+R5
+!i122 734
+R63
+Z134 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/Multiply_generic.vhd
+Z135 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/Multiply_generic.vhd
+l0
+L5 1
+V;OQhLNOV7U0nZX07[Dm;52
+!s100 <h1gSm8gPW4FWLnI`VNVY1
+R9
+33
+R66
+!i10b 1
+R67
+Z136 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/Multiply_generic.vhd|
+Z137 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/Multiply_generic.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R70
+!i122 734
+l70
+L25 111
+VIU>UJeAWhDV;zXb>WjGTe2
+!s100 jNO_<_mOI@hAQj7?Jez]^3
+R9
+33
+R66
+!i10b 1
+R67
+R136
+R137
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_1
+Z138 w1673997646
+R23
+R4
+R5
+!i122 718
+R63
+Z139 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd
+Z140 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd
+l0
+R36
+VY8RmYoZ<^Dm6YKMDIe^SW1
+!s100 @T<_LW[@a<O_867b_3Z260
+R9
+33
+Z141 !s110 1677175659
+!i10b 1
+Z142 !s108 1677175659.000000
+Z143 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd|
+Z144 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R115
+!i122 718
+l69
+Z145 L38 177
+Vl<ZOLb47793mMWc>go>[@1
+!s100 PS>b0;f0;f:Znz:RRm@Vb3
+R9
+33
+R141
+!i10b 1
+R142
+R143
+R144
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_10
+R138
+R23
+R4
+R5
+!i122 719
+R63
+Z146 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd
+Z147 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd
+l0
+R36
+V:CXRDbDNBJd3C[^ldQTbS3
+!s100 ]l]4BzlVYZYAA;SC44UOA3
+R9
+33
+R141
+!i10b 1
+R142
+Z148 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd|
+Z149 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R93
+!i122 719
+l69
+R145
+V`e^HOBEEWaN7Ih_Eeh8aP3
+!s100 zCG1SCfVk?8=zZ@=oVU4]1
+R9
+33
+R141
+!i10b 1
+R142
+R148
+R149
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_11
+R138
+R23
+R4
+R5
+!i122 720
+R63
+Z150 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd
+Z151 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd
+l0
+R36
+VG<XR=n<_n:PW?mK;PT;WM1
+!s100 Eh3?ge@0:K;BOFnzi_75J0
+R9
+33
+R141
+!i10b 1
+R142
+Z152 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd|
+Z153 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R90
+!i122 720
+l56
+L38 166
+V=;OeIj=loh]F[6=56iI521
+!s100 ?DkTD[2KBUibY3dXkmmD;2
+R9
+33
+R141
+!i10b 1
+R142
+R152
+R153
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_12
+R138
+R23
+R4
+R5
+!i122 721
+R63
+Z154 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd
+Z155 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd
+l0
+R36
+VgdDlR=D;fHVzFgC`m@VFf1
+!s100 B`=CcP0<5Y]]k]ek3__V33
+R9
+33
+R141
+!i10b 1
+R142
+Z156 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd|
+Z157 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R88
+!i122 721
+l62
+L38 120
+V6V[b7QYJUN20F00o8WI;A2
+!s100 GQKVbS@ZJXL^l:PfNUIe40
+R9
+33
+R141
+!i10b 1
+R142
+R156
+R157
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_2
+R138
+R23
+R4
+R5
+!i122 722
+R63
+Z158 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd
+Z159 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd
+l0
+R36
+VGiGzE?okh<kbn>eTAFFf12
+!s100 WdfZMBXQUYb`;Y8nd^;@@3
+R9
+33
+R141
+!i10b 1
+R142
+Z160 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd|
+Z161 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R113
+!i122 722
+l69
+R145
+VY>jgEPT07]A2eC4l?eaUX3
+!s100 X;cVGcfM3HCdeHV?Nj@TR3
+R9
+33
+R141
+!i10b 1
+R142
+R160
+R161
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_3
+R138
+R23
+R4
+R5
+!i122 723
+R63
+Z162 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd
+Z163 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd
+l0
+R36
+VfKM<;?3`d=6LJKhEnA7^?1
+!s100 ilQGJgzM0jbaZQm7<lKGX1
+R9
+33
+R141
+!i10b 1
+R142
+Z164 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd|
+Z165 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R110
+!i122 723
+l69
+R145
+VI3kd1>:<nU>AGW];flGW:0
+!s100 7@O?QLSz1^aP;Zn@A8??Z1
+R9
+33
+R141
+!i10b 1
+R142
+R164
+R165
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_4
+R138
+R23
+R4
+R5
+!i122 724
+R63
+Z166 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd
+Z167 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd
+l0
+R36
+V8oMdTkeAfUIBPH1=iCMgO0
+!s100 M;66E3Oe<1YoS?^EIZ>A90
+R9
+33
+R141
+!i10b 1
+R142
+Z168 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd|
+Z169 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R108
+!i122 724
+l69
+R145
+VA<[<glWNEoQ:WY1dDVg`Z3
+!s100 _nz1Dk]LGEccG_med<Ef[1
+R9
+33
+R141
+!i10b 1
+R142
+R168
+R169
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_5
+R138
+R23
+R4
+R5
+!i122 725
+R63
+Z170 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd
+Z171 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd
+l0
+R36
+V;LZ?K9fXM0UhKNkPaaG=b3
+!s100 YTU?H5BHEJdSai_;:>QLk2
+R9
+33
+R66
+!i10b 1
+R67
+Z172 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd|
+Z173 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R105
+!i122 725
+l69
+R145
+VS8P4[23b>mIK25@]iHOlN2
+!s100 g2j:XnGnoiaY@QF2gR@aL1
+R9
+33
+R66
+!i10b 1
+R67
+R172
+R173
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_6
+R138
+R23
+R4
+R5
+!i122 726
+R63
+Z174 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd
+Z175 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd
+l0
+R36
+VcQhk0<SFCB6JOJzEU99IP2
+!s100 :o4Gncbf;a^zgh<<VZaZ22
+R9
+33
+R66
+!i10b 1
+R67
+Z176 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd|
+Z177 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R103
+!i122 726
+l69
+R145
+VYDjX;RKkdIZ[lW]dLOQ5?1
+!s100 [V=izh0>FBEn=ZKAc]R>g2
+R9
+33
+R66
+!i10b 1
+R67
+R176
+R177
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_7
+R138
+R23
+R4
+R5
+!i122 727
+R63
+Z178 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd
+Z179 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd
+l0
+R36
+V95kBdFb`4TTziP8:ajf0F1
+!s100 2iXc9WLjhNVA=]Gk]GbBD1
+R9
+33
+R66
+!i10b 1
+R67
+Z180 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd|
+Z181 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R100
+!i122 727
+l69
+R145
+VLCI^Oc;gccZk4hlX2SC7H2
+!s100 jzO@AdNIX4iW`B3hnd3dh3
+R9
+33
+R66
+!i10b 1
+R67
+R180
+R181
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_8
+R138
+R23
+R4
+R5
+!i122 728
+R63
+Z182 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd
+Z183 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd
+l0
+R36
+VLG:IoD7<Q@hV54YO;0A5=3
+!s100 ShKGi[NO[0Z0@[CUfL?U@0
+R9
+33
+R66
+!i10b 1
+R67
+Z184 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd|
+Z185 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R98
+!i122 728
+l69
+R145
+VTg7HXi@QUUzZP<_0>Rk4M2
+!s100 3oGbg9M4nIl=mlB9=1iGo0
+R9
+33
+R66
+!i10b 1
+R67
+R184
+R185
+!i113 1
+R14
+R15
+Eradix22fft_ctrl1_9
+R138
+R23
+R4
+R5
+!i122 729
+R63
+Z186 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd
+Z187 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd
+l0
+R36
+Vl0ebzLnaEdf5j;;]hiZIR1
+!s100 G0E2lCm0:KGzhaCnDKZVL2
+R9
+33
+R66
+!i10b 1
+R67
+Z188 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd|
+Z189 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R95
+!i122 729
+l69
+R145
+Vhz7?KBV`KRBYO][:8fg0Z1
+!s100 :Bkb=2=WHm2Y3W:`VGf:E3
+R9
+33
+R66
+!i10b 1
+R67
+R188
+R189
+!i113 1
+R14
+R15
+Eradix22fft_sdf1_1
+R138
+R23
+R4
+R5
+!i122 732
+R63
+Z190 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd
+Z191 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd
+l0
+R36
+Vn;i9?_c7NEla;cV3>]n1M1
+!s100 n^lmBl4NU6mNL[C^<`9M22
+R9
+33
+R66
+!i10b 1
+R67
+Z192 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd|
+Z193 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd|
+!i113 1
+R14
+R15
+Artl
+Z194 DEx4 work 14 sdfcommutator1 0 22 :Ck>D2TFDIB=bDfW8Hf4J2
+R32
+R23
+R4
+R5
+R114
+!i122 732
+l152
+L45 291
+VG[MKEF89g<oz`ViH2D:>d0
+!s100 T^lDE37gNfVHiLYmPQQhG1
+R9
+33
+R66
+!i10b 1
+R67
+R192
+R193
+!i113 1
+R14
+R15
+Eradix22fft_sdf1_11
+Z195 w1677089037
+R23
+R4
+R5
+!i122 736
+R63
+Z196 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd
+Z197 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd
+l0
+R36
+VD:9?ZHkAD1JYAjz>Q7?:A3
+!s100 9^AMg8;n39M0KQUIdJXLK0
+R9
+33
+R66
+!i10b 1
+R67
+Z198 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd|
+Z199 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd|
+!i113 1
+R14
+R15
+Artl
+Z200 DEx4 work 15 sdfcommutator11 0 22 FUo=HX@1e:>l9AoLoT<Fe0
+R71
+R23
+R4
+R5
+R89
+!i122 736
+l172
+L45 344
+V3IN_WnlHG0[9FYEF=0]8M1
+!s100 4Of`PQE63oRWca7VKg`<81
+R9
+33
+R66
+!i10b 1
+R67
+R198
+R199
+!i113 1
+R14
+R15
+Eradix22fft_sdf1_3
+R195
+R23
+R4
+R5
+!i122 738
+R63
+Z201 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd
+Z202 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd
+l0
+R36
+V0O8bGC=[^^VV6mOck1=6i3
+!s100 E=gV>8eT`YGAiMo[<Y8QB0
+R9
+33
+R66
+!i10b 1
+R67
+Z203 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd|
+Z204 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd|
+!i113 1
+R14
+R15
+Artl
+Z205 DEx4 work 14 sdfcommutator3 0 22 lfGHkOciSn>UUf8o6D>z:0
+R32
+R71
+R23
+R4
+R5
+R109
+!i122 738
+l177
+Z206 L45 317
+VBeW[Ofh_eDJhk;[^M1Tif2
+!s100 gn9i<UBe9oi_MKOPoIKjF0
+R9
+33
+R66
+!i10b 1
+R67
+R203
+R204
+!i113 1
+R14
+R15
+Eradix22fft_sdf1_5
+Z207 w1677089082
+R23
+R4
+R5
+!i122 740
+R63
+Z208 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd
+Z209 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd
+l0
+R36
+V^E3SlHbXBBT`=3@z4XbSD3
+!s100 LFGhY;WjDWNV1A]JbZA2Q1
+R9
+33
+R66
+!i10b 1
+R67
+Z210 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd|
+Z211 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd|
+!i113 1
+R14
+R15
+Artl
+Z212 DEx4 work 14 sdfcommutator5 0 22 n]BaMM[l5O[eK1iQ?2f<D3
+R32
+R71
+R23
+R4
+R5
+R104
+!i122 740
+l177
+L45 319
+V@]1aJ220FD9RR11N]?=DM2
+!s100 nbAa:CW<TWSBE@cb]N=BH1
+R9
+33
+R66
+!i10b 1
+R67
+R210
+R211
+!i113 1
+R14
+R15
+Eradix22fft_sdf1_7
+Z213 w1677089167
+R23
+R4
+R5
+!i122 742
+R63
+Z214 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd
+Z215 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd
+l0
+R36
+V6h6`zdU6P:2b7j9>iZJoe1
+!s100 ?m<4?A;EF=PJ6>`4WVY@o1
+R9
+33
+Z216 !s110 1677175661
+!i10b 1
+Z217 !s108 1677175661.000000
+Z218 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd|
+Z219 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd|
+!i113 1
+R14
+R15
+Artl
+Z220 DEx4 work 14 sdfcommutator7 0 22 `NLR3LQ_6NjQZ:Rz`NmPc0
+R32
+R71
+R23
+R4
+R5
+R99
+!i122 742
+l177
+L45 318
+V_YIQORbKhFYi^N4Wd5m6g3
+!s100 n_L:T^no?S9dbNCNj1<=b1
+R9
+33
+R216
+!i10b 1
+R217
+R218
+R219
+!i113 1
+R14
+R15
+Eradix22fft_sdf1_9
+R213
+R23
+R4
+R5
+!i122 744
+R63
+Z221 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd
+Z222 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd
+l0
+R36
+V3lbY[Ck1Z0g@mK[]c;D[g3
+!s100 K;QEHT9N`:2B2TAh:4_8?0
+R9
+33
+R216
+!i10b 1
+R217
+Z223 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd|
+Z224 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd|
+!i113 1
+R14
+R15
+Artl
+Z225 DEx4 work 14 sdfcommutator9 0 22 ai3N[@RLZ=KST1j4NTdfJ0
+R32
+R71
+R23
+R4
+R5
+R94
+!i122 744
+l177
+R206
+V`Rjbf40jHJSToHPD1XcYC2
+!s100 J1b`Zo8mPBdGH`[HUk4Zh0
+R9
+33
+R216
+!i10b 1
+R217
+R223
+R224
+!i113 1
+R14
+R15
+Eradix22fft_sdf2_10
+R138
+R23
+R4
+R5
+!i122 746
+R63
+Z226 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd
+Z227 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd
+l0
+R36
+V[]>W[[O<8Wd]Xh^WKU;Yd0
+!s100 9nKSUolzh^Ld?eGYzb0AS2
+R9
+33
+R216
+!i10b 1
+R217
+Z228 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd|
+Z229 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd|
+!i113 1
+R14
+R15
+Artl
+Z230 DEx4 work 15 sdfcommutator10 0 22 I3X18ifS:K1aGC<4PfMXA0
+R32
+R23
+R4
+R5
+R92
+!i122 746
+l164
+Z231 L43 395
+V_RDWd[@cJ3:G[F5CBC0fU1
+!s100 ]2VFXa2V0h6c5:Hk<MPeG1
+R9
+33
+R216
+!i10b 1
+R217
+R228
+R229
+!i113 1
+R14
+R15
+Eradix22fft_sdf2_12
+R138
+R23
+R4
+R5
+!i122 748
+R63
+Z232 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd
+Z233 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd
+l0
+R36
+Vm5]`_CMnT?][:R_CaI[V[1
+!s100 MMH==6VPLmikClbc1_EYP0
+R9
+33
+R216
+!i10b 1
+R217
+Z234 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd|
+Z235 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd|
+!i113 1
+R14
+R15
+Artl
+Z236 DEx4 work 15 sdfcommutator12 0 22 X3P<QCG=f[?khheoK@0gF1
+R23
+R4
+R5
+R87
+!i122 748
+l165
+L43 497
+VOg^b4AezFOW5Z;UBHnE2`1
+!s100 b9]2FT2aKnY<21l^FRiSj1
+R9
+33
+R216
+!i10b 1
+R217
+R234
+R235
+!i113 1
+R14
+R15
+Eradix22fft_sdf2_2
+R138
+R23
+R4
+R5
+!i122 750
+R63
+Z237 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd
+Z238 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd
+l0
+R36
+VUQfK97ziARh]lQW[U0I=i3
+!s100 H:Na^hHFDlRS9i<^U5RSS2
+R9
+33
+R216
+!i10b 1
+R217
+Z239 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd|
+Z240 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd|
+!i113 1
+R14
+R15
+Artl
+Z241 DEx4 work 14 sdfcommutator2 0 22 cgRk?_4OP8b2d5X?R3:aT0
+R32
+R23
+R4
+R5
+R112
+!i122 750
+l164
+R231
+VOPR64iGe4M5OL4mEC<[Ei0
+!s100 I:V8HBnY96X59mzHbdg2E1
+R9
+33
+R216
+!i10b 1
+R217
+R239
+R240
+!i113 1
+R14
+R15
+Eradix22fft_sdf2_4
+R138
+R23
+R4
+R5
+!i122 752
+R63
+Z242 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd
+Z243 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd
+l0
+R36
+VF2Vf2d?eT8HzYnj><i>O^1
+!s100 FE@L:DF_l9]zURU^O@4J93
+R9
+33
+R216
+!i10b 1
+R217
+Z244 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd|
+Z245 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd|
+!i113 1
+R14
+R15
+Artl
+Z246 DEx4 work 14 sdfcommutator4 0 22 6nSio6z?0A2XSCW@nkgNT2
+R32
+R23
+R4
+R5
+R107
+!i122 752
+l164
+R231
+VF5l8PPVh<C`Em:2bVb_oK3
+!s100 dcaWGQP?8E=:^BAGHVB[O3
+R9
+33
+R216
+!i10b 1
+R217
+R244
+R245
+!i113 1
+R14
+R15
+Eradix22fft_sdf2_6
+R138
+R23
+R4
+R5
+!i122 754
+R63
+Z247 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd
+Z248 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd
+l0
+R36
+VLkAUZ0ge=E;UeR18ek5oG0
+!s100 7oQ>k9iV4Dm]4jhHNHT<83
+R9
+33
+R216
+!i10b 1
+R217
+Z249 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd|
+Z250 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd|
+!i113 1
+R14
+R15
+Artl
+Z251 DEx4 work 14 sdfcommutator6 0 22 7mW1kRaF1DbXUDUii0Vf22
+R32
+R23
+R4
+R5
+R102
+!i122 754
+l164
+R231
+VgAe?PK66UcNYOo6V7`JaC3
+!s100 9NLBfPWR9a=6IWKCUU;880
+R9
+33
+R216
+!i10b 1
+R217
+R249
+R250
+!i113 1
+R14
+R15
+Eradix22fft_sdf2_8
+R138
+R23
+R4
+R5
+!i122 756
+R63
+Z252 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd
+Z253 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd
+l0
+R36
+Vf<jUDh1^GUTf3fY56=k?h3
+!s100 0<_@7`mUiheni>8dM0MHe1
+R9
+33
+R216
+!i10b 1
+R217
+Z254 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd|
+Z255 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd|
+!i113 1
+R14
+R15
+Artl
+Z256 DEx4 work 14 sdfcommutator8 0 22 3SL@0RoELXSm6im3`;RDk2
+R32
+R23
+R4
+R5
+R97
+!i122 756
+l164
+R231
+VMXJLd>]P<zab>T_U@hzAe3
+!s100 J?h`l9XXQ8lY=]W=XjYKz0
+R9
+33
+R216
+!i10b 1
+R217
+R254
+R255
+!i113 1
+R14
+R15
+Eradix2fft_bitnatural
+R138
+R23
+R4
+R5
+!i122 757
+R63
+Z257 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd
+Z258 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd
+l0
+R36
+VPZ:OJX[iDmk59>0oMdZAi0
+!s100 fDO7WgjmUPc8R4HFM`oJJ3
+R9
+33
+R82
+!i10b 1
+R83
+Z259 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd|
+Z260 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R86
+!i122 757
+l107
+L38 281
+VzCRb<RGIf^7?mTfS@G1ko0
+!s100 d8YL]dWMl@ZjS^G5LIZld0
+R9
+33
+R82
+!i10b 1
+R83
+R259
+R260
+!i113 1
+R14
+R15
+Esdfcommutator1
+R138
+R23
+R4
+R5
+!i122 731
+R63
+Z261 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator1.vhd
+Z262 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator1.vhd
+l0
+R36
+V:Ck>D2TFDIB=bDfW8Hf4J2
+!s100 VcdNn0ZIR;TFSPYbDf8jN0
+R9
+33
+R66
+!i10b 1
+R67
+Z263 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator1.vhd|
+Z264 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator1.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R194
+!i122 731
+l156
+Z265 L51 516
+VogKj0n@dG`=2I4kL3N2Fj1
+!s100 zK4h[na_=z1S:l:=H<WfP2
+R9
+33
+R66
+!i10b 1
+R67
+R263
+R264
+!i113 1
+R14
+R15
+Esdfcommutator10
+R138
+R23
+R4
+R5
+!i122 745
+R63
+Z266 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator10.vhd
+Z267 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator10.vhd
+l0
+R36
+VI3X18ifS:K1aGC<4PfMXA0
+!s100 Dn8i5giN^2kVh6`HJF[gD0
+R9
+33
+R216
+!i10b 1
+R217
+Z268 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator10.vhd|
+Z269 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator10.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R230
+!i122 745
+l136
+Z270 L51 375
+VlP74?@IoIdBE5gG<To_7g3
+!s100 @FMARnVoH<5TYD_6iz9jV1
+R9
+33
+R216
+!i10b 1
+R217
+R268
+R269
+!i113 1
+R14
+R15
+Esdfcommutator11
+R138
+R23
+R4
+R5
+!i122 733
+R63
+Z271 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator11.vhd
+Z272 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator11.vhd
+l0
+R36
+VFUo=HX@1e:>l9AoLoT<Fe0
+!s100 5:AAZR0aT1g9Xn<[iCmiA0
+R9
+33
+R66
+!i10b 1
+R67
+Z273 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator11.vhd|
+Z274 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator11.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R200
+!i122 733
+l135
+L51 384
+Vfaoz<P`=?eAfci`6mafG72
+!s100 U6D_8zk^mc_5FcM4QLfmV3
+R9
+33
+R66
+!i10b 1
+R67
+R273
+R274
+!i113 1
+R14
+R15
+Esdfcommutator12
+R138
+R23
+R4
+R5
+!i122 747
+R63
+Z275 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator12.vhd
+Z276 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator12.vhd
+l0
+R36
+VX3P<QCG=f[?khheoK@0gF1
+!s100 <;V;1eVZZXT4@V?BcZBC^1
+R9
+33
+R216
+!i10b 1
+R217
+Z277 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator12.vhd|
+Z278 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator12.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R236
+!i122 747
+l141
+L51 344
+V9bIVE8mF0gFPY3=k2;CDU1
+!s100 I<[?1TG::I5AH6ffF@M>o0
+R9
+33
+R216
+!i10b 1
+R217
+R277
+R278
+!i113 1
+R14
+R15
+Esdfcommutator2
+R138
+R23
+R4
+R5
+!i122 749
+R63
+Z279 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator2.vhd
+Z280 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator2.vhd
+l0
+R36
+VcgRk?_4OP8b2d5X?R3:aT0
+!s100 [>HG^L6f`CHTfA;S1>Mj<0
+R9
+33
+R216
+!i10b 1
+R217
+Z281 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator2.vhd|
+Z282 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator2.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R241
+!i122 749
+l156
+R265
+VF4l@`f^[LCY6LK:5Al7hS1
+!s100 @mE3X@77N3[h>:MJZT2o63
+R9
+33
+R216
+!i10b 1
+R217
+R281
+R282
+!i113 1
+R14
+R15
+Esdfcommutator3
+R138
+R23
+R4
+R5
+!i122 737
+R63
+Z283 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator3.vhd
+Z284 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator3.vhd
+l0
+R36
+VlfGHkOciSn>UUf8o6D>z:0
+!s100 ]ES9iCC:d70@`;S55B0Hi0
+R9
+33
+R66
+!i10b 1
+R67
+Z285 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator3.vhd|
+Z286 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator3.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R205
+!i122 737
+l156
+R265
+V3K=]3Z9nBf;h^G`<7PPF;3
+!s100 ;QDQC?kAh7PBO;KaLG`W]3
+R9
+33
+R66
+!i10b 1
+R67
+R285
+R286
+!i113 1
+R14
+R15
+Esdfcommutator4
+R138
+R23
+R4
+R5
+!i122 751
+R63
+Z287 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator4.vhd
+Z288 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator4.vhd
+l0
+R36
+V6nSio6z?0A2XSCW@nkgNT2
+!s100 ?Xn48O9YlDRG:^6[b<N0T2
+R9
+33
+R216
+!i10b 1
+R217
+Z289 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator4.vhd|
+Z290 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator4.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R246
+!i122 751
+l156
+R265
+VZgFoF7W:m]fz7eP:<PN]i0
+!s100 cPb^5XI1k_?@6JIIiQL?o1
+R9
+33
+R216
+!i10b 1
+R217
+R289
+R290
+!i113 1
+R14
+R15
+Esdfcommutator5
+R138
+R23
+R4
+R5
+!i122 739
+R63
+Z291 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator5.vhd
+Z292 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator5.vhd
+l0
+R36
+Vn]BaMM[l5O[eK1iQ?2f<D3
+!s100 @;S8UMfSnk5D_DUY6lcRJ1
+R9
+33
+R66
+!i10b 1
+R67
+Z293 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator5.vhd|
+Z294 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator5.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R212
+!i122 739
+l156
+R265
+VX8@I`^STLKPBFn75H8?Jk3
+!s100 LbNgH2V`3eQ[5QiocOPb:1
+R9
+33
+R66
+!i10b 1
+R67
+R293
+R294
+!i113 1
+R14
+R15
+Esdfcommutator6
+R138
+R23
+R4
+R5
+!i122 753
+R63
+Z295 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator6.vhd
+Z296 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator6.vhd
+l0
+R36
+V7mW1kRaF1DbXUDUii0Vf22
+!s100 _S2PDMC^fFNd?C7K1GzdG3
+R9
+33
+R216
+!i10b 1
+R217
+Z297 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator6.vhd|
+Z298 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator6.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R251
+!i122 753
+l156
+R265
+VU`>an012odCTDOOdeEJRW2
+!s100 5gkme4d]cB:VPd?:YJGlH0
+R9
+33
+R216
+!i10b 1
+R217
+R297
+R298
+!i113 1
+R14
+R15
+Esdfcommutator7
+R138
+R23
+R4
+R5
+!i122 741
+R63
+Z299 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator7.vhd
+Z300 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator7.vhd
+l0
+R36
+V`NLR3LQ_6NjQZ:Rz`NmPc0
+!s100 PX=73H4eA1Q`1]kUGU28Q2
+R9
+33
+R216
+!i10b 1
+R67
+Z301 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator7.vhd|
+Z302 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator7.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R220
+!i122 741
+l156
+R265
+VB?N1[Rn0I29lE8]GfMh^F1
+!s100 AORGoo0[0M[JVA1GcV<>_0
+R9
+33
+R216
+!i10b 1
+R67
+R301
+R302
+!i113 1
+R14
+R15
+Esdfcommutator8
+R138
+R23
+R4
+R5
+!i122 755
+R63
+Z303 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator8.vhd
+Z304 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator8.vhd
+l0
+R36
+V3SL@0RoELXSm6im3`;RDk2
+!s100 8_1S]V?ER_0_Z^35N3GkI2
+R9
+33
+R216
+!i10b 1
+R217
+Z305 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator8.vhd|
+Z306 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator8.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R256
+!i122 755
+l156
+R265
+VK]0f?5CKT0LRS9dHkdiJ^3
+!s100 ??n@<_^cUJj^GC>><:@ZJ0
+R9
+33
+R216
+!i10b 1
+R217
+R305
+R306
+!i113 1
+R14
+R15
+Esdfcommutator9
+R138
+R23
+R4
+R5
+!i122 743
+R63
+Z307 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator9.vhd
+Z308 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator9.vhd
+l0
+R36
+Vai3N[@RLZ=KST1j4NTdfJ0
+!s100 nf9bKzG1=N]Sg8QeeoCO43
+R9
+33
+R216
+!i10b 1
+R217
+Z309 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator9.vhd|
+Z310 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SDFCommutator9.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+R225
+!i122 743
+l136
+R270
+VAlEclU]b[=Z[_c4PHi0jJ2
+!s100 ]ikBoRYE;LTUlkOQJMS2K2
+R9
+33
+R216
+!i10b 1
+R217
+R309
+R310
+!i113 1
+R14
+R15
+Esfft_fixpt
+R138
+R23
+R4
+R5
+!i122 766
+R63
+Z311 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/sfft_fixpt.vhd
+Z312 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/sfft_fixpt.vhd
+l0
+R27
+V_=T81IWU>6jKI7ID`FA[F3
+!s100 MW5iSzAcO?Lf`RNGmKDig2
+R9
+33
+R82
+!i10b 1
+R83
+Z313 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/sfft_fixpt.vhd|
+Z314 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/sfft_fixpt.vhd|
+!i113 1
+R14
+R15
+Artl
+R79
+R116
+R23
+R4
+R5
+DEx4 work 10 sfft_fixpt 0 22 _=T81IWU>6jKI7ID`FA[F3
+!i122 766
+l87
+L57 63
+Vm6QQVm@m2chfYm9;l0SH:1
+!s100 F@Nf6e:0M:T;=>[65zSIj2
+R9
+33
+R82
+!i10b 1
+R83
+R313
+R314
+!i113 1
+R14
+R15
+Psfft_fixpt_pkg
+R23
+R4
+R5
+!i122 768
+w1675271592
+R63
+8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd
+FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd
+l0
+L16 8
+VU;21bI>zGZekB1QYLHWm60
+!s100 __NUQW=Laz1zAO_=:beEi2
+R9
+33
+R120
+!i10b 1
+R121
+!s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd|
+!s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd|
+!i113 1
+R14
+R15
+Esimpledualportram_generic
+R138
+R23
+R4
+R5
+!i122 730
+R63
+Z315 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd
+Z316 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd
+l0
+R36
+Vg=X;8cM4Se8^3J`ZkB:Zz1
+!s100 a1J@kKVViAOQ`R5<4QBDG1
+R9
+33
+R66
+!i10b 1
+R67
+Z317 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd|
+Z318 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+R32
+!i122 730
+l49
+L38 31
+VS2doJLQAggC7<PS`2W5Si2
+!s100 I?4]hPW5WPHFMfA7lE[2T2
+R9
+33
+R66
+!i10b 1
+R67
+R317
+R318
+!i113 1
+R14
+R15
+Esimpledualportram_generic_block
+Z319 w1675271915
+R23
+R4
+R5
+!i122 114
+R24
+Z320 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SimpleDualPortRAM_generic_block.vhd
+Z321 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SimpleDualPortRAM_generic_block.vhd
+l0
+R36
+VUZF]>]FcLAJ^lF9;?]02P0
+!s100 MMJPSGIJH;>[7n]C9XLdS3
+R9
+33
+R28
+!i10b 1
+R29
+Z322 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SimpleDualPortRAM_generic_block.vhd|
+Z323 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SimpleDualPortRAM_generic_block.vhd|
+!i113 1
+R14
+R15
+Artl
+R23
+R4
+R5
+DEx4 work 31 simpledualportram_generic_block 0 22 UZF]>]FcLAJ^lF9;?]02P0
+!i122 114
+l51
+L40 32
+V6c3Y?n9oAEIIRL3P40=Bo2
+!s100 <3An^V_j<b0PPRoMSlM_20
+R9
+33
+R28
+!i10b 1
+R29
+R322
+R323
+!i113 1
+R14
+R15
+Espec_tst
+Z324 w1676250485
+R4
+R5
+!i122 174
+R24
+Z325 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/SPEC_TST.vhd
+Z326 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/SPEC_TST.vhd
+l0
+R19
+Ve4JoHg99:SlB[]MoKV^H50
+!s100 eZN6XGdWzz5Kl`T?afCb11
+R9
+33
+Z327 !s110 1676250516
+!i10b 1
+Z328 !s108 1676250516.000000
+Z329 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/SPEC_TST.vhd|
+Z330 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/SPEC_TST.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R4
+R5
+DEx4 work 8 spec_tst 0 22 e4JoHg99:SlB[]MoKV^H50
+!i122 174
+l73
+L35 89
+VPz0A`CK>F0:Gf>^[]3RXn3
+!s100 42DP1:QSA=H=;^SH8Q?E<2
+R9
+33
+R327
+!i10b 1
+R328
+R329
+R330
+!i113 1
+R14
+R15
+Espectrometer_fixpt
+Z331 w1675884720
+R79
+R23
+R4
+R5
+!i122 171
+R24
+Z332 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/spectrometer_fixpt.vhd
+Z333 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/spectrometer_fixpt.vhd
+l0
+L44 1
+ViVDPhSRN<BO58GJ1kmgiN0
+!s100 ]10Rem@]Z9ADh6:8ZGi:W2
+R9
+33
+R327
+!i10b 1
+R328
+Z334 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/spectrometer_fixpt.vhd|
+Z335 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/spectrometer_fixpt.vhd|
+!i113 1
+R14
+R15
+Artl
+R79
+R23
+R4
+R5
+DEx4 work 18 spectrometer_fixpt 0 22 iVDPhSRN<BO58GJ1kmgiN0
+!i122 171
+l265
+L67 511
+V;`:4[^MhN=[L:1n2iQb`K1
+!s100 dI5iVl3F6o2^hb_?J5h5Z3
+R9
+33
+R327
+!i10b 1
+R328
+R334
+R335
+!i113 1
+R14
+R15
+Pspectrometer_fixpt_pkg
+R23
+R4
+R5
+!i122 758
+w1674151914
+R63
+8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd
+FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd
+l0
+L16 11
+V`2AVUh@BQ<TjM0a79E=XF0
+!s100 UC_YS2]K_LQS5]LIPBV6K0
+R9
+33
+R82
+!i10b 1
+R83
+!s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd|
+!s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd|
+!i113 1
+R14
+R15
+Etwdl_rom_test
+Z336 w1675960527
+R4
+R5
+!i122 48
+R24
+Z337 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd
+Z338 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd
+l0
+R19
+V>BWS@lHd5>3=LASQ^J;E00
+!s100 NQ75jG??5jNlBD6eG@5Vj1
+R9
+33
+Z339 !s110 1675964023
+!i10b 1
+Z340 !s108 1675964023.000000
+Z341 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd|
+Z342 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R4
+R5
+DEx4 work 13 twdl_rom_test 0 22 >BWS@lHd5>3=LASQ^J;E00
+!i122 48
+l62
+L35 67
+V:3`k<mNN<[0Yj6YP?7X553
+!s100 2_TRe[GMR@kmRXJ@W@]>D0
+R9
+33
+R339
+!i10b 1
+R340
+R341
+R342
+!i113 1
+R14
+R15
+Etwdlrom_11_1
+Z343 w1677175514
+R79
+R23
+R4
+R5
+!i122 759
+R63
+Z344 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd
+Z345 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd
+l0
+R8
+VMchNae:Rn;SOPaP_i8IYo0
+!s100 0HO5V3MZO>]TbcS=VLSgF3
+R9
+33
+R82
+!i10b 1
+R83
+Z346 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd|
+Z347 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd|
+!i113 1
+R14
+R15
+Artl
+R79
+R23
+R4
+R5
+R91
+!i122 759
+l355
+Z348 L37 604
+VYAUEBX9GZ63eZcmh1`@Pc3
+!s100 TSHTMKnGn:[0RIf_Z0]cM3
+R9
+33
+R82
+!i10b 1
+R83
+R346
+R347
+!i113 1
+R14
+R15
+Etwdlrom_11_1_array
+Z349 w1677168538
+R2
+R3
+R4
+R5
+!i122 760
+R63
+Z350 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd
+Z351 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd
+l0
+L25 1
+V46:14ah9]0N0CQ]`em@<a1
+!s100 C2nL=<<P`cmeXGaJK2NjA2
+R9
+33
+R82
+!i10b 1
+R83
+Z352 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd|
+Z353 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd|
+!i113 1
+R14
+R15
+Aarchitecture_twdlrom_11_1_array
+R2
+R3
+R4
+R5
+DEx4 work 18 twdlrom_11_1_array 0 22 46:14ah9]0N0CQ]`em@<a1
+!i122 760
+l51
+L37 40
+VHGj@d2WkgM28fRnBKJ=;53
+!s100 UkfJPK`?b@_hPki<I_Y;h1
+R9
+33
+R82
+!i10b 1
+R83
+R352
+R353
+!i113 1
+R14
+R15
+Etwdlrom_3_1
+Z354 w1677097943
+R79
+R23
+R4
+R5
+!i122 761
+R63
+Z355 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd
+Z356 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd
+l0
+R8
+VlfbmD5JW0lF?o39K6i:dL1
+!s100 30ZA<UegS_@>hBDUeOA`@0
+R9
+33
+R82
+!i10b 1
+R83
+Z357 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd|
+Z358 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd|
+!i113 1
+R14
+R15
+Artl
+R79
+R23
+R4
+R5
+R111
+!i122 761
+l355
+R348
+VQlz^11_J2jaIeNJ?O^9bP3
+!s100 mzhPR@]f^5o@3RIJUFSHP0
+R9
+33
+R82
+!i10b 1
+R83
+R357
+R358
+!i113 1
+R14
+R15
+Etwdlrom_5_1
+R138
+R79
+R23
+R4
+R5
+!i122 762
+R63
+Z359 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd
+Z360 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd
+l0
+R8
+V:YAENYMj0SEkf8c7cf_nR2
+!s100 1lAW09@Xd?l<SOaeCzh[b1
+R9
+33
+R82
+!i10b 1
+R83
+Z361 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd|
+Z362 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd|
+!i113 1
+R14
+R15
+Artl
+R79
+R23
+R4
+R5
+R106
+!i122 762
+l355
+R348
+V?`I9>oG>ZCjXdKKF]Y2oR2
+!s100 2ijoi91ZKhk0T4:d7O=A12
+R9
+33
+R82
+!i10b 1
+R83
+R361
+R362
+!i113 1
+R14
+R15
+Etwdlrom_7_1
+R138
+R79
+R23
+R4
+R5
+!i122 763
+R63
+Z363 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd
+Z364 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd
+l0
+R8
+V?^nk0fUgEXg3R@WMRFeMQ0
+!s100 zjl0MzOfWjfa<>HNl;8h12
+R9
+33
+R82
+!i10b 1
+R83
+Z365 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd|
+Z366 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd|
+!i113 1
+R14
+R15
+Artl
+R79
+R23
+R4
+R5
+R101
+!i122 763
+l355
+R348
+VV36d>9iCEmlT8C<eeQJ9G3
+!s100 31>RlhM9g5XllECkQjdFT2
+R9
+33
+R82
+!i10b 1
+R83
+R365
+R366
+!i113 1
+R14
+R15
+Etwdlrom_9_1
+R138
+R79
+R23
+R4
+R5
+!i122 764
+R63
+Z367 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd
+Z368 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd
+l0
+R8
+VkPJZLOz7<gTYM<@PidhY<1
+!s100 NRkRX8c326lI5_Zkbh>OA0
+R9
+33
+R82
+!i10b 1
+R83
+Z369 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd|
+Z370 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd|
+!i113 1
+R14
+R15
+Artl
+R79
+R23
+R4
+R5
+R96
+!i122 764
+l355
+R348
+Vnhdg5JAnHWNdKg3Rf5UFJ2
+!s100 fjYONRg7Z_78NXh`>^Y?e1
+R9
+33
+R82
+!i10b 1
+R83
+R369
+R370
+!i113 1
+R14
+R15
+Eweight_fold_instance_1_fixpt
+Z371 w1675271590
+R23
+R4
+R5
+!i122 168
+R24
+Z372 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_fold_instance_1_fixpt.vhd
+Z373 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_fold_instance_1_fixpt.vhd
+l0
+L41 1
+VJ:olQ;VlOF8@VJ9YkWlZ20
+!s100 @X43eD395A@<CTfVKKQ?D1
+R9
+33
+Z374 !s110 1676250515
+!i10b 1
+Z375 !s108 1676250515.000000
+Z376 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_fold_instance_1_fixpt.vhd|
+Z377 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_fold_instance_1_fixpt.vhd|
+!i113 1
+R14
+R15
+Artl
+R32
+R23
+R4
+R5
+DEx4 work 28 weight_fold_instance_1_fixpt 0 22 J:olQ;VlOF8@VJ9YkWlZ20
+!i122 168
+l195
+L56 759
+V:>JU:ikcLY7en8ikY>dG_0
+!s100 _FmYMaPmeTA;61U1dhK221
+R9
+33
+R374
+!i10b 1
+R375
+R376
+R377
+!i113 1
+R14
+R15
+Eweight_streamer_fixpt
+Z378 w1675357230
+R79
+R23
+R4
+R5
+!i122 170
+R24
+Z379 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_streamer_fixpt.vhd
+Z380 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_streamer_fixpt.vhd
+l0
+L47 1
+VnU2bIXa7];_c73WM=^nTB1
+!s100 hcbHhA1bZ<0a2a6k75HYT0
+R9
+33
+R374
+!i10b 1
+R375
+Z381 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_streamer_fixpt.vhd|
+Z382 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_streamer_fixpt.vhd|
+!i113 1
+R14
+R15
+Artl
+R79
+R23
+R4
+R5
+DEx4 work 21 weight_streamer_fixpt 0 22 nU2bIXa7];_c73WM=^nTB1
+!i122 170
+l4186
+L60 4193
+V46Rf^lM32JQBzEXge[88g3
+!s100 aUDzFlWiWkZ:E[1dnf:i>2
+R9
+33
+R374
+!i10b 1
+R375
+R381
+R382
+!i113 1
+R14
+R15
+Pweight_streamer_fixpt_pkg
+R23
+R4
+R5
+!i122 769
+w1674151266
+R63
+8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd
+FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd
+l0
+L16 3
+VkXdm9znf@20An;N`DCYdN3
+!s100 dX2Lmoa39NaVMleSE[ZK<0
+R9
+33
+R120
+!i10b 1
+R121
+!s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd|
+!s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd|
+!i113 1
+R14
+R15
