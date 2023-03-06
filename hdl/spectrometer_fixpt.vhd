@@ -456,7 +456,7 @@ deinterlace_instance_12_fixpt_inst : deinterlace_instance_12_fixpt
 end process;     
         
 
- average_instance_P1_fixpt_inst : average_instance_P1_fixpt
+ average_instance_P1_fixpt_inst : average_stage1
   PORT map
         ( clk                => clk,
         reset                => blk_reset,
@@ -467,6 +467,7 @@ end process;
       ch2_val_re           => ch1_val_re_s1,
       ch2_val_im           => ch1_val_im_s1,
       count                => bin_s1,
+      navg                 => Navg,
       ready_in             => fft_ready_s1,
         
      
@@ -478,7 +479,7 @@ end process;
         );
 
 
-   average_instance_P1_fixpt_inst2 : average_instance_P1_fixpt
+   average_instance_P1_fixpt_inst2 : average_stage1
   PORT map
         ( clk                => clk,
         reset                => blk_reset,
@@ -490,6 +491,7 @@ end process;
         ch2_val_re           => ch2_val_re_s1,
         ch2_val_im           => ch2_val_im_s1,
         count                => bin_s1,
+        navg                 => Navg,
         ready_in             => fft_ready_s1,
 
         ce_out               => open,
