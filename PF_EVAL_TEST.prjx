@@ -830,8 +830,8 @@ SIZE="35367"
 ENDFILE
 VALUE "<project>/hdl/average_stage1.vhd,hdl"
 STATE="utd"
-TIME="1678143854"
-SIZE="7778"
+TIME="1678143866"
+SIZE="7780"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
 STATE="utd"
@@ -1090,8 +1090,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1678118550"
-SIZE="21691"
+TIME="1678227898"
+SIZE="21717"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1140,8 +1140,8 @@ SIZE="28466"
 ENDFILE
 VALUE "<project>/hdl/weight_streamer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1675357232"
-SIZE="467824"
+TIME="1678228028"
+SIZE="463576"
 ENDFILE
 VALUE "<project>/hdl/weight_streamer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1153,15 +1153,30 @@ STATE="utd"
 TIME="1677186124"
 SIZE="46282"
 ENDFILE
+VALUE "<project>/simulation/make_libero.log,log"
+STATE="utd"
+TIME="1678228689"
+SIZE="19302"
+ENDFILE
+VALUE "<project>/simulation/presynth_simulation.log,log"
+STATE="utd"
+TIME="1678229618"
+SIZE="125098"
+ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1677175656"
-SIZE="5663"
+TIME="1678228862"
+SIZE="12500"
+ENDFILE
+VALUE "<project>/simulation/run_LuSEE.do,do"
+STATE="utd"
+TIME="1678229668"
+SIZE="12559"
 ENDFILE
 VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
 STATE="utd"
-TIME="1676250816"
-SIZE="45644"
+TIME="1678228066"
+SIZE="127256"
 ENDFILE
 VALUE "<project>/simulation/testbnch_presynth_simulation.log,log"
 STATE="utd"
@@ -1180,8 +1195,8 @@ SIZE="3219"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1676250486"
-SIZE="3748"
+TIME="1678227988"
+SIZE="3497"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -1200,8 +1215,8 @@ SIZE="20749459"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1677189196"
-SIZE="14888"
+TIME="1678118199"
+SIZE="17800"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
 STATE="utd"
@@ -1220,8 +1235,8 @@ SIZE="11745194"
 ENDFILE
 VALUE "<project>/synthesis/sfft_fixpt_syn.prj,prj"
 STATE="utd"
-TIME="1677169232"
-SIZE="6025"
+TIME="1678118199"
+SIZE="7299"
 ENDFILE
 VALUE "<project>/synthesis/sfft_fixpt_vm.sdc,syn_sdc"
 STATE="utd"
@@ -1293,6 +1308,9 @@ ENDLIST
 ENDLIST
 LIST "LuSEE_PF_EVAL::work"
 FILE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
+LIST AssociatedStimulus
+VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
+ENDLIST
 LIST SynthesisConstraints
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
 VALUE "<project>/constraint/user.sdc,sdc"
@@ -1308,6 +1326,7 @@ VALUE "<project>/constraint/user.sdc,sdc"
 ENDLIST
 LIST ProjectState5.1
 LIST Impl1
+ideSTIMULUS=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1331,6 +1350,7 @@ VALUE "<project>/synthesis/LuSEE_PF_EVAL.vhd,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 LIST Impl2
+ideSTIMULUS=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1594,6 +1614,9 @@ ENDLIST
 ENDLIST
 ENDLIST
 LIST AssociatedStimulus
+LIST LuSEE_PF_EVAL
+VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
+ENDLIST
 LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
 VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
 VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
@@ -1676,17 +1699,17 @@ VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/runall_vhdl.do
 ENDLIST
 ENDLIST
 LIST SimulationOptions
-UseAutomaticDoFile=true
+UseAutomaticDoFile=false
 IncludeWaveDo=false
 Type=max
 RunTime=1000ns
 Resolution=1ps
 VsimOpt=
-EntityName=testbench
+EntityName=SPEC_TST
 TopInstanceName=<top>_0
-DoFileName=
+DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/simulation/run_LuSEE.do
 DoFileName2=wave.do
-DoFileParams=
+DoFileParams=eric test
 DisplayDUTWave=false
 LogAllSignals=false
 DisablePulseFiltering=false
@@ -1755,8 +1778,8 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=""
-BATCH=0
+PARAM="-l presynth_simulation.log -c"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -1817,6 +1840,7 @@ ENDLIST
 ENDLIST
 LIST "LuSEE_PF_EVAL::work"
 LIST Impl1
+ideSTIMULUS=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1840,6 +1864,7 @@ VALUE "<project>/synthesis/LuSEE_PF_EVAL.vhd,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 LIST Impl2
+ideSTIMULUS=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -2025,11 +2050,6 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-ORIENTATION;HORIZONTAL
-HDL;hdl/average_stage1.vhd;0
-HDL;hdl/Multiply_generic_32.vhd;0
-HDL;component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v;0
-ACTIVEVIEW;hdl/average_stage1.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
@@ -2049,6 +2069,7 @@ SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "average_stage1::work","hdl/average_stage1.vhd","FALSE","FALSE"
+SUBBLOCK "PF_TPSRAM_C0::work","component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v","TRUE","FALSE"
 ENDLIST
 LIST "Complex4Multiply_generic::work","hdl/Complex4Multiply_generic.vhd","FALSE","FALSE"
 SUBBLOCK "Multiply_generic::work","hdl/Multiply_generic.vhd","FALSE","FALSE"
@@ -2361,7 +2382,7 @@ ENDLIST
 LIST "sfft_fixpt_pkg::work","hdl/sfft_fixpt_pkg.vhd","FALSE","FALSE"
 ENDLIST
 LIST "spectrometer_fixpt::work","hdl/spectrometer_fixpt.vhd","FALSE","FALSE"
-SUBBLOCK "average_stage1::work","hdl/average_stage1.vhd","FALSE","FALSE"
+SUBBLOCK "average_instance_P1_fixpt::work","hdl/average_instance_P1_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "deinterlace_instance_12_fixpt::work","hdl/deinterlace_instance_12_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "sfft_fixpt::work","hdl/sfft_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "weight_fold_instance_1_fixpt::work","hdl/weight_fold_instance_1_fixpt.vhd","FALSE","FALSE"

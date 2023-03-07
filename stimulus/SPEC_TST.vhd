@@ -28,6 +28,8 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+USE IEEE.numeric_std.ALL;
+USE work.spectrometer_fixpt_pkg.ALL;
 
 entity SPEC_TST is
 end SPEC_TST;
@@ -38,6 +40,8 @@ architecture behavioral of SPEC_TST is
 
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
+    
+    signal pks_val             : vector_of_std_logic_vector32(0 TO 3);
 
     component spectrometer_fixpt
         -- ports
@@ -58,10 +62,7 @@ architecture behavioral of SPEC_TST is
 
             -- Outputs
             ce_out : out std_logic;
-            \pks[0]\ : out std_logic_vector(31 downto 0);
-            \pks[1]\ : out std_logic_vector(31 downto 0);
-            \pks[2]\ : out std_logic_vector(31 downto 0);
-            \pks[3]\ : out std_logic_vector(31 downto 0);
+            pks    : out vector_of_std_logic_vector32(0 TO 3);
             outbin : out std_logic_vector(10 downto 0);
             ready : out std_logic
 
@@ -96,7 +97,7 @@ begin
             -- Inputs
             clk => SYSCLK,
             reset => NSYSRESET,
-            clk_enable => SYSCLK,
+            clk_enable => '1',
             Navg => (others=> '0'),
             sample1 => b"01" & x"123",
             sample2 => b"01" & x"abc",
@@ -109,10 +110,7 @@ begin
 
             -- Outputs
             ce_out =>  open,
-            \pks[0]\ => open,
-            \pks[1]\ => open,
-            \pks[2]\ => open,
-            \pks[3]\ => open,
+            pks => pks_val,
             outbin => open,
             ready =>  open
 
@@ -121,4 +119,3 @@ begin
         );
 
 end behavioral;
-

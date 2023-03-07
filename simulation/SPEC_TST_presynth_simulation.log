@@ -1,11 +1,10 @@
-# Reading pref.tcl
 # do run.do
 # INFO: Simulation library presynth already exists
 # Model Technology ModelSim Microsemi Pro vmap 2022.2 Lib Mapping Utility 2022.04 Apr 26 2022
 # vmap presynth presynth 
 # Modifying modelsim.ini
 # Model Technology ModelSim Microsemi Pro vmap 2022.2 Lib Mapping Utility 2022.04 Apr 26 2022
-# vmap PolarFire C:/Microchip/Libero_SoC_v2022.3/Designer/lib/modelsimpro/precompiled/vlog/PolarFire 
+# vmap PolarFire /usr/local/microchip/Libero_SoC_v2022.3/Libero/lib/modelsimpro/precompiled/vlog/polarfire 
 # Modifying modelsim.ini
 # INFO: Simulation library COREUART_LIB already exists
 # Model Technology ModelSim Microsemi Pro vmap 2022.2 Lib Mapping Utility 2022.04 Apr 26 2022
@@ -16,19 +15,715 @@
 # vmap COREFIFO_LIB COREFIFO_LIB 
 # Modifying modelsim.ini
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:31 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SimpleDualPortRAM_generic.vhd 
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft
+# -- Compiling architecture translated of COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package fifo_pkg
+# -- Compiling package body fifo_pkg
+# -- Loading package fifo_pkg
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_corefifo_sync_scntr
+# -- Compiling architecture translated of COREFIFO_C0_COREFIFO_C0_0_corefifo_sync_scntr
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_corefifo_sync
+# -- Compiling architecture translated of COREFIFO_C0_COREFIFO_C0_0_corefifo_sync
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync
+# -- Compiling architecture translated of COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv
+# -- Compiling architecture translated of COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_corefifo_async
+# -- Compiling architecture translated of COREFIFO_C0_COREFIFO_C0_0_corefifo_async
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_LSRAM_top
+# -- Compiling architecture DEF_ARCH of COREFIFO_C0_COREFIFO_C0_0_LSRAM_top
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_ram_wrapper
+# -- Compiling architecture generated of COREFIFO_C0_COREFIFO_C0_0_ram_wrapper
+# End time: 17:27:23 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:23 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity COREFIFO_C0_COREFIFO_C0_0_COREFIFO
+# -- Compiling architecture translated of COREFIFO_C0_COREFIFO_C0_0_COREFIFO
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity COREFIFO_C0
+# -- Compiling architecture RTL of COREFIFO_C0
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_fwft
+# -- Compiling architecture translated of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_fwft
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_sync_scntr
+# -- Compiling architecture translated of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_sync_scntr
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_sync
+# -- Compiling architecture translated of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_sync
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_NstagesSync
+# -- Compiling architecture translated of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_NstagesSync
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_grayToBinConv
+# -- Compiling architecture translated of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_grayToBinConv
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_async
+# -- Compiling architecture translated of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_corefifo_async
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top
+# -- Compiling architecture DEF_ARCH of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper
+# -- Compiling architecture generated of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_COREFIFO
+# -- Compiling architecture translated of COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_COREFIFO
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity COREFIFO_Spectrometer
+# -- Compiling architecture RTL of COREFIFO_Spectrometer
+# End time: 17:27:24 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:24 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package spectrometer_fixpt_pkg
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADC_UART_RDOUT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package spectrometer_fixpt_pkg
+# -- Compiling entity ADC_UART_RDOUT
+# -- Compiling architecture architecture_ADC_UART_RDOUT of ADC_UART_RDOUT
+# -- Loading entity COREFIFO_Spectrometer
+# -- Loading entity COREFIFO_C0
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vlog -reportprogress 300 -sv -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_RX/PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD.v 
+# -- Compiling module PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD
+# 
+# Top level modules:
+# 	PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vlog -reportprogress 300 -sv -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v 
+# -- Compiling module PF_IOD_ADC_ADS4245
+# 
+# Top level modules:
+# 	PF_IOD_ADC_ADS4245
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ADS4245_CNTL
+# -- Compiling architecture architecture_ADS4245_CNTL of ADS4245_CNTL
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity IO_registers
+# -- Compiling architecture behavior of IO_registers
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity LED_DIMMER_s
+# -- Compiling architecture behavior of LED_DIMMER_s
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vlog -reportprogress 300 -sv -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v 
+# -- Compiling module PF_CCC_C0_PF_CCC_C0_0_PF_CCC
+# 
+# Top level modules:
+# 	PF_CCC_C0_PF_CCC_C0_0_PF_CCC
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vlog -reportprogress 300 -sv -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0.v 
+# -- Compiling module PF_CCC_C0
+# 
+# Top level modules:
+# 	PF_CCC_C0
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CORERESET_PF_C0_CORERESET_PF_C0_0_corereset_pf
+# -- Compiling architecture architecture_corereset_pf of CORERESET_PF_C0_CORERESET_PF_C0_0_corereset_pf
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CORERESET_PF_C0
+# -- Compiling architecture RTL of CORERESET_PF_C0
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vlog -reportprogress 300 -sv -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0_0/PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v 
+# -- Compiling module PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR
+# 
+# Top level modules:
+# 	PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR
+# End time: 17:27:25 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:25 on Mar 07,2023
+# vlog -reportprogress 300 -sv -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0.v 
+# -- Compiling module PF_INIT_MONITOR_C0
+# 
+# Top level modules:
+# 	PF_INIT_MONITOR_C0
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PF_RESET
+# -- Compiling architecture architecture_PF_RESET of PF_RESET
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity COREUART_C0_COREUART_C0_0_Rx_async
+# -- Compiling architecture translated of COREUART_C0_COREUART_C0_0_Rx_async
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity COREUART_C0_COREUART_C0_0_Tx_async
+# -- Compiling architecture translated of COREUART_C0_COREUART_C0_0_Tx_async
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/fifo_256x8_g5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity COREUART_C0_COREUART_C0_0_fifo_256x8
+# -- Compiling architecture translated of COREUART_C0_COREUART_C0_0_fifo_256x8
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity COREUART_C0_COREUART_C0_0_fifo_ctrl_256
+# -- Compiling architecture translated of COREUART_C0_COREUART_C0_0_fifo_ctrl_256
+# -- Compiling entity COREUART_C0_COREUART_C0_0_ram256x8_g5
+# -- Compiling architecture translated of COREUART_C0_COREUART_C0_0_ram256x8_g5
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity COREUART_C0_COREUART_C0_0_Clock_gen
+# -- Compiling architecture rtl of COREUART_C0_COREUART_C0_0_Clock_gen
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/coreuart_pkg.vhd 
+# -- Loading package STANDARD
+# -- Compiling package COREUART_C0_COREUART_C0_0_coreuart_pkg
+# -- Compiling package body COREUART_C0_COREUART_C0_0_coreuart_pkg
+# -- Loading package COREUART_C0_COREUART_C0_0_coreuart_pkg
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/CoreUART.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package COREUART_C0_COREUART_C0_0_coreuart_pkg
+# -- Compiling entity COREUART_C0_COREUART_C0_0_COREUART
+# -- Compiling architecture translated of COREUART_C0_COREUART_C0_0_COREUART
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package COREUART_C0_COREUART_C0_0_components
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package COREUART_C0_COREUART_C0_0_components
+# -- Compiling entity COREUART_C0
+# -- Compiling architecture RTL of COREUART_C0
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity UART_FIFO_UART_FIFO_0_corefifo_fwft
+# -- Compiling architecture translated of UART_FIFO_UART_FIFO_0_corefifo_fwft
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity UART_FIFO_UART_FIFO_0_corefifo_sync_scntr
+# -- Compiling architecture translated of UART_FIFO_UART_FIFO_0_corefifo_sync_scntr
+# End time: 17:27:26 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:26 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity UART_FIFO_UART_FIFO_0_corefifo_sync
+# -- Compiling architecture translated of UART_FIFO_UART_FIFO_0_corefifo_sync
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity UART_FIFO_UART_FIFO_0_corefifo_NstagesSync
+# -- Compiling architecture translated of UART_FIFO_UART_FIFO_0_corefifo_NstagesSync
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity UART_FIFO_UART_FIFO_0_corefifo_grayToBinConv
+# -- Compiling architecture translated of UART_FIFO_UART_FIFO_0_corefifo_grayToBinConv
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity UART_FIFO_UART_FIFO_0_corefifo_async
+# -- Compiling architecture translated of UART_FIFO_UART_FIFO_0_corefifo_async
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity UART_FIFO_UART_FIFO_0_LSRAM_top
+# -- Compiling architecture DEF_ARCH of UART_FIFO_UART_FIFO_0_LSRAM_top
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity UART_FIFO_UART_FIFO_0_ram_wrapper
+# -- Compiling architecture generated of UART_FIFO_UART_FIFO_0_ram_wrapper
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package fifo_pkg
+# -- Compiling entity UART_FIFO_UART_FIFO_0_COREFIFO
+# -- Compiling architecture translated of UART_FIFO_UART_FIFO_0_COREFIFO
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity UART_FIFO
+# -- Compiling architecture RTL of UART_FIFO
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package LuSEE_Pkg
+# -- Compiling package body LuSEE_Pkg
+# -- Loading package LuSEE_Pkg
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package LuSEE_Pkg
+# -- Compiling entity uart_reader
+# -- Compiling architecture architecture_uart_reader of uart_reader
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package LuSEE_Pkg
+# -- Compiling entity UART_IO
+# -- Compiling architecture architecture_UART_IO of UART_IO
+# -- Loading package COREUART_C0_COREUART_C0_0_components
+# -- Loading entity COREUART_C0
+# -- Loading entity uart_reader
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SimpleDualPortRAM_generic
 # -- Compiling architecture rtl of SimpleDualPortRAM_generic
-# End time: 20:08:31 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:27 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:31 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/average_instance_P1_fixpt.vhd 
+# Start time: 17:27:27 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/average_instance_P1_fixpt.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -36,165 +731,165 @@
 # -- Compiling entity average_instance_P1_fixpt
 # -- Compiling architecture rtl of average_instance_P1_fixpt
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:31 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:31 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SimpleDualPortRAM_generic_block.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SimpleDualPortRAM_generic_block
 # -- Compiling architecture rtl of SimpleDualPortRAM_generic_block
-# End time: 20:08:31 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:31 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/deinterlace_instance_12_fixpt.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity deinterlace_instance_12_fixpt
 # -- Compiling architecture rtl of deinterlace_instance_12_fixpt
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:01
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_1.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_1
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_1
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_10.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_10
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_10
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_11.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_11
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_11
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_12.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_12
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_12
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_2.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_2
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_2
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_3.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_3
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_3
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_4.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_4
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_4
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_5.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_5
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_5
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_6.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_6
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_6
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:28 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_7.vhd 
+# Start time: 17:27:28 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_7
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_7
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_8.vhd 
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_8
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_8
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_CTRL1_9.vhd 
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RADIX22FFT_CTRL1_9
 # -- Compiling architecture rtl of RADIX22FFT_CTRL1_9
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator1.vhd 
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -202,11 +897,11 @@
 # -- Compiling entity SDFCommutator1
 # -- Compiling architecture rtl of SDFCommutator1
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_1.vhd 
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -215,22 +910,11 @@
 # -- Compiling architecture rtl of RADIX22FFT_SDF1_1
 # -- Loading entity SimpleDualPortRAM_generic
 # -- Loading entity SDFCommutator1
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block3.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Complex4Multiply_block3
-# -- Compiling architecture rtl of Complex4Multiply_block3
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator11.vhd 
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator11.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -238,169 +922,22 @@
 # -- Compiling entity SDFCommutator11
 # -- Compiling architecture rtl of SDFCommutator11
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:32 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_11.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity RADIX22FFT_SDF1_11
-# -- Compiling architecture rtl of RADIX22FFT_SDF1_11
-# -- Loading entity Complex4Multiply_block3
-# -- Loading entity SDFCommutator11
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Complex4Multiply
-# -- Compiling architecture rtl of Complex4Multiply
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator3.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity SDFCommutator3
-# -- Compiling architecture rtl of SDFCommutator3
-# -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_3.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity RADIX22FFT_SDF1_3
-# -- Compiling architecture rtl of RADIX22FFT_SDF1_3
-# -- Loading entity Complex4Multiply
-# -- Loading entity SimpleDualPortRAM_generic
-# -- Loading entity SDFCommutator3
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Complex4Multiply_block
-# -- Compiling architecture rtl of Complex4Multiply_block
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator5.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity SDFCommutator5
-# -- Compiling architecture rtl of SDFCommutator5
-# -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_5.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity RADIX22FFT_SDF1_5
-# -- Compiling architecture rtl of RADIX22FFT_SDF1_5
-# -- Loading entity Complex4Multiply_block
-# -- Loading entity SimpleDualPortRAM_generic
-# -- Loading entity SDFCommutator5
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Complex4Multiply_block1
-# -- Compiling architecture rtl of Complex4Multiply_block1
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator7.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity SDFCommutator7
-# -- Compiling architecture rtl of SDFCommutator7
-# -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_7.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity RADIX22FFT_SDF1_7
-# -- Compiling architecture rtl of RADIX22FFT_SDF1_7
-# -- Loading entity Complex4Multiply_block1
-# -- Loading entity SimpleDualPortRAM_generic
-# -- Loading entity SDFCommutator7
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_block2.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Complex4Multiply_block2
-# -- Compiling architecture rtl of Complex4Multiply_block2
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator9.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity SDFCommutator9
-# -- Compiling architecture rtl of SDFCommutator9
-# -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Multiply_generic.vhd 
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Multiply_generic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Multiply_generic
 # -- Compiling architecture rtl of Multiply_generic
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/Complex4Multiply_generic.vhd 
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -408,11 +945,114 @@
 # -- Compiling entity Complex4Multiply_generic
 # -- Compiling architecture rtl of Complex4Multiply_generic
 # -- Loading entity Multiply_generic
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF1_9.vhd 
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_11
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_11
+# -- Loading entity Complex4Multiply_generic
+# -- Loading entity SDFCommutator11
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator3
+# -- Compiling architecture rtl of SDFCommutator3
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_3
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_3
+# -- Loading entity Complex4Multiply_generic
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator3
+# End time: 17:27:29 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:29 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator5
+# -- Compiling architecture rtl of SDFCommutator5
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_5
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_5
+# -- Loading entity Complex4Multiply_generic
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator5
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator7
+# -- Compiling architecture rtl of SDFCommutator7
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RADIX22FFT_SDF1_7
+# -- Compiling architecture rtl of RADIX22FFT_SDF1_7
+# -- Loading entity Complex4Multiply_generic
+# -- Loading entity SimpleDualPortRAM_generic
+# -- Loading entity SDFCommutator7
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator9.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SDFCommutator9
+# -- Compiling architecture rtl of SDFCommutator9
+# -- Loading entity SimpleDualPortRAM_generic
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -420,14 +1060,13 @@
 # -- Compiling entity RADIX22FFT_SDF1_9
 # -- Compiling architecture rtl of RADIX22FFT_SDF1_9
 # -- Loading entity Complex4Multiply_generic
-# -- Loading entity Complex4Multiply_block2
 # -- Loading entity SimpleDualPortRAM_generic
 # -- Loading entity SDFCommutator9
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator10.vhd 
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -435,11 +1074,11 @@
 # -- Compiling entity SDFCommutator10
 # -- Compiling architecture rtl of SDFCommutator10
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:33 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:33 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_10.vhd 
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -448,11 +1087,11 @@
 # -- Compiling architecture rtl of RADIX22FFT_SDF2_10
 # -- Loading entity SimpleDualPortRAM_generic
 # -- Loading entity SDFCommutator10
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:01
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator12.vhd 
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator12.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -460,11 +1099,11 @@
 # -- Compiling entity SDFCommutator12
 # -- Compiling architecture rtl of SDFCommutator12
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_12.vhd 
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -472,11 +1111,11 @@
 # -- Compiling entity RADIX22FFT_SDF2_12
 # -- Compiling architecture rtl of RADIX22FFT_SDF2_12
 # -- Loading entity SDFCommutator12
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator2.vhd 
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -484,11 +1123,11 @@
 # -- Compiling entity SDFCommutator2
 # -- Compiling architecture rtl of SDFCommutator2
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:30 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_2.vhd 
+# Start time: 17:27:30 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -497,11 +1136,11 @@
 # -- Compiling architecture rtl of RADIX22FFT_SDF2_2
 # -- Loading entity SimpleDualPortRAM_generic
 # -- Loading entity SDFCommutator2
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator4.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -509,11 +1148,11 @@
 # -- Compiling entity SDFCommutator4
 # -- Compiling architecture rtl of SDFCommutator4
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_4.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -522,11 +1161,11 @@
 # -- Compiling architecture rtl of RADIX22FFT_SDF2_4
 # -- Loading entity SimpleDualPortRAM_generic
 # -- Loading entity SDFCommutator4
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator6.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator6.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -534,11 +1173,11 @@
 # -- Compiling entity SDFCommutator6
 # -- Compiling architecture rtl of SDFCommutator6
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_6.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -547,11 +1186,11 @@
 # -- Compiling architecture rtl of RADIX22FFT_SDF2_6
 # -- Loading entity SimpleDualPortRAM_generic
 # -- Loading entity SDFCommutator6
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/SDFCommutator8.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator8.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -559,11 +1198,11 @@
 # -- Compiling entity SDFCommutator8
 # -- Compiling architecture rtl of SDFCommutator8
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX22FFT_SDF2_8.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -572,11 +1211,11 @@
 # -- Compiling architecture rtl of RADIX22FFT_SDF2_8
 # -- Loading entity SimpleDualPortRAM_generic
 # -- Loading entity SDFCommutator8
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/RADIX2FFT_bitNatural.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -584,86 +1223,76 @@
 # -- Compiling entity RADIX2FFT_bitNatural
 # -- Compiling architecture rtl of RADIX2FFT_bitNatural
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/sfft_fixpt_pkg.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity TWDLROM_11_1_array
+# -- Compiling architecture architecture_TWDLROM_11_1_array of TWDLROM_11_1_array
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling package sfft_fixpt_pkg
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_11_1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package sfft_fixpt_pkg
-# -- Compiling entity TWDLROM_11_1
-# -- Compiling architecture rtl of TWDLROM_11_1
-# End time: 20:08:34 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:34 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_3_1.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package sfft_fixpt_pkg
+# -- Loading package spectrometer_fixpt_pkg
 # -- Compiling entity TWDLROM_3_1
 # -- Compiling architecture rtl of TWDLROM_3_1
-# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:01
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:35 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_5_1.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Loading package sfft_fixpt_pkg
+# -- Loading package spectrometer_fixpt_pkg
 # -- Compiling entity TWDLROM_5_1
 # -- Compiling architecture rtl of TWDLROM_5_1
-# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:31 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:35 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_7_1.vhd 
+# Start time: 17:27:31 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Loading package sfft_fixpt_pkg
+# -- Loading package spectrometer_fixpt_pkg
 # -- Compiling entity TWDLROM_7_1
 # -- Compiling architecture rtl of TWDLROM_7_1
-# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:32 on Mar 07,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:35 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/TWDLROM_9_1.vhd 
+# Start time: 17:27:32 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Loading package sfft_fixpt_pkg
+# -- Loading package spectrometer_fixpt_pkg
 # -- Compiling entity TWDLROM_9_1
 # -- Compiling architecture rtl of TWDLROM_9_1
-# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:32 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:35 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/dsphdl_FFT.vhd 
+# Start time: 17:27:32 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Loading package sfft_fixpt_pkg
+# -- Loading package spectrometer_fixpt_pkg
 # -- Compiling entity dsphdl_FFT
 # -- Compiling architecture rtl of dsphdl_FFT
 # -- Loading entity RADIX22FFT_CTRL1_1
@@ -690,30 +1319,29 @@
 # -- Loading entity RADIX22FFT_SDF1_9
 # -- Loading entity RADIX22FFT_CTRL1_10
 # -- Loading entity RADIX22FFT_SDF2_10
-# -- Loading entity TWDLROM_11_1
 # -- Loading entity RADIX22FFT_CTRL1_11
 # -- Loading entity RADIX22FFT_SDF1_11
 # -- Loading entity RADIX22FFT_CTRL1_12
 # -- Loading entity RADIX22FFT_SDF2_12
 # -- Loading entity RADIX2FFT_bitNatural
-# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:32 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:35 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/sfft_fixpt.vhd 
+# Start time: 17:27:32 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity sfft_fixpt
 # -- Compiling architecture rtl of sfft_fixpt
-# -- Loading package sfft_fixpt_pkg
+# -- Loading package spectrometer_fixpt_pkg
 # -- Loading entity dsphdl_FFT
-# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:32 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:35 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_fold_instance_1_fixpt.vhd 
+# Start time: 17:27:32 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -721,21 +1349,11 @@
 # -- Compiling entity weight_fold_instance_1_fixpt
 # -- Compiling architecture rtl of weight_fold_instance_1_fixpt
 # -- Loading entity SimpleDualPortRAM_generic
-# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:32 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:35 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/spectrometer_fixpt_pkg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package spectrometer_fixpt_pkg
-# End time: 20:08:35 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:35 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_streamer_fixpt.vhd 
+# Start time: 17:27:32 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -743,11 +1361,11 @@
 # -- Loading package spectrometer_fixpt_pkg
 # -- Compiling entity weight_streamer_fixpt
 # -- Compiling architecture rtl of weight_streamer_fixpt
-# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:01
+# End time: 17:27:33 on Mar 07,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:36 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/spectrometer_fixpt.vhd 
+# Start time: 17:27:33 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -755,75 +1373,62 @@
 # -- Loading package spectrometer_fixpt_pkg
 # -- Compiling entity spectrometer_fixpt
 # -- Compiling architecture rtl of spectrometer_fixpt
-# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:33 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:36 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd 
+# Start time: 17:27:33 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling package fifo_pkg
-# -- Compiling package body fifo_pkg
-# -- Loading package fifo_pkg
-# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# -- Loading package NUMERIC_STD
+# -- Loading package spectrometer_fixpt_pkg
+# -- Compiling entity LuSEE_PF_EVAL
+# -- Compiling architecture architecture_LuSEE_PF_EVAL of LuSEE_PF_EVAL
+# -- Loading entity PF_RESET
+# -- Loading entity ADC_UART_RDOUT
+# -- Loading entity IO_registers
+# -- Loading entity ADS4245_CNTL
+# -- Loading entity spectrometer_fixpt
+# End time: 17:27:33 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:36 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/components.vhd 
+# Start time: 17:27:33 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling package COREUART_C0_COREUART_C0_0_components
-# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# -- Loading package NUMERIC_STD
+# -- Compiling package sfft_fixpt_pkg
+# End time: 17:27:33 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:36 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work COREUART_LIB C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/coreuart_pkg.vhd 
-# -- Loading package STANDARD
-# -- Compiling package COREUART_C0_COREUART_C0_0_coreuart_pkg
-# -- Compiling package body COREUART_C0_COREUART_C0_0_coreuart_pkg
-# -- Loading package COREUART_C0_COREUART_C0_0_coreuart_pkg
-# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:36 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/LuSEE_Pkg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling package LuSEE_Pkg
-# -- Compiling package body LuSEE_Pkg
-# -- Loading package LuSEE_Pkg
-# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:36 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/hdl/weight_streamer_fixpt_pkg.vhd 
+# Start time: 17:27:33 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling package weight_streamer_fixpt_pkg
-# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:33 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2022.2 Compiler 2022.04 Apr 26 2022
-# Start time: 20:08:36 on Feb 12,2023
-# vcom -reportprogress 300 -2008 -explicit -work presynth C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/SPEC_TST.vhd 
+# Start time: 17:27:33 on Mar 07,2023
+# vcom -reportprogress 300 -2008 -explicit -work presynth /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/stimulus/SPEC_TST.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package spectrometer_fixpt_pkg
 # -- Compiling entity SPEC_TST
 # -- Compiling architecture behavioral of SPEC_TST
-# End time: 20:08:36 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 17:27:33 on Mar 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB -t 1ps -pli "C:/Microchip/Libero_SoC_v2022.3/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll" presynth.SPEC_TST 
-# Start time: 20:08:36 on Feb 12,2023
-# //  ModelSim Microsemi Pro 2022.2 Apr 26 2022
+# vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB -t 1ps -pli "/usr/local/microchip/Libero_SoC_v2022.3/Libero/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so" presynth.SPEC_TST 
+# Start time: 17:27:33 on Mar 07,2023
+# //  ModelSim Microsemi Pro 2022.2 Apr 26 2022 Linux 6.1.12-1-MANJARO
 # //
 # //  Copyright 1991-2022 Mentor Graphics Corporation
 # //  All Rights Reserved.
@@ -839,21 +1444,13 @@
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading presynth.spec_tst(behavioral)
 # Loading ieee.numeric_std(body)
 # Loading presynth.spectrometer_fixpt_pkg
+# Loading presynth.spec_tst(behavioral)
 # Loading presynth.spectrometer_fixpt(rtl)
-# ** Error: (vsim-3732) No default binding for component instance 'spectrometer_fixpt_0'.
-#    The following component ports are not on the entity:
-#           \pks[3]\
-#           \pks[2]\
-#           \pks[1]\
-#           \pks[0]\
-#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0 File: C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/SPEC_TST.vhd Line: 93
 # Loading presynth.weight_streamer_fixpt(rtl)
 # Loading presynth.weight_fold_instance_1_fixpt(rtl)
 # Loading presynth.simpledualportram_generic(rtl)
-# Loading presynth.sfft_fixpt_pkg
 # Loading presynth.sfft_fixpt(rtl)
 # Loading presynth.dsphdl_fft(rtl)
 # Loading presynth.radix22fft_ctrl1_1(rtl)
@@ -865,7 +1462,8 @@
 # Loading presynth.twdlrom_3_1(rtl)
 # Loading presynth.radix22fft_ctrl1_3(rtl)
 # Loading presynth.radix22fft_sdf1_3(rtl)
-# Loading presynth.complex4multiply(rtl)
+# Loading presynth.complex4multiply_generic(rtl)
+# Loading presynth.multiply_generic(rtl)
 # Loading presynth.sdfcommutator3(rtl)
 # Loading presynth.radix22fft_ctrl1_4(rtl)
 # Loading presynth.radix22fft_sdf2_4(rtl)
@@ -873,7 +1471,6 @@
 # Loading presynth.twdlrom_5_1(rtl)
 # Loading presynth.radix22fft_ctrl1_5(rtl)
 # Loading presynth.radix22fft_sdf1_5(rtl)
-# Loading presynth.complex4multiply_block(rtl)
 # Loading presynth.sdfcommutator5(rtl)
 # Loading presynth.radix22fft_ctrl1_6(rtl)
 # Loading presynth.radix22fft_sdf2_6(rtl)
@@ -881,7 +1478,6 @@
 # Loading presynth.twdlrom_7_1(rtl)
 # Loading presynth.radix22fft_ctrl1_7(rtl)
 # Loading presynth.radix22fft_sdf1_7(rtl)
-# Loading presynth.complex4multiply_block1(rtl)
 # Loading presynth.sdfcommutator7(rtl)
 # Loading presynth.radix22fft_ctrl1_8(rtl)
 # Loading presynth.radix22fft_sdf2_8(rtl)
@@ -889,17 +1485,15 @@
 # Loading presynth.twdlrom_9_1(rtl)
 # Loading presynth.radix22fft_ctrl1_9(rtl)
 # Loading presynth.radix22fft_sdf1_9(rtl)
-# Loading presynth.complex4multiply_generic(rtl)
-# Loading presynth.multiply_generic(rtl)
-# Loading presynth.complex4multiply_block2(rtl)
 # Loading presynth.sdfcommutator9(rtl)
 # Loading presynth.radix22fft_ctrl1_10(rtl)
 # Loading presynth.radix22fft_sdf2_10(rtl)
 # Loading presynth.sdfcommutator10(rtl)
-# Loading presynth.twdlrom_11_1(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading presynth.twdlrom_11_1_array(architecture_twdlrom_11_1_array)
 # Loading presynth.radix22fft_ctrl1_11(rtl)
 # Loading presynth.radix22fft_sdf1_11(rtl)
-# Loading presynth.complex4multiply_block3(rtl)
 # Loading presynth.sdfcommutator11(rtl)
 # Loading presynth.radix22fft_ctrl1_12(rtl)
 # Loading presynth.radix22fft_sdf2_12(rtl)
@@ -908,14 +1502,515 @@
 # Loading presynth.deinterlace_instance_12_fixpt(rtl)
 # Loading presynth.simpledualportram_generic_block(rtl)
 # Loading presynth.average_instance_p1_fixpt(rtl)
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./run.do PAUSED at line 94
-
-
-
-
-
-# End time: 20:13:34 on Feb 12,2023, Elapsed time: 0:04:58
-# Errors: 1, Warnings: 0
+# Loading /usr/local/microchip/Libero_SoC_v2022.3/Libero/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/deinterlace_instance_12_fixpt_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/deinterlace_instance_12_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/deinterlace_instance_12_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1/u_buf_ram_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1/u_buf_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1/u_buf_ram_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1/u_buf_ram_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2/u_buf_ram_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2/u_buf_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2/u_buf_ram_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2/u_buf_ram_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_8_1/u_dataMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_8_1/u_dataMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_9_1/u_dataMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_9_1/u_dataMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_9_1/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_9_1/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_10_1/u_dataMEM_im_0_10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_10_1/u_dataMEM_re_0_10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/u_dataXMEM_re_0_10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/u_dataXMEM_im_0_10
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_11_2
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_11_2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_11_2
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_11_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_11_1/u_SDFCOMMUTATOR_11/u_dataXMEM_re_0_11
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF1_11_1/u_SDFCOMMUTATOR_11/u_dataXMEM_im_0_11
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_12_1/u_SDFCOMMUTATOR_12/u_dataXMEM_re_0_12
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_SDF2_12_1/u_SDFCOMMUTATOR_12/u_dataXMEM_im_0_12
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/deinterlace_instance_12_fixpt_inst/u_buf_ram_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst/u_buf2_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst/u_buf1_ram_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2/u_buf2_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2/u_buf1_ram_generic
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/deinterlace_instance_12_fixpt_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/deinterlace_instance_12_fixpt_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/deinterlace_instance_12_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 50 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1/u_buf_ram_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1/u_buf_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1/u_buf_ram_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst1/u_buf_ram_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2/u_buf_ram_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2/u_buf_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2/u_buf_ram_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/weight_fold_instance_1_fixpt_inst2/u_buf_ram_2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_11_2
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_11_2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_11_2
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_11_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/deinterlace_instance_12_fixpt_inst/u_buf_ram_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst/u_buf2_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst/u_buf1_ram_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2/u_buf2_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2/u_buf1_ram_generic
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/sfft_fixpt_inst/u_dsphdl_FFT/u_twdlROM_9_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 1  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 150 ns  Iteration: 2  Instance: /spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst2
+run -all
+# End time: 17:27:46 on Mar 07,2023, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 254

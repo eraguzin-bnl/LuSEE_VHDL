@@ -4191,7 +4191,6 @@ PROCESS (clk, reset)
       count_add   <= 0;
       INDEX       <= 0;
     ELSIF clk'EVENT AND clk = '1' THEN
-      count_add <= count_add +1;
   /* 
       tmp_1 <= pfb_weights1(count_add );
       tmp_2 <= pfb_weights2(count_add );
@@ -4209,6 +4208,8 @@ PROCESS (clk, reset)
         IF(INDEX = 3) THEN
             INDEX <= 0;
         END IF;
+      ELSE
+        count_add <= count_add +1;
       END IF;  
     END IF;
  END PROCESS ;
@@ -4250,7 +4251,3 @@ PROCESS (clk, reset)
             w4_tmp;
             
 END rtl;
-
-
-
-
