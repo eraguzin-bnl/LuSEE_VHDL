@@ -145,7 +145,12 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli $1/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
 
 add wave /SPEC_TST/*
-add wave /spec_tst/spectrometer_fixpt_0/fft_ready
+add wave /spec_tst/spectrometer_fixpt_0/sample1
+add wave /spec_tst/spectrometer_fixpt_0/sample2
+add wave /spec_tst/spectrometer_fixpt_0/Navg
+add wave /spec_tst/spectrometer_fixpt_0/pks
+add wave /spec_tst/spectrometer_fixpt_0/outbin
+add wave /spec_tst/spectrometer_fixpt_0/ready
 
 set strobe Low
 set count 0

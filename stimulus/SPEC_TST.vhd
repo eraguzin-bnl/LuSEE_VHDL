@@ -31,6 +31,10 @@ use ieee.std_logic_1164.all;
 USE IEEE.numeric_std.ALL;
 USE work.spectrometer_fixpt_pkg.ALL;
 
+--For reading file
+LIBRARY STD;
+USE STD.textio.ALL;
+
 entity SPEC_TST is
 end SPEC_TST;
 
@@ -46,6 +50,9 @@ architecture behavioral of SPEC_TST is
     signal pks1                : std_logic_vector(31 downto 0);
     signal pks2                : std_logic_vector(31 downto 0);
     signal pks3                : std_logic_vector(31 downto 0);
+
+    SIGNAL sample1             : std_logic_vector(13 DOWNTO 0);
+    SIGNAL sample2             : std_logic_vector(13 DOWNTO 0);
 
     component spectrometer_fixpt
         -- ports
@@ -94,10 +101,50 @@ begin
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
     
+    --Needs to be split up so that ModelSim can see them
     pks0 <= pks_val(0);
     pks1 <= pks_val(1);
     pks2 <= pks_val(2);
     pks3 <= pks_val(3);
+
+    -- Data source for adc
+      c_re_fileread: PROCESS
+        FILE fp: TEXT;
+        VARIABLE file_status: std_logic := '0';
+        VARIABLE l: LINE;
+        VARIABLE read_data: std_logic_vector(31 DOWNTO 0);
+        VARIABLE sample1_v: std_logic_vector(13 DOWNTO 0);
+        VARIABLE sample2_v: std_logic_vector(13 DOWNTO 0);
+        
+
+      BEGIN
+      wait for SYSCLK_PERIOD;
+        IF (file_status = '0') THEN
+            report "Opening file";
+            file_open(fp, "data_fixed.txt", read_mode);
+            file_status := '1';
+        END IF;
+        
+        IF NSYSRESET = '0' AND NOT ENDFILE(fp) THEN
+        --report "reading line ";
+          READLINE(fp, l);
+          HREAD(l, read_data);
+          sample1_v := read_data(29 downto 16);
+          sample2_v := read_data(13 downto 0);
+          sample1 <= sample1_v;
+          sample2 <= sample2_v;
+          --report "value is " & to_hex_string(read_data);
+          --report "sample1v is " & to_hex_string(sample1_v);
+          --report "sample2v is " & to_hex_string(sample2_v);
+        END IF;
+        
+        IF ENDFILE(fp) THEN
+          report "VHDL --> Sample input file ended, restarting";
+          file_close(fp);
+          file_status := '0';
+        END IF;
+        
+      END PROCESS c_re_fileread;
 
     -- Instantiate Unit Under Test:  spectrometer_fixpt
     spectrometer_fixpt_0 : spectrometer_fixpt
@@ -108,8 +155,8 @@ begin
             reset => NSYSRESET,
             clk_enable => '1',
             Navg => (others=> '0'),
-            sample1 => b"01" & x"123",
-            sample2 => b"01" & x"abc",
+            sample1 => sample1,
+            sample2 => sample2,
             nstart => '1',
             Streamer_DLY => (others=> '0'),
             weight_fold_DLY => (others=> '0'),

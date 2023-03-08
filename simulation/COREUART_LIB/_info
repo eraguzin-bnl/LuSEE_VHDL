@@ -40,7 +40,7 @@ R3
 R2
 R4
 R5
-!i122 441
+!i122 490
 Z13 d/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/simulation
 Z14 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd
 Z15 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd
@@ -50,9 +50,9 @@ VGX@Z80<XX;fVD]QaHKlOf2
 !s100 4@ofEWZ400TAen7MY>cGo1
 R7
 33
-Z16 !s110 1678306968
+Z16 !s110 1678312215
 !i10b 1
-Z17 !s108 1678306968.000000
+Z17 !s108 1678312215.000000
 Z18 !s90 -reportprogress|300|-2008|-explicit|-work|COREUART_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd|
 Z19 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd|
 !i113 1
@@ -64,7 +64,7 @@ R2
 R4
 R5
 DEx4 work 35 coreuart_c0_coreuart_c0_0_clock_gen 0 22 GX@Z80<XX;fVD]QaHKlOf2
-!i122 441
+!i122 490
 l58
 L47 221
 VINUmCzQkYn0d^Xa`kj<a53
@@ -82,7 +82,7 @@ R11
 Pcoreuart_c0_coreuart_c0_0_components
 R4
 R5
-!i122 444
+!i122 493
 R12
 R13
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/components.vhd
@@ -108,7 +108,7 @@ R3
 R2
 R4
 R5
-!i122 443
+!i122 492
 R13
 Z21 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/CoreUART.vhd
 Z22 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/CoreUART.vhd
@@ -133,7 +133,7 @@ R2
 R4
 R5
 DEx4 work 34 coreuart_c0_coreuart_c0_0_coreuart 0 22 UkHlY;maR[_Fm5mbWMb>e1
-!i122 443
+!i122 492
 l224
 L67 502
 VgKT6lHDcle7jTnfX534B>2
@@ -149,7 +149,7 @@ R25
 R10
 R11
 Pcoreuart_c0_coreuart_c0_0_coreuart_pkg
-!i122 442
+!i122 491
 R12
 R13
 Z26 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/coreuart_pkg.vhd
@@ -171,7 +171,7 @@ R10
 R11
 Bbody
 R20
-!i122 442
+!i122 491
 l0
 L5 14
 VG]H?:YDA2YcU:9eLTaE4A3
@@ -190,7 +190,7 @@ Ecoreuart_c0_coreuart_c0_0_fifo_256x8
 R12
 R4
 R5
-!i122 440
+!i122 489
 R13
 Z30 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/fifo_256x8_g5.vhd
 Z31 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/fifo_256x8_g5.vhd
@@ -212,7 +212,7 @@ Atranslated
 R4
 R5
 DEx4 work 36 coreuart_c0_coreuart_c0_0_fifo_256x8 0 22 FS^;[Nlc2:Z^@ofjSEGX:1
-!i122 440
+!i122 489
 l78
 L48 50
 VH1JBR6jddK6C8=5ZL2<890
@@ -233,7 +233,7 @@ R2
 R3
 R4
 R5
-!i122 440
+!i122 489
 R13
 R30
 R31
@@ -257,7 +257,7 @@ R3
 R4
 R5
 DEx4 work 39 coreuart_c0_coreuart_c0_0_fifo_ctrl_256 0 22 nN7]9z9lHQ5lP=WPJYGD^2
-!i122 440
+!i122 489
 l188
 L144 154
 V;[Z>6FDfcYgR`YX9eoc>[1
@@ -276,7 +276,7 @@ Ecoreuart_c0_coreuart_c0_0_ram256x8_g5
 R12
 R4
 R5
-!i122 440
+!i122 489
 R13
 R30
 R31
@@ -298,7 +298,7 @@ Atranslated
 R4
 R5
 DEx4 work 37 coreuart_c0_coreuart_c0_0_ram256x8_g5 0 22 :akPhOC@:kKZIa43HPO;U0
-!i122 440
+!i122 489
 l376
 L317 113
 VO:2Q^bJik[OPGnShize:_1
@@ -319,7 +319,7 @@ R3
 R2
 R4
 R5
-!i122 438
+!i122 487
 R13
 Z34 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd
 Z35 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd
@@ -343,7 +343,7 @@ R2
 R4
 R5
 DEx4 work 34 coreuart_c0_coreuart_c0_0_rx_async 0 22 D10I[iePOa_>AFC6MMEY60
-!i122 438
+!i122 487
 l97
 L61 451
 VZCEGRb:46^me`7@I<k8C21
@@ -364,7 +364,7 @@ R3
 R2
 R4
 R5
-!i122 439
+!i122 488
 R13
 Z39 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd
 Z40 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd
@@ -388,7 +388,7 @@ R2
 R4
 R5
 DEx4 work 34 coreuart_c0_coreuart_c0_0_tx_async 0 22 LMogOBlBX@mV5V4SJLJP53
-!i122 439
+!i122 488
 l95
 L56 267
 VHNgg5NgmGn6zLF[;a>QSk1

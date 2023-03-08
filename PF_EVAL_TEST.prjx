@@ -1155,13 +1155,13 @@ SIZE="46282"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1678297284"
-SIZE="38199"
+TIME="1678297760"
+SIZE="38054"
 ENDFILE
 VALUE "<project>/simulation/presynth_simulation.log,log"
 STATE="utd"
-TIME="1678297509"
-SIZE="31712"
+TIME="1678312225"
+SIZE="127578"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
@@ -1170,13 +1170,13 @@ SIZE="12500"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1678297481"
-SIZE="12466"
+TIME="1678308412"
+SIZE="13778"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
-TIME="1678297517"
-SIZE="463"
+TIME="1678311121"
+SIZE="557605"
 ENDFILE
 VALUE "<project>/simulation/testbnch_presynth_simulation.log,log"
 STATE="utd"
@@ -1195,8 +1195,8 @@ SIZE="3219"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1678298571"
-SIZE="3854"
+TIME="1678312205"
+SIZE="5365"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -1778,7 +1778,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=" -l presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -2051,10 +2051,10 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;stimulus/SPEC_TST.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
+HDL;stimulus/SPEC_TST.vhd;0
 StartPage;StartPage;0
-ACTIVEVIEW;hdl/spectrometer_fixpt.vhd
+ACTIVEVIEW;stimulus/SPEC_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
