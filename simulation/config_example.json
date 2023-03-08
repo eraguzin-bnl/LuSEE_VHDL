@@ -1,4 +1,62 @@
 {"Libero_Location": "/usr/local/microchip/Libero_SoC_v2022.3/Libero/bin64/libero",
 "Project_Location": "/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST",
-"Project_File": "PF_EVAL_TEST.prjx"
+"Project_File": "PF_EVAL_TEST.prjx",
+"Signals":
+    {"pks0": {
+        "Title": "Peaks0",
+        "Y-axis": "bin counts",
+        "Signedness": "unsigned",
+        "Word Length": 32,
+        "Fraction Length": 0
+        },
+    "pks1": {
+        "Title": "Peaks1",
+        "Y-axis": "bin counts",
+        "Signedness": "unsigned",
+        "Word Length": 32,
+        "Fraction Length": 0
+        },
+    "pks2": {
+        "Title": "Peaks2",
+        "Y-axis": "bin counts",
+        "Signedness": "unsigned",
+        "Word Length": 32,
+        "Fraction Length": 0
+        },
+    "pks3": {
+        "Title": "Peaks3",
+        "Y-axis": "bin counts",
+        "Signedness": "unsigned",
+        "Word Length": 32,
+        "Fraction Length": 0
+        },
+    "outbin": {
+        "Title": "outbin",
+        "Y-axis": "bin",
+        "Signedness": "unsigned",
+        "Word Length": 11,
+        "Fraction Length": 0
+        },
+    "ready": {
+        "Title": "ready",
+        "Y-axis": "ready",
+        "Signedness": "unsigned",
+        "Word Length": 1,
+        "Fraction Length": 0
+        },
+    "sample1": {
+        "Title": "Sample 1",
+        "Y-axis": "Amplitude",
+        "Signedness": "unsigned",
+        "Word Length": 14,
+        "Fraction Length": 0
+    },
+    "sample2": {
+        "Title": "Sample 2",
+        "Y-axis": "Amplitude",
+        "Signedness": "unsigned",
+        "Word Length": 1,
+        "Fraction Length": 0
+    }
+ }
 }

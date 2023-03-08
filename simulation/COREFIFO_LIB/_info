@@ -18,7 +18,7 @@ Z4 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
 Z5 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
 Z6 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
 Z7 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-!i122 1735
+!i122 1903
 Z8 d/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/simulation
 Z9 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd
 Z10 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd
@@ -28,10 +28,10 @@ ViOG>S=jMGGl4MhUC:;cCD2
 !s100 `I0?TX[l2BOWLJUK1896;3
 Z12 OW;C;2022.2;75
 33
-Z13 !s110 1678312213
+Z13 !s110 1678317082
 !i10b 1
-Z14 !s108 1678312213.000000
-Z15 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd|
+Z14 !s108 1678317082.000000
+Z15 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd|
 Z16 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd|
 !i113 1
 Z17 o-2008 -explicit -work COREFIFO_LIB -O0
@@ -45,7 +45,7 @@ R5
 R6
 R7
 DEx4 work 34 corefifo_c0_corefifo_c0_0_corefifo 0 22 iOG>S=jMGGl4MhUC:;cCD2
-!i122 1735
+!i122 1903
 l609
 Z19 L120 1583
 V=j0aJ=;W;if?aczUF5Kfh2
@@ -69,7 +69,7 @@ R4
 R5
 R6
 R7
-!i122 1732
+!i122 1900
 R8
 Z20 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd
 Z21 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd
@@ -79,11 +79,11 @@ VSUXV0MGaC:Kc8_UjKc93j2
 !s100 c1ZEe^6bz@Nz3IKe9OEW_3
 R12
 33
-Z23 !s110 1678312212
+R13
 !i10b 1
-Z24 !s108 1678312212.000000
-Z25 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd|
-Z26 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd|
+R14
+Z23 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd|
+Z24 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd|
 !i113 1
 R17
 R18
@@ -96,18 +96,18 @@ R5
 R6
 R7
 DEx4 work 40 corefifo_c0_corefifo_c0_0_corefifo_async 0 22 SUXV0MGaC:Kc8_UjKc93j2
-!i122 1732
+!i122 1900
 l326
-Z27 L108 1728
+Z25 L108 1728
 V5ISdKZ=:_Ng=0JVo:HRIK0
 !s100 iMnKzjC3i8>CdHZU5E]632
 R12
 33
-R23
+R13
 !i10b 1
+R14
+R23
 R24
-R25
-R26
 !i113 1
 R17
 R18
@@ -119,20 +119,20 @@ R4
 R5
 R6
 R7
-!i122 1726
+!i122 1894
 R8
-Z28 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd
-Z29 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd
+Z26 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd
+Z27 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd
 l0
-Z30 L31 1
+Z28 L31 1
 V;TXlk=XcLW=;LI0Q0<TO[1
 !s100 h9gSR5LhBz1ZdEBV89QGj0
 R12
 33
-R23
+Z29 !s110 1678317081
 !i10b 1
-R24
-Z31 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd|
+Z30 !s108 1678317081.000000
+Z31 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd|
 Z32 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd|
 !i113 1
 R17
@@ -145,16 +145,16 @@ R5
 R6
 R7
 DEx4 work 39 corefifo_c0_corefifo_c0_0_corefifo_fwft 0 22 ;TXlk=XcLW=;LI0Q0<TO[1
-!i122 1726
+!i122 1894
 l203
 Z33 L87 360
 VMzYEJSmAZC>5ChGjUR54V0
 !s100 H]SC9^RFg@g^Bdf6ia^W70
 R12
 33
-R23
+R29
 !i10b 1
-R24
+R30
 R31
 R32
 !i113 1
@@ -168,7 +168,7 @@ R4
 R5
 R6
 R7
-!i122 1731
+!i122 1899
 R8
 Z34 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
 Z35 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
@@ -178,10 +178,10 @@ Vd6=[>]0c>WeQn6QKS?O]T1
 !s100 TciIlHChGJ>2HeLzFW1MQ1
 R12
 33
-R23
+R13
 !i10b 1
-R24
-Z37 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
+R14
+Z37 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
 Z38 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
 !i113 1
 R17
@@ -194,16 +194,16 @@ R5
 R6
 R7
 DEx4 work 48 corefifo_c0_corefifo_c0_0_corefifo_graytobinconv 0 22 d6=[>]0c>WeQn6QKS?O]T1
-!i122 1731
+!i122 1899
 l62
 Z39 L54 31
 VcmV2]mcL]JHg2;XSQ@=AZ1
 !s100 @D@n>jhO5`]FOf_7KUA@41
 R12
 33
-R23
+R13
 !i10b 1
-R24
+R14
 R37
 R38
 !i113 1
@@ -217,20 +217,20 @@ R4
 R5
 R6
 R7
-!i122 1730
+!i122 1898
 R8
 Z40 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
 Z41 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
 l0
-R30
+R28
 V7WDVYj_bBe22go=321bmZ0
 !s100 j1eHRlFffZXjzGJ5nLi833
 R12
 33
-R23
+R13
 !i10b 1
-R24
-Z42 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
+R30
+Z42 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
 Z43 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
 !i113 1
 R17
@@ -243,16 +243,16 @@ R5
 R6
 R7
 DEx4 work 46 corefifo_c0_corefifo_c0_0_corefifo_nstagessync 0 22 7WDVYj_bBe22go=321bmZ0
-!i122 1730
+!i122 1898
 l68
 Z44 L58 46
 VT4`QYl;fZSQVQokJIUYI;3
 !s100 h3n9LBWZ41SYO]<zNVoRM0
 R12
 33
-R23
+R13
 !i10b 1
-R24
+R30
 R42
 R43
 !i113 1
@@ -267,20 +267,20 @@ R4
 R5
 R6
 R7
-!i122 1729
+!i122 1897
 R8
 Z45 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd
 Z46 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd
 l0
-R30
+R28
 V8P[RWdQ@8kjgMLED>17UC2
 !s100 eocIKDL<klP@4dZf1oR=g1
 R12
 33
-R23
+R29
 !i10b 1
-R24
-Z47 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd|
+R30
+Z47 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd|
 Z48 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd|
 !i113 1
 R17
@@ -294,16 +294,16 @@ R5
 R6
 R7
 DEx4 work 39 corefifo_c0_corefifo_c0_0_corefifo_sync 0 22 8P[RWdQ@8kjgMLED>17UC2
-!i122 1729
+!i122 1897
 l283
 Z49 L99 1221
 V53YE_bfWFjBm9=6BSbYYP3
 !s100 Z<MY>=BQ]BJ8[Kl9^VBzJ3
 R12
 33
-R23
+R29
 !i10b 1
-R24
+R30
 R47
 R48
 !i113 1
@@ -318,20 +318,20 @@ R4
 R5
 R6
 R7
-!i122 1728
+!i122 1896
 R8
 Z50 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
 Z51 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
 l0
-R30
+R28
 V5O=145e]AIOCP;;ZnLQK22
 !s100 mi7`66Qj[nJONn^cB=Qo=3
 R12
 33
-R23
+R29
 !i10b 1
-R24
-Z52 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
+R30
+Z52 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
 Z53 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
 !i113 1
 R17
@@ -345,16 +345,16 @@ R5
 R6
 R7
 DEx4 work 45 corefifo_c0_corefifo_c0_0_corefifo_sync_scntr 0 22 5O=145e]AIOCP;;ZnLQK22
-!i122 1728
+!i122 1896
 l287
 Z54 L101 818
 V5U=WWM98e>jZ;E[3i8Z[k0
 !s100 YmgKEhPS9Jn40BQZmGDZk0
 R12
 33
-R23
+R29
 !i10b 1
-R24
+R30
 R52
 R53
 !i113 1
@@ -364,7 +364,7 @@ Ecorefifo_c0_corefifo_c0_0_lsram_top
 R0
 R6
 R7
-!i122 1733
+!i122 1901
 R8
 Z55 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.vhd
 Z56 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.vhd
@@ -374,10 +374,10 @@ V<[TJ0VD2k]R<hei=B5HTL2
 !s100 5?=1m`@DYPHT`I4gzoWVH0
 R12
 33
-R23
+R13
 !i10b 1
-R24
-Z57 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.vhd|
+R14
+Z57 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.vhd|
 Z58 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.vhd|
 !i113 1
 R17
@@ -386,16 +386,16 @@ Adef_arch
 R6
 R7
 DEx4 work 35 corefifo_c0_corefifo_c0_0_lsram_top 0 22 <[TJ0VD2k]R<hei=B5HTL2
-!i122 1733
+!i122 1901
 l367
 L22 3152
 VEzhcggl?eeRJ23==PF=I10
 !s100 bX0A;>]>Eh4YVClCAN3^^1
 R12
 33
-R23
+R13
 !i10b 1
-R24
+R14
 R57
 R58
 !i113 1
@@ -406,7 +406,7 @@ R0
 Z59 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
 R6
 R7
-!i122 1734
+!i122 1902
 R8
 Z60 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.vhd
 Z61 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.vhd
@@ -418,8 +418,8 @@ R12
 33
 R13
 !i10b 1
-R24
-Z62 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.vhd|
+R14
+Z62 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.vhd|
 Z63 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.vhd|
 !i113 1
 R17
@@ -429,7 +429,7 @@ R59
 R6
 R7
 DEx4 work 37 corefifo_c0_corefifo_c0_0_ram_wrapper 0 22 RN2[SXKeDHae>KoI_@fl12
-!i122 1734
+!i122 1902
 l51
 Z64 L36 32
 V:8]Ne88>ORQ8a4mhz`1g60
@@ -438,7 +438,7 @@ R12
 33
 R13
 !i10b 1
-R24
+R14
 R62
 R63
 !i113 1
@@ -453,7 +453,7 @@ R4
 R5
 R6
 R7
-!i122 1744
+!i122 1912
 R8
 Z66 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO.vhd
 Z67 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO.vhd
@@ -463,11 +463,11 @@ V]1?KR6>Sa=hBg]foMYHOQ1
 !s100 J7aN4DSTakG3DC`g66jNi3
 R12
 33
-Z68 !s110 1678312214
+Z68 !s110 1678317083
 !i10b 1
-R14
-Z69 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO.vhd|
-Z70 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO.vhd|
+Z69 !s108 1678317083.000000
+Z70 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO.vhd|
+Z71 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO.vhd|
 !i113 1
 R17
 R18
@@ -480,7 +480,7 @@ R5
 R6
 R7
 DEx4 work 54 corefifo_spectrometer_corefifo_spectrometer_0_corefifo 0 22 ]1?KR6>Sa=hBg]foMYHOQ1
-!i122 1744
+!i122 1912
 l609
 R19
 VkO>Y6]cEzTKNB?kiBP16?1
@@ -489,9 +489,9 @@ R12
 33
 R68
 !i10b 1
-R14
 R69
 R70
+R71
 !i113 1
 R17
 R18
@@ -504,21 +504,21 @@ R4
 R5
 R6
 R7
-!i122 1741
+!i122 1909
 R8
-Z71 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd
-Z72 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd
+Z72 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd
+Z73 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd
 l0
 R22
 V:6g05:e;HdLbDMg1:6z[o0
 !s100 E6JgPlaNahKEk88EAUiH]1
 R12
 33
-R13
+R68
 !i10b 1
-R14
-Z73 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd|
-Z74 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd|
+R69
+Z74 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd|
+Z75 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_async.vhd|
 !i113 1
 R17
 R18
@@ -531,18 +531,18 @@ R5
 R6
 R7
 DEx4 work 60 corefifo_spectrometer_corefifo_spectrometer_0_corefifo_async 0 22 :6g05:e;HdLbDMg1:6z[o0
-!i122 1741
+!i122 1909
 l326
-R27
+R25
 VJD7:f2OM_Y7QAJC9YO4Nj2
 !s100 cicFZA[VOUTHZVDJ:BY0[3
 R12
 33
-R13
+R68
 !i10b 1
-R14
-R73
+R69
 R74
+R75
 !i113 1
 R17
 R18
@@ -554,12 +554,12 @@ R4
 R5
 R6
 R7
-!i122 1736
+!i122 1904
 R8
-Z75 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd
-Z76 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd
+Z76 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd
+Z77 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd
 l0
-R30
+R28
 VZCYV6z]nLiFEI]A;FE21D2
 !s100 `G98GEJNi8;ZVYU8?EeOE3
 R12
@@ -567,8 +567,8 @@ R12
 R13
 !i10b 1
 R14
-Z77 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd|
-Z78 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd|
+Z78 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd|
+Z79 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_fwft.vhd|
 !i113 1
 R17
 R18
@@ -580,7 +580,7 @@ R5
 R6
 R7
 DEx4 work 59 corefifo_spectrometer_corefifo_spectrometer_0_corefifo_fwft 0 22 ZCYV6z]nLiFEI]A;FE21D2
-!i122 1736
+!i122 1904
 l203
 R33
 VeW:2FLAYQ2fkHO=VWdZ751
@@ -590,8 +590,8 @@ R12
 R13
 !i10b 1
 R14
-R77
 R78
+R79
 !i113 1
 R17
 R18
@@ -603,21 +603,21 @@ R4
 R5
 R6
 R7
-!i122 1740
+!i122 1908
 R8
-Z79 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
-Z80 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
+Z80 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
+Z81 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
 l0
 R36
 VnKKYmQc73V_8iUNDQzn760
 !s100 5mlXU;V5am5k6NC<RQmA22
 R12
 33
-R13
+R68
 !i10b 1
 R14
-Z81 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
-Z82 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
+Z82 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
+Z83 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
 !i113 1
 R17
 R18
@@ -629,18 +629,18 @@ R5
 R6
 R7
 DEx4 work 68 corefifo_spectrometer_corefifo_spectrometer_0_corefifo_graytobinconv 0 22 nKKYmQc73V_8iUNDQzn760
-!i122 1740
+!i122 1908
 l62
 R39
 VXK;m7cegMRQdL5j=SUmbP3
 !s100 2VdF]S5Pbhe9DXdUNMC9a0
 R12
 33
-R13
+R68
 !i10b 1
 R14
-R81
 R82
+R83
 !i113 1
 R17
 R18
@@ -652,12 +652,12 @@ R4
 R5
 R6
 R7
-!i122 1739
+!i122 1907
 R8
-Z83 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
-Z84 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
+Z84 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
+Z85 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
 l0
-R30
+R28
 VAB`QOlj5bi_FUG=UZWE5F1
 !s100 hm3jkbX2EZY]04N^7GjS`1
 R12
@@ -665,8 +665,8 @@ R12
 R13
 !i10b 1
 R14
-Z85 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
-Z86 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
+Z86 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
+Z87 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
 !i113 1
 R17
 R18
@@ -678,7 +678,7 @@ R5
 R6
 R7
 DEx4 work 66 corefifo_spectrometer_corefifo_spectrometer_0_corefifo_nstagessync 0 22 AB`QOlj5bi_FUG=UZWE5F1
-!i122 1739
+!i122 1907
 l68
 R44
 V^WSAPZdUCUPdaZ:<h8IAj3
@@ -688,8 +688,8 @@ R12
 R13
 !i10b 1
 R14
-R85
 R86
+R87
 !i113 1
 R17
 R18
@@ -702,12 +702,12 @@ R4
 R5
 R6
 R7
-!i122 1738
+!i122 1906
 R8
-Z87 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd
-Z88 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd
+Z88 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd
+Z89 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd
 l0
-R30
+R28
 VJa8AXUJ3eabT^cbz7U5IL2
 !s100 VNWBn216n`l78?4Io42Le2
 R12
@@ -715,8 +715,8 @@ R12
 R13
 !i10b 1
 R14
-Z89 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd|
-Z90 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd|
+Z90 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd|
+Z91 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync.vhd|
 !i113 1
 R17
 R18
@@ -729,7 +729,7 @@ R5
 R6
 R7
 DEx4 work 59 corefifo_spectrometer_corefifo_spectrometer_0_corefifo_sync 0 22 Ja8AXUJ3eabT^cbz7U5IL2
-!i122 1738
+!i122 1906
 l283
 R49
 V1R[RX1NzJK60`0X<<ECaW1
@@ -739,8 +739,8 @@ R12
 R13
 !i10b 1
 R14
-R89
 R90
+R91
 !i113 1
 R17
 R18
@@ -753,12 +753,12 @@ R4
 R5
 R6
 R7
-!i122 1737
+!i122 1905
 R8
-Z91 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
-Z92 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
+Z92 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
+Z93 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
 l0
-R30
+R28
 V66Ac>0SGQ8QOMgQl5>R0i2
 !s100 jje2gB4TcGN5cH@j>hz9C0
 R12
@@ -766,8 +766,8 @@ R12
 R13
 !i10b 1
 R14
-Z93 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
-Z94 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
+Z94 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
+Z95 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
 !i113 1
 R17
 R18
@@ -780,7 +780,7 @@ R5
 R6
 R7
 DEx4 work 65 corefifo_spectrometer_corefifo_spectrometer_0_corefifo_sync_scntr 0 22 66Ac>0SGQ8QOMgQl5>R0i2
-!i122 1737
+!i122 1905
 l287
 R54
 VZgN75YJU5YHY[E^m`iU==3
@@ -790,8 +790,8 @@ R12
 R13
 !i10b 1
 R14
-R93
 R94
+R95
 !i113 1
 R17
 R18
@@ -799,21 +799,21 @@ Ecorefifo_spectrometer_corefifo_spectrometer_0_lsram_top
 R65
 R6
 R7
-!i122 1742
+!i122 1910
 R8
-Z95 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd
-Z96 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd
+Z96 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd
+Z97 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd
 l0
 L8 1
 VKhI^F9inkO<4?4oWU8@a90
 !s100 cnbZ@7fQmTC?3IG8MTo`L2
 R12
 33
-R13
+R68
 !i10b 1
-R14
-Z97 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd|
-Z98 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd|
+R69
+Z98 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd|
+Z99 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_LSRAM_top.vhd|
 !i113 1
 R17
 R18
@@ -821,41 +821,41 @@ Adef_arch
 R6
 R7
 DEx4 work 55 corefifo_spectrometer_corefifo_spectrometer_0_lsram_top 0 22 KhI^F9inkO<4?4oWU8@a90
-!i122 1742
+!i122 1910
 l113
 L22 364
 VY5XzK1:eLd02O[M8SNQIY3
 !s100 Ji^dcX?hA5hJPb7]Qh?ga2
 R12
 33
-R13
+R68
 !i10b 1
-R14
-R97
+R69
 R98
+R99
 !i113 1
 R17
 R18
 Ecorefifo_spectrometer_corefifo_spectrometer_0_ram_wrapper
-Z99 w1673722848
+Z100 w1673722848
 R59
 R6
 R7
-!i122 1743
+!i122 1911
 R8
-Z100 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd
-Z101 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd
+Z101 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd
+Z102 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd
 l0
 L8 1
 VSel0XI43J?S;ET^2jWi3Z3
 !s100 @l8C0JT8P[L2JG5e=^30K0
 R12
 33
-R13
+R68
 !i10b 1
-R14
-Z102 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd|
-Z103 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd|
+R69
+Z103 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd|
+Z104 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_ram_wrapper.vhd|
 !i113 1
 R17
 R18
@@ -864,18 +864,18 @@ R59
 R6
 R7
 DEx4 work 57 corefifo_spectrometer_corefifo_spectrometer_0_ram_wrapper 0 22 Sel0XI43J?S;ET^2jWi3Z3
-!i122 1743
+!i122 1911
 l51
 R64
 V`=56EmUcOBGPGbBD`YMjW2
 !s100 oaz`4ljNmDd4_fcj7;:052
 R12
 33
-R13
+R68
 !i10b 1
-R14
-R102
+R69
 R103
+R104
 !i113 1
 R17
 R18
@@ -884,11 +884,11 @@ R4
 R5
 R6
 R7
-!i122 1727
-Z104 w1668548736
+!i122 1895
+Z105 w1668548736
 R8
-Z105 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
-Z106 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
+Z106 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
+Z107 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
 l0
 L5 7
 V@MLFzo3Ljf1?QCaNB1T;D3
@@ -896,11 +896,11 @@ V@MLFzo3Ljf1?QCaNB1T;D3
 R12
 33
 b1
-R23
+R29
 !i10b 1
-R24
-Z107 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
-Z108 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
+R30
+Z108 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
+Z109 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
 !i113 1
 R17
 R18
@@ -910,23 +910,23 @@ R4
 R5
 R6
 R7
-!i122 1727
+!i122 1895
 l0
 L13 61
 V3jLTCPHMf79zR0Un`ba9[1
 !s100 DmlBVSC3nmBK^QkJWW04b0
 R12
 33
-R23
+R29
 !i10b 1
-R24
-R107
+R30
 R108
+R109
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_corefifo
-Z109 w1673722866
+Z110 w1673722866
 R1
 R2
 R3
@@ -934,21 +934,21 @@ R4
 R5
 R6
 R7
-!i122 1753
+!i122 1921
 R8
-Z110 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd
-Z111 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd
+Z111 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd
+Z112 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd
 l0
 R11
 V7J;U@kH:gShgSNIK83SP30
 !s100 ID37AN8Y[_TmYS`=Y13?S0
 R12
 33
-Z112 !s110 1678312216
+Z113 !s110 1678317085
 !i10b 1
-Z113 !s108 1678312216.000000
-Z114 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd|
-Z115 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd|
+Z114 !s108 1678317085.000000
+Z115 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd|
+Z116 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd|
 !i113 1
 R17
 R18
@@ -960,24 +960,24 @@ R4
 R5
 R6
 R7
-Z116 DEx4 work 30 uart_fifo_uart_fifo_0_corefifo 0 22 7J;U@kH:gShgSNIK83SP30
-!i122 1753
+Z117 DEx4 work 30 uart_fifo_uart_fifo_0_corefifo 0 22 7J;U@kH:gShgSNIK83SP30
+!i122 1921
 l609
 R19
-Z117 VQTHj5RNX3]kj1ST4cW^FL0
-Z118 !s100 Re^Hnngc=_1]J@>OE;:g;0
+Z118 VQTHj5RNX3]kj1ST4cW^FL0
+Z119 !s100 Re^Hnngc=_1]J@>OE;:g;0
 R12
 33
-R112
+!s110 1678317086
 !i10b 1
-R113
 R114
 R115
+R116
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_corefifo_async
-R109
+R110
 R1
 R2
 R3
@@ -985,21 +985,21 @@ R4
 R5
 R6
 R7
-!i122 1750
+!i122 1918
 R8
-Z119 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd
-Z120 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd
+Z120 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd
+Z121 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd
 l0
 R22
 V6W8FBab1@O]J3ZV2[OXb72
 !s100 m7SCGWM`GJSEL5i8>;_RB3
 R12
 33
-R112
-!i10b 1
 R113
-Z121 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd|
-Z122 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd|
+!i10b 1
+R114
+Z122 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd|
+Z123 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_async.vhd|
 !i113 1
 R17
 R18
@@ -1012,44 +1012,44 @@ R5
 R6
 R7
 DEx4 work 36 uart_fifo_uart_fifo_0_corefifo_async 0 22 6W8FBab1@O]J3ZV2[OXb72
-!i122 1750
+!i122 1918
 l326
-R27
+R25
 VQd8>]L5m>UTCnZeIV7H[]2
 !s100 k=9cHU2_V=^]0TOZc5PfN1
 R12
 33
-R112
-!i10b 1
 R113
-R121
+!i10b 1
+R114
 R122
+R123
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_corefifo_fwft
-R109
+R110
 R2
 R3
 R4
 R5
 R6
 R7
-!i122 1745
+!i122 1913
 R8
-Z123 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd
-Z124 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd
+Z124 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd
+Z125 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd
 l0
-R30
+R28
 VhO[QlGoiSdU422i>nQ_@W0
 !s100 KFSe_:6BnDWPojR?`YWnJ3
 R12
 33
-R112
-!i10b 1
 R113
-Z125 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd|
-Z126 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd|
+!i10b 1
+R114
+Z126 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd|
+Z127 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_fwft.vhd|
 !i113 1
 R17
 R18
@@ -1061,44 +1061,44 @@ R5
 R6
 R7
 DEx4 work 35 uart_fifo_uart_fifo_0_corefifo_fwft 0 22 hO[QlGoiSdU422i>nQ_@W0
-!i122 1745
+!i122 1913
 l203
 R33
 VN:4V6:=1a;::[ZLe[^1CI0
 !s100 AK^AB@MXCdc3SXgo:[o5T1
 R12
 33
-R112
-!i10b 1
 R113
-R125
+!i10b 1
+R114
 R126
+R127
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_corefifo_graytobinconv
-R109
+R110
 R2
 R3
 R4
 R5
 R6
 R7
-!i122 1749
+!i122 1917
 R8
-Z127 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
-Z128 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
+Z128 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
+Z129 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
 l0
 R36
 VMZYe<O<_FEeL0h3]QY2^V3
 !s100 LbjQzmN^[E1Da3Rd2ELRS3
 R12
 33
-R112
-!i10b 1
 R113
-Z129 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
-Z130 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
+!i10b 1
+R114
+Z130 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
+Z131 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
 !i113 1
 R17
 R18
@@ -1110,44 +1110,44 @@ R5
 R6
 R7
 DEx4 work 44 uart_fifo_uart_fifo_0_corefifo_graytobinconv 0 22 MZYe<O<_FEeL0h3]QY2^V3
-!i122 1749
+!i122 1917
 l62
 R39
 VaHZk7z@8nQhLC=67KN@kd1
 !s100 IF8nE>A8VzgB:1j4jUA7K3
 R12
 33
-R112
-!i10b 1
 R113
-R129
+!i10b 1
+R114
 R130
+R131
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_corefifo_nstagessync
-R109
+R110
 R2
 R3
 R4
 R5
 R6
 R7
-!i122 1748
+!i122 1916
 R8
-Z131 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
-Z132 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
+Z132 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
+Z133 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
 l0
-R30
+R28
 VC8=g1gLBb`;QSY3b6jG8A0
 !s100 XzmOTNlX0OZib2^ETBbJ93
 R12
 33
-R112
-!i10b 1
 R113
-Z133 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
-Z134 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
+!i10b 1
+R114
+Z134 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
+Z135 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
 !i113 1
 R17
 R18
@@ -1159,23 +1159,23 @@ R5
 R6
 R7
 DEx4 work 42 uart_fifo_uart_fifo_0_corefifo_nstagessync 0 22 C8=g1gLBb`;QSY3b6jG8A0
-!i122 1748
+!i122 1916
 l68
 R44
 VI?9fXIldKKA2M7f1NR7aC1
 !s100 8bOmWg4M0MAh3Pf?[^F1g2
 R12
 33
-R112
-!i10b 1
 R113
-R133
+!i10b 1
+R114
 R134
+R135
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_corefifo_sync
-R109
+R110
 R1
 R2
 R3
@@ -1183,21 +1183,21 @@ R4
 R5
 R6
 R7
-!i122 1747
+!i122 1915
 R8
-Z135 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd
-Z136 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd
+Z136 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd
+Z137 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd
 l0
-R30
+R28
 V>Vkokg[gbjH36W<D5P19l3
 !s100 i73ddV>;>2U546F]k3IjB2
 R12
 33
-R112
-!i10b 1
 R113
-Z137 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd|
-Z138 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd|
+!i10b 1
+R114
+Z138 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd|
+Z139 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync.vhd|
 !i113 1
 R17
 R18
@@ -1210,23 +1210,23 @@ R5
 R6
 R7
 DEx4 work 35 uart_fifo_uart_fifo_0_corefifo_sync 0 22 >Vkokg[gbjH36W<D5P19l3
-!i122 1747
+!i122 1915
 l283
 R49
 VZbcl^gO6]BSOmOYT6j5o62
 !s100 3Zf^P>iWGgc6d9MB:nmLC0
 R12
 33
-R112
-!i10b 1
 R113
-R137
+!i10b 1
+R114
 R138
+R139
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_corefifo_sync_scntr
-R109
+R110
 R1
 R2
 R3
@@ -1234,21 +1234,21 @@ R4
 R5
 R6
 R7
-!i122 1746
+!i122 1914
 R8
-Z139 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
-Z140 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
+Z140 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
+Z141 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
 l0
-R30
+R28
 VDPT>9MB[L:UcJhXaBTkF^2
 !s100 RHLdA@2LMBP]05:[C^fkK0
 R12
 33
-R112
-!i10b 1
 R113
-Z141 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
-Z142 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
+!i10b 1
+R114
+Z142 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
+Z143 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
 !i113 1
 R17
 R18
@@ -1261,40 +1261,40 @@ R5
 R6
 R7
 DEx4 work 41 uart_fifo_uart_fifo_0_corefifo_sync_scntr 0 22 DPT>9MB[L:UcJhXaBTkF^2
-!i122 1746
+!i122 1914
 l287
 R54
 V2HH3:PAHH=Ani?TJbP<UI0
 !s100 9lFiDmVQ;KdIY?ORMLJz90
 R12
 33
-R112
-!i10b 1
 R113
-R141
+!i10b 1
+R114
 R142
+R143
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_lsram_top
-R109
+R110
 R6
 R7
-!i122 1751
+!i122 1919
 R8
-Z143 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd
-Z144 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd
+Z144 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd
+Z145 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd
 l0
 L8 1
 VAgGH0]OX99:ONTA^66Uh>0
 !s100 ?L[lmgiiET39cbL8INQ3<3
 R12
 33
-R112
-!i10b 1
 R113
-Z145 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd|
-Z146 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd|
+!i10b 1
+R114
+Z146 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd|
+Z147 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_LSRAM_top.vhd|
 !i113 1
 R17
 R18
@@ -1302,41 +1302,41 @@ Adef_arch
 R6
 R7
 DEx4 work 31 uart_fifo_uart_fifo_0_lsram_top 0 22 AgGH0]OX99:ONTA^66Uh>0
-!i122 1751
+!i122 1919
 l102
 L22 224
 VHM:fn^LJ2UX<i`VmObTUR0
 !s100 QN=Kd`IUJ=LlU;nhL59C_0
 R12
 33
-R112
-!i10b 1
 R113
-R145
+!i10b 1
+R114
 R146
+R147
 !i113 1
 R17
 R18
 Euart_fifo_uart_fifo_0_ram_wrapper
-R109
+R110
 R59
 R6
 R7
-!i122 1752
+!i122 1920
 R8
-Z147 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd
-Z148 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd
+Z148 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd
+Z149 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd
 l0
 L8 1
 V[N:1hKcgFGUWGHfD0354C3
 !s100 Pc[UNBQ]?F[dJ[=kbeDLn1
 R12
 33
-R112
-!i10b 1
 R113
-Z149 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd|
-Z150 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd|
+!i10b 1
+R114
+Z150 !s90 -2008|-explicit|-work|COREFIFO_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd|
+Z151 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/UART_FIFO_UART_FIFO_0_ram_wrapper.vhd|
 !i113 1
 R17
 R18
@@ -1345,18 +1345,18 @@ R59
 R6
 R7
 DEx4 work 33 uart_fifo_uart_fifo_0_ram_wrapper 0 22 [N:1hKcgFGUWGHfD0354C3
-!i122 1752
+!i122 1920
 l51
 R64
 VUGcbZFT@5PNVkU38gzW]z2
 !s100 3]k;TO6_?8=4V>;G5Z;c?3
 R12
 33
-R112
-!i10b 1
 R113
-R149
+!i10b 1
+R114
 R150
+R151
 !i113 1
 R17
 R18

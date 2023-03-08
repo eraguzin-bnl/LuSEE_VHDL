@@ -45,7 +45,7 @@ set_modelsim_options -user_do_file "$project_location/simulation/run_LuSEE.do"
 set_modelsim_options -do_file_args "$libero_root $project_location"
 #save_project
 
-puts "TCL --> Running simulation"
+puts "TCL --> Running simulation (May take over a minute)..."
 #Run specific tools
 run_tool -name {SIM_PRESYNTH}
 #run_tool -name {SYNTHESIZE}

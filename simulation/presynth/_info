@@ -18,7 +18,7 @@ Z4 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
 Z5 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
 Z6 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
 Z7 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-!i122 5496
+!i122 5964
 Z8 d/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/simulation
 Z9 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADC_UART_RDOUT.vhd
 Z10 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADC_UART_RDOUT.vhd
@@ -28,10 +28,10 @@ V1>bcP:EA;d^i3H9?R?QQR0
 !s100 ncNLUQkmFd^iL8D@S@de]2
 Z11 OW;C;2022.2;75
 33
-Z12 !s110 1678312214
+Z12 !s110 1678317083
 !i10b 1
-Z13 !s108 1678312214.000000
-Z14 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADC_UART_RDOUT.vhd|
+Z13 !s108 1678317083.000000
+Z14 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADC_UART_RDOUT.vhd|
 Z15 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADC_UART_RDOUT.vhd|
 !i113 1
 Z16 o-2008 -explicit -work presynth -O0
@@ -46,7 +46,7 @@ R5
 R6
 R7
 Z20 DEx4 work 14 adc_uart_rdout 0 22 1>bcP:EA;d^i3H9?R?QQR0
-!i122 5496
+!i122 5964
 l153
 L59 398
 VSK97zCkMJYL[M6_2cY[ZS1
@@ -67,7 +67,7 @@ R4
 R5
 R6
 R7
-!i122 5499
+!i122 5967
 R8
 Z22 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd
 Z23 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd
@@ -80,7 +80,7 @@ R11
 R12
 !i10b 1
 R13
-Z25 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd|
+Z25 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd|
 Z26 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/ADS4245_CNTL.vhd|
 !i113 1
 R16
@@ -91,7 +91,7 @@ R5
 R6
 R7
 Z27 DEx4 work 12 ads4245_cntl 0 22 zTjfPbTW]@i8BEQ@[I?ed1
-!i122 5499
+!i122 5967
 l120
 L58 181
 VAj>H[1ln5nbGnhN=m9Ic91
@@ -152,7 +152,7 @@ Z36 w1676245426
 R2
 R6
 R7
-!i122 5515
+!i122 5983
 R8
 Z37 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/average_instance_P1_fixpt.vhd
 Z38 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/average_instance_P1_fixpt.vhd
@@ -162,10 +162,10 @@ VnK`3DSP23J2Z5zHbn>lM^2
 !s100 dcI:boY>35hIBJS;m?3:T1
 R11
 33
-Z40 !s110 1678312217
+Z40 !s110 1678317086
 !i10b 1
-Z41 !s108 1678312217.000000
-Z42 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/average_instance_P1_fixpt.vhd|
+Z41 !s108 1678317086.000000
+Z42 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/average_instance_P1_fixpt.vhd|
 Z43 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/average_instance_P1_fixpt.vhd|
 !i113 1
 R16
@@ -176,7 +176,7 @@ R2
 R6
 R7
 DEx4 work 25 average_instance_p1_fixpt 0 22 nK`3DSP23J2Z5zHbn>lM^2
-!i122 5515
+!i122 5983
 l256
 L61 909
 V:R_YUMjzGiIl3MgB;b0LM2
@@ -411,7 +411,7 @@ Z75 w1677179532
 R2
 R6
 R7
-!i122 5534
+!i122 6002
 R8
 Z76 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd
 Z77 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd
@@ -421,10 +421,10 @@ VmVJSIGCEXO`0?CT:8<P;Y0
 !s100 anEO`J_mHzI4I`PN;_A[33
 R11
 33
-Z78 !s110 1678312219
+Z78 !s110 1678317088
 !i10b 1
-Z79 !s108 1678312219.000000
-Z80 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd|
+Z79 !s108 1678317088.000000
+Z80 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd|
 Z81 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Complex4Multiply_generic.vhd|
 !i113 1
 R16
@@ -435,7 +435,7 @@ R2
 R6
 R7
 Z83 DEx4 work 24 complex4multiply_generic 0 22 mVJSIGCEXO`0?CT:8<P;Y0
-!i122 5534
+!i122 6002
 l89
 L43 273
 Vb1LcL_3[20We[lfQhE6FJ0
@@ -454,7 +454,7 @@ Ecorefifo_c0
 Z84 w1669135472
 R6
 R7
-!i122 5493
+!i122 5961
 R8
 Z85 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0.vhd
 Z86 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0.vhd
@@ -464,10 +464,10 @@ VzNEW@BSa`NQQl^[:BNbbY0
 !s100 e]GoVC=3^C6BogMeofaSV3
 R11
 33
-Z88 !s110 1678312213
+Z88 !s110 1678317082
 !i10b 1
-Z89 !s108 1678312213.000000
-Z90 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0.vhd|
+Z89 !s108 1678317082.000000
+Z90 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0.vhd|
 Z91 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_C0/COREFIFO_C0.vhd|
 !i113 1
 R16
@@ -476,7 +476,7 @@ Artl
 R6
 R7
 R18
-!i122 5493
+!i122 5961
 l163
 Z92 L77 171
 V_^n]GQGTQl;jPoJ_aK8DV2
@@ -495,7 +495,7 @@ Ecorefifo_spectrometer
 Z93 w1673722850
 R6
 R7
-!i122 5494
+!i122 5962
 R8
 Z94 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer.vhd
 Z95 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer.vhd
@@ -508,7 +508,7 @@ R11
 R12
 !i10b 1
 R13
-Z96 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer.vhd|
+Z96 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer.vhd|
 Z97 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer.vhd|
 !i113 1
 R16
@@ -517,7 +517,7 @@ Artl
 R6
 R7
 R19
-!i122 5494
+!i122 5962
 l163
 R92
 VjYXJLKhRf]?OdPfZNWOn`3
@@ -536,7 +536,7 @@ Ecorereset_pf_c0
 Z98 w1673559862
 R6
 R7
-!i122 5505
+!i122 5973
 R8
 Z99 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0.vhd
 Z100 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0.vhd
@@ -546,10 +546,10 @@ VZ<5b1nHRm^QC[BkO?cZP>3
 !s100 ?boh`<e]Hi0j:@AG8eiJ`1
 R11
 33
-Z101 !s110 1678312215
+Z101 !s110 1678317084
 !i10b 1
-Z102 !s108 1678312215.000000
-Z103 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0.vhd|
+Z102 !s108 1678317084.000000
+Z103 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0.vhd|
 Z104 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0.vhd|
 !i113 1
 R16
@@ -558,7 +558,7 @@ Artl
 R6
 R7
 DEx4 work 15 corereset_pf_c0 0 22 Z<5b1nHRm^QC[BkO?cZP>3
-!i122 5505
+!i122 5973
 l79
 L48 61
 V^cG:i8nM>GYBllNola<>m1
@@ -577,7 +577,7 @@ Ecorereset_pf_c0_corereset_pf_c0_0_corereset_pf
 R98
 R6
 R7
-!i122 5504
+!i122 5972
 R8
 Z105 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.vhd
 Z106 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.vhd
@@ -589,8 +589,8 @@ R11
 33
 R101
 !i10b 1
-R13
-Z107 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.vhd|
+R102
+Z107 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.vhd|
 Z108 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.vhd|
 !i113 1
 R16
@@ -599,7 +599,7 @@ Aarchitecture_corereset_pf
 R6
 R7
 DEx4 work 46 corereset_pf_c0_corereset_pf_c0_0_corereset_pf 0 22 h?][BcJ1l=l6LUb2BXmE72
-!i122 5504
+!i122 5972
 l62
 L38 80
 V>d0`l242N<[`ghm=38BmB2
@@ -608,7 +608,7 @@ R11
 33
 R101
 !i10b 1
-R13
+R102
 R107
 R108
 !i113 1
@@ -619,7 +619,7 @@ Z109 w1669847576
 Z110 DPx12 coreuart_lib 36 coreuart_c0_coreuart_c0_0_components 0 22 o[U1dWND^2Rn=8Tj2Me1n3
 R6
 R7
-!i122 5509
+!i122 5977
 R8
 Z111 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0.vhd
 Z112 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0.vhd
@@ -629,11 +629,11 @@ V?AQl[0:HjWG8m<QCn2YjY0
 !s100 GS4RIB:Kk3mEzmXEZ;[=S3
 R11
 33
-Z113 !s110 1678312216
+Z113 !s110 1678317085
 !i10b 1
-R102
-Z114 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0.vhd|
-Z115 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0.vhd|
+Z114 !s108 1678317085.000000
+Z115 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0.vhd|
+Z116 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0.vhd|
 !i113 1
 R16
 R17
@@ -641,8 +641,8 @@ Artl
 R110
 R6
 R7
-Z116 DEx4 work 11 coreuart_c0 0 22 ?AQl[0:HjWG8m<QCn2YjY0
-!i122 5509
+Z117 DEx4 work 11 coreuart_c0 0 22 ?AQl[0:HjWG8m<QCn2YjY0
+!i122 5977
 l120
 L64 111
 VVU>?5<@@GNB^nmU=THH?=1
@@ -651,21 +651,21 @@ R11
 33
 R113
 !i10b 1
-R102
 R114
 R115
+R116
 !i113 1
 R16
 R17
 Edeinterlace_instance_12_fixpt
-Z117 w1673998496
+Z118 w1673998496
 R2
 R6
 R7
-!i122 5517
+!i122 5985
 R8
-Z118 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd
-Z119 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd
+Z119 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd
+Z120 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd
 l0
 L46 1
 V3:6Yafk7_11zILkB;a`1i2
@@ -675,8 +675,8 @@ R11
 R40
 !i10b 1
 R41
-Z120 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd|
-Z121 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd|
+Z121 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd|
+Z122 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/deinterlace_instance_12_fixpt.vhd|
 !i113 1
 R16
 R17
@@ -685,7 +685,7 @@ R2
 R6
 R7
 DEx4 work 29 deinterlace_instance_12_fixpt 0 22 3:6Yafk7_11zILkB;a`1i2
-!i122 5517
+!i122 5985
 l196
 L64 522
 VXXCO4iAk60@oe?Dg2XUHC0
@@ -695,106 +695,106 @@ R11
 R40
 !i10b 1
 R41
-R120
 R121
+R122
 !i113 1
 R16
 R17
 Edsphdl_fft
-Z122 w1677179720
+Z123 w1677179720
 R3
 R2
 R6
 R7
-!i122 5562
+!i122 6030
 R8
-Z123 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd
-Z124 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd
+Z124 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd
+Z125 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd
 l0
-Z125 L26 1
+Z126 L26 1
 Vog?]i538ZbShcLQUS_Z4T1
 !s100 k_hXn?TQgL_2>F^LI9b>X2
 R11
 33
-Z126 !s110 1678312221
+Z127 !s110 1678317090
 !i10b 1
-Z127 !s108 1678312221.000000
-Z128 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd|
-Z129 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd|
+Z128 !s108 1678317090.000000
+Z129 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd|
+Z130 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/dsphdl_FFT.vhd|
 !i113 1
 R16
 R17
 Artl
-Z130 DEx4 work 20 radix2fft_bitnatural 0 22 PZ:OJX[iDmk59>0oMdZAi0
-Z131 DEx4 work 18 radix22fft_sdf2_12 0 22 m5]`_CMnT?][:R_CaI[V[1
-Z132 DEx4 work 19 radix22fft_ctrl1_12 0 22 gdDlR=D;fHVzFgC`m@VFf1
-Z133 DEx4 work 18 radix22fft_sdf1_11 0 22 D:9?ZHkAD1JYAjz>Q7?:A3
-Z134 DEx4 work 19 radix22fft_ctrl1_11 0 22 G<XR=n<_n:PW?mK;PT;WM1
-Z135 DEx4 work 18 radix22fft_sdf2_10 0 22 []>W[[O<8Wd]Xh^WKU;Yd0
-Z136 DEx4 work 19 radix22fft_ctrl1_10 0 22 :CXRDbDNBJd3C[^ldQTbS3
-Z137 DEx4 work 17 radix22fft_sdf1_9 0 22 3lbY[Ck1Z0g@mK[]c;D[g3
-Z138 DEx4 work 18 radix22fft_ctrl1_9 0 22 l0ebzLnaEdf5j;;]hiZIR1
-Z139 DEx4 work 11 twdlrom_9_1 0 22 kPJZLOz7<gTYM<@PidhY<1
-Z140 DEx4 work 17 radix22fft_sdf2_8 0 22 f<jUDh1^GUTf3fY56=k?h3
-Z141 DEx4 work 18 radix22fft_ctrl1_8 0 22 LG:IoD7<Q@hV54YO;0A5=3
-Z142 DEx4 work 17 radix22fft_sdf1_7 0 22 6h6`zdU6P:2b7j9>iZJoe1
-Z143 DEx4 work 18 radix22fft_ctrl1_7 0 22 95kBdFb`4TTziP8:ajf0F1
-Z144 DEx4 work 11 twdlrom_7_1 0 22 ?^nk0fUgEXg3R@WMRFeMQ0
-Z145 DEx4 work 17 radix22fft_sdf2_6 0 22 LkAUZ0ge=E;UeR18ek5oG0
-Z146 DEx4 work 18 radix22fft_ctrl1_6 0 22 cQhk0<SFCB6JOJzEU99IP2
-Z147 DEx4 work 17 radix22fft_sdf1_5 0 22 ^E3SlHbXBBT`=3@z4XbSD3
-Z148 DEx4 work 18 radix22fft_ctrl1_5 0 22 ;LZ?K9fXM0UhKNkPaaG=b3
-Z149 DEx4 work 11 twdlrom_5_1 0 22 :YAENYMj0SEkf8c7cf_nR2
-Z150 DEx4 work 17 radix22fft_sdf2_4 0 22 F2Vf2d?eT8HzYnj><i>O^1
-Z151 DEx4 work 18 radix22fft_ctrl1_4 0 22 8oMdTkeAfUIBPH1=iCMgO0
-Z152 DEx4 work 17 radix22fft_sdf1_3 0 22 0O8bGC=[^^VV6mOck1=6i3
-Z153 DEx4 work 18 radix22fft_ctrl1_3 0 22 fKM<;?3`d=6LJKhEnA7^?1
-Z154 DEx4 work 11 twdlrom_3_1 0 22 lfbmD5JW0lF?o39K6i:dL1
-Z155 DEx4 work 17 radix22fft_sdf2_2 0 22 UQfK97ziARh]lQW[U0I=i3
-Z156 DEx4 work 18 radix22fft_ctrl1_2 0 22 GiGzE?okh<kbn>eTAFFf12
-Z157 DEx4 work 17 radix22fft_sdf1_1 0 22 n;i9?_c7NEla;cV3>]n1M1
-Z158 DEx4 work 18 radix22fft_ctrl1_1 0 22 Y8RmYoZ<^Dm6YKMDIe^SW1
+Z131 DEx4 work 20 radix2fft_bitnatural 0 22 PZ:OJX[iDmk59>0oMdZAi0
+Z132 DEx4 work 18 radix22fft_sdf2_12 0 22 m5]`_CMnT?][:R_CaI[V[1
+Z133 DEx4 work 19 radix22fft_ctrl1_12 0 22 gdDlR=D;fHVzFgC`m@VFf1
+Z134 DEx4 work 18 radix22fft_sdf1_11 0 22 D:9?ZHkAD1JYAjz>Q7?:A3
+Z135 DEx4 work 19 radix22fft_ctrl1_11 0 22 G<XR=n<_n:PW?mK;PT;WM1
+Z136 DEx4 work 18 radix22fft_sdf2_10 0 22 []>W[[O<8Wd]Xh^WKU;Yd0
+Z137 DEx4 work 19 radix22fft_ctrl1_10 0 22 :CXRDbDNBJd3C[^ldQTbS3
+Z138 DEx4 work 17 radix22fft_sdf1_9 0 22 3lbY[Ck1Z0g@mK[]c;D[g3
+Z139 DEx4 work 18 radix22fft_ctrl1_9 0 22 l0ebzLnaEdf5j;;]hiZIR1
+Z140 DEx4 work 11 twdlrom_9_1 0 22 kPJZLOz7<gTYM<@PidhY<1
+Z141 DEx4 work 17 radix22fft_sdf2_8 0 22 f<jUDh1^GUTf3fY56=k?h3
+Z142 DEx4 work 18 radix22fft_ctrl1_8 0 22 LG:IoD7<Q@hV54YO;0A5=3
+Z143 DEx4 work 17 radix22fft_sdf1_7 0 22 6h6`zdU6P:2b7j9>iZJoe1
+Z144 DEx4 work 18 radix22fft_ctrl1_7 0 22 95kBdFb`4TTziP8:ajf0F1
+Z145 DEx4 work 11 twdlrom_7_1 0 22 ?^nk0fUgEXg3R@WMRFeMQ0
+Z146 DEx4 work 17 radix22fft_sdf2_6 0 22 LkAUZ0ge=E;UeR18ek5oG0
+Z147 DEx4 work 18 radix22fft_ctrl1_6 0 22 cQhk0<SFCB6JOJzEU99IP2
+Z148 DEx4 work 17 radix22fft_sdf1_5 0 22 ^E3SlHbXBBT`=3@z4XbSD3
+Z149 DEx4 work 18 radix22fft_ctrl1_5 0 22 ;LZ?K9fXM0UhKNkPaaG=b3
+Z150 DEx4 work 11 twdlrom_5_1 0 22 :YAENYMj0SEkf8c7cf_nR2
+Z151 DEx4 work 17 radix22fft_sdf2_4 0 22 F2Vf2d?eT8HzYnj><i>O^1
+Z152 DEx4 work 18 radix22fft_ctrl1_4 0 22 8oMdTkeAfUIBPH1=iCMgO0
+Z153 DEx4 work 17 radix22fft_sdf1_3 0 22 0O8bGC=[^^VV6mOck1=6i3
+Z154 DEx4 work 18 radix22fft_ctrl1_3 0 22 fKM<;?3`d=6LJKhEnA7^?1
+Z155 DEx4 work 11 twdlrom_3_1 0 22 lfbmD5JW0lF?o39K6i:dL1
+Z156 DEx4 work 17 radix22fft_sdf2_2 0 22 UQfK97ziARh]lQW[U0I=i3
+Z157 DEx4 work 18 radix22fft_ctrl1_2 0 22 GiGzE?okh<kbn>eTAFFf12
+Z158 DEx4 work 17 radix22fft_sdf1_1 0 22 n;i9?_c7NEla;cV3>]n1M1
+Z159 DEx4 work 18 radix22fft_ctrl1_1 0 22 Y8RmYoZ<^Dm6YKMDIe^SW1
 R3
 R2
 R6
 R7
-Z159 DEx4 work 10 dsphdl_fft 0 22 og?]i538ZbShcLQUS_Z4T1
-!i122 5562
+Z160 DEx4 work 10 dsphdl_fft 0 22 og?]i538ZbShcLQUS_Z4T1
+!i122 6030
 l803
 L40 1626
 VOcRQP9UUbA4H0cX1_<d770
 !s100 zZ`7eGZn7e0=k`1n4EYz:3
 R11
 33
-R126
-!i10b 1
 R127
+!i10b 1
 R128
 R129
+R130
 !i113 1
 R16
 R17
 Efft_tst
-Z160 w1676257464
+Z161 w1676257464
 R4
 R5
 R6
 R7
 !i122 770
-Z161 dC:/share/LuSEE/FPGA/PF_EVAL_TEST/simulation
-Z162 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd
-Z163 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd
+Z162 dC:/share/LuSEE/FPGA/PF_EVAL_TEST/simulation
+Z163 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd
+Z164 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd
 l0
 L36 1
 VDNQF9YYI?:Q<U9473hQlZ3
 !s100 iQ3i^JZkj=z]lYiDLJL=m3
 R11
 33
-Z164 !s110 1677175663
+Z165 !s110 1677175663
 !i10b 1
-Z165 !s108 1677175663.000000
-Z166 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd|
-Z167 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd|
+Z166 !s108 1677175663.000000
+Z167 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd|
+Z168 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/stimulus/FFT_TST.vhd|
 !i113 1
 R16
 R17
@@ -811,35 +811,35 @@ VWBl8Z=ae:Wm^RI]@S0H8Y2
 !s100 m_PMUjeN8ah>QRcAYRV@j1
 R11
 33
-R164
-!i10b 1
 R165
+!i10b 1
 R166
 R167
+R168
 !i113 1
 R16
 R17
 Eio_registers
-Z168 w1669224592
+Z169 w1669224592
 R4
 R5
 R6
 R7
-!i122 5500
+!i122 5968
 R8
-Z169 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd
-Z170 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd
+Z170 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd
+Z171 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd
 l0
 R49
 V[Kl:zM;QZ>]UO78`mBM0i1
 !s100 gDU2FWDf][[V5iCUCeO6P0
 R11
 33
-R12
+R101
 !i10b 1
 R13
-Z171 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd|
-Z172 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd|
+Z172 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd|
+Z173 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/IO_registers.vhd|
 !i113 1
 R16
 R17
@@ -848,43 +848,43 @@ R4
 R5
 R6
 R7
-Z173 DEx4 work 12 io_registers 0 22 [Kl:zM;QZ>]UO78`mBM0i1
-!i122 5500
+Z174 DEx4 work 12 io_registers 0 22 [Kl:zM;QZ>]UO78`mBM0i1
+!i122 5968
 l155
 L145 190
 V;hbW^6oIV7:H8S272Wb3T3
 !s100 `N=@PR=z^`HRI2S<d12OL2
 R11
 33
-R12
+R101
 !i10b 1
 R13
-R171
 R172
+R173
 !i113 1
 R16
 R17
 Eled_dimmer_s
-Z174 w1667229478
+Z175 w1667229478
 R4
 R5
 R6
 R7
-!i122 5501
+!i122 5969
 R8
-Z175 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd
-Z176 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd
+Z176 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd
+Z177 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd
 l0
-Z177 L25 1
+Z178 L25 1
 Vmblf^BnmFUW@g6>dM4@Y]1
 !s100 6_g3<dDUJ`?z_oT9bA>4n1
 R11
 33
-R12
+R101
 !i10b 1
-R13
-Z178 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd|
-Z179 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd|
+R102
+Z179 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd|
+Z180 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LED_DIMMER_s.vhd|
 !i113 1
 R16
 R17
@@ -894,53 +894,53 @@ R5
 R6
 R7
 DEx4 work 12 led_dimmer_s 0 22 mblf^BnmFUW@g6>dM4@Y]1
-!i122 5501
+!i122 5969
 l51
 L40 87
 Vd9[KSk?dgLgogWgcN4YH=1
 !s100 9D`6_zI9;A4kNQOmM^n^^0
 R11
 33
-R12
+R101
 !i10b 1
-R13
-R178
+R102
 R179
+R180
 !i113 1
 R16
 R17
 Elusee_pf_eval
-Z180 w1677189046
+Z181 w1677189046
 R2
 R3
 R4
 R5
 R6
 R7
-!i122 5567
+!i122 6035
 R8
-Z181 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd
-Z182 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd
+Z182 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd
+Z183 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd
 l0
-R177
+R178
 VkB]0<EXC54W:5L:D9SfnX0
 !s100 B]XNRi601EUjQFdhSmjOJ2
 R11
 33
-Z183 !s110 1678312222
+Z184 !s110 1678317091
 !i10b 1
-Z184 !s108 1678312222.000000
-Z185 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd|
-Z186 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd|
+Z185 !s108 1678317091.000000
+Z186 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd|
+Z187 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_PF_EVAL.vhd|
 !i113 1
 R16
 R17
 Aarchitecture_lusee_pf_eval
-Z187 DEx4 work 18 spectrometer_fixpt 0 22 iVDPhSRN<BO58GJ1kmgiN0
+Z188 DEx4 work 18 spectrometer_fixpt 0 22 iVDPhSRN<BO58GJ1kmgiN0
 R27
-R173
+R174
 R20
-Z188 DEx4 work 8 pf_reset 0 22 oj7Z@8OPXNa6]4iWG6oK82
+Z189 DEx4 work 8 pf_reset 0 22 oj7Z@8OPXNa6]4iWG6oK82
 R2
 R3
 R4
@@ -948,18 +948,18 @@ R5
 R6
 R7
 DEx4 work 13 lusee_pf_eval 0 22 kB]0<EXC54W:5L:D9SfnX0
-!i122 5567
+!i122 6035
 l265
 L64 509
 VJ]RDJ7N600oJYNio5Z>bo2
 !s100 l;WjS<X4k^=D88dEH0V_;1
 R11
 33
-R183
-!i10b 1
 R184
+!i10b 1
 R185
 R186
+R187
 !i113 1
 R16
 R17
@@ -968,11 +968,11 @@ R4
 R5
 R6
 R7
-!i122 5511
-Z189 w1667328150
+!i122 5979
+Z190 w1667328150
 R8
-Z190 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd
-Z191 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd
+Z191 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd
+Z192 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd
 l0
 L6 15
 V^@nN:fXPI?G:]@4BDDO2?2
@@ -981,8 +981,8 @@ R11
 33
 R40
 !i10b 1
-Z192 !s108 1678312216.000000
-Z193 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd|
+R41
+Z193 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd|
 Z194 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/LuSEE_Pkg.vhd|
 !i113 1
 R16
@@ -993,7 +993,7 @@ R4
 R5
 R6
 R7
-!i122 5511
+!i122 5979
 l0
 L22 5
 Vn`I?;omAQl[U9>zj_=IzC1
@@ -1002,7 +1002,7 @@ R11
 33
 R40
 !i10b 1
-R192
+R41
 R193
 R194
 !i113 1
@@ -1013,7 +1013,7 @@ Z196 w1678131038
 R2
 R6
 R7
-!i122 5533
+!i122 6001
 R8
 Z197 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Multiply_generic.vhd
 Z198 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Multiply_generic.vhd
@@ -1023,11 +1023,11 @@ V;OQhLNOV7U0nZX07[Dm;52
 !s100 <h1gSm8gPW4FWLnI`VNVY1
 R11
 33
-Z199 !s110 1678312218
+R78
 !i10b 1
-Z200 !s108 1678312218.000000
-Z201 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Multiply_generic.vhd|
-Z202 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Multiply_generic.vhd|
+Z199 !s108 1678317087.000000
+Z200 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Multiply_generic.vhd|
+Z201 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/Multiply_generic.vhd|
 !i113 1
 R16
 R17
@@ -1036,187 +1036,187 @@ R2
 R6
 R7
 R82
-!i122 5533
+!i122 6001
 l70
 L25 121
 V48N24@a?WR]P9W14kBTUZ1
 !s100 Il7bYdVc[JjDJFJ7Hn1iB1
 R11
 33
-R199
+R78
 !i10b 1
+R199
 R200
 R201
-R202
 !i113 1
 R16
 R17
 vPF_CCC_C0
-Z203 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-R12
+Z202 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R101
 !i10b 1
 !s100 HdKd=O0legQWeN1AH1^Dg2
 InJhAoVXiOYTW>:Slk;oS=0
 S1
 R8
-Z204 w1674072812
+Z203 w1674072812
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0.v
 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0.v
-!i122 5503
+!i122 5971
 L0 264 66
-Z205 VDg1SIo80bB@j0V0VzS_@n1
-Z206 OW;L;2022.2;75
+Z204 VDg1SIo80bB@j0V0VzS_@n1
+Z205 OW;L;2022.2;75
 r1
 !s85 0
 31
-R13
+R102
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0.v|
-!s90 -reportprogress|300|-sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0.v|
+!s90 -sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0.v|
 !s101 -O0
 !i113 1
-Z207 o-sv -work presynth -O0
+Z206 o-sv -work presynth -O0
 R17
 n@p@f_@c@c@c_@c0
 vPF_CCC_C0_PF_CCC_C0_0_PF_CCC
-R203
-R12
+R202
+R101
 !i10b 1
 !s100 W<hQEjJc6z>>4HkZ0Di1g0
 I=oUdD5_Vb7ojK7jZD6Ico3
 S1
 R8
-R204
+R203
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v
 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v
-!i122 5502
+!i122 5970
 L0 5 62
+R204
 R205
-R206
 r1
 !s85 0
 31
-R13
+R102
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v|
-!s90 -reportprogress|300|-sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v|
+!s90 -sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v|
 !s101 -O0
 !i113 1
-R207
+R206
 R17
 n@p@f_@c@c@c_@c0_@p@f_@c@c@c_@c0_0_@p@f_@c@c@c
 vPF_INIT_MONITOR_C0
-R203
+R202
 R101
 !i10b 1
 !s100 D>I@Ode>fm:oQS4R@g_293
 IRB^0jo9blTOkn47lJNg9b1
 S1
 R8
-Z208 w1673559968
+Z207 w1673559968
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0.v
 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0.v
-!i122 5507
+!i122 5975
 L0 83 171
+R204
 R205
-R206
 r1
 !s85 0
 31
 R102
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0.v|
-!s90 -reportprogress|300|-sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0.v|
+!s90 -sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0.v|
 !s101 -O0
 !i113 1
-R207
+R206
 R17
 n@p@f_@i@n@i@t_@m@o@n@i@t@o@r_@c0
 vPF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR
-R203
+R202
 R101
 !i10b 1
 !s100 >3WlPZk>dE;TGWlXXeHY=2
 Ig6XHi22Rz]9DOdbT`YDDT3
 S1
 R8
-R208
+R207
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0_0/PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v
 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0_0/PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v
-!i122 5506
+!i122 5974
 L0 5 74
+R204
 R205
-R206
 r1
 !s85 0
 31
 R102
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0_0/PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v|
-!s90 -reportprogress|300|-sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0_0/PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v|
+!s90 -sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_INIT_MONITOR_C0/PF_INIT_MONITOR_C0_0/PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v|
 !s101 -O0
 !i113 1
-R207
+R206
 R17
 n@p@f_@i@n@i@t_@m@o@n@i@t@o@r_@c0_@p@f_@i@n@i@t_@m@o@n@i@t@o@r_@c0_0_@p@f_@i@n@i@t_@m@o@n@i@t@o@r
 vPF_IOD_ADC_ADS4245
-R203
+R202
 R12
 !i10b 1
 !s100 Xkm_Tk=LPjFZC=EVdcVSm1
 IV<RKKkA5fYF9CjEXi@0CS1
 S1
 R8
-Z209 w1674151112
+Z208 w1674151112
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v
 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v
-!i122 5498
+!i122 5966
 L0 59 486
+R204
 R205
-R206
 r1
 !s85 0
 31
 R13
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v|
-!s90 -reportprogress|300|-sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v|
+!s90 -sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.v|
 !s101 -O0
 !i113 1
-R207
+R206
 R17
 n@p@f_@i@o@d_@a@d@c_@a@d@s4245
 vPF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD
-R203
+R202
 R12
 !i10b 1
 !s100 m>i?T=OfkXOZL@FZg8l:X2
 I@?e1d`NL9@[kL8G@8Q;=_0
 S1
 R8
-R209
+R208
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_RX/PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD.v
 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_RX/PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD.v
-!i122 5497
+!i122 5965
 L0 5 732
+R204
 R205
-R206
 r1
 !s85 0
 31
 R13
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_RX/PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD.v|
-!s90 -reportprogress|300|-sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_RX/PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD.v|
+!s90 -sv|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/PF_IOD_ADC_ADS4245/PF_IOD_RX/PF_IOD_ADC_ADS4245_PF_IOD_RX_PF_IOD.v|
 !s101 -O0
 !i113 1
-R207
+R206
 R17
 n@p@f_@i@o@d_@a@d@c_@a@d@s4245_@p@f_@i@o@d_@r@x_@p@f_@i@o@d
 Epf_reset
-Z210 w1673559772
+Z209 w1673559772
 R6
 R7
-!i122 5508
+!i122 5976
 R8
-Z211 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd
-Z212 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd
+Z210 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd
+Z211 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd
 l0
-R125
+R126
 Voj7Z@8OPXNa6]4iWG6oK82
 !s100 V3nOA1oBUhLnH89=9HEMm3
 R11
@@ -1224,16 +1224,16 @@ R11
 R101
 !i10b 1
 R102
-Z213 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd|
-Z214 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd|
+Z212 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd|
+Z213 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/PF_RESET.vhd.vhd|
 !i113 1
 R16
 R17
 Aarchitecture_pf_reset
 R6
 R7
-R188
-!i122 5508
+R189
+!i122 5976
 l96
 L34 109
 VeMAOBnj4ZMg9R2o5P:aLE2
@@ -1243,20 +1243,20 @@ R11
 R101
 !i10b 1
 R102
+R212
 R213
-R214
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_1
-Z215 w1673997646
+Z214 w1673997646
 R2
 R6
 R7
-!i122 5518
+!i122 5986
 R8
-Z216 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd
-Z217 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd
+Z215 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd
+Z216 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd
 l0
 R49
 VY8RmYoZ<^Dm6YKMDIe^SW1
@@ -1266,8 +1266,8 @@ R11
 R40
 !i10b 1
 R41
-Z218 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd|
-Z219 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd|
+Z217 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd|
+Z218 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_1.vhd|
 !i113 1
 R16
 R17
@@ -1275,10 +1275,10 @@ Artl
 R2
 R6
 R7
-R158
-!i122 5518
+R159
+!i122 5986
 l69
-Z220 L38 177
+Z219 L38 177
 Vl<ZOLb47793mMWc>go>[@1
 !s100 PS>b0;f0;f:Znz:RRm@Vb3
 R11
@@ -1286,20 +1286,20 @@ R11
 R40
 !i10b 1
 R41
+R217
 R218
-R219
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_10
-R215
+R214
 R2
 R6
 R7
-!i122 5519
+!i122 5987
 R8
-Z221 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd
-Z222 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd
+Z220 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd
+Z221 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd
 l0
 R49
 V:CXRDbDNBJd3C[^ldQTbS3
@@ -1309,8 +1309,8 @@ R11
 R40
 !i10b 1
 R41
-Z223 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd|
-Z224 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd|
+Z222 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd|
+Z223 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_10.vhd|
 !i113 1
 R16
 R17
@@ -1318,10 +1318,10 @@ Artl
 R2
 R6
 R7
-R136
-!i122 5519
+R137
+!i122 5987
 l69
-R220
+R219
 V`e^HOBEEWaN7Ih_Eeh8aP3
 !s100 zCG1SCfVk?8=zZ@=oVU4]1
 R11
@@ -1329,20 +1329,20 @@ R11
 R40
 !i10b 1
 R41
+R222
 R223
-R224
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_11
-R215
+R214
 R2
 R6
 R7
-!i122 5520
+!i122 5988
 R8
-Z225 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd
-Z226 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd
+Z224 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd
+Z225 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd
 l0
 R49
 VG<XR=n<_n:PW?mK;PT;WM1
@@ -1352,8 +1352,8 @@ R11
 R40
 !i10b 1
 R41
-Z227 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd|
-Z228 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd|
+Z226 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd|
+Z227 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_11.vhd|
 !i113 1
 R16
 R17
@@ -1361,8 +1361,8 @@ Artl
 R2
 R6
 R7
-R134
-!i122 5520
+R135
+!i122 5988
 l56
 L38 166
 V=;OeIj=loh]F[6=56iI521
@@ -1372,30 +1372,30 @@ R11
 R40
 !i10b 1
 R41
+R226
 R227
-R228
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_12
-R215
+R214
 R2
 R6
 R7
-!i122 5521
+!i122 5989
 R8
-Z229 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd
-Z230 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd
+Z228 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd
+Z229 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd
 l0
 R49
 VgdDlR=D;fHVzFgC`m@VFf1
 !s100 B`=CcP0<5Y]]k]ek3__V33
 R11
 33
-R40
+Z230 !s110 1678317087
 !i10b 1
 R41
-Z231 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd|
+Z231 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd|
 Z232 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_12.vhd|
 !i113 1
 R16
@@ -1404,15 +1404,15 @@ Artl
 R2
 R6
 R7
-R132
-!i122 5521
+R133
+!i122 5989
 l62
 L38 120
 V6V[b7QYJUN20F00o8WI;A2
 !s100 GQKVbS@ZJXL^l:PfNUIe40
 R11
 33
-R40
+R230
 !i10b 1
 R41
 R231
@@ -1421,11 +1421,11 @@ R232
 R16
 R17
 Eradix22fft_ctrl1_2
-R215
+R214
 R2
 R6
 R7
-!i122 5522
+!i122 5990
 R8
 Z233 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd
 Z234 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd
@@ -1435,10 +1435,10 @@ VGiGzE?okh<kbn>eTAFFf12
 !s100 WdfZMBXQUYb`;Y8nd^;@@3
 R11
 33
-R199
+R230
 !i10b 1
-R41
-Z235 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd|
+R199
+Z235 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd|
 Z236 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_2.vhd|
 !i113 1
 R16
@@ -1447,28 +1447,28 @@ Artl
 R2
 R6
 R7
-R156
-!i122 5522
+R157
+!i122 5990
 l69
-R220
+R219
 VY>jgEPT07]A2eC4l?eaUX3
 !s100 X;cVGcfM3HCdeHV?Nj@TR3
 R11
 33
-R199
+R230
 !i10b 1
-R41
+R199
 R235
 R236
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_3
-R215
+R214
 R2
 R6
 R7
-!i122 5523
+!i122 5991
 R8
 Z237 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd
 Z238 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd
@@ -1478,10 +1478,10 @@ VfKM<;?3`d=6LJKhEnA7^?1
 !s100 ilQGJgzM0jbaZQm7<lKGX1
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z239 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd|
+R199
+Z239 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd|
 Z240 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_3.vhd|
 !i113 1
 R16
@@ -1490,28 +1490,28 @@ Artl
 R2
 R6
 R7
-R153
-!i122 5523
+R154
+!i122 5991
 l69
-R220
+R219
 VI3kd1>:<nU>AGW];flGW:0
 !s100 7@O?QLSz1^aP;Zn@A8??Z1
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R239
 R240
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_4
-R215
+R214
 R2
 R6
 R7
-!i122 5524
+!i122 5992
 R8
 Z241 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd
 Z242 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd
@@ -1521,10 +1521,10 @@ V8oMdTkeAfUIBPH1=iCMgO0
 !s100 M;66E3Oe<1YoS?^EIZ>A90
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z243 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd|
+R199
+Z243 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd|
 Z244 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_4.vhd|
 !i113 1
 R16
@@ -1533,28 +1533,28 @@ Artl
 R2
 R6
 R7
-R151
-!i122 5524
+R152
+!i122 5992
 l69
-R220
+R219
 VA<[<glWNEoQ:WY1dDVg`Z3
 !s100 _nz1Dk]LGEccG_med<Ef[1
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R243
 R244
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_5
-R215
+R214
 R2
 R6
 R7
-!i122 5525
+!i122 5993
 R8
 Z245 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd
 Z246 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd
@@ -1564,10 +1564,10 @@ V;LZ?K9fXM0UhKNkPaaG=b3
 !s100 YTU?H5BHEJdSai_;:>QLk2
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z247 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd|
+R199
+Z247 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd|
 Z248 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_5.vhd|
 !i113 1
 R16
@@ -1576,28 +1576,28 @@ Artl
 R2
 R6
 R7
-R148
-!i122 5525
+R149
+!i122 5993
 l69
-R220
+R219
 VS8P4[23b>mIK25@]iHOlN2
 !s100 g2j:XnGnoiaY@QF2gR@aL1
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R247
 R248
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_6
-R215
+R214
 R2
 R6
 R7
-!i122 5526
+!i122 5994
 R8
 Z249 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd
 Z250 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd
@@ -1607,10 +1607,10 @@ VcQhk0<SFCB6JOJzEU99IP2
 !s100 :o4Gncbf;a^zgh<<VZaZ22
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z251 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd|
+R199
+Z251 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd|
 Z252 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_6.vhd|
 !i113 1
 R16
@@ -1619,28 +1619,28 @@ Artl
 R2
 R6
 R7
-R146
-!i122 5526
+R147
+!i122 5994
 l69
-R220
+R219
 VYDjX;RKkdIZ[lW]dLOQ5?1
 !s100 [V=izh0>FBEn=ZKAc]R>g2
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R251
 R252
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_7
-R215
+R214
 R2
 R6
 R7
-!i122 5527
+!i122 5995
 R8
 Z253 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd
 Z254 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd
@@ -1650,10 +1650,10 @@ V95kBdFb`4TTziP8:ajf0F1
 !s100 2iXc9WLjhNVA=]Gk]GbBD1
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z255 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd|
+R199
+Z255 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd|
 Z256 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_7.vhd|
 !i113 1
 R16
@@ -1662,28 +1662,28 @@ Artl
 R2
 R6
 R7
-R143
-!i122 5527
+R144
+!i122 5995
 l69
-R220
+R219
 VLCI^Oc;gccZk4hlX2SC7H2
 !s100 jzO@AdNIX4iW`B3hnd3dh3
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R255
 R256
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_8
-R215
+R214
 R2
 R6
 R7
-!i122 5528
+!i122 5996
 R8
 Z257 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd
 Z258 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd
@@ -1693,10 +1693,10 @@ VLG:IoD7<Q@hV54YO;0A5=3
 !s100 ShKGi[NO[0Z0@[CUfL?U@0
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z259 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd|
+R199
+Z259 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd|
 Z260 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_8.vhd|
 !i113 1
 R16
@@ -1705,28 +1705,28 @@ Artl
 R2
 R6
 R7
-R141
-!i122 5528
+R142
+!i122 5996
 l69
-R220
+R219
 VTg7HXi@QUUzZP<_0>Rk4M2
 !s100 3oGbg9M4nIl=mlB9=1iGo0
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R259
 R260
 !i113 1
 R16
 R17
 Eradix22fft_ctrl1_9
-R215
+R214
 R2
 R6
 R7
-!i122 5529
+!i122 5997
 R8
 Z261 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd
 Z262 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd
@@ -1736,10 +1736,10 @@ Vl0ebzLnaEdf5j;;]hiZIR1
 !s100 G0E2lCm0:KGzhaCnDKZVL2
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z263 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd|
+R199
+Z263 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd|
 Z264 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_CTRL1_9.vhd|
 !i113 1
 R16
@@ -1748,17 +1748,17 @@ Artl
 R2
 R6
 R7
-R138
-!i122 5529
+R139
+!i122 5997
 l69
-R220
+R219
 Vhz7?KBV`KRBYO][:8fg0Z1
 !s100 :Bkb=2=WHm2Y3W:`VGf:E3
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R263
 R264
 !i113 1
@@ -1769,7 +1769,7 @@ Z265 w1677186332
 R2
 R6
 R7
-!i122 5531
+!i122 5999
 R8
 Z266 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd
 Z267 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd
@@ -1779,10 +1779,10 @@ Vn;i9?_c7NEla;cV3>]n1M1
 !s100 n^lmBl4NU6mNL[C^<`9M22
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z268 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd|
+R199
+Z268 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd|
 Z269 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_1.vhd|
 !i113 1
 R16
@@ -1793,17 +1793,17 @@ R44
 R2
 R6
 R7
-R157
-!i122 5531
+R158
+!i122 5999
 l152
 L45 291
 VV_lmimHK9d3F`i7aERc_70
 !s100 z?0gPLFjMmV]aUO0NAECz3
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R268
 R269
 !i113 1
@@ -1814,7 +1814,7 @@ Z271 w1677186400
 R2
 R6
 R7
-!i122 5535
+!i122 6003
 R8
 Z272 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd
 Z273 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd
@@ -1827,7 +1827,7 @@ R11
 R78
 !i10b 1
 R79
-Z274 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd|
+Z274 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd|
 Z275 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_11.vhd|
 !i113 1
 R16
@@ -1838,8 +1838,8 @@ R83
 R2
 R6
 R7
-R133
-!i122 5535
+R134
+!i122 6003
 l172
 L45 329
 V]1POFRfz8>7D4BT[mPV^j2
@@ -1859,7 +1859,7 @@ Z277 w1677186434
 R2
 R6
 R7
-!i122 5537
+!i122 6005
 R8
 Z278 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd
 Z279 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd
@@ -1872,7 +1872,7 @@ R11
 R78
 !i10b 1
 R79
-Z280 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd|
+Z280 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd|
 Z281 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_3.vhd|
 !i113 1
 R16
@@ -1884,8 +1884,8 @@ R83
 R2
 R6
 R7
-R152
-!i122 5537
+R153
+!i122 6005
 l177
 L45 305
 V0He[V^JOY]zP:n]WjEZc20
@@ -1905,7 +1905,7 @@ Z283 w1677186216
 R2
 R6
 R7
-!i122 5539
+!i122 6007
 R8
 Z284 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd
 Z285 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd
@@ -1918,7 +1918,7 @@ R11
 R78
 !i10b 1
 R79
-Z286 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd|
+Z286 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd|
 Z287 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_5.vhd|
 !i113 1
 R16
@@ -1930,8 +1930,8 @@ R83
 R2
 R6
 R7
-R147
-!i122 5539
+R148
+!i122 6007
 l177
 Z289 L45 304
 V6ean>SF;gD4N:jnGDV3`D2
@@ -1951,7 +1951,7 @@ Z290 w1677184488
 R2
 R6
 R7
-!i122 5541
+!i122 6009
 R8
 Z291 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd
 Z292 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd
@@ -1964,7 +1964,7 @@ R11
 R78
 !i10b 1
 R79
-Z293 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd|
+Z293 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd|
 Z294 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_7.vhd|
 !i113 1
 R16
@@ -1976,8 +1976,8 @@ R83
 R2
 R6
 R7
-R142
-!i122 5541
+R143
+!i122 6009
 l177
 R289
 V6e3_E<8cL>cbIn[cRPU[e1
@@ -1997,7 +1997,7 @@ Z296 w1677186178
 R2
 R6
 R7
-!i122 5543
+!i122 6011
 R8
 Z297 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd
 Z298 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd
@@ -2010,7 +2010,7 @@ R11
 R78
 !i10b 1
 R79
-Z299 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd|
+Z299 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd|
 Z300 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF1_9.vhd|
 !i113 1
 R16
@@ -2022,8 +2022,8 @@ R83
 R2
 R6
 R7
-R137
-!i122 5543
+R138
+!i122 6011
 l177
 R289
 VFY81VBH=Uf8QPkNI;NdnH0
@@ -2039,11 +2039,11 @@ R300
 R16
 R17
 Eradix22fft_sdf2_10
-R215
+R214
 R2
 R6
 R7
-!i122 5545
+!i122 6013
 R8
 Z302 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd
 Z303 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd
@@ -2053,45 +2053,45 @@ V[]>W[[O<8Wd]Xh^WKU;Yd0
 !s100 9nKSUolzh^Ld?eGYzb0AS2
 R11
 33
-Z304 !s110 1678312220
+Z304 !s110 1678317089
 !i10b 1
-Z305 !s108 1678312220.000000
-Z306 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd|
-Z307 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd|
+R79
+Z305 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd|
+Z306 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_10.vhd|
 !i113 1
 R16
 R17
 Artl
-Z308 DEx4 work 15 sdfcommutator10 0 22 I3X18ifS:K1aGC<4PfMXA0
+Z307 DEx4 work 15 sdfcommutator10 0 22 I3X18ifS:K1aGC<4PfMXA0
 R44
 R2
 R6
 R7
-R135
-!i122 5545
+R136
+!i122 6013
 l164
-Z309 L43 395
+Z308 L43 395
 V_RDWd[@cJ3:G[F5CBC0fU1
 !s100 ]2VFXa2V0h6c5:Hk<MPeG1
 R11
 33
 R304
 !i10b 1
+R79
 R305
 R306
-R307
 !i113 1
 R16
 R17
 Eradix22fft_sdf2_12
-R215
+R214
 R2
 R6
 R7
-!i122 5547
+!i122 6015
 R8
-Z310 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd
-Z311 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd
+Z309 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd
+Z310 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd
 l0
 R49
 Vm5]`_CMnT?][:R_CaI[V[1
@@ -2100,8 +2100,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z312 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd|
+Z311 !s108 1678317089.000000
+Z312 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd|
 Z313 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_12.vhd|
 !i113 1
 R16
@@ -2111,8 +2111,8 @@ Z314 DEx4 work 15 sdfcommutator12 0 22 X3P<QCG=f[?khheoK@0gF1
 R2
 R6
 R7
-R131
-!i122 5547
+R132
+!i122 6015
 l165
 L43 497
 VOg^b4AezFOW5Z;UBHnE2`1
@@ -2121,18 +2121,18 @@ R11
 33
 R304
 !i10b 1
-R305
+R311
 R312
 R313
 !i113 1
 R16
 R17
 Eradix22fft_sdf2_2
-R215
+R214
 R2
 R6
 R7
-!i122 5549
+!i122 6017
 R8
 Z315 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd
 Z316 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd
@@ -2144,8 +2144,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z317 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd|
+R311
+Z317 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd|
 Z318 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_2.vhd|
 !i113 1
 R16
@@ -2156,28 +2156,28 @@ R44
 R2
 R6
 R7
-R155
-!i122 5549
+R156
+!i122 6017
 l164
-R309
+R308
 VOPR64iGe4M5OL4mEC<[Ei0
 !s100 I:V8HBnY96X59mzHbdg2E1
 R11
 33
 R304
 !i10b 1
-R305
+R311
 R317
 R318
 !i113 1
 R16
 R17
 Eradix22fft_sdf2_4
-R215
+R214
 R2
 R6
 R7
-!i122 5551
+!i122 6019
 R8
 Z320 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd
 Z321 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd
@@ -2189,8 +2189,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z322 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd|
+R311
+Z322 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd|
 Z323 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_4.vhd|
 !i113 1
 R16
@@ -2201,28 +2201,28 @@ R44
 R2
 R6
 R7
-R150
-!i122 5551
+R151
+!i122 6019
 l164
-R309
+R308
 VF5l8PPVh<C`Em:2bVb_oK3
 !s100 dcaWGQP?8E=:^BAGHVB[O3
 R11
 33
 R304
 !i10b 1
-R305
+R311
 R322
 R323
 !i113 1
 R16
 R17
 Eradix22fft_sdf2_6
-R215
+R214
 R2
 R6
 R7
-!i122 5553
+!i122 6021
 R8
 Z325 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd
 Z326 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd
@@ -2234,8 +2234,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z327 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd|
+R311
+Z327 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd|
 Z328 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_6.vhd|
 !i113 1
 R16
@@ -2246,28 +2246,28 @@ R44
 R2
 R6
 R7
-R145
-!i122 5553
+R146
+!i122 6021
 l164
-R309
+R308
 VgAe?PK66UcNYOo6V7`JaC3
 !s100 9NLBfPWR9a=6IWKCUU;880
 R11
 33
 R304
 !i10b 1
-R305
+R311
 R327
 R328
 !i113 1
 R16
 R17
 Eradix22fft_sdf2_8
-R215
+R214
 R2
 R6
 R7
-!i122 5555
+!i122 6023
 R8
 Z330 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd
 Z331 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd
@@ -2277,10 +2277,10 @@ Vf<jUDh1^GUTf3fY56=k?h3
 !s100 0<_@7`mUiheni>8dM0MHe1
 R11
 33
-R126
+R304
 !i10b 1
-R305
-Z332 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd|
+R311
+Z332 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd|
 Z333 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX22FFT_SDF2_8.vhd|
 !i113 1
 R16
@@ -2291,28 +2291,28 @@ R44
 R2
 R6
 R7
-R140
-!i122 5555
+R141
+!i122 6023
 l164
-R309
+R308
 VMXJLd>]P<zab>T_U@hzAe3
 !s100 J?h`l9XXQ8lY=]W=XjYKz0
 R11
 33
-R126
+R304
 !i10b 1
-R305
+R311
 R332
 R333
 !i113 1
 R16
 R17
 Eradix2fft_bitnatural
-R215
+R214
 R2
 R6
 R7
-!i122 5556
+!i122 6024
 R8
 Z335 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd
 Z336 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd
@@ -2322,10 +2322,10 @@ VPZ:OJX[iDmk59>0oMdZAi0
 !s100 fDO7WgjmUPc8R4HFM`oJJ3
 R11
 33
-R126
-!i10b 1
 R127
-Z337 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd|
+!i10b 1
+R311
+Z337 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd|
 Z338 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/RADIX2FFT_bitNatural.vhd|
 !i113 1
 R16
@@ -2335,28 +2335,28 @@ R44
 R2
 R6
 R7
-R130
-!i122 5556
+R131
+!i122 6024
 l107
 L38 281
 VzCRb<RGIf^7?mTfS@G1ko0
 !s100 d8YL]dWMl@ZjS^G5LIZld0
 R11
 33
-R126
-!i10b 1
 R127
+!i10b 1
+R311
 R337
 R338
 !i113 1
 R16
 R17
 Esdfcommutator1
-R215
+R214
 R2
 R6
 R7
-!i122 5530
+!i122 5998
 R8
 Z339 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator1.vhd
 Z340 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator1.vhd
@@ -2366,10 +2366,10 @@ V:Ck>D2TFDIB=bDfW8Hf4J2
 !s100 VcdNn0ZIR;TFSPYbDf8jN0
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z341 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator1.vhd|
+R199
+Z341 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator1.vhd|
 Z342 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator1.vhd|
 !i113 1
 R16
@@ -2380,27 +2380,27 @@ R2
 R6
 R7
 R270
-!i122 5530
+!i122 5998
 l156
 Z343 L51 516
 VogKj0n@dG`=2I4kL3N2Fj1
 !s100 zK4h[na_=z1S:l:=H<WfP2
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R341
 R342
 !i113 1
 R16
 R17
 Esdfcommutator10
-R215
+R214
 R2
 R6
 R7
-!i122 5544
+!i122 6012
 R8
 Z344 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator10.vhd
 Z345 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator10.vhd
@@ -2410,10 +2410,10 @@ VI3X18ifS:K1aGC<4PfMXA0
 !s100 Dn8i5giN^2kVh6`HJF[gD0
 R11
 33
-R304
+R78
 !i10b 1
 R79
-Z346 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator10.vhd|
+Z346 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator10.vhd|
 Z347 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator10.vhd|
 !i113 1
 R16
@@ -2423,15 +2423,15 @@ R44
 R2
 R6
 R7
-R308
-!i122 5544
+R307
+!i122 6012
 l136
 Z348 L51 375
 VlP74?@IoIdBE5gG<To_7g3
 !s100 @FMARnVoH<5TYD_6iz9jV1
 R11
 33
-R304
+R78
 !i10b 1
 R79
 R346
@@ -2440,11 +2440,11 @@ R347
 R16
 R17
 Esdfcommutator11
-R215
+R214
 R2
 R6
 R7
-!i122 5532
+!i122 6000
 R8
 Z349 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator11.vhd
 Z350 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator11.vhd
@@ -2454,10 +2454,10 @@ VFUo=HX@1e:>l9AoLoT<Fe0
 !s100 5:AAZR0aT1g9Xn<[iCmiA0
 R11
 33
-R199
+R230
 !i10b 1
-R200
-Z351 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator11.vhd|
+R199
+Z351 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator11.vhd|
 Z352 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator11.vhd|
 !i113 1
 R16
@@ -2468,27 +2468,27 @@ R2
 R6
 R7
 R276
-!i122 5532
+!i122 6000
 l135
 L51 384
 Vfaoz<P`=?eAfci`6mafG72
 !s100 U6D_8zk^mc_5FcM4QLfmV3
 R11
 33
-R199
+R230
 !i10b 1
-R200
+R199
 R351
 R352
 !i113 1
 R16
 R17
 Esdfcommutator12
-R215
+R214
 R2
 R6
 R7
-!i122 5546
+!i122 6014
 R8
 Z353 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator12.vhd
 Z354 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator12.vhd
@@ -2500,8 +2500,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z355 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator12.vhd|
+R311
+Z355 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator12.vhd|
 Z356 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator12.vhd|
 !i113 1
 R16
@@ -2512,7 +2512,7 @@ R2
 R6
 R7
 R314
-!i122 5546
+!i122 6014
 l141
 L51 344
 V9bIVE8mF0gFPY3=k2;CDU1
@@ -2521,18 +2521,18 @@ R11
 33
 R304
 !i10b 1
-R305
+R311
 R355
 R356
 !i113 1
 R16
 R17
 Esdfcommutator2
-R215
+R214
 R2
 R6
 R7
-!i122 5548
+!i122 6016
 R8
 Z357 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator2.vhd
 Z358 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator2.vhd
@@ -2544,8 +2544,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z359 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator2.vhd|
+R311
+Z359 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator2.vhd|
 Z360 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator2.vhd|
 !i113 1
 R16
@@ -2556,7 +2556,7 @@ R2
 R6
 R7
 R319
-!i122 5548
+!i122 6016
 l156
 R343
 VF4l@`f^[LCY6LK:5Al7hS1
@@ -2565,18 +2565,18 @@ R11
 33
 R304
 !i10b 1
-R305
+R311
 R359
 R360
 !i113 1
 R16
 R17
 Esdfcommutator3
-R215
+R214
 R2
 R6
 R7
-!i122 5536
+!i122 6004
 R8
 Z361 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator3.vhd
 Z362 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator3.vhd
@@ -2589,7 +2589,7 @@ R11
 R78
 !i10b 1
 R79
-Z363 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator3.vhd|
+Z363 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator3.vhd|
 Z364 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator3.vhd|
 !i113 1
 R16
@@ -2600,7 +2600,7 @@ R2
 R6
 R7
 R282
-!i122 5536
+!i122 6004
 l156
 R343
 V3K=]3Z9nBf;h^G`<7PPF;3
@@ -2616,11 +2616,11 @@ R364
 R16
 R17
 Esdfcommutator4
-R215
+R214
 R2
 R6
 R7
-!i122 5550
+!i122 6018
 R8
 Z365 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator4.vhd
 Z366 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator4.vhd
@@ -2632,8 +2632,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z367 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator4.vhd|
+R311
+Z367 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator4.vhd|
 Z368 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator4.vhd|
 !i113 1
 R16
@@ -2644,7 +2644,7 @@ R2
 R6
 R7
 R324
-!i122 5550
+!i122 6018
 l156
 R343
 VZgFoF7W:m]fz7eP:<PN]i0
@@ -2653,18 +2653,18 @@ R11
 33
 R304
 !i10b 1
-R305
+R311
 R367
 R368
 !i113 1
 R16
 R17
 Esdfcommutator5
-R215
+R214
 R2
 R6
 R7
-!i122 5538
+!i122 6006
 R8
 Z369 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator5.vhd
 Z370 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator5.vhd
@@ -2677,7 +2677,7 @@ R11
 R78
 !i10b 1
 R79
-Z371 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator5.vhd|
+Z371 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator5.vhd|
 Z372 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator5.vhd|
 !i113 1
 R16
@@ -2688,7 +2688,7 @@ R2
 R6
 R7
 R288
-!i122 5538
+!i122 6006
 l156
 R343
 VX8@I`^STLKPBFn75H8?Jk3
@@ -2704,11 +2704,11 @@ R372
 R16
 R17
 Esdfcommutator6
-R215
+R214
 R2
 R6
 R7
-!i122 5552
+!i122 6020
 R8
 Z373 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator6.vhd
 Z374 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator6.vhd
@@ -2720,8 +2720,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z375 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator6.vhd|
+R311
+Z375 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator6.vhd|
 Z376 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator6.vhd|
 !i113 1
 R16
@@ -2732,7 +2732,7 @@ R2
 R6
 R7
 R329
-!i122 5552
+!i122 6020
 l156
 R343
 VU`>an012odCTDOOdeEJRW2
@@ -2741,18 +2741,18 @@ R11
 33
 R304
 !i10b 1
-R305
+R311
 R375
 R376
 !i113 1
 R16
 R17
 Esdfcommutator7
-R215
+R214
 R2
 R6
 R7
-!i122 5540
+!i122 6008
 R8
 Z377 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator7.vhd
 Z378 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator7.vhd
@@ -2765,7 +2765,7 @@ R11
 R78
 !i10b 1
 R79
-Z379 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator7.vhd|
+Z379 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator7.vhd|
 Z380 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator7.vhd|
 !i113 1
 R16
@@ -2776,7 +2776,7 @@ R2
 R6
 R7
 R295
-!i122 5540
+!i122 6008
 l156
 R343
 VB?N1[Rn0I29lE8]GfMh^F1
@@ -2792,11 +2792,11 @@ R380
 R16
 R17
 Esdfcommutator8
-R215
+R214
 R2
 R6
 R7
-!i122 5554
+!i122 6022
 R8
 Z381 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator8.vhd
 Z382 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator8.vhd
@@ -2808,8 +2808,8 @@ R11
 33
 R304
 !i10b 1
-R305
-Z383 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator8.vhd|
+R311
+Z383 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator8.vhd|
 Z384 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator8.vhd|
 !i113 1
 R16
@@ -2820,7 +2820,7 @@ R2
 R6
 R7
 R334
-!i122 5554
+!i122 6022
 l156
 R343
 VK]0f?5CKT0LRS9dHkdiJ^3
@@ -2829,18 +2829,18 @@ R11
 33
 R304
 !i10b 1
-R305
+R311
 R383
 R384
 !i113 1
 R16
 R17
 Esdfcommutator9
-R215
+R214
 R2
 R6
 R7
-!i122 5542
+!i122 6010
 R8
 Z385 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator9.vhd
 Z386 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator9.vhd
@@ -2853,7 +2853,7 @@ R11
 R78
 !i10b 1
 R79
-Z387 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator9.vhd|
+Z387 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator9.vhd|
 Z388 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SDFCommutator9.vhd|
 !i113 1
 R16
@@ -2864,7 +2864,7 @@ R2
 R6
 R7
 R301
-!i122 5542
+!i122 6010
 l136
 R348
 VAlEclU]b[=Z[_c4PHi0jJ2
@@ -2880,11 +2880,11 @@ R388
 R16
 R17
 Esfft_fixpt
-R215
+R214
 R2
 R6
 R7
-!i122 5563
+!i122 6031
 R8
 Z389 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt.vhd
 Z390 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt.vhd
@@ -2894,31 +2894,31 @@ V_=T81IWU>6jKI7ID`FA[F3
 !s100 MW5iSzAcO?Lf`RNGmKDig2
 R11
 33
-R126
-!i10b 1
 R127
-Z391 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt.vhd|
+!i10b 1
+R128
+Z391 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt.vhd|
 Z392 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt.vhd|
 !i113 1
 R16
 R17
 Artl
 R3
-R159
+R160
 R2
 R6
 R7
 DEx4 work 10 sfft_fixpt 0 22 _=T81IWU>6jKI7ID`FA[F3
-!i122 5563
+!i122 6031
 l87
 L57 63
 Vm6QQVm@m2chfYm9;l0SH:1
 !s100 F@Nf6e:0M:T;=>[65zSIj2
 R11
 33
-R126
-!i10b 1
 R127
+!i10b 1
+R128
 R391
 R392
 !i113 1
@@ -2928,7 +2928,7 @@ Psfft_fixpt_pkg
 R2
 R6
 R7
-!i122 5568
+!i122 6036
 Z393 w1675271592
 R8
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd
@@ -2939,23 +2939,23 @@ VU;21bI>zGZekB1QYLHWm60
 !s100 __NUQW=Laz1zAO_=:beEi2
 R11
 33
-Z394 !s110 1678312223
+R184
 !i10b 1
-Z395 !s108 1678312223.000000
-!s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd|
+R185
+!s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd|
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/sfft_fixpt_pkg.vhd|
 !i113 1
 R16
 R17
 Esimpledualportram_generic
-Z396 w1677185560
+Z394 w1677185560
 R2
 R6
 R7
-!i122 5514
+!i122 5982
 R8
-Z397 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd
-Z398 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd
+Z395 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd
+Z396 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd
 l0
 R49
 Vg=X;8cM4Se8^3J`ZkB:Zz1
@@ -2965,8 +2965,8 @@ R11
 R40
 !i10b 1
 R41
-Z399 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd|
-Z400 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd|
+Z397 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd|
+Z398 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic.vhd|
 !i113 1
 R16
 R17
@@ -2975,7 +2975,7 @@ R2
 R6
 R7
 R44
-!i122 5514
+!i122 5982
 l49
 L38 31
 V4@GYZ;o:;US99nNP;;[e20
@@ -2985,20 +2985,20 @@ R11
 R40
 !i10b 1
 R41
-R399
-R400
+R397
+R398
 !i113 1
 R16
 R17
 Esimpledualportram_generic_block
-Z401 w1673560784
+Z399 w1673560784
 R2
 R6
 R7
-!i122 5516
+!i122 5984
 R8
-Z402 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd
-Z403 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd
+Z400 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd
+Z401 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd
 l0
 R49
 VUZF]>]FcLAJ^lF9;?]02P0
@@ -3008,8 +3008,8 @@ R11
 R40
 !i10b 1
 R41
-Z404 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd|
-Z405 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd|
+Z402 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd|
+Z403 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/SimpleDualPortRAM_generic_block.vhd|
 !i113 1
 R16
 R17
@@ -3018,7 +3018,7 @@ R2
 R6
 R7
 DEx4 work 31 simpledualportram_generic_block 0 22 UZF]>]FcLAJ^lF9;?]02P0
-!i122 5516
+!i122 5984
 l51
 L40 32
 V6c3Y?n9oAEIIRL3P40=Bo2
@@ -3028,31 +3028,31 @@ R11
 R40
 !i10b 1
 R41
-R404
-R405
+R402
+R403
 !i113 1
 R16
 R17
 Espec_tst
-Z406 w1678312205
+Z404 w1678312205
 R3
 R2
 R6
 R7
-!i122 5570
+!i122 6038
 R8
-Z407 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/stimulus/SPEC_TST.vhd
-Z408 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/stimulus/SPEC_TST.vhd
+Z405 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/stimulus/SPEC_TST.vhd
+Z406 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/stimulus/SPEC_TST.vhd
 l0
 L38 1
 V=3LjH7JR3X2;IhfThe;E[2
 !s100 ]9Cb4DX:[1m1]EU0h>e`J3
 R11
 33
-R394
+Z407 !s110 1678317092
 !i10b 1
-R395
-Z409 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/stimulus/SPEC_TST.vhd|
+Z408 !s108 1678317092.000000
+Z409 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/stimulus/SPEC_TST.vhd|
 Z410 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/stimulus/SPEC_TST.vhd|
 !i113 1
 R16
@@ -3063,42 +3063,42 @@ R2
 R6
 R7
 Z411 DEx4 work 8 spec_tst 0 22 =3LjH7JR3X2;IhfThe;E[2
-!i122 5570
+!i122 6038
 l85
-L41 137
-VaP3:Zh5HMDJ>fOJY8e5XG3
-!s100 I6h813CIX?8dN9_hZQ:8U3
+Z412 L41 137
+Z413 VaP3:Zh5HMDJ>fOJY8e5XG3
+Z414 !s100 I6h813CIX?8dN9_hZQ:8U3
 R11
 33
-R394
+R407
 !i10b 1
-R395
+R408
 R409
 R410
 !i113 1
 R16
 R17
 Espectrometer_fixpt
-Z412 w1678227898
+Z415 w1678227898
 R3
 R2
 R6
 R7
-!i122 5566
+!i122 6034
 R8
-Z413 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd
-Z414 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd
+Z416 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd
+Z417 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd
 l0
 L44 1
 ViVDPhSRN<BO58GJ1kmgiN0
 !s100 ]10Rem@]Z9ADh6:8ZGi:W2
 R11
 33
-R183
-!i10b 1
 R184
-Z415 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd|
-Z416 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd|
+!i10b 1
+R185
+Z418 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd|
+Z419 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt.vhd|
 !i113 1
 R16
 R17
@@ -3107,19 +3107,19 @@ R3
 R2
 R6
 R7
-R187
-!i122 5566
+R188
+!i122 6034
 l264
 L67 452
 V?Ue3@IkAk6bWMUF4oo:IS2
 !s100 bgRk;aL4KTE`^14S;JPR?3
 R11
 33
-R183
-!i10b 1
 R184
-R415
-R416
+!i10b 1
+R185
+R418
+R419
 !i113 1
 R16
 R17
@@ -3127,7 +3127,7 @@ Pspectrometer_fixpt_pkg
 R2
 R6
 R7
-!i122 5495
+!i122 5963
 w1674151914
 R8
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd
@@ -3141,30 +3141,30 @@ R11
 R12
 !i10b 1
 R13
-!s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd|
+!s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd|
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/spectrometer_fixpt_pkg.vhd|
 !i113 1
 R16
 R17
 Etwdl_rom_test
-Z417 w1675960527
+Z420 w1675960527
 R6
 R7
 !i122 48
 R46
-Z418 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd
-Z419 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd
+Z421 8C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd
+Z422 FC:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd
 l0
 R31
 V>BWS@lHd5>3=LASQ^J;E00
 !s100 NQ75jG??5jNlBD6eG@5Vj1
 R11
 33
-Z420 !s110 1675964023
+Z423 !s110 1675964023
 !i10b 1
-Z421 !s108 1675964023.000000
-Z422 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd|
-Z423 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd|
+Z424 !s108 1675964023.000000
+Z425 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd|
+Z426 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST32_INDV/stimulus/TWDL_ROM_test.vhd|
 !i113 1
 R16
 R17
@@ -3179,35 +3179,35 @@ V:3`k<mNN<[0Yj6YP?7X553
 !s100 2_TRe[GMR@kmRXJ@W@]>D0
 R11
 33
-R420
-!i10b 1
-R421
-R422
 R423
+!i10b 1
+R424
+R425
+R426
 !i113 1
 R16
 R17
 Etwdlrom_11_1
-Z424 w1677175514
+Z427 w1677175514
 R3
 R2
 R6
 R7
 !i122 759
-R161
-Z425 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd
-Z426 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd
+R162
+Z428 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd
+Z429 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd
 l0
-Z427 L24 1
+Z430 L24 1
 VMchNae:Rn;SOPaP_i8IYo0
 !s100 0HO5V3MZO>]TbcS=VLSgF3
 R11
 33
-Z428 !s110 1677175662
+Z431 !s110 1677175662
 !i10b 1
-Z429 !s108 1677175662.000000
-Z430 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd|
-Z431 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd|
+Z432 !s108 1677175662.000000
+Z433 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd|
+Z434 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/hdl/TWDLROM_11_1.vhd|
 !i113 1
 R16
 R17
@@ -3219,40 +3219,40 @@ R7
 DEx4 work 12 twdlrom_11_1 0 22 MchNae:Rn;SOPaP_i8IYo0
 !i122 759
 l355
-Z432 L37 604
+Z435 L37 604
 VYAUEBX9GZ63eZcmh1`@Pc3
 !s100 TSHTMKnGn:[0RIf_Z0]cM3
 R11
 33
-R428
-!i10b 1
-R429
-R430
 R431
+!i10b 1
+R432
+R433
+R434
 !i113 1
 R16
 R17
 Etwdlrom_11_1_array
-Z433 w1677179406
+Z436 w1677179406
 R4
 R5
 R6
 R7
-!i122 5557
+!i122 6025
 R8
-Z434 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd
-Z435 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd
+Z437 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd
+Z438 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd
 l0
-R177
+R178
 V46:14ah9]0N0CQ]`em@<a1
 !s100 C2nL=<<P`cmeXGaJK2NjA2
 R11
 33
-R126
-!i10b 1
 R127
-Z436 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd|
-Z437 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd|
+!i10b 1
+R128
+Z439 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd|
+Z440 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_11_1_array.vhd|
 !i113 1
 R16
 R17
@@ -3262,42 +3262,42 @@ R5
 R6
 R7
 DEx4 work 18 twdlrom_11_1_array 0 22 46:14ah9]0N0CQ]`em@<a1
-!i122 5557
+!i122 6025
 l51
 L37 40
 V^Ghn9Oli=Rb16IKmLAK0I0
 !s100 ILoV@F13`Qd[2Jnh<4TlH2
 R11
 33
-R126
-!i10b 1
 R127
-R436
-R437
+!i10b 1
+R128
+R439
+R440
 !i113 1
 R16
 R17
 Etwdlrom_3_1
-Z438 w1677185618
+Z441 w1677185618
 R3
 R2
 R6
 R7
-!i122 5558
+!i122 6026
 R8
-Z439 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd
-Z440 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd
+Z442 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd
+Z443 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd
 l0
-R427
+R430
 VlfbmD5JW0lF?o39K6i:dL1
 !s100 30ZA<UegS_@>hBDUeOA`@0
 R11
 33
-R126
-!i10b 1
 R127
-Z441 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd|
-Z442 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd|
+!i10b 1
+R128
+Z444 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd|
+Z445 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_3_1.vhd|
 !i113 1
 R16
 R17
@@ -3306,43 +3306,43 @@ R3
 R2
 R6
 R7
-R154
-!i122 5558
+R155
+!i122 6026
 l355
-R432
+R435
 V^iCUKhKDIgbS;bb[ANCc91
 !s100 l9L_ZidF776QTec8K]o=00
 R11
 33
-R126
-!i10b 1
 R127
-R441
-R442
+!i10b 1
+R128
+R444
+R445
 !i113 1
 R16
 R17
 Etwdlrom_5_1
-Z443 w1677185652
+Z446 w1677185652
 R3
 R2
 R6
 R7
-!i122 5559
+!i122 6027
 R8
-Z444 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd
-Z445 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd
+Z447 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd
+Z448 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd
 l0
-R427
+R430
 V:YAENYMj0SEkf8c7cf_nR2
 !s100 1lAW09@Xd?l<SOaeCzh[b1
 R11
 33
-R126
-!i10b 1
 R127
-Z446 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd|
-Z447 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd|
+!i10b 1
+R128
+Z449 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd|
+Z450 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_5_1.vhd|
 !i113 1
 R16
 R17
@@ -3351,43 +3351,43 @@ R3
 R2
 R6
 R7
-R149
-!i122 5559
+R150
+!i122 6027
 l355
-R432
+R435
 VT3AAV@n]jgDeU>i5E8Q162
 !s100 ^`:gdD^oI>YSNN^YHU9g83
 R11
 33
-R126
-!i10b 1
 R127
-R446
-R447
+!i10b 1
+R128
+R449
+R450
 !i113 1
 R16
 R17
 Etwdlrom_7_1
-Z448 w1677185686
+Z451 w1677185686
 R3
 R2
 R6
 R7
-!i122 5560
+!i122 6028
 R8
-Z449 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd
-Z450 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd
+Z452 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd
+Z453 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd
 l0
-R427
+R430
 V?^nk0fUgEXg3R@WMRFeMQ0
 !s100 zjl0MzOfWjfa<>HNl;8h12
 R11
 33
-R126
-!i10b 1
 R127
-Z451 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd|
-Z452 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd|
+!i10b 1
+R128
+Z454 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd|
+Z455 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_7_1.vhd|
 !i113 1
 R16
 R17
@@ -3396,43 +3396,43 @@ R3
 R2
 R6
 R7
-R144
-!i122 5560
+R145
+!i122 6028
 l355
-R432
+R435
 V0XVi5j`[MRR<_8Z5V^Mbz1
 !s100 gRYI:C5@V^hDHJE0Aj7zP2
 R11
 33
-R126
-!i10b 1
 R127
-R451
-R452
+!i10b 1
+R128
+R454
+R455
 !i113 1
 R16
 R17
 Etwdlrom_9_1
-Z453 w1677185732
+Z456 w1677185732
 R3
 R2
 R6
 R7
-!i122 5561
+!i122 6029
 R8
-Z454 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd
-Z455 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd
+Z457 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd
+Z458 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd
 l0
-R427
+R430
 VkPJZLOz7<gTYM<@PidhY<1
 !s100 NRkRX8c326lI5_Zkbh>OA0
 R11
 33
-R126
-!i10b 1
 R127
-Z456 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd|
-Z457 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd|
+!i10b 1
+R128
+Z459 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd|
+Z460 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/TWDLROM_9_1.vhd|
 !i113 1
 R16
 R17
@@ -3441,41 +3441,41 @@ R3
 R2
 R6
 R7
-R139
-!i122 5561
+R140
+!i122 6029
 l355
-R432
+R435
 Vb]G]H`B^d=AjNnmX8QCO61
 !s100 LW[ZVQ_nH8GZ1aDg6Wa`E1
 R11
 33
-R126
-!i10b 1
 R127
-R456
-R457
+!i10b 1
+R128
+R459
+R460
 !i113 1
 R16
 R17
 Euart_fifo
-Z458 w1673722866
+Z461 w1673722866
 R6
 R7
-!i122 5510
+!i122 5978
 R8
-Z459 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd
-Z460 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd
+Z462 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd
+Z463 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd
 l0
 R87
 V^SUA_>?jOO<2m?J<7Y;E10
 !s100 C2L;O1zH`I0B;>E@F]`Ne3
 R11
 33
-R113
+R40
 !i10b 1
-R192
-Z461 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd|
-Z462 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd|
+R41
+Z464 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd|
+Z465 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/component/work/UART_FIFO/UART_FIFO.vhd|
 !i113 1
 R16
 R17
@@ -3483,35 +3483,35 @@ Artl
 R6
 R7
 DEx4 work 9 uart_fifo 0 22 ^SUA_>?jOO<2m?J<7Y;E10
-!i122 5510
+!i122 5978
 l166
 L78 175
 VgI8g@DJE1T6c`c?<lF9GH3
 !s100 HEE[9RhSNH6UiI[T<@fP^0
 R11
 33
-R113
+R40
 !i10b 1
-R192
-R461
-R462
+R41
+R464
+R465
 !i113 1
 R16
 R17
 Euart_io
-Z463 w1673721730
+Z466 w1673721730
 R4
 R5
 R195
 R2
 R6
 R7
-!i122 5513
+!i122 5981
 R8
-Z464 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd
-Z465 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd
+Z467 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd
+Z468 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd
 l0
-R177
+R178
 VKLWZgHA@2N2Q@<me5Pdi43
 !s100 @TEfG4m?VCGz]B^:308[N2
 R11
@@ -3519,15 +3519,15 @@ R11
 R40
 !i10b 1
 R41
-Z466 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd|
-Z467 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd|
+Z469 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd|
+Z470 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/UART_IO.vhd|
 !i113 1
 R16
 R17
 Aarchitecture_uart_io
-Z468 DEx4 work 11 uart_reader 0 22 ]e_?4=PH34G45;eBB]TE51
+Z471 DEx4 work 11 uart_reader 0 22 ]e_?4=PH34G45;eBB]TE51
 R110
-R116
+R117
 R4
 R5
 R195
@@ -3535,7 +3535,7 @@ R2
 R6
 R7
 DEx4 work 7 uart_io 0 22 KLWZgHA@2N2Q@<me5Pdi43
-!i122 5513
+!i122 5981
 l71
 L47 129
 VIRSFAmT<iRiU5SWz]c@mV2
@@ -3545,25 +3545,25 @@ R11
 R40
 !i10b 1
 R41
-R466
-R467
+R469
+R470
 !i113 1
 R16
 R17
 Euart_reader
-Z469 w1673733846
+Z472 w1673733846
 R4
 R5
 R195
 R2
 R6
 R7
-!i122 5512
+!i122 5980
 R8
-Z470 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd
-Z471 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd
+Z473 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd
+Z474 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd
 l0
-R177
+R178
 V]e_?4=PH34G45;eBB]TE51
 !s100 GSaY5n?6mVlV>SB:<@4m_2
 R11
@@ -3571,8 +3571,8 @@ R11
 R40
 !i10b 1
 R41
-Z472 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd|
-Z473 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd|
+Z475 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd|
+Z476 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/uart_reader.vhd|
 !i113 1
 R16
 R17
@@ -3583,8 +3583,8 @@ R195
 R2
 R6
 R7
-R468
-!i122 5512
+R471
+!i122 5980
 l107
 L58 249
 V5z>NC2o;R7jhSmZXd_IMn3
@@ -3594,8 +3594,8 @@ R11
 R40
 !i10b 1
 R41
-R472
-R473
+R475
+R476
 !i113 1
 R16
 R17
@@ -3604,21 +3604,21 @@ R393
 R2
 R6
 R7
-!i122 5564
+!i122 6032
 R8
-Z474 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd
-Z475 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd
+Z477 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd
+Z478 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd
 l0
 L41 1
 VJ:olQ;VlOF8@VJ9YkWlZ20
 !s100 @X43eD395A@<CTfVKKQ?D1
 R11
 33
-R183
-!i10b 1
 R127
-Z476 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd|
-Z477 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd|
+!i10b 1
+R128
+Z479 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd|
+Z480 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_fold_instance_1_fixpt.vhd|
 !i113 1
 R16
 R17
@@ -3628,42 +3628,42 @@ R2
 R6
 R7
 DEx4 work 28 weight_fold_instance_1_fixpt 0 22 J:olQ;VlOF8@VJ9YkWlZ20
-!i122 5564
+!i122 6032
 l195
 L56 759
 V:>JU:ikcLY7en8ikY>dG_0
 !s100 _FmYMaPmeTA;61U1dhK221
 R11
 33
-R183
-!i10b 1
 R127
-R476
-R477
+!i10b 1
+R128
+R479
+R480
 !i113 1
 R16
 R17
 Eweight_streamer_fixpt
-Z478 w1678228028
+Z481 w1678228028
 R3
 R2
 R6
 R7
-!i122 5565
+!i122 6033
 R8
-Z479 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd
-Z480 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd
+Z482 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd
+Z483 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd
 l0
 L47 1
 VnU2bIXa7];_c73WM=^nTB1
 !s100 hcbHhA1bZ<0a2a6k75HYT0
 R11
 33
-R183
-!i10b 1
 R184
-Z481 !s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd|
-Z482 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd|
+!i10b 1
+R128
+Z484 !s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd|
+Z485 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt.vhd|
 !i113 1
 R16
 R17
@@ -3673,18 +3673,18 @@ R2
 R6
 R7
 DEx4 work 21 weight_streamer_fixpt 0 22 nU2bIXa7];_c73WM=^nTB1
-!i122 5565
+!i122 6033
 l4186
 L60 4194
 V`H`:cnLXfT]GF`L=dm;ik3
 !s100 =6HPC3^F0Q`mOHP^4fOb32
 R11
 33
-R183
-!i10b 1
 R184
-R481
-R482
+!i10b 1
+R128
+R484
+R485
 !i113 1
 R16
 R17
@@ -3692,7 +3692,7 @@ Pweight_streamer_fixpt_pkg
 R2
 R6
 R7
-!i122 5569
+!i122 6037
 w1674151266
 R8
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd
@@ -3703,10 +3703,10 @@ VkXdm9znf@20An;N`DCYdN3
 !s100 dX2Lmoa39NaVMleSE[ZK<0
 R11
 33
-R394
+R407
 !i10b 1
-R395
-!s90 -reportprogress|300|-2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd|
+R185
+!s90 -2008|-explicit|-work|presynth|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd|
 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/hdl/weight_streamer_fixpt_pkg.vhd|
 !i113 1
 R16

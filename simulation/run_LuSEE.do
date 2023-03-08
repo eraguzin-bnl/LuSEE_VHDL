@@ -165,6 +165,10 @@ when {/spec_tst/spectrometer_fixpt_0/ready = 1} {
          set count 1
       } elseif {$count == 1} {
          set count 2
+      } elseif {$count == 2} {
+         set count 3
+      } elseif {$count == 3} {
+         set count 4
       }
 
       if {$count == 2} {
