@@ -1155,28 +1155,28 @@ SIZE="46282"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1678228689"
-SIZE="19302"
+TIME="1678297284"
+SIZE="38199"
 ENDFILE
 VALUE "<project>/simulation/presynth_simulation.log,log"
 STATE="utd"
-TIME="1678229618"
-SIZE="125098"
+TIME="1678297509"
+SIZE="31712"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1678228862"
+TIME="1678296777"
 SIZE="12500"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1678229668"
-SIZE="12559"
+TIME="1678297481"
+SIZE="12466"
 ENDFILE
-VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
+VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
-TIME="1678228066"
-SIZE="127256"
+TIME="1678297517"
+SIZE="463"
 ENDFILE
 VALUE "<project>/simulation/testbnch_presynth_simulation.log,log"
 STATE="utd"
@@ -1195,8 +1195,8 @@ SIZE="3219"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1678227988"
-SIZE="3497"
+TIME="1678298571"
+SIZE="3854"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -1709,7 +1709,7 @@ EntityName=SPEC_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/simulation/run_LuSEE.do
 DoFileName2=wave.do
-DoFileParams=eric test
+DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST
 DisplayDUTWave=false
 LogAllSignals=false
 DisablePulseFiltering=false
@@ -1778,8 +1778,8 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM="-l presynth_simulation.log -c"
-BATCH=1
+PARAM=" -l presynth_simulation.log "
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -2050,6 +2050,11 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+HDL;stimulus/SPEC_TST.vhd;0
+HDL;hdl/spectrometer_fixpt.vhd;0
+StartPage;StartPage;0
+ACTIVEVIEW;hdl/spectrometer_fixpt.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

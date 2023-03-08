@@ -1,9 +1,9 @@
-echo "Here we are in Eric's DO file"
+echo "Here we are in Eric's LuSEE DO file"
 echo $1
 echo $2
 
 quietly set ACTELLIBNAME PolarFire
-quietly set PROJECT_DIR "/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST"
+quietly set PROJECT_DIR $2
 
 if {[file exists presynth/_info]} {
    echo "INFO: Simulation library presynth already exists"
@@ -12,7 +12,7 @@ if {[file exists presynth/_info]} {
    vlib presynth
 }
 vmap presynth presynth
-vmap PolarFire "/usr/local/microchip/Libero_SoC_v2022.3/Libero/lib/modelsimpro/precompiled/vlog/polarfire"
+vmap PolarFire "$1/lib/modelsimpro/precompiled/vlog/polarfire"
 if {[file exists COREUART_LIB/_info]} {
    echo "INFO: Simulation library COREUART_LIB already exists"
 } else {
@@ -142,7 +142,55 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/sfft_fixpt_pkg.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_streamer_fixpt_pkg.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 
-vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli /usr/local/microchip/Libero_SoC_v2022.3/Libero/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
+vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli $1/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
+
 add wave /SPEC_TST/*
-run 1000ns
+add wave /spec_tst/spectrometer_fixpt_0/fft_ready
+
+set strobe Low
+set count 0
+
+when {/spec_tst/spectrometer_fixpt_0/ready = 1} {
+   if {$strobe eq "Low"} {
+      echo "ready is 1"
+      set strobe High
+
+      #Can't find a simple way to do regular damn addition in ModelSim's DO files
+      if {$count == 0} {
+         set count 1
+      } elseif {$count == 1} {
+         set count 2
+      }
+
+      if {$count == 2} {
+         echo "fft_ready rose for the second time"
+
+         vcd file spec_test.vcd
+         vcd add /spec_tst/*
+         vcd add /spec_tst/spectrometer_fixpt_0/sample1
+         vcd add /spec_tst/spectrometer_fixpt_0/sample2
+         vcd add /spec_tst/spectrometer_fixpt_0/Navg
+         vcd add /spec_tst/spectrometer_fixpt_0/pks
+         vcd add /spec_tst/spectrometer_fixpt_0/outbin
+         vcd add /spec_tst/spectrometer_fixpt_0/ready
+      }
+   }
+}
+
+when {/spec_tst/spectrometer_fixpt_0/ready = 0} {
+   if {$strobe eq "High"} {
+      echo "ready is 0"
+      set strobe Low
+
+      if {$count == 2} {
+         echo "fft_ready fell for the second time"
+         vcd flush
+         stop
+      }
+   }
+}
+
+
+run -all
+vcd flush
 exit

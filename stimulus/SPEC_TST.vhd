@@ -42,6 +42,10 @@ architecture behavioral of SPEC_TST is
     signal NSYSRESET : std_logic := '0';
     
     signal pks_val             : vector_of_std_logic_vector32(0 TO 3);
+    signal pks0                : std_logic_vector(31 downto 0);
+    signal pks1                : std_logic_vector(31 downto 0);
+    signal pks2                : std_logic_vector(31 downto 0);
+    signal pks3                : std_logic_vector(31 downto 0);
 
     component spectrometer_fixpt
         -- ports
@@ -89,6 +93,11 @@ begin
 
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
+    
+    pks0 <= pks_val(0);
+    pks1 <= pks_val(1);
+    pks2 <= pks_val(2);
+    pks3 <= pks_val(3);
 
     -- Instantiate Unit Under Test:  spectrometer_fixpt
     spectrometer_fixpt_0 : spectrometer_fixpt
