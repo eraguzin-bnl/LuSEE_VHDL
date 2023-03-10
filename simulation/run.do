@@ -1,5 +1,5 @@
 quietly set ACTELLIBNAME PolarFire
-quietly set PROJECT_DIR "/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST"
+quietly set PROJECT_DIR "/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/test_addition/LuSEE_VHDL"
 
 if {[file exists presynth/_info]} {
    echo "INFO: Simulation library presynth already exists"

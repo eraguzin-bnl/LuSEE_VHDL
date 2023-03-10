@@ -157,19 +157,11 @@ set count 0
 
 when {/spec_tst/spectrometer_fixpt_0/ready = 1} {
    if {$strobe eq "Low"} {
-      echo "ready is 1"
+      echo "readyz is 1"
       set strobe High
 
       #Can't find a simple way to do regular damn addition in ModelSim's DO files
-      if {$count == 0} {
-         set count 1
-      } elseif {$count == 1} {
-         set count 2
-      } elseif {$count == 2} {
-         set count 3
-      } elseif {$count == 3} {
-         set count 4
-      }
+      set count [expr $count + 1]
 
       if {$count == 2} {
          echo "fft_ready rose for the second time"
