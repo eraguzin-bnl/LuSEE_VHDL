@@ -830,10 +830,20 @@ STATE="utd"
 TIME="1676245426"
 SIZE="35367"
 ENDFILE
+VALUE "<project>/hdl/average_stage1 (conflicted copy 2023-03-14 125433).vhd,hdl"
+STATE="utd"
+TIME="1678812873"
+SIZE="4284"
+ENDFILE
+VALUE "<project>/hdl/average_stage1 (conflicted copy 2023-03-14 125452).vhd,hdl"
+STATE="utd"
+TIME="1678812892"
+SIZE="4284"
+ENDFILE
 VALUE "<project>/hdl/average_stage1.vhd,hdl"
 STATE="utd"
-TIME="1678810298"
-SIZE="7486"
+TIME="1678813649"
+SIZE="4919"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
 STATE="utd"
@@ -1102,8 +1112,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1678810317"
-SIZE="26359"
+TIME="1678811929"
+SIZE="26382"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1900,7 +1910,7 @@ Resolution=1ps
 VsimOpt=
 EntityName=SPEC_TST
 TopInstanceName=<top>_0
-DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/test_addition/LuSEE_VHDL/simulation/run_LuSEE.do
+DoFileName=/home/eraguzin/Nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST/simulation/run_LuSEE.do
 DoFileName2=wave.do
 DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL//test_addition/LuSEE_VHDL
 DisplayDUTWave=false
@@ -1971,7 +1981,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=""
+PARAM=" -l presynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -2463,7 +2473,8 @@ ORIENTATION;HORIZONTAL
 HDL;hdl/average_instance_P1_fixpt.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;hdl/average_stage1.vhd;0
-ACTIVEVIEW;hdl/spectrometer_fixpt.vhd
+HDL;hdl/deinterlace_instance_12_fixpt.vhd;0
+ACTIVEVIEW;hdl/average_stage1.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

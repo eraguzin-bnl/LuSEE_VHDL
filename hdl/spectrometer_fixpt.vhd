@@ -234,7 +234,7 @@ COMPONENT average_instance_P1_fixpt
  SIGNAL ch1_val_im_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_re_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_im_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL bin_s1                               :      std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL bin_s1                               :      std_logic_vector(11 DOWNTO 0);  -- ufix13
  SIGNAL fft_ready_s1                         :       std_logic;
   
   
@@ -549,6 +549,7 @@ end process;
       ready_in             => fft_ready_s1,
         
         ce_out               => ce_out_s1,
+        error_flag           => open,
         outpk                => pks_s1(0),
         outbin               => outbin_s1,
         ready_out            => ready_s1

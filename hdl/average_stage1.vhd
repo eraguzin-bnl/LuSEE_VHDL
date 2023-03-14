@@ -24,16 +24,17 @@ use ieee.numeric_std.all;
 entity average_stage1 is
     GENERIC(
         navg2                             : integer range 1 to 16 := 8;
-        bins                              : integer := 2048
+        bins                              : integer := 2047
     );
     PORT( clk                             :   IN    std_logic;
         reset                             :   IN    std_logic;
         clk_enable                        :   IN    std_logic;
         P                                 :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        count                             :   IN    std_logic_vector(12 DOWNTO 0);  -- ufix13
+        count                             :   IN    std_logic_vector(11 DOWNTO 0);  -- ufix13
         navg                              :   IN    std_logic_vector(9 DOWNTO 0);
         ready_in                          :   IN    std_logic;
         ce_out                            :   OUT   std_logic;
+        error_flag                        :   OUT   std_logic;
         outpk                             :   OUT   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15a
         outbin                            :   OUT   std_logic_vector(10 DOWNTO 0);  -- ufix11
         ready_out                         :   OUT   std_logic
@@ -47,34 +48,17 @@ architecture architecture_average_stage1 of average_stage1 is
     signal write_data                     : unsigned(41 downto 0);
     signal read_data                      : unsigned(41 downto 0);
     
-    signal ar                             : signed(31 downto 0);
-    signal ai                             : signed(31 downto 0);
-    signal br                             : signed(31 downto 0);
-    signal bi                             : signed(31 downto 0);
-    signal ch2_im_expanded                : signed(32 downto 0);
-    signal ch2_im_negative                : signed(32 downto 0);
+    constant bins_s                       : std_logic_vector(11 downto 0) := std_logic_vector(to_unsigned(bins,12));
+    signal index                          : unsigned(11 DOWNTO 0);
+    signal count_s                        : std_logic_vector(11 downto 0);
+    signal P_s                            : std_logic_vector(31 downto 0);
+    signal sum                            : std_logic_vector(42 downto 0);
+    signal first_time                     : std_logic;
     
-    --signal real_product                   : signed(63 downto 0);
-    --signal im_product                     : signed(63 downto 0);
-    signal real_expanded                  : signed(64 downto 0);
-    signal im_expanded                    : signed(64 downto 0);
-    signal re_im_difference               : signed(64 downto 0);
-    signal difference                     : unsigned(31 downto 0);
-    
-    signal bin_counter                    : integer range 0 to 2048;
-    signal first_run                      : std_logic;
-    
-    signal count_s1                       : std_logic_vector(12 downto 0);
-    signal count_s2                       : std_logic_vector(12 downto 0);
-    signal count_s3                       : std_logic_vector(12 downto 0);
-    signal count_s4                       : std_logic_vector(12 downto 0);
-    signal count_s5                       : std_logic_vector(12 downto 0);
-    
-    signal w_en_s1                        : std_logic;
-    signal w_en_s2                        : std_logic;
-    signal w_en_s3                        : std_logic;
-    signal w_en_s4                        : std_logic;
-    signal w_en_s5                        : std_logic;
+    type state_type is (S_IDLE,
+        S_READ_DATA,
+        S_FINISH_DATA);
+    signal state: state_type;
 
 begin
 
@@ -89,107 +73,56 @@ begin
         W_DATA => write_data,
         R_DATA => read_data
         );
-    
-    -- Combinational Logic
-    ch2_im_expanded <= resize(signed(ch2_val_im), 33);
-    ch2_im_negative <= - (ch2_im_expanded);
 
     process (clk) begin
         if (rising_edge(clk)) then
             if (reset = '1') then
-                ar <= (others=>'0');
-                ai <= (others=>'0');
-                br <= (others=>'0');
-                bi <= (others=>'0');
-                
-                ch2_im_expanded <= (others=>'0');
-                ch2_im_negative <= (others=>'0');
-                
-                real_expanded <= (others=>'0');
-                im_expanded <= (others=>'0');
-                re_im_difference <= (others=>'0');
-                difference <= (others=>'0');
-                write_data <= (others=>'0');
-            else
-                if (ready_in = '1') then
-                    ar <= signed(ch1_val_re);
-                    ai <= signed(ch1_val_im);
-                    br <= signed(ch2_val_re);
-                    bi <= ch2_im_negative(31 DOWNTO 0);
-                    
-                    --real_product <= ar * br;
-                    real_expanded <= resize(ar * br, 65);
-                    --im_product <= ai * bi;
-                    im_expanded <= resize(ai * bi, 65);
-                    
-                    re_im_difference <= real_expanded - im_expanded;
-                    
-                    difference <= unsigned(re_im_difference(60 DOWNTO 29));
-                    
-                    if (first_run = '0') then
-                        write_data <= difference + read_data;
-                    else
-                        write_data <= difference;
-                    end if;
-                    
-                end if;
-            end if;
-        end if;
-    end process;
-    
-    process (clk) begin
-        if (rising_edge(clk)) then
-            if (reset = '1') then
-                count_s1 <= (others=>'0');
-                count_s2 <= (others=>'0');
-                count_s3 <= (others=>'0');
-                count_s4 <= (others=>'0');
-                count_s5 <= (others=>'0');
-                
-                read_address <= (others=>'0');
+                read_data <= (others=>'0');
+                write_en <= '0';
                 write_address <= (others=>'0');
+                write_data <= (others=>'0');
+                read_address <= bins_s;
+                error_flag <= '0';
+                index <= to_unsigned(bins-1, index'length);
+                P_s <= (others=>'0');
+                sum <= (others=>'0');
+                first_time <= '0';
+            else
+                CASE state IS
                 
-                w_en_s1 <= '0';
-                w_en_s2 <= '0';
-                w_en_s3 <= '0';
-                w_en_s4 <= '0';
-                w_en_s5 <= '0';
-            else
-                if (ready_in = '1') then
-                    count_s1 <= count;
-                    count_s2 <= count_s1;
-                    count_s3 <= count_s2;
-                    count_s4 <= count_s3;
-                    count_s5 <= count_s4;
+                when S_IDLE =>	
+                    read_address <= bins_s;
+                    write_en <= '0';
+                    write_address <= (others=>'0');
+                    write_data <= (others=>'0');
+                    --Should be a cycle ahead
+                    error_flag <= '0';
+                    index <= to_unsigned(bins-1, index'length);
+                    P_s <= (others=>'0');
+                    sum <= (others=>'0');
+                    first_time <= '0';
                     
-                    read_address <= count_s4;
-                    write_address <= count_s5;
+                    if (ready_in = '1') then
+                        if (count = bins_s) then
+                            state <= S_READ_DATA;
+                            read_address <= std_logic_vector(index);
+                            P_s <= P;
+                        else
+                            error_flag <= '1';
+                        end if;
+                    end if;
+
+                when S_READ_DATA =>
+                    read_data <= (others=>'0');
+                    write_en <= '1';
+                    write_address <= (others=>'0');
+                    write_data <= (others=>'0');
+                    read_address <= bins_s;
                     
-                    w_en_s1 <= '1';
-                    w_en_s2 <= w_en_s1;
-                    w_en_s3 <= w_en_s2;
-                    w_en_s4 <= w_en_s3;
-                    w_en_s5 <= w_en_s4;
-                    
-                end if;
+                when others =>		
+					state <= S_idle;		
+			    end case; 
             end if;
         end if;
     end process;
-    
-    process (clk) begin
-        if (rising_edge(clk)) then
-            if (reset = '1') then
-                bin_counter <= 0;
-                first_run <= '1';
-            else
-                if (bin_counter = 2048) then
-                    bin_counter <= 0;
-                    first_run <= '0';
-                else
-                    bin_counter <= bin_counter + 1;
-                end if;
-            end if;
-        end if;
-    end process;
-                    
 end architecture_average_stage1;
