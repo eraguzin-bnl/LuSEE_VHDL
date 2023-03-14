@@ -259,6 +259,40 @@ COMPONENT average_instance_P1_fixpt
  SIGNAL sfft_DLYr                          : std_logic_vector(3 DOWNTO 0);  
  SIGNAL deinterlace_DLYr                   : std_logic_vector(3 DOWNTO 0); 
  SIGNAL AVG_DLYr                           : std_logic_vector(3 DOWNTO 0); 
+ 
+ SIGNAL A1                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A2                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A3                                : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL A4                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL X12R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X12I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X13R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X13I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X14R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X14I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X23R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X23I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X24R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X24I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X34R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X34I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ 
+ SIGNAL A1_s                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A2_s                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A3_s                                : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL A4_s                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL X12R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X12I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X13R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X13I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X14R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X14I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X23R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X23I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X24R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X24I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X34R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X34I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
 
     
 BEGIN
@@ -454,23 +488,65 @@ deinterlace_instance_12_fixpt_inst : deinterlace_instance_12_fixpt
         fft_ready_s1            <= fft_ready;
     end if;
 end process;     
-        
+    
+    correlate_fixpt_inst : entity work.correlate_fixpt
+    PORT map
+    (   ch1_val_re              => ch1_val_re_s1,
+        ch1_val_im              => ch1_val_im_s1,
+        ch2_val_re              => ch2_val_re_s1,
+        ch2_val_im              => ch2_val_im_s1,
+        ch3_val_re              => ch1_val_re_s1,
+        ch3_val_im              => ch1_val_im_s1,
+        ch4_val_re              => ch2_val_re_s1,
+        ch4_val_im              => ch2_val_im_s1,
+        A1                      => A1,
+        A2                      => A2,
+        A3                      => A3,
+        A4                      => A4,
+        X12R                    => X12R,
+        X12I                    => X12I,
+        X13R                    => X13R,
+        X13I                    => X13I,
+        X14R                    => X14R,
+        X14I                    => X14I,
+        X23R                    => X23R,
+        X23I                    => X23I,
+        X24R                    => X24R,
+        X24I                    => X24I,
+        X34R                    => X34R,
+        X34I                    => X34I
+        );
+       process (clk) begin
+    if (rising_edge(clk)) then
+        A1_s                      <= A1;
+        A2_s                      <= A2;
+        A3_s                      <= A3;
+        A4_s                      <= A4;
+        X12R_s                    <= X12R;
+        X12I_s                    <= X12I;
+        X13R_s                    <= X13R;
+        X13I_s                    <= X13I;
+        X14R_s                    <= X14R;
+        X14I_s                    <= X14I;
+        X23R_s                    <= X23R;
+        X23I_s                    <= X23I;
+        X24R_s                    <= X24R;
+        X24I_s                    <= X24I;
+        X34R_s                    <= X34R;
+        X34I_s                    <= X34I;
+    end if;
+end process;  
 
- average_instance_P1_fixpt_inst : average_instance_P1_fixpt
+ average_instance_P1_fixpt_inst : entity work.average_stage1
   PORT map
         ( clk                => clk,
         reset                => blk_reset,
         clk_enable           => clk_enable,
 
-      ch1_val_re           => ch1_val_re_s1,
-      ch1_val_im           => ch1_val_im_s1,
-      ch2_val_re           => ch1_val_re_s1,
-      ch2_val_im           => ch1_val_im_s1,
+      P                    => A1,
       count                => bin_s1,
-      --navg                 => Navg,
+      navg                 => Navg,
       ready_in             => fft_ready_s1,
-        
-     
         
         ce_out               => ce_out_s1,
         outpk                => pks_s1(0),

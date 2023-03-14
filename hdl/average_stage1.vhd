@@ -29,10 +29,7 @@ entity average_stage1 is
     PORT( clk                             :   IN    std_logic;
         reset                             :   IN    std_logic;
         clk_enable                        :   IN    std_logic;
-        ch1_val_re                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch1_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_re                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+        P                                 :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
         count                             :   IN    std_logic_vector(12 DOWNTO 0);  -- ufix13
         navg                              :   IN    std_logic_vector(9 DOWNTO 0);
         ready_in                          :   IN    std_logic;
