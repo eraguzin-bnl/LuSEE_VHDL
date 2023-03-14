@@ -23,7 +23,7 @@ use ieee.numeric_std.all;
 
 entity average_stage1 is
     GENERIC(
-        navg2                             : integer range 1 to 16 := 8;
+        navg_max                          : integer range 1 to 16 := 8;
         bins                              : integer := 2047
     );
     PORT( clk                             :   IN    std_logic;
@@ -51,9 +51,10 @@ architecture architecture_average_stage1 of average_stage1 is
     constant bins_s                       : std_logic_vector(11 downto 0) := std_logic_vector(to_unsigned(bins,12));
     signal index                          : unsigned(11 DOWNTO 0);
     signal count_s                        : std_logic_vector(11 downto 0);
-    signal P_s                            : std_logic_vector(31 downto 0);
-    signal sum                            : std_logic_vector(42 downto 0);
+    signal sum                            : unsigned(41 downto 0);
     signal first_time                     : std_logic;
+    
+    signal navg_num                       : integer range 0 to navg_max;
     
     type state_type is (S_IDLE,
         S_READ_DATA,
@@ -77,16 +78,17 @@ begin
     process (clk) begin
         if (rising_edge(clk)) then
             if (reset = '1') then
-                read_data <= (others=>'0');
                 write_en <= '0';
                 write_address <= (others=>'0');
                 write_data <= (others=>'0');
                 read_address <= bins_s;
                 error_flag <= '0';
                 index <= to_unsigned(bins-1, index'length);
-                P_s <= (others=>'0');
                 sum <= (others=>'0');
-                first_time <= '0';
+                first_time <= '1';
+                navg_num <= 0;
+                ce_out <= '0';
+                ready_out <= '0';
             else
                 CASE state IS
                 
@@ -98,26 +100,83 @@ begin
                     --Should be a cycle ahead
                     error_flag <= '0';
                     index <= to_unsigned(bins-1, index'length);
-                    P_s <= (others=>'0');
                     sum <= (others=>'0');
-                    first_time <= '0';
+                    first_time <= '1';
                     
                     if (ready_in = '1') then
                         if (count = bins_s) then
                             state <= S_READ_DATA;
                             read_address <= std_logic_vector(index);
-                            P_s <= P;
+                            index <= unsigned(count) - 1;
+                            count_s <= count;
+                            if (first_time = '1') then
+                                sum <= unsigned(P);
+                            else
+                                sum <= unsigned(P) + read_data;
+                            end if;
                         else
                             error_flag <= '1';
                         end if;
                     end if;
 
                 when S_READ_DATA =>
-                    read_data <= (others=>'0');
                     write_en <= '1';
-                    write_address <= (others=>'0');
-                    write_data <= (others=>'0');
-                    read_address <= bins_s;
+                    
+                    if (navg_num >= to_integer(unsigned(navg))) then
+                        write_data <= to_unsigned(0, write_data'length);
+                        outpk <= std_logic_vector(shift_left(sum, to_integer(unsigned(navg))));
+                        outbin <= count_s;
+                        ce_out <= '1';
+                        ready_out <= '1';
+                    else
+                        write_data <= sum;
+                        outpk <= x"0000";
+                        outbin <= "000" & x"00";
+                        ce_out <= '0';
+                        ready_out <= '0';
+                    end if;
+                    
+                    if (first_time = '1') then
+                        sum <= unsigned(P);
+                    else
+                        sum <= unsigned(P) + read_data;
+                    end if;
+                    
+                    write_address <= count_s;
+                    count_s <= count;
+                    
+                    read_address <= std_logic_vector(index);
+                    if (index > 0) then
+                        index <= unsigned(count) - 1;
+                    else
+                        state <= S_FINISH_DATA;
+                    end if;
+                    
+                when S_FINISH_DATA =>
+                    write_en <= '1';
+                    
+                    if (navg_num >= to_integer(unsigned(navg))) then
+                        write_data <= to_unsigned(0, write_data'length);
+                        outpk <= std_logic_vector(shift_left(sum, to_integer(unsigned(navg))));
+                        outbin <= count_s;
+                        ce_out <= '1';
+                        ready_out <= '1';
+                        
+                        navg_num <= 0;
+                        first_time <= '1';
+                    else
+                        outpk <= x"0000";
+                        outbin <= "000" & x"00";
+                        ce_out <= '0';
+                        ready_out <= '0';
+                        write_data <= sum;
+                        write_address <= count_s;
+                        
+                        navg_num <= navg_num + 1;
+                        first_time <= '0';
+                    end if;
+                    
+                    state <= S_IDLE;
                     
                 when others =>		
 					state <= S_idle;		

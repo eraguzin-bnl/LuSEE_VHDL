@@ -830,20 +830,10 @@ STATE="utd"
 TIME="1676245426"
 SIZE="35367"
 ENDFILE
-VALUE "<project>/hdl/average_stage1 (conflicted copy 2023-03-14 125433).vhd,hdl"
-STATE="utd"
-TIME="1678812873"
-SIZE="4284"
-ENDFILE
-VALUE "<project>/hdl/average_stage1 (conflicted copy 2023-03-14 125452).vhd,hdl"
-STATE="utd"
-TIME="1678812892"
-SIZE="4284"
-ENDFILE
 VALUE "<project>/hdl/average_stage1.vhd,hdl"
 STATE="utd"
-TIME="1678813649"
-SIZE="4919"
+TIME="1678834783"
+SIZE="6810"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
 STATE="utd"
