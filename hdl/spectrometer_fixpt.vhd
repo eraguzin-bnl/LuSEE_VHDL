@@ -66,116 +66,6 @@ END spectrometer_fixpt;
 
 ARCHITECTURE rtl OF spectrometer_fixpt IS
 
-
-
-
-  COMPONENT weight_streamer_fixpt 
-  PORT( clk                               :   IN    std_logic;
-        reset                             :   IN    std_logic;
-        clk_enable                        :   IN    std_logic;
-        ce_out                            :   OUT   std_logic;
-        w1                                :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
-        w2                                :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
-        w3                                :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
-        w4                                :   OUT   std_logic_vector(31 DOWNTO 0)  -- sfix32_En31
-        );
-  END COMPONENT;
- 
- 
- 
-COMPONENT weight_fold_instance_1_fixpt 
-  PORT( clk                               :   IN    std_logic;
-        reset                             :   IN    std_logic;
-        clk_enable                        :   IN    std_logic;
-        sample_1                          :   IN    std_logic_vector(13 DOWNTO 0);  -- sfix14
-        w1                                :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
-        w2                                :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
-        w3                                :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
-        w4                                :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
-        ce_out                            :   OUT   std_logic;
-        val_out                           :   OUT   std_logic_vector(31 DOWNTO 0)  -- sfix32_En18
-        );
-  END COMPONENT;
- 
-
-COMPONENT  sfft_fixpt 
-  PORT( clk                               :   IN    std_logic;
-        reset                             :   IN    std_logic;
-        clk_enable                        :   IN    std_logic;
-        c_re                              :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
-        c_im                              :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
-        ce_out                            :   OUT   std_logic;
-        fft_out_re                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        fft_out_im                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        fft_valid                         :   OUT   std_logic
-        );
-  END COMPONENT;
- 
- 
- 
- 
- 
- 
-COMPONENT deinterlace_instance_12_fixpt 
-  PORT( clk                               :   IN    std_logic;
-        reset                             :   IN    std_logic;
-        clk_enable                        :   IN    std_logic;
-        fft_val_re                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        fft_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        fft_valid                         :   IN    std_logic;
-        ce_out                            :   OUT   std_logic;
-        ch1_val_re                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch1_val_im                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_re                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_im                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        bin                               :   OUT   std_logic_vector(12 DOWNTO 0);  -- ufix13
-        ready                             :   OUT   std_logic
-        );
-  END COMPONENT;
- 
- 
- 
- 
- 
- 
- 
- 
-COMPONENT average_instance_P1_fixpt
-  PORT( clk                               :   IN    std_logic;
-        reset                             :   IN    std_logic;
-        clk_enable                        :   IN    std_logic;
-        ch1_val_re                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch1_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_re                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        count                             :   IN    std_logic_vector(12 DOWNTO 0);  -- ufix13
-        ready_in                          :   IN    std_logic;
-        ce_out                            :   OUT   std_logic;
-        outpk                             :   OUT   std_logic_vector(31 DOWNTO 0);  -- ufix32_E17
-        outbin                            :   OUT   std_logic_vector(10 DOWNTO 0);  -- ufix11
-        ready_out                         :   OUT   std_logic
-        );
-  END COMPONENT;
-  
-  COMPONENT average_instance_P2_fixpt
-  PORT( clk                               :   IN    std_logic;
-        reset                             :   IN    std_logic;
-        clk_enable                        :   IN    std_logic;
-        ch1_val_re                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch1_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_re                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        count                             :   IN    std_logic_vector(12 DOWNTO 0);  -- ufix13
-        ready_in                          :   IN    std_logic;
-        ce_out                            :   OUT   std_logic;
-        outpk                             :   OUT   std_logic_vector(31 DOWNTO 0);  -- ufix32_E17
-        outbin                            :   OUT   std_logic_vector(10 DOWNTO 0);  -- ufix11
-        ready_out                         :   OUT   std_logic
-        );
-  END COMPONENT;
-  
-  
-
  SIGNAL  resetr                              :   std_logic;
  SIGNAL w1                                   :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
  SIGNAL w2                                   :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
@@ -227,7 +117,7 @@ COMPONENT average_instance_P1_fixpt
  SIGNAL ch1_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_re                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL bin                               :      std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL bin                               :      std_logic_vector(11 DOWNTO 0);  -- ufix13
  SIGNAL fft_ready                         :       std_logic;
   
  SIGNAL ch1_val_re_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
@@ -349,7 +239,7 @@ end process;
                        
  
  
-weight_streamer_fixpt_inst : weight_streamer_fixpt
+weight_streamer_fixpt_inst : entity work.weight_streamer_fixpt
   PORT map
         ( clk                => clk,
         reset                => not Streamer_en(0),
@@ -381,7 +271,7 @@ weight_streamer_fixpt_inst : weight_streamer_fixpt
 end process; 
 
          
-weight_fold_instance_1_fixpt_inst1  : weight_fold_instance_1_fixpt 
+weight_fold_instance_1_fixpt_inst1  : entity work.weight_fold_instance_1_fixpt 
   PORT map
         ( clk                => clk,
         reset                => not weight_fold_en(0),
@@ -396,7 +286,7 @@ weight_fold_instance_1_fixpt_inst1  : weight_fold_instance_1_fixpt
         val_out                 => val1
         );
 
- weight_fold_instance_1_fixpt_inst2  : weight_fold_instance_1_fixpt 
+ weight_fold_instance_1_fixpt_inst2  : entity work.weight_fold_instance_1_fixpt 
   PORT map
         ( clk                => clk,
         reset                => not weight_fold_en(0),
@@ -428,7 +318,7 @@ weight_fold_instance_1_fixpt_inst1  : weight_fold_instance_1_fixpt
 end process;     
         
    
-sfft_fixpt_inst : sfft_fixpt
+sfft_fixpt_inst : entity work.sfft_fixpt
   PORT map
         ( clk                => clk,
         reset                => not sfft_en(0) ,
@@ -458,7 +348,7 @@ end process;
 
 
  
-deinterlace_instance_12_fixpt_inst : deinterlace_instance_12_fixpt
+deinterlace_instance_12_fixpt_inst : entity work.deinterlace_instance_12_fixpt
   PORT map
         ( clk                => clk,
         reset                => blk_reset,
@@ -543,7 +433,7 @@ end process;
         reset                => blk_reset,
         clk_enable           => clk_enable,
 
-      P                    => A1,
+      P                    => A1_s,
       count                => bin_s1,
       navg                 => Navg,
       ready_in             => fft_ready_s1,
@@ -556,26 +446,26 @@ end process;
         );
 
 
-   average_instance_P1_fixpt_inst2 : average_instance_P1_fixpt
-  PORT map
-        ( clk                => clk,
-        reset                => blk_reset,
-        clk_enable           => clk_enable ,
-        
-        
-        ch1_val_re           => ch2_val_re_s1,
-        ch1_val_im           => ch2_val_im_s1,
-        ch2_val_re           => ch2_val_re_s1,
-        ch2_val_im           => ch2_val_im_s1,
-        count                => bin_s1,
-        --navg                 => Navg,
-        ready_in             => fft_ready_s1,
-
-        ce_out               => open,
-        outpk                => pks_s1(1),
-        outbin               => open,
-        ready_out            => open
-        );
+   --average_instance_P1_fixpt_inst2 : average_instance_P1_fixpt
+  --PORT map
+        --( clk                => clk,
+        --reset                => blk_reset,
+        --clk_enable           => clk_enable ,
+        --
+        --
+        --ch1_val_re           => ch2_val_re_s1,
+        --ch1_val_im           => ch2_val_im_s1,
+        --ch2_val_re           => ch2_val_re_s1,
+        --ch2_val_im           => ch2_val_im_s1,
+        --count                => bin_s1,
+        ----navg                 => Navg,
+        --ready_in             => fft_ready_s1,
+--
+        --ce_out               => open,
+        --outpk                => pks_s1(1),
+        --outbin               => open,
+        --ready_out            => open
+        --);
 
         
              process (clk) begin

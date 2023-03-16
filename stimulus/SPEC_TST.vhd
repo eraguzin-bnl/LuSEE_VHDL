@@ -154,7 +154,7 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg => (others=> '0'),
+            Navg => "00" & x"04",
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',

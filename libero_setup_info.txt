@@ -1,11 +1,11 @@
 # Microsemi Corp.
-# Date: 2023-Mar-14 19:02:36
+# Date: 2023-Mar-16 17:36:22
 Libero Release : v2022.3
 Libero Version : 2022.3.0.8
 Operating System Name : Linux
-Linux Distribution Description:	Ubuntu 22.04.1 LTS
+Linux Distribution Description:	Manjaro Linux
 
-Ram Size : Unknown
+Ram Size : 125.64 GB (usable)
 OS Type : 64-bit
 
 Environment Variables : 

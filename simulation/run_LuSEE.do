@@ -87,6 +87,7 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/UART_IO.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SimpleDualPortRAM_generic.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/average_instance_P1_fixpt.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SimpleDualPortRAM_generic_block.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/deinterlace_instance_12_fixpt_pkg.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/deinterlace_instance_12_fixpt.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RADIX22FFT_CTRL1_1.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RADIX22FFT_CTRL1_10.vhd"
@@ -136,10 +137,12 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/dsphdl_FFT.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/sfft_fixpt.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_fold_instance_1_fixpt.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_streamer_fixpt.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/spectrometer_fixpt.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/LuSEE_PF_EVAL.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/sfft_fixpt_pkg.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_streamer_fixpt_pkg.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/correlate_fixpt.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/average_stage1.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/spectrometer_fixpt.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/LuSEE_PF_EVAL.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 
 vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli $1/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
@@ -155,9 +158,9 @@ add wave /spec_tst/spectrometer_fixpt_0/ready
 set strobe Low
 set count 0
 
-when {/spec_tst/spectrometer_fixpt_0/ready = 1} {
+when {/spec_tst/spectrometer_fixpt_0/fft_ready_s1 = 1} {
    if {$strobe eq "Low"} {
-      echo "readyz is 1"
+      echo "ready is 1"
       set strobe High
 
       #Can't find a simple way to do regular damn addition in ModelSim's DO files
@@ -173,12 +176,12 @@ when {/spec_tst/spectrometer_fixpt_0/ready = 1} {
          vcd add /spec_tst/spectrometer_fixpt_0/Navg
          vcd add /spec_tst/spectrometer_fixpt_0/pks
          vcd add /spec_tst/spectrometer_fixpt_0/outbin
-         vcd add /spec_tst/spectrometer_fixpt_0/ready
+         vcd add /spec_tst/spectrometer_fixpt_0/fft_ready_s1
       }
    }
 }
 
-when {/spec_tst/spectrometer_fixpt_0/ready = 0} {
+when {/spec_tst/spectrometer_fixpt_0/fft_ready_s1 = 0} {
    if {$strobe eq "High"} {
       echo "ready is 0"
       set strobe Low
