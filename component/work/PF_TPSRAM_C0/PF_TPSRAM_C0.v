@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Mar 16 12:52:51 2023
+// Created by SmartDesign Fri Mar 17 12:10:06 2023
 // Version: 2022.3 2022.3.0.8
 //////////////////////////////////////////////////////////////////////
 
@@ -43,7 +43,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_TPSRAM:1.1.108} -component
 "RE_POLARITY:2"  \
 "RESET_PN:R_DATA_ARST_N"  \
 "RESET_POLARITY:2"  \
-"RWIDTH:42"  \
+"RWIDTH:52"  \
 "SII_LOCK:0"  \
 "WADDRESS_PN:W_ADDR"  \
 "WCLK_EDGE:RISE"  \
@@ -51,7 +51,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_TPSRAM:1.1.108} -component
 "WDEPTH:4096"  \
 "WE_PN:W_EN"  \
 "WE_POLARITY:1"  \
-"WWIDTH:42"   }
+"WWIDTH:52"   }
 # Exporting Component Description of PF_TPSRAM_C0 to TCL done
 */
 
@@ -73,22 +73,22 @@ module PF_TPSRAM_C0(
 input         CLK;
 input  [11:0] R_ADDR;
 input  [11:0] W_ADDR;
-input  [41:0] W_DATA;
+input  [51:0] W_DATA;
 input         W_EN;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output [41:0] R_DATA;
+output [51:0] R_DATA;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
 wire          CLK;
 wire   [11:0] R_ADDR;
-wire   [41:0] R_DATA_net_0;
+wire   [51:0] R_DATA_net_0;
 wire   [11:0] W_ADDR;
-wire   [41:0] W_DATA;
+wire   [51:0] W_DATA;
 wire          W_EN;
-wire   [41:0] R_DATA_net_1;
+wire   [51:0] R_DATA_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -103,7 +103,7 @@ assign WBYTE_EN_const_net_0 = 9'h000;
 // Top level output port assignments
 //--------------------------------------------------------------------
 assign R_DATA_net_1 = R_DATA_net_0;
-assign R_DATA[41:0] = R_DATA_net_1;
+assign R_DATA[51:0] = R_DATA_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------

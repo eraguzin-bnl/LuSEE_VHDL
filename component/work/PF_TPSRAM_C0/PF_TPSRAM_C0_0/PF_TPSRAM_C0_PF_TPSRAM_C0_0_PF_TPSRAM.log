@@ -21,9 +21,9 @@ Write Clock Edge                : Rising
 A_REN Polarity                  : None
 B_REN Polarity                  : None
 Write Depth                     : 4096
-Write Width                     : 42
+Write Width                     : 52
 Read Depth                      : 4096
-Read Width                      : 42
+Read Width                      : 52
 Portname DataIn                 : W_DATA
 Portname DataOut                : R_DATA
 Portname WClock                 : W_CLK
@@ -75,6 +75,6 @@ Cascade Configuration:
      Write Port configuration   : 4096x5
      Read Port configuration    : 4096x5
      Number of blocks depth wise: 1
-     Number of blocks width wise: 9
+     Number of blocks width wise: 11
 
 Wrote Verilog netlist to /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0//PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.v.

@@ -145,7 +145,7 @@ PARENT="<project>/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.cxf"
 ENDFILE
 VALUE "<project>/component/Actel/SgCore/PF_TPSRAM/1.1.108/PF_TPSRAM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1678985571"
+TIME="1679069406"
 SIZE="246"
 PARENT="<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.cxf"
 ENDFILE
@@ -637,26 +637,26 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.cxf,actgen_cxf"
 STATE="utd"
-TIME="1678985571"
+TIME="1679069406"
 SIZE="4881"
 ENDFILE
 VALUE "<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v,hdl"
 STATE="utd"
-TIME="1678985571"
+TIME="1679069406"
 SIZE="3642"
 PARENT="<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0/PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1678985571"
+TIME="1679069406"
 SIZE="738"
 PARENT="<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.cxf"
 ENDFILE
 VALUE "<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0/PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.v,hdl"
 STATE="utd"
-TIME="1678985570"
-SIZE="16457"
+TIME="1679069405"
+SIZE="20023"
 PARENT="<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0/PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -833,8 +833,8 @@ SIZE="35367"
 ENDFILE
 VALUE "<project>/hdl/average_stage1.vhd,hdl"
 STATE="utd"
-TIME="1679002414"
-SIZE="8424"
+TIME="1679071565"
+SIZE="8867"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
 STATE="utd"
@@ -1173,23 +1173,18 @@ SIZE="745"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1678982516"
+TIME="1679002425"
 SIZE="12775"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1678984257"
-SIZE="14078"
+TIME="1678985398"
+SIZE="13978"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
-TIME="1678984279"
-SIZE="97"
-ENDFILE
-VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
-STATE="utd"
-TIME="1679002432"
-SIZE="32222"
+TIME="1678985375"
+SIZE="136"
 ENDFILE
 VALUE "<project>/simulation/testbnch_presynth_simulation.log,log"
 STATE="utd"
@@ -1208,7 +1203,7 @@ SIZE="3219"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1678986313"
+TIME="1679070762"
 SIZE="5363"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
@@ -2193,8 +2188,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/SynplifyPro/bin/synplify_pro"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -2921,7 +2916,6 @@ ENDLIST
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;hdl/deinterlace_instance_12_fixpt.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;hdl/average_stage1.vhd;0
 HDL;stimulus/SPEC_TST.vhd;0
