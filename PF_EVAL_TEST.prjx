@@ -145,7 +145,7 @@ PARENT="<project>/component/work/PF_IOD_ADC_ADS4245/PF_IOD_ADC_ADS4245.cxf"
 ENDFILE
 VALUE "<project>/component/Actel/SgCore/PF_TPSRAM/1.1.108/PF_TPSRAM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1679069406"
+TIME="1679327107"
 SIZE="246"
 PARENT="<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.cxf"
 ENDFILE
@@ -637,25 +637,25 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.cxf,actgen_cxf"
 STATE="utd"
-TIME="1679069406"
+TIME="1679327107"
 SIZE="4881"
 ENDFILE
 VALUE "<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v,hdl"
 STATE="utd"
-TIME="1679069406"
+TIME="1679327107"
 SIZE="3642"
 PARENT="<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0/PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1679069406"
+TIME="1679327107"
 SIZE="738"
 PARENT="<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.cxf"
 ENDFILE
 VALUE "<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0/PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.v,hdl"
 STATE="utd"
-TIME="1679069405"
+TIME="1679327106"
 SIZE="20023"
 PARENT="<project>/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0/PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.cxf"
 IS_READONLY="TRUE"
@@ -833,8 +833,8 @@ SIZE="35367"
 ENDFILE
 VALUE "<project>/hdl/average_stage1.vhd,hdl"
 STATE="utd"
-TIME="1679071565"
-SIZE="8867"
+TIME="1679350818"
+SIZE="9381"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
 STATE="utd"
@@ -848,8 +848,8 @@ SIZE="16358"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1678982501"
-SIZE="17650"
+TIME="1679326815"
+SIZE="22895"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1103,7 +1103,7 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1678989634"
+TIME="1679326873"
 SIZE="20689"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
@@ -1173,7 +1173,7 @@ SIZE="745"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1679002425"
+TIME="1679328849"
 SIZE="12775"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
@@ -1211,10 +1211,30 @@ STATE="utd"
 TIME="1678978149"
 SIZE="2708"
 ENDFILE
+VALUE "<project>/synthesis/LuSEE_PF_EVAL.so,so"
+STATE="utd"
+TIME="1679329072"
+SIZE="251"
+ENDFILE
+VALUE "<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm"
+STATE="ood"
+TIME="1679329063"
+SIZE="19236025"
+ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1678982430"
-SIZE="15431"
+TIME="1679327663"
+SIZE="16781"
+ENDFILE
+VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1679329066"
+SIZE="28344"
+ENDFILE
+VALUE "<project>/synthesis/synwork/layer0.so,so"
+STATE="utd"
+TIME="1679091596"
+SIZE="154"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -2916,9 +2936,12 @@ ENDLIST
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;hdl/average_stage1.vhd;0
+HDL;hdl/LuSEE_PF_EVAL.vhd;0
+HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;stimulus/SPEC_TST.vhd;0
+HDL;hdl/correlate_fixpt.vhd;0
+StartPage;StartPage;0
 ACTIVEVIEW;hdl/average_stage1.vhd
 ENDLIST
 LIST ModuleSubBlockList
@@ -2961,6 +2984,7 @@ ENDLIST
 LIST "correlate_fixpt::work","hdl/correlate_fixpt.vhd","FALSE","FALSE"
 ENDLIST
 LIST "deinterlace_instance_12_fixpt::work","hdl/deinterlace_instance_12_fixpt.vhd","FALSE","FALSE"
+SUBBLOCK "SimpleDualPortRAM_generic_block::work","hdl/SimpleDualPortRAM_generic_block.vhd","FALSE","FALSE"
 ENDLIST
 LIST "deinterlace_instance_12_fixpt_pkg::work","hdl/deinterlace_instance_12_fixpt_pkg.vhd","FALSE","FALSE"
 ENDLIST
@@ -3002,6 +3026,8 @@ ENDLIST
 LIST "Multiply_generic::work","hdl/Multiply_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
+ENDLIST
+LIST "SimpleDualPortRAM_generic_block::work","hdl/SimpleDualPortRAM_generic_block.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
@@ -3252,8 +3278,6 @@ SUBBLOCK "dsphdl_FFT::work","hdl/dsphdl_FFT.vhd","FALSE","FALSE"
 ENDLIST
 LIST "sfft_fixpt_pkg::work","hdl/sfft_fixpt_pkg.vhd","FALSE","FALSE"
 ENDLIST
-LIST "SimpleDualPortRAM_generic_block::work","hdl/SimpleDualPortRAM_generic_block.vhd","FALSE","FALSE"
-ENDLIST
 LIST "spectrometer_fixpt::work","hdl/spectrometer_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "average_stage1::work","hdl/average_stage1.vhd","FALSE","FALSE"
 SUBBLOCK "correlate_fixpt::work","hdl/correlate_fixpt.vhd","FALSE","FALSE"
@@ -3500,6 +3524,7 @@ ENDLIST
 LIST TimingTabList
 VALUE "constraint/LuSEE_PF_EVAL_derived_constraints.sdc"
 VALUE "constraint/user.sdc"
+VALUE "synthesis/LuSEE_PF_EVAL_vm_tmp7.sdc"
 ENDLIST
 LIST FDCTabList
 ENDLIST

@@ -23,13 +23,13 @@ use ieee.numeric_std.all;
 entity average_stage1 is
     GENERIC(
         navg_max                          : integer range 1 to 20 := 20;
-        bins                              : integer := 2046
+        bins                              : integer := 2047
     );
     PORT( clk                             :   IN    std_logic;
         reset                             :   IN    std_logic;
         clk_enable                        :   IN    std_logic;
         P                                 :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        count                             :   IN    std_logic_vector(11 DOWNTO 0);  -- ufix13
+        count                             :   IN    std_logic_vector(12 DOWNTO 0);  -- ufix13
         navg                              :   IN    std_logic_vector(9 DOWNTO 0);
         ready_in                          :   IN    std_logic;
         ce_out                            :   OUT   std_logic;
@@ -47,9 +47,9 @@ architecture architecture_average_stage1 of average_stage1 is
     signal write_data                     : unsigned(51 downto 0);
     signal read_data                      : unsigned(51 downto 0);
     
-    constant bins_s                       : std_logic_vector(11 downto 0) := std_logic_vector(to_unsigned(bins,12));
+    constant bins_s                       : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(bins,13));
     signal index                          : unsigned(11 downto 0);
-    signal count_s                        : std_logic_vector(11 downto 0);
+    signal count_s                        : std_logic_vector(12 downto 0);
     signal sum                            : unsigned(51 downto 0);
     signal first_time                     : std_logic;
     
@@ -66,10 +66,21 @@ architecture architecture_average_stage1 of average_stage1 is
         S_READ_DATA,
         S_FINISH_DATA);
     signal state: state_type;
+    
+    component PF_TPSRAM_C0
+    PORT ( 
+        CLK                               :   IN    std_logic;
+        R_ADDR                            :   IN    std_logic_vector(11 downto 0);
+        W_EN                              :   IN    std_logic;
+        W_ADDR                            :   IN    std_logic_vector(11 downto 0);
+        W_DATA                            :   IN    unsigned(51 downto 0);
+        R_DATA                            :   OUT   unsigned(51 downto 0)
+        );
+    end component;
 
 begin
 
-    average_accumulator : entity work.PF_TPSRAM_C0
+    average_accumulator : PF_TPSRAM_C0
     PORT MAP( 
         CLK => clk,
         R_ADDR => read_address,
@@ -87,7 +98,7 @@ begin
                 write_data <= (others=>'0');
                 read_address <= std_logic_vector(to_unsigned(bins-4,12));
                 error_flag <= '0';
-                index <= to_unsigned(bins-1, index'length);
+                index <= to_unsigned(bins, index'length);
                 count_s <= (others=>'0');
                 sum <= (others=>'0');
                 first_time <= '1';
@@ -104,17 +115,17 @@ begin
                 CASE state IS
                 
                 when S_IDLE =>	
-                    if (unsigned(count) < 2050) then
-                        read_address <= std_logic_vector(unsigned(count) - 3);
+                    if (unsigned(count) < 2051) then
+                        read_address <= std_logic_vector(unsigned(count(11 downto 0)) - 3);
                     else
-                        read_address <= x"000";
+                        read_address <= x"7FF";
                     end if;
                     write_en <= '0';
                     write_address <= (others=>'0');
                     write_data <= (others=>'0');
                     --Should be a cycle ahead
                     error_flag <= '0';
-                    index <= to_unsigned(bins-2, index'length);
+                    index <= to_unsigned(bins, index'length);
                     sum <= (others=>'0');
                     
                     outpk <= x"00000000";
@@ -126,15 +137,13 @@ begin
                         if (count = bins_s) then
                             state <= S_READ_DATA;
                             read_address <= std_logic_vector(index-1);
-                            index <= unsigned(count) - 1;
+                            index <= unsigned(count(11 downto 0)) - 1;
                             count_s <= count;
                             if (first_time = '1') then
                                 sum <= x"00000" & unsigned(P);
                             else
                                 sum <= unsigned(P) + read_data;
                             end if;
-                        else
-                            error_flag <= '1';
                         end if;
                     end if;
                     
@@ -164,18 +173,18 @@ begin
                         sum <= unsigned(P) + read_data;
                     end if;
                     
-                    write_address <= count_s;
+                    write_address <= count_s(11 downto 0);
                     count_s <= count;
                     
                     if (index > 2) then
-                        index <= unsigned(count) - 1;
+                        index <= unsigned(count(11 downto 0)) - 1;
                         read_address <= std_logic_vector(index-3);
-                    elsif (index > 0) then
-                        index <= unsigned(count) - 1;
-                        read_address <= x"7FD";
+                    elsif (index > 1) then
+                        index <= unsigned(count(11 downto 0)) - 1;
+                        read_address <= x"7FF";
                     else
                         state <= S_FINISH_DATA;
-                        read_address <= x"7FD";
+                        read_address <= x"7FF";
                     end if;
                     
                 when S_FINISH_DATA =>
@@ -187,7 +196,7 @@ begin
                         ce_out <= '1';
                         ready_out <= '1';
                         write_data <= to_unsigned(0, write_data'length);
-                        write_address <= count_s;
+                        write_address <= count_s(11 downto 0);
                         
                         navg_count <= to_unsigned(0, navg_count'length);
                         first_time <= '1';
@@ -197,7 +206,7 @@ begin
                         ce_out <= '0';
                         ready_out <= '0';
                         write_data <= sum;
-                        write_address <= count_s;
+                        write_address <= count_s(11 downto 0);
                         
                         navg_count <= navg_count + 1;
                         first_time <= '0';

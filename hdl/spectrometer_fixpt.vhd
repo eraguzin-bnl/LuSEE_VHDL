@@ -117,14 +117,14 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL ch1_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_re                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL bin                               :      std_logic_vector(11 DOWNTO 0);  -- ufix13
+ SIGNAL bin                               :      std_logic_vector(12 DOWNTO 0);  -- ufix13
  SIGNAL fft_ready                         :       std_logic;
   
  SIGNAL ch1_val_re_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch1_val_im_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_re_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_im_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL bin_s1                               :      std_logic_vector(11 DOWNTO 0);  -- ufix13
+ SIGNAL bin_s1                               :      std_logic_vector(12 DOWNTO 0);  -- ufix13
  SIGNAL fft_ready_s1                         :       std_logic;
   
   

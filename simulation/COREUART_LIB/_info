@@ -40,7 +40,7 @@ R3
 R2
 R4
 R5
-!i122 1162
+!i122 1253
 Z13 d/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation
 Z14 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd
 Z15 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd
@@ -50,9 +50,9 @@ VGX@Z80<XX;fVD]QaHKlOf2
 !s100 4@ofEWZ400TAen7MY>cGo1
 R7
 33
-Z16 !s110 1679071349
+Z16 !s110 1679350743
 !i10b 1
-Z17 !s108 1679071349.000000
+Z17 !s108 1679350743.000000
 Z18 !s90 -reportprogress|300|-2008|-explicit|-work|COREUART_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd|
 Z19 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Clock_gen.vhd|
 !i113 1
@@ -64,7 +64,7 @@ R2
 R4
 R5
 DEx4 work 35 coreuart_c0_coreuart_c0_0_clock_gen 0 22 GX@Z80<XX;fVD]QaHKlOf2
-!i122 1162
+!i122 1253
 l58
 L47 221
 VINUmCzQkYn0d^Xa`kj<a53
@@ -82,7 +82,7 @@ R11
 Pcoreuart_c0_coreuart_c0_0_components
 R4
 R5
-!i122 1165
+!i122 1256
 R12
 R13
 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/components.vhd
@@ -108,7 +108,7 @@ R3
 R2
 R4
 R5
-!i122 1164
+!i122 1255
 R13
 Z21 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/CoreUART.vhd
 Z22 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/CoreUART.vhd
@@ -133,7 +133,7 @@ R2
 R4
 R5
 DEx4 work 34 coreuart_c0_coreuart_c0_0_coreuart 0 22 UkHlY;maR[_Fm5mbWMb>e1
-!i122 1164
+!i122 1255
 l224
 L67 502
 VgKT6lHDcle7jTnfX534B>2
@@ -149,7 +149,7 @@ R25
 R10
 R11
 Pcoreuart_c0_coreuart_c0_0_coreuart_pkg
-!i122 1163
+!i122 1254
 R12
 R13
 Z26 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/coreuart_pkg.vhd
@@ -171,7 +171,7 @@ R10
 R11
 Bbody
 R20
-!i122 1163
+!i122 1254
 l0
 L5 14
 VG]H?:YDA2YcU:9eLTaE4A3
@@ -190,7 +190,7 @@ Ecoreuart_c0_coreuart_c0_0_fifo_256x8
 R12
 R4
 R5
-!i122 1161
+!i122 1252
 R13
 Z30 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/fifo_256x8_g5.vhd
 Z31 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/fifo_256x8_g5.vhd
@@ -212,7 +212,7 @@ Atranslated
 R4
 R5
 DEx4 work 36 coreuart_c0_coreuart_c0_0_fifo_256x8 0 22 FS^;[Nlc2:Z^@ofjSEGX:1
-!i122 1161
+!i122 1252
 l78
 L48 50
 VH1JBR6jddK6C8=5ZL2<890
@@ -233,7 +233,7 @@ R2
 R3
 R4
 R5
-!i122 1161
+!i122 1252
 R13
 R30
 R31
@@ -257,7 +257,7 @@ R3
 R4
 R5
 DEx4 work 39 coreuart_c0_coreuart_c0_0_fifo_ctrl_256 0 22 nN7]9z9lHQ5lP=WPJYGD^2
-!i122 1161
+!i122 1252
 l188
 L144 154
 V;[Z>6FDfcYgR`YX9eoc>[1
@@ -276,7 +276,7 @@ Ecoreuart_c0_coreuart_c0_0_ram256x8_g5
 R12
 R4
 R5
-!i122 1161
+!i122 1252
 R13
 R30
 R31
@@ -298,7 +298,7 @@ Atranslated
 R4
 R5
 DEx4 work 37 coreuart_c0_coreuart_c0_0_ram256x8_g5 0 22 :akPhOC@:kKZIa43HPO;U0
-!i122 1161
+!i122 1252
 l376
 L317 113
 VO:2Q^bJik[OPGnShize:_1
@@ -319,7 +319,7 @@ R3
 R2
 R4
 R5
-!i122 1159
+!i122 1250
 R13
 Z34 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd
 Z35 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd
@@ -331,9 +331,9 @@ R7
 33
 R16
 !i10b 1
-Z37 !s108 1679071348.000000
-Z38 !s90 -reportprogress|300|-2008|-explicit|-work|COREUART_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd|
-Z39 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd|
+R17
+Z37 !s90 -reportprogress|300|-2008|-explicit|-work|COREUART_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd|
+Z38 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Rx_async.vhd|
 !i113 1
 R10
 R11
@@ -343,7 +343,7 @@ R2
 R4
 R5
 DEx4 work 34 coreuart_c0_coreuart_c0_0_rx_async 0 22 D10I[iePOa_>AFC6MMEY60
-!i122 1159
+!i122 1250
 l97
 L61 451
 VZCEGRb:46^me`7@I<k8C21
@@ -352,9 +352,9 @@ R7
 33
 R16
 !i10b 1
+R17
 R37
 R38
-R39
 !i113 1
 R10
 R11
@@ -364,10 +364,10 @@ R3
 R2
 R4
 R5
-!i122 1160
+!i122 1251
 R13
-Z40 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd
-Z41 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd
+Z39 8/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd
+Z40 F/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd
 l0
 R36
 VLMogOBlBX@mV5V4SJLJP53
@@ -377,8 +377,8 @@ R7
 R16
 !i10b 1
 R17
-Z42 !s90 -reportprogress|300|-2008|-explicit|-work|COREUART_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd|
-Z43 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd|
+Z41 !s90 -reportprogress|300|-2008|-explicit|-work|COREUART_LIB|/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd|
+Z42 !s107 /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/Tx_async.vhd|
 !i113 1
 R10
 R11
@@ -388,7 +388,7 @@ R2
 R4
 R5
 DEx4 work 34 coreuart_c0_coreuart_c0_0_tx_async 0 22 LMogOBlBX@mV5V4SJLJP53
-!i122 1160
+!i122 1251
 l95
 L56 267
 VHNgg5NgmGn6zLF[;a>QSk1
@@ -398,8 +398,8 @@ R7
 R16
 !i10b 1
 R17
+R41
 R42
-R43
 !i113 1
 R10
 R11
@@ -409,10 +409,10 @@ R2
 R4
 R5
 !i122 8
-Z44 w1661279671
+Z43 w1661279671
 R0
-Z45 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd
-Z46 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd
+Z44 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd
+Z45 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd
 l0
 L43 73
 V3_fL@F40mLzK[DAC34aVV1
@@ -423,13 +423,13 @@ b1
 R8
 !i10b 1
 R9
-Z47 !s90 -2008|-explicit|-work|COREUART_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd|
-Z48 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd|
+Z46 !s90 -2008|-explicit|-work|COREUART_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd|
+Z47 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd|
 !i113 1
 R10
 R11
 Bbody
-Z49 DPx4 work 4 misc 0 22 3_fL@F40mLzK[DAC34aVV1
+Z48 DPx4 work 4 misc 0 22 3_fL@F40mLzK[DAC34aVV1
 R3
 R2
 R4
@@ -444,23 +444,23 @@ R7
 R8
 !i10b 1
 R9
+R46
 R47
-R48
 !i113 1
 R10
 R11
 Ptbpack
-R49
-Z50 DPx4 work 6 textio 0 22 F1Beii1Y:PhTU_9EaaXTP0
+R48
+Z49 DPx4 work 6 textio 0 22 F1Beii1Y:PhTU_9EaaXTP0
 R2
 R3
 R4
 R5
 !i122 10
-R44
+R43
 R0
-Z51 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd
-Z52 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd
+Z50 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd
+Z51 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd
 l0
 L26 124
 VAeJTR9VD57E__F==EDkfd2
@@ -471,15 +471,15 @@ b1
 R8
 !i10b 1
 R9
-Z53 !s90 -2008|-explicit|-work|COREUART_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd|
-Z54 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd|
+Z52 !s90 -2008|-explicit|-work|COREUART_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd|
+Z53 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd|
 !i113 1
 R10
 R11
 Bbody
-Z55 DPx4 work 6 tbpack 0 22 AeJTR9VD57E__F==EDkfd2
+Z54 DPx4 work 6 tbpack 0 22 AeJTR9VD57E__F==EDkfd2
+R48
 R49
-R50
 R2
 R3
 R4
@@ -494,26 +494,26 @@ R7
 R8
 !i10b 1
 R9
+R52
 R53
-R54
 !i113 1
 R10
 R11
 Etestbnch
 R6
 R1
-Z56 DPx4 work 14 coreparameters 0 22 Z?l4>WhRMW4lzhH<h>GLY0
+Z55 DPx4 work 14 coreparameters 0 22 Z?l4>WhRMW4lzhH<h>GLY0
+R48
 R49
-R50
-R55
+R54
 R3
 R2
 R4
 R5
 !i122 11
 R0
-Z57 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd
-Z58 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd
+Z56 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd
+Z57 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd
 l0
 L29 1
 V7bB5koL2@7==BZEmQ]4a[3
@@ -523,17 +523,17 @@ R7
 R8
 !i10b 1
 R9
-Z59 !s90 -2008|-explicit|-work|COREUART_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd|
-Z60 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd|
+Z58 !s90 -2008|-explicit|-work|COREUART_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd|
+Z59 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd|
 !i113 1
 R10
 R11
 Aver100
 R1
-R56
-R49
-R50
 R55
+R48
+R49
+R54
 R3
 R2
 R4
@@ -549,8 +549,8 @@ R7
 R8
 !i10b 1
 R9
+R58
 R59
-R60
 !i113 1
 R10
 R11
@@ -558,13 +558,13 @@ Ptextio
 R3
 R2
 R5
-R49
+R48
 R4
 !i122 9
-R44
+R43
 R0
-Z61 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd
-Z62 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd
+Z60 8C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd
+Z61 FC:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd
 l0
 L65 53
 VF1Beii1Y:PhTU_9EaaXTP0
@@ -575,17 +575,17 @@ b1
 R8
 !i10b 1
 R9
-Z63 !s90 -2008|-explicit|-work|COREUART_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd|
-Z64 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd|
+Z62 !s90 -2008|-explicit|-work|COREUART_LIB|C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd|
+Z63 !s107 C:/share/LuSEE/FPGA/PF_EVAL_TEST/PF_EVAL_TEST/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd|
 !i113 1
 R10
 R11
 Bbody
-R50
+R49
 R3
 R2
 R5
-R49
+R48
 R4
 !i122 9
 l0
@@ -597,23 +597,23 @@ R7
 R8
 !i10b 1
 R9
+R62
 R63
-R64
 !i113 1
 R10
 R11
 Etextio_test
-R44
+R43
 R3
+R48
 R49
-R50
 R2
 R4
 R5
 !i122 9
 R0
+R60
 R61
-R62
 l0
 L636 1
 VE@MoL?oXIi>THP74>[Ne[3
@@ -623,15 +623,15 @@ R7
 R8
 !i10b 1
 R9
+R62
 R63
-R64
 !i113 1
 R10
 R11
 Atb
 R3
+R48
 R49
-R50
 R2
 R4
 R5
@@ -646,8 +646,8 @@ R7
 R8
 !i10b 1
 R9
+R62
 R63
-R64
 !i113 1
 R10
 R11
