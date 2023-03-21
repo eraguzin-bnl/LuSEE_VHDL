@@ -3,3 +3,4 @@ designer/
 make_libero.log
 *.kate-swp
 tooldata/libero*
+*.sdb
