@@ -3,7 +3,7 @@ echo $1
 echo $2
 
 quietly set ACTELLIBNAME PolarFire
-quietly set PROJECT_DIR "/home/eraguzin/Desktop/test/LuSEE_VHDL"
+quietly set PROJECT_DIR $2
 
 if {[file exists presynth/_info]} {
    echo "INFO: Simulation library presynth already exists"
