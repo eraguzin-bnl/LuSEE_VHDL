@@ -158,7 +158,7 @@ add wave /spec_tst/spectrometer_fixpt_0/ready
 set strobe Low
 set count 0
 
-when {/spec_tst/spectrometer_fixpt_0/fft_ready_s1 = 1} {
+when {/spec_tst/spectrometer_fixpt_0/ready = 1} {
    if {$strobe eq "Low"} {
       echo "ready is 1"
       set strobe High
@@ -176,12 +176,12 @@ when {/spec_tst/spectrometer_fixpt_0/fft_ready_s1 = 1} {
          vcd add /spec_tst/spectrometer_fixpt_0/Navg
          vcd add /spec_tst/spectrometer_fixpt_0/pks
          vcd add /spec_tst/spectrometer_fixpt_0/outbin
-         vcd add /spec_tst/spectrometer_fixpt_0/fft_ready_s1
+         vcd add /spec_tst/spectrometer_fixpt_0/ready
       }
    }
 }
 
-when {/spec_tst/spectrometer_fixpt_0/fft_ready_s1 = 0} {
+when {/spec_tst/spectrometer_fixpt_0/ready = 0} {
    if {$strobe eq "High"} {
       echo "ready is 0"
       set strobe Low

@@ -1168,23 +1168,38 @@ SIZE="46282"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1678979147"
-SIZE="745"
+TIME="1679412512"
+SIZE="37962"
+ENDFILE
+VALUE "<project>/simulation/presynth_simulation.log,log"
+STATE="utd"
+TIME="1679414550"
+SIZE="120461"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1679328849"
-SIZE="12775"
+TIME="1679414482"
+SIZE="12777"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1678985398"
-SIZE="13978"
+TIME="1679412371"
+SIZE="13957"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
-TIME="1678985375"
-SIZE="136"
+TIME="1679412511"
+SIZE="202488"
+ENDFILE
+VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
+STATE="utd"
+TIME="1679414479"
+SIZE="122248"
+ENDFILE
+VALUE "<project>/simulation/testbench_presynth_simulation.log,log"
+STATE="utd"
+TIME="1679414487"
+SIZE="17799"
 ENDFILE
 VALUE "<project>/simulation/testbnch_presynth_simulation.log,log"
 STATE="utd"
@@ -1203,7 +1218,7 @@ SIZE="3219"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1679070762"
+TIME="1679414588"
 SIZE="5363"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
@@ -1223,7 +1238,7 @@ SIZE="19236025"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1679327663"
+TIME="1679348575"
 SIZE="16781"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
@@ -2217,7 +2232,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=" -l SPEC_TST_presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -2935,14 +2950,6 @@ ENDLIST
 ENDLIST
 ENDLIST
 LIST OpenedFileList
-ORIENTATION;HORIZONTAL
-HDL;hdl/average_stage1.vhd;0
-HDL;hdl/LuSEE_PF_EVAL.vhd;0
-HDL;hdl/spectrometer_fixpt.vhd;0
-HDL;stimulus/SPEC_TST.vhd;0
-HDL;hdl/correlate_fixpt.vhd;0
-StartPage;StartPage;0
-ACTIVEVIEW;hdl/average_stage1.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
@@ -3508,9 +3515,6 @@ ENDLIST
 LIST ActiveTestBenchList
 LIST "ADS4245_CNTL::work"
 ACTIVETESTBENCH "ADS4245_tst::work","stimulus/ADS4245_tst.vhd","FALSE"
-ENDLIST
-LIST "spectrometer_fixpt::work"
-ACTIVETESTBENCH "SPEC_TST::work","stimulus/SPEC_TST.vhd","FALSE"
 ENDLIST
 LIST "sfft_fixpt::work"
 ACTIVETESTBENCH "FFT_TST::work","stimulus/FFT_TST.vhd","FALSE"

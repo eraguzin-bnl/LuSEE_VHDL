@@ -47,6 +47,7 @@ set_modelsim_options -do_file_args "$libero_root $project_location"
 
 puts "TCL --> Running simulation (May take over a minute)..."
 #Run specific tools
+#https://onlinedocs.microchip.com/pr/GUID-FABC58FF-E2CC-4557-BA80-9C03AAFAA2D2-en-US-6/index.html?GUID-177689DE-CA56-4BB8-A64A-47C05C26F071
 run_tool -name {SIM_PRESYNTH}
 #run_tool -name {SYNTHESIZE}
 #save_project

@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 class LuSEE_Integrated_Simulator:
     def __init__(self, config_file):
         print("Python --> Welcome to the LuSEE Integrated Simulator")
-        print("Python --> Reading config file")
         with open(config_file, "r") as jsonfile:
             self.json_data = json.load(jsonfile)
 
@@ -24,7 +23,6 @@ class LuSEE_Integrated_Simulator:
             self.signals_of_interest[i] = listing
 
     def simulate(self, config_file):
-        print("Python --> Welcome to the LuSEE Integrated Simulator")
         print("Python --> Reading config file")
         with open(config_file, "r") as jsonfile:
             self.json_data = json.load(jsonfile)
