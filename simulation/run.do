@@ -1,5 +1,5 @@
 quietly set ACTELLIBNAME PolarFire
-quietly set PROJECT_DIR "/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL"
+quietly set PROJECT_DIR "/home/eraguzin/Desktop/test/LuSEE_VHDL"
 
 if {[file exists presynth/_info]} {
    echo "INFO: Simulation library presynth already exists"
@@ -83,6 +83,8 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/UART_IO.vhd"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0/PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.v"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/average_stage1.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/correlate_fixpt.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SimpleDualPortRAM_generic_block.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/deinterlace_instance_12_fixpt.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RADIX22FFT_CTRL1_1.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RADIX22FFT_CTRL1_10.vhd"
@@ -123,7 +125,6 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SDFCommutator6.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RADIX22FFT_SDF2_6.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SDFCommutator8.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RADIX22FFT_SDF2_8.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/correlate_fixpt.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RADIX2FFT_bitNatural.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/TWDLROM_11_1_array.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/TWDLROM_3_1.vhd"
@@ -141,6 +142,6 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/sfft_fixpt_pkg.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_streamer_fixpt_pkg.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 
-vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli /usr/local/microchip/Libero_SoC_v2022.3/Libero/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.testbench
-add wave /testbench/*
+vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli /usr/local/microchip/Libero_SoC_v2022.3/Libero/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
+add wave /SPEC_TST/*
 run 1000ns
