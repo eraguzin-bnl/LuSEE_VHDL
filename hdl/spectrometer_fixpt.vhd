@@ -125,7 +125,11 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL ch2_val_re_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_im_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL bin_s1                               :      std_logic_vector(12 DOWNTO 0);  -- ufix13
- SIGNAL fft_ready_s1                         :       std_logic;
+ SIGNAL fft_ready_s1                         :      std_logic;
+ SIGNAL bin_delay                            :      std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL fft_ready_delay                      :      std_logic;
+ SIGNAL bin_delay_s                          :      std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL fft_delay_s                          :      std_logic;
   
   
  SIGNAL ce_out_s1                            :   std_logic;
@@ -380,8 +384,14 @@ deinterlace_instance_12_fixpt_inst : entity work.deinterlace_instance_12_fixpt
 end process;     
     
     correlate_fixpt_inst : entity work.correlate_fixpt
+    generic map(
+      size => 32)
     PORT map
-    (   ch1_val_re              => ch1_val_re_s1,
+    (   clk                     => clk,
+        reset                   => blk_reset,
+        bin_in                  => bin_s1,
+        fft_ready_in            => fft_ready_s1,
+        ch1_val_re              => ch1_val_re_s1,
         ch1_val_im              => ch1_val_im_s1,
         ch2_val_re              => ch2_val_re_s1,
         ch2_val_im              => ch2_val_im_s1,
@@ -404,7 +414,9 @@ end process;
         X24R                    => X24R,
         X24I                    => X24I,
         X34R                    => X34R,
-        X34I                    => X34I
+        X34I                    => X34I,
+        bin_out                 => bin_delay,
+        fft_ready_out           => fft_ready_delay
         );
        process (clk) begin
     if (rising_edge(clk)) then
@@ -424,6 +436,8 @@ end process;
         X24I_s                    <= X24I;
         X34R_s                    <= X34R;
         X34I_s                    <= X34I;
+        bin_delay_s               <= bin_delay;
+        fft_delay_s               <= fft_ready_delay;
     end if;
 end process;  
 
@@ -434,9 +448,9 @@ end process;
         clk_enable           => clk_enable,
 
       P                    => A1_s,
-      count                => bin_s1,
+      count                => bin_delay_s,
       navg                 => Navg,
-      ready_in             => fft_ready_s1,
+      ready_in             => fft_delay_s,
         
         ce_out               => ce_out_s1,
         error_flag           => open,
