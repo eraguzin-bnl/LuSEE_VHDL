@@ -849,8 +849,8 @@ SIZE="12765"
 ENDFILE
 VALUE "<project>/hdl/correlate_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1679523047"
-SIZE="25078"
+TIME="1679587630"
+SIZE="25632"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt.vhd,hdl"
 STATE="utd"
@@ -894,8 +894,8 @@ SIZE="6069"
 ENDFILE
 VALUE "<project>/hdl/Multiply_generic_32.vhd,hdl"
 STATE="utd"
-TIME="1679518366"
-SIZE="4928"
+TIME="1679586067"
+SIZE="5147"
 ENDFILE
 VALUE "<project>/hdl/PF_RESET.vhd.vhd,hdl"
 STATE="utd"
@@ -1167,6 +1167,11 @@ STATE="utd"
 TIME="1678978149"
 SIZE="575"
 ENDFILE
+VALUE "<project>/simulation/CORR_TST_presynth_simulation.log,log"
+STATE="utd"
+TIME="1679587644"
+SIZE="34583"
+ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
 TIME="1679412512"
@@ -1199,13 +1204,18 @@ SIZE="3716"
 ENDFILE
 VALUE "<project>/stimulus/CORR_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1679522346"
-SIZE="6825"
+TIME="1679587659"
+SIZE="7013"
 ENDFILE
 VALUE "<project>/stimulus/FFT_TST.vhd,tb_hdl"
 STATE="utd"
 TIME="1678978149"
 SIZE="3219"
+ENDFILE
+VALUE "<project>/stimulus/MULT32_TST.vhd,tb_hdl"
+STATE="utd"
+TIME="1679586181"
+SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
@@ -3974,11 +3984,11 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;hdl/spectrometer_fixpt.vhd;0
-HDL;hdl/correlate_fixpt.vhd;0
 HDL;hdl/Multiply_generic_32.vhd;0
+HDL;hdl/correlate_fixpt.vhd;0
+HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;stimulus/CORR_TST.vhd;0
-ACTIVEVIEW;hdl/Multiply_generic_32.vhd
+ACTIVEVIEW;stimulus/CORR_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
@@ -4376,6 +4386,9 @@ LIST "g4_dp_ext_mem::work","component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/u
 ENDLIST
 LIST "FFT_TST::work","stimulus/FFT_TST.vhd","FALSE","TRUE"
 SUBBLOCK "sfft_fixpt::work","hdl/sfft_fixpt.vhd","FALSE","FALSE"
+ENDLIST
+LIST "MULT32_TST::work","stimulus/MULT32_TST.vhd","FALSE","TRUE"
+SUBBLOCK "Multiply_generic32::work","hdl/Multiply_generic_32.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SPEC_TST::work","stimulus/SPEC_TST.vhd","FALSE","TRUE"
 SUBBLOCK "spectrometer_fixpt::work","hdl/spectrometer_fixpt.vhd","FALSE","FALSE"

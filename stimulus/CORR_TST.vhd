@@ -47,6 +47,7 @@ architecture behavioral of CORR_TST is
     
     signal ready     : std_logic := '0';
     
+    SIGNAL bin_in_s                             :      std_logic_vector(12 DOWNTO 0);  -- ufix13
     SIGNAL bin_delay_s                          :      std_logic_vector(12 DOWNTO 0);  -- ufix13
     SIGNAL fft_delay_s                          :      std_logic;
     
@@ -113,6 +114,7 @@ begin
         IF NSYSRESET = '0' AND NOT ENDFILE(fp) THEN
         --report "reading line ";
             ready <= '1';
+            bin_in_s <= std_logic_vector(to_unsigned(to_integer(unsigned(bin_in_s)) + 1, 13));
           READLINE(fp, l);
           HREAD(l, read_data);
           ch1_val_re_v := read_data(63 downto 32);
@@ -141,7 +143,7 @@ begin
     PORT map
     (   clk                     => SYSCLK,
         reset                   => NSYSRESET,
-        bin_in                  => "0" & x"001",
+        bin_in                  => bin_in_s,
         fft_ready_in            => ready,
         ch1_val_re              => ch1_val_re,
         ch1_val_im              => ch1_val_im,

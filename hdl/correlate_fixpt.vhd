@@ -153,6 +153,10 @@ ARCHITECTURE rtl OF correlate_fixpt IS
   SIGNAL correlate_fixpt_sub_temp_4       : signed(64 DOWNTO 0);  -- sfix65_En14
   
   SIGNAL bin_s1                           : std_logic_vector(12 DOWNTO 0);
+  SIGNAL bin_s2                           : std_logic_vector(12 DOWNTO 0);
+  SIGNAL bin_s3                           : std_logic_vector(12 DOWNTO 0);
+  SIGNAL bin_s4                           : std_logic_vector(12 DOWNTO 0);
+  SIGNAL bin_s5                           : std_logic_vector(12 DOWNTO 0);
   SIGNAL fft_ready_s1                     : std_logic;
 
 BEGIN
@@ -160,11 +164,18 @@ BEGIN
         if (rising_edge(clk)) then
             if (reset = '1') then
                 bin_s1 <= (others=>'0');
+                bin_s2 <= (others=>'0');
+                bin_s3 <= (others=>'0');
+                bin_s4 <= (others=>'0');
+                bin_s5 <= (others=>'0');
                 fft_ready_s1 <= '0';
             else
                 bin_s1 <= bin_in;
-                fft_ready_s1 <= fft_ready_in;
-                bin_out <= bin_s1;
+                bin_s2 <= bin_s1;
+                bin_s3 <= bin_s2;
+                bin_s4 <= bin_s3;
+                bin_s5 <= bin_s4;
+                bin_out <= bin_s5;
                 --fft_ready_out <= fft_ready_s1;
             end if;
         end if;
