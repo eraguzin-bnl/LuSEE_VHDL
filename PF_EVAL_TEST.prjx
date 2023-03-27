@@ -813,8 +813,8 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1678978149"
-SIZE="2303"
+TIME="1679593020"
+SIZE="2401"
 ENDFILE
 VALUE "<project>/constraint/user.sdc,sdc"
 STATE="utd"
@@ -1169,23 +1169,33 @@ SIZE="575"
 ENDFILE
 VALUE "<project>/simulation/CORR_TST_presynth_simulation.log,log"
 STATE="utd"
-TIME="1679587644"
-SIZE="34583"
+TIME="1679587794"
+SIZE="113536"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1679412512"
-SIZE="37962"
+TIME="1679606923"
+SIZE="38346"
+ENDFILE
+VALUE "<project>/simulation/presynth_simulation.log,log"
+STATE="utd"
+TIME="1679606922"
+SIZE="122378"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1679522366"
+TIME="1679587682"
 SIZE="12951"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
 TIME="1679434928"
 SIZE="14617"
+ENDFILE
+VALUE "<project>/simulation/spec_test.vcd,vcd"
+STATE="utd"
+TIME="1679606922"
+SIZE="198110"
 ENDFILE
 VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
 STATE="utd"
@@ -1227,10 +1237,25 @@ STATE="utd"
 TIME="1678978149"
 SIZE="2708"
 ENDFILE
+VALUE "<project>/synthesis/LuSEE_PF_EVAL.so,so"
+STATE="utd"
+TIME="1679593126"
+SIZE="251"
+ENDFILE
+VALUE "<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm"
+STATE="ood"
+TIME="1679593119"
+SIZE="19412237"
+ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1679434991"
-SIZE="16781"
+TIME="1679946738"
+SIZE="16883"
+ENDFILE
+VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1679593122"
+SIZE="28344"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -1240,127 +1265,6 @@ LIST "ADS4245_CNTL::work"
 FILE "<project>/hdl/ADS4245_CNTL.vhd,hdl"
 LIST AssociatedStimulus
 VALUE "<project>/stimulus/ADS4245_tst.vhd,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-ENDLIST
-LIST "CORERESET_PF_C0_CORERESET_PF_C0_0_corereset_pf::work"
-FILE "<project>/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.vhd,hdl"
-LIST Other_Association
-VALUE "<project>/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/test/corereset_pf_tb.vhd,tb_hdl"
-ENDLIST
-LIST AssociatedStimulus
-VALUE "<project>/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/test/corereset_pf_tb.vhd,tb_hdl"
 ENDLIST
 LIST ProjectState5.1
 LIST Impl1
@@ -1709,6 +1613,9 @@ VALUE "<project>/synthesis/LuSEE_PF_EVAL.vhd,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
+LIST synthesis_implementations
+VALUE "synthesis"
+ENDLIST
 ENDLIST
 LIST "sfft_fixpt::work"
 FILE "<project>/hdl/sfft_fixpt.vhd,hdl"
@@ -2050,567 +1957,13 @@ ENDUsed_File_List
 ENDLIST
 ENDLIST
 ENDLIST
-LIST "COREUART_C0_COREUART_C0_0_COREUART::coreuart_lib"
-FILE "<project>/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/CoreUART.vhd,hdl"
-LIST Other_Association
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd,tb_hdl"
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd,tb_hdl"
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/mti/scripts/wave_vhdl.do,do"
-ENDLIST
-LIST AssociatedStimulus
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd,tb_hdl"
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-ENDLIST
-LIST "COREFIFO_C0_COREFIFO_C0_0_COREFIFO::corefifo_lib"
-FILE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd,hdl"
-LIST Other_Association
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/mti/scripts/wave_vhdl.do,do"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/mti/scripts/runall_vhdl.do,do"
-ENDLIST
-LIST AssociatedStimulus
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-ENDLIST
-LIST "COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_COREFIFO::corefifo_lib"
-FILE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/core/COREFIFO.vhd,hdl"
-LIST Other_Association
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/mti/scripts/wave_vhdl.do,do"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/mti/scripts/runall_vhdl.do,do"
-ENDLIST
-LIST AssociatedStimulus
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-ENDLIST
-LIST "UART_FIFO_UART_FIFO_0_COREFIFO::corefifo_lib"
-FILE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/core/COREFIFO.vhd,hdl"
-LIST Other_Association
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/wave_vhdl.do,do"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/runall_vhdl.do,do"
-ENDLIST
-LIST AssociatedStimulus
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-ENDLIST
 ENDLIST
 LIST AssociatedStimulus
 LIST LuSEE_PF_EVAL
 VALUE "<project>/stimulus/CORR_TST.vhd,tb_hdl"
 ENDLIST
-LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-ENDLIST
-LIST COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_COREFIFO
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-ENDLIST
 LIST ADS4245_CNTL
 VALUE "<project>/stimulus/ADS4245_tst.vhd,tb_hdl"
-ENDLIST
-LIST CORERESET_PF_C0_CORERESET_PF_C0_0_corereset_pf
-VALUE "<project>/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/test/corereset_pf_tb.vhd,tb_hdl"
-ENDLIST
-LIST COREUART_C0_COREUART_C0_0_COREUART
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd,tb_hdl"
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd,tb_hdl"
-ENDLIST
-LIST UART_FIFO_UART_FIFO_0_COREFIFO
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
 ENDLIST
 LIST spectrometer_fixpt
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
@@ -2620,44 +1973,6 @@ VALUE "<project>/stimulus/FFT_TST.vhd,tb_hdl"
 ENDLIST
 ENDLIST
 LIST Other_Association
-LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/mti/scripts/wave_vhdl.do,do"
-VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/mti/scripts/runall_vhdl.do,do"
-ENDLIST
-LIST COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_COREFIFO
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/mti/scripts/wave_vhdl.do,do"
-VALUE "<project>/component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/mti/scripts/runall_vhdl.do,do"
-ENDLIST
-LIST CORERESET_PF_C0_CORERESET_PF_C0_0_corereset_pf
-VALUE "<project>/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/test/corereset_pf_tb.vhd,tb_hdl"
-ENDLIST
-LIST COREUART_C0_COREUART_C0_0_COREUART
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/misc.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/textio.vhd,tb_hdl"
-VALUE "<project>/component/Actel/DirectCore/COREUART/5.7.100/rtl/vhdl/test/common/tbpack.vhd,tb_hdl"
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/test/user/testbnch.vhd,tb_hdl"
-VALUE "<project>/component/work/COREUART_C0/COREUART_C0_0/mti/scripts/wave_vhdl.do,do"
-ENDLIST
-LIST UART_FIFO_UART_FIFO_0_COREFIFO
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/coreparameters.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_std_logic.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/XHDL_misc.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/TB.vhd,tb_hdl"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/wave_vhdl.do,do"
-VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/runall_vhdl.do,do"
-ENDLIST
 ENDLIST
 LIST SimulationOptions
 UseAutomaticDoFile=true
@@ -2739,7 +2054,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=" -l CORR_TST_presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -2756,118 +2071,6 @@ EndProfile
 ENDLIST
 LIST ProjectState5.1
 LIST "ADS4245_CNTL::work"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST "CORERESET_PF_C0_CORERESET_PF_C0_0_corereset_pf::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
 LIST FlowOptions
@@ -3523,454 +2726,6 @@ Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
-LIST "COREUART_C0_COREUART_C0_0_COREUART::coreuart_lib"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST "COREFIFO_C0_COREFIFO_C0_0_COREFIFO::corefifo_lib"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST "COREFIFO_Spectrometer_COREFIFO_Spectrometer_0_COREFIFO::corefifo_lib"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST "UART_FIFO_UART_FIFO_0_COREFIFO::corefifo_lib"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl4
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl5
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl6
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl7
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl8
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl9
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl10
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl11
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -3984,11 +2739,15 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+StartPage;StartPage;0
+Reports;Reports;0
+ReportsCurrentItem;Run Programming Action:LuSEE_PF_EVAL_PROGRAM.log
 HDL;hdl/Multiply_generic_32.vhd;0
 HDL;hdl/correlate_fixpt.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
+HDL;hdl/LuSEE_PF_EVAL.vhd;0
 HDL;stimulus/CORR_TST.vhd;0
-ACTIVEVIEW;stimulus/CORR_TST.vhd
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
