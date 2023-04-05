@@ -183,7 +183,7 @@ class LuSEE_Integrated_Simulator:
             self.vals[i]['x'].append(self.time)
             self.vals[i]['y'].append(self.vals[i]['last_val'])
 
-        print("Done with VCD body")
+        print("Python --> Done with VCD body")
 
     def plot(self):
         self.plot_num = 0

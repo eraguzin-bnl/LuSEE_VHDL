@@ -12,7 +12,7 @@ if {[file exists presynth/_info]} {
    vlib presynth
 }
 vmap presynth presynth
-vmap PolarFire "/usr/local/microchip/Libero_SoC_v2022.3/Libero/lib/modelsimpro/precompiled/vlog/polarfire"
+vmap PolarFire "$1/lib/modelsimpro/precompiled/vlog/polarfire"
 if {[file exists COREUART_LIB/_info]} {
    echo "INFO: Simulation library COREUART_LIB already exists"
 } else {
