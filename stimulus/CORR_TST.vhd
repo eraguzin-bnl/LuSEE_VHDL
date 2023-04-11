@@ -72,6 +72,8 @@ architecture behavioral of CORR_TST is
     SIGNAL ch1_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
     SIGNAL ch2_val_re                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
     SIGNAL ch2_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+    
+    SIGNAL  corr_array                        : vector_of_std_logic_vector6(9 downto 0);
 
 begin
 
@@ -82,6 +84,16 @@ begin
         if ( vhdl_initial ) then
             -- Assert Reset
             NSYSRESET <= '1';
+            corr_array(0)      <= "000000";
+            corr_array(1)      <= "000000";
+            corr_array(2)      <= "000000";
+            corr_array(3)      <= "000000";
+            corr_array(4)      <= "000000";
+            corr_array(5)      <= "000000";
+            corr_array(6)      <= "000000";
+            corr_array(7)      <= "000000";
+            corr_array(8)      <= "000000";
+            corr_array(9)      <= "000000";
             wait for ( SYSCLK_PERIOD * 10 );
             
             NSYSRESET <= '0';
@@ -153,6 +165,7 @@ begin
         ch3_val_im              => ch1_val_im,
         ch4_val_re              => ch2_val_re,
         ch4_val_im              => ch2_val_im,
+        index_array             => corr_array,
         A1                      => A1,
         A2                      => A2,
         A3                      => A3,

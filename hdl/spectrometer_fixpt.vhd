@@ -56,6 +56,8 @@ ENTITY spectrometer_fixpt IS
         deinterlace_DLY                   : IN std_logic_vector(3 DOWNTO 0); 
         AVG_DLY                           : IN std_logic_vector(3 DOWNTO 0); 
         
+        index_array                       :   IN    vector_of_std_logic_vector6(9 downto 0);
+        
         ce_out                            :   OUT   std_logic;
         pks                               :   OUT   vector_of_std_logic_vector32(0 TO 3);  -- sfix32_E18 [4]
         outbin                            :   OUT   std_logic_vector(10 DOWNTO 0);  -- ufix11
@@ -399,6 +401,7 @@ end process;
         ch3_val_im              => ch1_val_im_s1,
         ch4_val_re              => ch2_val_re_s1,
         ch4_val_im              => ch2_val_im_s1,
+        index_array             => index_array,
         A1                      => A1,
         A2                      => A2,
         A3                      => A3,
@@ -416,6 +419,7 @@ end process;
         X34R                    => X34R,
         X34I                    => X34I,
         bin_out                 => bin_delay,
+        error_out               => open,
         fft_ready_out           => fft_ready_delay
         );
        process (clk) begin

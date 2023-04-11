@@ -261,6 +261,7 @@ SIGNAL  sfft_DLY                          : std_logic_vector(3 DOWNTO 0);
 SIGNAL  deinterlace_DLY                   : std_logic_vector(3 DOWNTO 0); 
 SIGNAL  AVG_DLY                           : std_logic_vector(3 DOWNTO 0);
 
+SIGNAL  corr_array                        : vector_of_std_logic_vector6(9 downto 0);
 
 begin
    
@@ -310,7 +311,16 @@ begin
     deinterlace_DLY    <= reg10_p(15 downto 12);  
     AVG_DLY            <= reg10_p(19 downto 16);  
 
-    
+    corr_array(0)      <= reg20_p(5 downto 0);
+    corr_array(1)      <= reg20_p(11 downto 6);
+    corr_array(2)      <= reg20_p(17 downto 12);
+    corr_array(3)      <= reg20_p(23 downto 18);
+    corr_array(4)      <= reg20_p(29 downto 24);
+    corr_array(5)      <= reg21_p(5 downto 0);
+    corr_array(6)      <= reg21_p(11 downto 6);
+    corr_array(7)      <= reg21_p(17 downto 12);
+    corr_array(8)      <= reg21_p(23 downto 18);
+    corr_array(9)      <= reg21_p(29 downto 24);
     
 LED_DIMMER_s_0 : LED_DIMMER_s
     port map( 
@@ -562,8 +572,9 @@ port MAP (
               weight_fold_DLY   => weight_fold_DLY, 
               sfft_DLY          => sfft_DLY,  
               deinterlace_DLY   => deinterlace_DLY, 
-              AVG_DLY           =>AVG_DLY   
+              AVG_DLY           => AVG_DLY,  
               
+              index_array       => corr_array
               
               );     
     
