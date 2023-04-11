@@ -441,7 +441,7 @@ end process;
     end if;
 end process;  
 
- average_instance_P1_fixpt_inst : entity work.average_stage1
+ average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
   PORT map
         ( clk                => clk,
         reset                => blk_reset,

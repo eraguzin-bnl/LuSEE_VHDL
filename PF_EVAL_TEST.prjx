@@ -839,8 +839,13 @@ SIZE="35367"
 ENDFILE
 VALUE "<project>/hdl/average_stage1.vhd,hdl"
 STATE="utd"
-TIME="1679350818"
+TIME="1680730373"
 SIZE="9381"
+ENDFILE
+VALUE "<project>/hdl/average_stage1_signed.vhd,hdl"
+STATE="utd"
+TIME="1680803425"
+SIZE="9420"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
 STATE="utd"
@@ -1109,8 +1114,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1679521106"
-SIZE="21419"
+TIME="1680803480"
+SIZE="21433"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1169,22 +1174,22 @@ SIZE="575"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1680638824"
-SIZE="38195"
+TIME="1680639054"
+SIZE="38856"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1679587682"
+TIME="1680720391"
 SIZE="12951"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1680638975"
+TIME="1680639068"
 SIZE="14573"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
-TIME="1680638823"
+TIME="1680639053"
 SIZE="198110"
 ENDFILE
 VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
@@ -1229,22 +1234,22 @@ SIZE="2708"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.so,so"
 STATE="utd"
-TIME="1679593126"
+TIME="1680805001"
 SIZE="251"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm"
-STATE="ood"
-TIME="1679593119"
-SIZE="19412237"
+STATE="utd"
+TIME="1680804993"
+SIZE="19438251"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1679946738"
-SIZE="16883"
+TIME="1680805002"
+SIZE="17859"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1679593122"
+TIME="1680804997"
 SIZE="28344"
 ENDFILE
 ENDLIST
@@ -1511,6 +1516,7 @@ ENDLIST
 LIST ProjectState5.1
 LIST Impl1
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1535,6 +1541,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl2
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1554,6 +1561,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl3
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1573,6 +1581,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl4
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1592,6 +1601,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl5
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1611,6 +1621,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl6
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1630,6 +1641,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl7
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1649,6 +1661,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl8
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1668,6 +1681,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl9
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1687,6 +1701,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl10
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1706,6 +1721,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl11
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -2754,8 +2770,8 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM="-l presynth_simulation.log -c"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -2997,6 +3013,7 @@ ENDLIST
 LIST "LuSEE_PF_EVAL::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3021,6 +3038,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl2
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3040,6 +3058,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl3
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3059,6 +3078,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl4
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3078,6 +3098,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl5
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3097,6 +3118,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl6
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3116,6 +3138,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl7
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3135,6 +3158,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl8
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3154,6 +3178,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl9
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3173,6 +3198,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl10
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3192,6 +3218,7 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl11
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3998,6 +4025,9 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
@@ -4017,6 +4047,9 @@ SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "average_stage1::work","hdl/average_stage1.vhd","FALSE","FALSE"
+SUBBLOCK "PF_TPSRAM_C0::work","component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v","TRUE","FALSE"
+ENDLIST
+LIST "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
 SUBBLOCK "PF_TPSRAM_C0::work","component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v","TRUE","FALSE"
 ENDLIST
 LIST "Complex4Multiply_generic::work","hdl/Complex4Multiply_generic.vhd","FALSE","FALSE"
@@ -4335,7 +4368,7 @@ ENDLIST
 LIST "sfft_fixpt_pkg::work","hdl/sfft_fixpt_pkg.vhd","FALSE","FALSE"
 ENDLIST
 LIST "spectrometer_fixpt::work","hdl/spectrometer_fixpt.vhd","FALSE","FALSE"
-SUBBLOCK "average_stage1::work","hdl/average_stage1.vhd","FALSE","FALSE"
+SUBBLOCK "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
 SUBBLOCK "correlate_fixpt::work","hdl/correlate_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "deinterlace_instance_12_fixpt::work","hdl/deinterlace_instance_12_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "sfft_fixpt::work","hdl/sfft_fixpt.vhd","FALSE","FALSE"
