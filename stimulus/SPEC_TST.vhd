@@ -53,6 +53,8 @@ architecture behavioral of SPEC_TST is
 
     SIGNAL sample1             : std_logic_vector(13 DOWNTO 0);
     SIGNAL sample2             : std_logic_vector(13 DOWNTO 0);
+    
+    SIGNAL corr_array         : vector_of_std_logic_vector6(9 downto 0);
 
     component spectrometer_fixpt
         -- ports
@@ -70,6 +72,7 @@ architecture behavioral of SPEC_TST is
             sfft_DLY : in std_logic_vector(3 downto 0);
             deinterlace_DLY : in std_logic_vector(3 downto 0);
             AVG_DLY : in std_logic_vector(3 downto 0);
+            index_array : in vector_of_std_logic_vector6(9 downto 0);
 
             -- Outputs
             ce_out : out std_logic;
@@ -91,6 +94,16 @@ begin
         if ( vhdl_initial ) then
             -- Assert Reset
             NSYSRESET <= '1';
+            corr_array(0)      <= "100001";
+            corr_array(1)      <= "001000";
+            corr_array(2)      <= "000000";
+            corr_array(3)      <= "000000";
+            corr_array(4)      <= "000000";
+            corr_array(5)      <= "000000";
+            corr_array(6)      <= "000000";
+            corr_array(7)      <= "000000";
+            corr_array(8)      <= "000000";
+            corr_array(9)      <= "000000";
             wait for ( SYSCLK_PERIOD * 10 );
             
             NSYSRESET <= '0';
@@ -163,6 +176,8 @@ begin
             sfft_DLY => (others=> '0'),
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
+            
+            index_array => corr_array,
 
             -- Outputs
             ce_out =>  open,

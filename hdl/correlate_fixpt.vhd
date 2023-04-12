@@ -189,8 +189,8 @@ BEGIN
     A1_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0',
-            signing => '0')
+            operation => '0'
+            )
         port map(
             -- Inputs
             clk => clk,
@@ -213,8 +213,8 @@ BEGIN
     A2_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0',
-            signing => '0')
+            operation => '0'
+            )
         port map(
             -- Inputs
             clk => clk,
@@ -237,8 +237,8 @@ BEGIN
     A3_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0',
-            signing => '0')
+            operation => '0'
+            )
         port map(
             -- Inputs
             clk => clk,
@@ -261,8 +261,8 @@ BEGIN
     A4_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0',
-            signing => '0')
+            operation => '0'
+            )
         port map(
             -- Inputs
             clk => clk,
@@ -285,8 +285,8 @@ BEGIN
     X12R_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0',
-            signing => '1')
+            operation => '0'
+            )
         port map(
             -- Inputs
             clk => clk,
@@ -309,8 +309,8 @@ BEGIN
     X12I_corr : entity work.correlate_operation
     generic map(
         size => size,
-        operation => '1',
-        signing => '1')
+        operation => '1'
+        )
     port map(
         -- Inputs
         clk => clk,

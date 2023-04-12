@@ -854,13 +854,13 @@ SIZE="12765"
 ENDFILE
 VALUE "<project>/hdl/correlate_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1681325805"
-SIZE="14872"
+TIME="1681329711"
+SIZE="14782"
 ENDFILE
 VALUE "<project>/hdl/correlate_operation.vhd,hdl"
 STATE="utd"
-TIME="1681328520"
-SIZE="6557"
+TIME="1681329675"
+SIZE="5472"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt.vhd,hdl"
 STATE="utd"
@@ -1179,23 +1179,18 @@ SIZE="575"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1680639054"
-SIZE="38856"
+TIME="1681331759"
+SIZE="38890"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1681250127"
+TIME="1681331037"
 SIZE="13040"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1681227960"
-SIZE="14573"
-ENDFILE
-VALUE "<project>/simulation/spec_test.vcd,vcd"
-STATE="utd"
-TIME="1680639053"
-SIZE="198110"
+TIME="1681332159"
+SIZE="14587"
 ENDFILE
 VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
 STATE="utd"
@@ -1214,8 +1209,8 @@ SIZE="3716"
 ENDFILE
 VALUE "<project>/stimulus/CORR_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1681325233"
-SIZE="9624"
+TIME="1681331030"
+SIZE="8547"
 ENDFILE
 VALUE "<project>/stimulus/FFT_TST.vhd,tb_hdl"
 STATE="utd"
@@ -1229,8 +1224,8 @@ SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1679434928"
-SIZE="5363"
+TIME="1681332067"
+SIZE="6003"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -1503,7 +1498,7 @@ ENDLIST
 LIST "LuSEE_PF_EVAL::work"
 FILE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 LIST AssociatedStimulus
-VALUE "<project>/stimulus/CORR_TST.vhd,tb_hdl"
+VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 ENDLIST
 LIST SynthesisConstraints
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
@@ -2601,7 +2596,7 @@ ENDLIST
 ENDLIST
 LIST AssociatedStimulus
 LIST LuSEE_PF_EVAL
-VALUE "<project>/stimulus/CORR_TST.vhd,tb_hdl"
+VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 ENDLIST
 LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
 VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
@@ -2685,13 +2680,13 @@ VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/runall_vhdl.do
 ENDLIST
 ENDLIST
 LIST SimulationOptions
-UseAutomaticDoFile=true
+UseAutomaticDoFile=false
 IncludeWaveDo=false
 Type=max
 RunTime=1000ns
 Resolution=1ps
 VsimOpt=
-EntityName=CORR_TST
+EntityName=SPEC_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do
 DoFileName2=wave.do
@@ -2764,8 +2759,8 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=" -l CORR_TST_presynth_simulation.log "
-BATCH=0
+PARAM="-l presynth_simulation.log -c"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -4008,13 +4003,6 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-ORIENTATION;HORIZONTAL
-HDL;hdl/correlate_fixpt.vhd;0
-HDL;hdl/correlate_operation.vhd;0
-HDL;hdl/Multiply_generic_32.vhd;0
-HDL;hdl/average_stage1_signed.vhd;0
-HDL;stimulus/CORR_TST.vhd;0
-ACTIVEVIEW;hdl/correlate_operation.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
@@ -4057,7 +4045,6 @@ LIST "COREUART_C0::work","component/work/COREUART_C0/COREUART_C0.vhd","TRUE","FA
 SUBBLOCK "COREUART_C0_COREUART_C0_0_COREUART::coreuart_lib","component/work/COREUART_C0/COREUART_C0_0/rtl/vhdl/core/CoreUART.vhd","FALSE","FALSE"
 ENDLIST
 LIST "correlate_fixpt::work","hdl/correlate_fixpt.vhd","FALSE","FALSE"
-SUBBLOCK "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
 SUBBLOCK "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
 SUBBLOCK "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
 ENDLIST
@@ -4135,9 +4122,6 @@ LIST "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALS
 ENDLIST
 LIST "Complex4Multiply_generic::work","hdl/Complex4Multiply_generic.vhd","FALSE","FALSE"
 SUBBLOCK "Multiply_generic::work","hdl/Multiply_generic.vhd","FALSE","FALSE"
-ENDLIST
-LIST "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
-SUBBLOCK "Multiply_generic32::work","hdl/Multiply_generic_32.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Multiply_generic::work","hdl/Multiply_generic.vhd","FALSE","FALSE"
 ENDLIST
@@ -4419,17 +4403,12 @@ LIST "CORR_TST::work","stimulus/CORR_TST.vhd","FALSE","TRUE"
 SUBBLOCK "correlate_fixpt::work","hdl/correlate_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
 SUBBLOCK "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
-SUBBLOCK "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
-SUBBLOCK "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
 ENDLIST
 LIST "g4_dp_ext_mem::work","component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd","FALSE","TRUE"
 ENDLIST
 LIST "g4_dp_ext_mem::work","component/work/COREFIFO_Spectrometer/COREFIFO_Spectrometer_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd","FALSE","TRUE"
 ENDLIST
 LIST "g4_dp_ext_mem::work","component/work/UART_FIFO/UART_FIFO_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd","FALSE","TRUE"
-ENDLIST
-LIST "correlate_operation::work","hdl/correlate_operation.vhd","FALSE","FALSE"
-SUBBLOCK "Multiply_generic32::work","hdl/Multiply_generic_32.vhd","FALSE","FALSE"
 ENDLIST
 LIST "FFT_TST::work","stimulus/FFT_TST.vhd","FALSE","TRUE"
 SUBBLOCK "sfft_fixpt::work","hdl/sfft_fixpt.vhd","FALSE","FALSE"

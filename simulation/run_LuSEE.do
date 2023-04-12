@@ -160,14 +160,14 @@ quietly set strobe Low
 quietly set strobe_log Low
 quietly set count 0
 
-when {/spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst/ready_in = 1} {
+when {/spec_tst/spectrometer_fixpt_0/average_signed_instance_P1_fixpt_inst/ready_in = 1} {
    if {$strobe_log eq "Low"} {
       set strobe_log High
       echo "Another batch of data coming in from sfft and correlate"
    }
 }
 
-when {/spec_tst/spectrometer_fixpt_0/average_instance_P1_fixpt_inst/ready_in = 0} {
+when {/spec_tst/spectrometer_fixpt_0/average_signed_instance_P1_fixpt_inst/ready_in = 0} {
    if {$strobe_log eq "High"} {
       set strobe_log Low
    }

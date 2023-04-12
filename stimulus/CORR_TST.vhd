@@ -84,8 +84,8 @@ begin
         if ( vhdl_initial ) then
             -- Assert Reset
             NSYSRESET <= '1';
-            corr_array(0)      <= "000000";
-            corr_array(1)      <= "000000";
+            corr_array(0)      <= "100001";
+            corr_array(1)      <= "001000";
             corr_array(2)      <= "000000";
             corr_array(3)      <= "000000";
             corr_array(4)      <= "000000";
@@ -186,11 +186,10 @@ begin
         fft_ready_out           => fft_delay_s
         );
         
-    unsigned_subtract : entity work.correlate_operation
+    subtract : entity work.correlate_operation
     generic map(
         size => 32,
-        operation => '0',
-        signing => '0')
+        operation => '0')
     port map(
         -- Inputs
         clk => SYSCLK,
@@ -210,11 +209,10 @@ begin
         o_m => open
     );
     
-    signed_subtract : entity work.correlate_operation
+    add : entity work.correlate_operation
     generic map(
         size => 32,
-        operation => '0',
-        signing => '1')
+        operation => '1')
     port map(
         -- Inputs
         clk => SYSCLK,
@@ -223,55 +221,7 @@ begin
         m1_2 => ch1_val_im,
         m2_1 => ch2_val_re,
         m2_2 => ch2_val_im,
-        index => "000000",
-
-        --Valid
-        valid_in => ready,
-        valid_out => open,
-
-        -- Outputs
-        error => open,
-        o_m => open
-    );
-    
-    unsigned_add : entity work.correlate_operation
-    generic map(
-        size => 32,
-        operation => '1',
-        signing => '0')
-    port map(
-        -- Inputs
-        clk => SYSCLK,
-        rstb => NSYSRESET,
-        m1_1 => ch1_val_re,
-        m1_2 => ch1_val_im,
-        m2_1 => ch2_val_re,
-        m2_2 => ch2_val_im,
-        index => "000000",
-
-        --Valid
-        valid_in => ready,
-        valid_out => open,
-
-        -- Outputs
-        error => open,
-        o_m => open
-    );
-    
-    signed_add : entity work.correlate_operation
-    generic map(
-        size => 32,
-        operation => '1',
-        signing => '1')
-    port map(
-        -- Inputs
-        clk => SYSCLK,
-        rstb => NSYSRESET,
-        m1_1 => ch1_val_re,
-        m1_2 => ch1_val_im,
-        m2_1 => ch2_val_re,
-        m2_2 => ch2_val_im,
-        index => "000000",
+        index => "100001",
 
         --Valid
         valid_in => ready,
