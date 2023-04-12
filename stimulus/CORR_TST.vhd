@@ -185,5 +185,101 @@ begin
         bin_out                 => bin_delay_s,
         fft_ready_out           => fft_delay_s
         );
+        
+    unsigned_subtract : entity work.correlate_operation
+    generic map(
+        size => 32,
+        operation => '0',
+        signing => '0')
+    port map(
+        -- Inputs
+        clk => SYSCLK,
+        rstb => NSYSRESET,
+        m1_1 => ch1_val_re,
+        m1_2 => ch1_val_im,
+        m2_1 => ch2_val_re,
+        m2_2 => ch2_val_im,
+        index => "000000",
+
+        --Valid
+        valid_in => ready,
+        valid_out => open,
+
+        -- Outputs
+        error => open,
+        o_m => open
+    );
+    
+    signed_subtract : entity work.correlate_operation
+    generic map(
+        size => 32,
+        operation => '0',
+        signing => '1')
+    port map(
+        -- Inputs
+        clk => SYSCLK,
+        rstb => NSYSRESET,
+        m1_1 => ch1_val_re,
+        m1_2 => ch1_val_im,
+        m2_1 => ch2_val_re,
+        m2_2 => ch2_val_im,
+        index => "000000",
+
+        --Valid
+        valid_in => ready,
+        valid_out => open,
+
+        -- Outputs
+        error => open,
+        o_m => open
+    );
+    
+    unsigned_add : entity work.correlate_operation
+    generic map(
+        size => 32,
+        operation => '1',
+        signing => '0')
+    port map(
+        -- Inputs
+        clk => SYSCLK,
+        rstb => NSYSRESET,
+        m1_1 => ch1_val_re,
+        m1_2 => ch1_val_im,
+        m2_1 => ch2_val_re,
+        m2_2 => ch2_val_im,
+        index => "000000",
+
+        --Valid
+        valid_in => ready,
+        valid_out => open,
+
+        -- Outputs
+        error => open,
+        o_m => open
+    );
+    
+    signed_add : entity work.correlate_operation
+    generic map(
+        size => 32,
+        operation => '1',
+        signing => '1')
+    port map(
+        -- Inputs
+        clk => SYSCLK,
+        rstb => NSYSRESET,
+        m1_1 => ch1_val_re,
+        m1_2 => ch1_val_im,
+        m2_1 => ch2_val_re,
+        m2_2 => ch2_val_im,
+        index => "000000",
+
+        --Valid
+        valid_in => ready,
+        valid_out => open,
+
+        -- Outputs
+        error => open,
+        o_m => open
+    );
 
 end behavioral;
