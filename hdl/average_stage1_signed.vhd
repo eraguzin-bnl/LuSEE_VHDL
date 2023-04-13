@@ -33,7 +33,6 @@ entity average_stage1_signed is
         navg                              :   IN    std_logic_vector(9 DOWNTO 0);
         ready_in                          :   IN    std_logic;
         ce_out                            :   OUT   std_logic;
-        error_flag                        :   OUT   std_logic;
         outpk                             :   OUT   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15a
         outbin                            :   OUT   std_logic_vector(10 DOWNTO 0);  -- ufix11
         ready_out                         :   OUT   std_logic
@@ -97,7 +96,6 @@ begin
                 write_address <= (others=>'0');
                 write_data <= (others=>'0');
                 read_address <= std_logic_vector(to_unsigned(bins-4,12));
-                error_flag <= '0';
                 index <= to_unsigned(bins, index'length);
                 count_s <= (others=>'0');
                 sum <= (others=>'0');
@@ -124,7 +122,6 @@ begin
                     write_address <= (others=>'0');
                     write_data <= (others=>'0');
                     --Should be a cycle ahead
-                    error_flag <= '0';
                     index <= to_unsigned(bins, index'length);
                     sum <= (others=>'0');
                     
