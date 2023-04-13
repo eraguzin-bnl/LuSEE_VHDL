@@ -251,7 +251,8 @@ SIGNAL  pks                :  vector_of_std_logic_vector32(0 TO 3); -- sfix32_E1
 SIGNAL  outbin             :  std_logic_vector(10 DOWNTO 0);  -- ufix11
 SIGNAL  ready               :  std_logic;
 
-SIGNAL  Navg       :      std_logic_vector(9 DOWNTO 0);  -- sfix14
+SIGNAL  Navg_notch       :      std_logic_vector(9 DOWNTO 0);  -- sfix14
+SIGNAL  Navg_main        :      std_logic_vector(9 DOWNTO 0);  -- sfix14
 
 
 SIGNAL  nstart                            : std_logic;
@@ -262,6 +263,7 @@ SIGNAL  deinterlace_DLY                   : std_logic_vector(3 DOWNTO 0);
 SIGNAL  AVG_DLY                           : std_logic_vector(3 DOWNTO 0);
 
 SIGNAL  corr_array                        : vector_of_std_logic_vector6(9 downto 0);
+SIGNAL  notch_array                       : vector_of_std_logic_vector6(9 downto 0);
 
 begin
    
@@ -302,7 +304,8 @@ begin
     Num_Samples        <= reg5_p;        
     Mode_sel           <= reg6_p(7 downto 0);   
     FIFO_RST           <= not reg7_p(0);    
-    Navg               <= reg8_p(9 downto 0);  
+    Navg_notch         <= reg8_p(9 downto 0);  
+    Navg_main          <= reg11_p(9 downto 0);  
     
     nstart             <= reg9_p(0);  
     Streamer_DLY       <= reg10_p(3 downto 0);  
@@ -321,6 +324,17 @@ begin
     corr_array(7)      <= reg21_p(17 downto 12);
     corr_array(8)      <= reg21_p(23 downto 18);
     corr_array(9)      <= reg21_p(29 downto 24);
+    
+    notch_array(0)      <= reg22_p(5 downto 0);
+    notch_array(1)      <= reg22_p(11 downto 6);
+    notch_array(2)      <= reg22_p(17 downto 12);
+    notch_array(3)      <= reg22_p(23 downto 18);
+    notch_array(4)      <= reg22_p(29 downto 24);
+    notch_array(5)      <= reg23_p(5 downto 0);
+    notch_array(6)      <= reg23_p(11 downto 6);
+    notch_array(7)      <= reg23_p(17 downto 12);
+    notch_array(8)      <= reg23_p(23 downto 18);
+    notch_array(9)      <= reg23_p(29 downto 24);
     
 LED_DIMMER_s_0 : LED_DIMMER_s
     port map( 
@@ -562,7 +576,8 @@ port MAP (
               sample1     => ADC_DATA_A_s,
               sample2     => ADC_DATA_B_s,
               ce_out      => ce_out,
-              Navg        =>  Navg,
+              Navg_notch  =>  Navg_notch,
+              Navg_main   =>  Navg_main,
               pks         => pks,  -- sfix32_E14 [4]
               outbin      => outbin,  -- ufix12
               ready       => ready,
@@ -574,7 +589,8 @@ port MAP (
               deinterlace_DLY   => deinterlace_DLY, 
               AVG_DLY           => AVG_DLY,  
               
-              index_array       => corr_array
+              index_array       => corr_array,
+              index_array_notch => notch_array
               
               );     
     

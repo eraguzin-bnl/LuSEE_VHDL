@@ -113,9 +113,9 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL fft_val_i_s2                       :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL fft_valid_s2                       :   std_logic;
  
- 
- 
- 
+ SIGNAL test0                               : signed(31 DOWNTO 0);
+ SIGNAL test1                               : signed(32 DOWNTO 0);
+ SIGNAL test2                               : signed(31 DOWNTO 0);
   
  SIGNAL ch1_val_re                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch1_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
@@ -437,6 +437,11 @@ BEGIN
         navg                 => Navg_notch,
         ready_in             => fft_ready_s1,
         
+        subtract             => (others=>'0'),
+        subtract_bin         => (others=>'0'),
+        subtract_ready       => '0',
+        subtract_error       => open,
+        
         ce_out               => ch1_notch_real_ce,
         outpk                => ch1_notch_real,
         outbin               => ch1_notch_real_outbin,
@@ -453,6 +458,11 @@ BEGIN
         count                => bin_s1,
         navg                 => Navg_notch,
         ready_in             => fft_ready_s1,
+        
+        subtract             => (others=>'0'),
+        subtract_bin         => (others=>'0'),
+        subtract_ready       => '0',
+        subtract_error       => open,
         
         ce_out               => ch1_notch_imag_ce,
         outpk                => ch1_notch_imag,
@@ -471,6 +481,11 @@ BEGIN
         navg                 => Navg_notch,
         ready_in             => fft_ready_s1,
         
+        subtract             => (others=>'0'),
+        subtract_bin         => (others=>'0'),
+        subtract_ready       => '0',
+        subtract_error       => open,
+        
         ce_out               => ch2_notch_real_ce,
         outpk                => ch2_notch_real,
         outbin               => ch2_notch_real_outbin,
@@ -488,6 +503,11 @@ BEGIN
         navg                 => Navg_notch,
         ready_in             => fft_ready_s1,
         
+        subtract             => (others=>'0'),
+        subtract_bin         => (others=>'0'),
+        subtract_ready       => '0',
+        subtract_error       => open,
+        
         ce_out               => ch2_notch_imag_ce,
         outpk                => ch2_notch_imag,
         outbin               => ch2_notch_imag_outbin,
@@ -500,7 +520,7 @@ BEGIN
     PORT map
     (   clk                     => clk,
         reset                   => blk_reset,
-        bin_in                  => ch1_notch_real_outbin,
+        bin_in                  => "00" & ch1_notch_real_outbin,
         fft_ready_in            => ch1_notch_real_ready,
         ch1_val_re              => ch1_notch_real,
         ch1_val_im              => ch1_notch_imag,
@@ -626,6 +646,11 @@ average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
         count                => bin_delay_s,
         navg                 => Navg_main,
         ready_in             => fft_delay_s,
+        
+        subtract             => signed(A1_s_notch),
+        subtract_bin         => bin_delay_s_notch,
+        subtract_ready       => fft_delay_s_notch,
+        subtract_error       => open,
         
         ce_out               => ce_out_s1,
         outpk                => pks_s1(0),

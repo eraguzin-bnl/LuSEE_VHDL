@@ -844,8 +844,8 @@ SIZE="9381"
 ENDFILE
 VALUE "<project>/hdl/average_stage1_signed.vhd,hdl"
 STATE="utd"
-TIME="1681401175"
-SIZE="9283"
+TIME="1681419783"
+SIZE="11781"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
 STATE="utd"
@@ -889,8 +889,8 @@ SIZE="3459"
 ENDFILE
 VALUE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 STATE="utd"
-TIME="1681249231"
-SIZE="17763"
+TIME="1681420097"
+SIZE="18570"
 ENDFILE
 VALUE "<project>/hdl/LuSEE_Pkg.vhd,hdl"
 STATE="utd"
@@ -1119,8 +1119,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1681403742"
-SIZE="31772"
+TIME="1681420315"
+SIZE="33009"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1199,8 +1199,8 @@ SIZE="172838"
 ENDFILE
 VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
 STATE="utd"
-TIME="1679414479"
-SIZE="122248"
+TIME="1681420559"
+SIZE="30504"
 ENDFILE
 VALUE "<project>/simulation/testbench_presynth_simulation.log,log"
 STATE="utd"
@@ -1229,8 +1229,8 @@ SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1681332067"
-SIZE="6003"
+TIME="1681420522"
+SIZE="6634"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -1508,7 +1508,7 @@ ENDLIST
 LIST "LuSEE_PF_EVAL::work"
 FILE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 LIST AssociatedStimulus
-VALUE "<project>/stimulus/CORR_TST.vhd,tb_hdl"
+VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 ENDLIST
 LIST SynthesisConstraints
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
@@ -2606,7 +2606,7 @@ ENDLIST
 ENDLIST
 LIST AssociatedStimulus
 LIST LuSEE_PF_EVAL
-VALUE "<project>/stimulus/CORR_TST.vhd,tb_hdl"
+VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 ENDLIST
 LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
 VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
@@ -2696,7 +2696,7 @@ Type=max
 RunTime=1000ns
 Resolution=1ps
 VsimOpt=
-EntityName=CORR_TST
+EntityName=SPEC_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do
 DoFileName2=wave.do
@@ -2769,7 +2769,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=" -l CORR_TST_presynth_simulation.log "
+PARAM=" -l SPEC_TST_presynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -4014,11 +4014,11 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;hdl/correlate_fixpt.vhd;0
-HDL;hdl/correlate_operation.vhd;0
+HDL;stimulus/SPEC_TST.vhd;0
+HDL;hdl/LuSEE_PF_EVAL.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;hdl/average_stage1_signed.vhd;0
-ACTIVEVIEW;hdl/spectrometer_fixpt.vhd
+ACTIVEVIEW;stimulus/SPEC_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

@@ -32,6 +32,12 @@ entity average_stage1_signed is
         count                             :   IN    std_logic_vector(12 DOWNTO 0);  -- ufix13
         navg                              :   IN    std_logic_vector(9 DOWNTO 0);
         ready_in                          :   IN    std_logic;
+        
+        subtract                          :   IN    signed(31 DOWNTO 0);
+        subtract_bin                      :   IN    std_logic_vector(12 DOWNTO 0);
+        subtract_ready                    :   IN    std_logic;
+        subtract_error                    :   OUT   std_logic;
+        
         ce_out                            :   OUT   std_logic;
         outpk                             :   OUT   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15a
         outbin                            :   OUT   std_logic_vector(10 DOWNTO 0);  -- ufix11
@@ -105,6 +111,7 @@ begin
                 outbin <= "000" & x"00";
                 ce_out <= '0';
                 ready_out <= '0';
+                subtract_error <= '0';
             else
             
                 navg_s <= navg;
@@ -136,10 +143,30 @@ begin
                             read_address <= std_logic_vector(index-1);
                             index <= unsigned(count(11 downto 0)) - 1;
                             count_s <= count;
+                            -- Need to differentiate for first time because RAM could have junk values
+                            -- For each subsequent loop, the RAM should already have zeros after the last cycle
                             if (first_time = '1') then
-                                sum <= resize(signed(P), 52);
+                                if (subtract_ready = '1') then
+                                    if (subtract_bin = count) then
+                                        sum <= resize(signed(P), 52) - subtract;
+                                    else
+                                        sum <= resize(signed(P), 52);
+                                        subtract_error <= '1';
+                                    end if;
+                                else
+                                    sum <= resize(signed(P), 52);
+                                end if;
                             else
-                                sum <= resize(signed(P), 52) + read_data;
+                                if (subtract_ready = '1') then
+                                    if (subtract_bin = count) then
+                                        sum <= resize(signed(P), 52) + read_data - subtract;
+                                    else
+                                        sum <= resize(signed(P), 52) + read_data;
+                                        subtract_error <= '1';
+                                    end if;
+                                else
+                                    sum <= resize(signed(P), 52) + read_data;
+                                end if;
                             end if;
                         end if;
                     end if;
@@ -165,9 +192,27 @@ begin
                     end if;
                     
                     if (first_time = '1') then
-                        sum <= resize(signed(P), 52);
+                        if (subtract_ready = '1') then
+                            if (subtract_bin = count) then
+                                sum <= resize(signed(P), 52) - subtract;
+                            else
+                                sum <= resize(signed(P), 52);
+                                subtract_error <= '1';
+                            end if;
+                        else
+                            sum <= resize(signed(P), 52);
+                        end if;
                     else
-                        sum <= resize(signed(P), 52) + read_data;
+                        if (subtract_ready = '1') then
+                            if (subtract_bin = count) then
+                                sum <= resize(signed(P), 52) + read_data - subtract;
+                            else
+                                sum <= resize(signed(P), 52) + read_data;
+                                subtract_error <= '1';
+                            end if;
+                        else
+                            sum <= resize(signed(P), 52) + read_data;
+                        end if;
                     end if;
                     
                     write_address <= count_s(11 downto 0);

@@ -55,6 +55,7 @@ architecture behavioral of SPEC_TST is
     SIGNAL sample2             : std_logic_vector(13 DOWNTO 0);
     
     SIGNAL corr_array         : vector_of_std_logic_vector6(9 downto 0);
+    SIGNAL notch_array        : vector_of_std_logic_vector6(9 downto 0);
 
     component spectrometer_fixpt
         -- ports
@@ -63,7 +64,8 @@ architecture behavioral of SPEC_TST is
             clk : in std_logic;
             reset : in std_logic;
             clk_enable : in std_logic;
-            Navg : in std_logic_vector(9 downto 0);
+            Navg_notch :   IN    std_logic_vector(9 DOWNTO 0);  -- sfix14
+            Navg_main  :   IN    std_logic_vector(9 DOWNTO 0);  -- sfix14
             sample1 : in std_logic_vector(13 downto 0);
             sample2 : in std_logic_vector(13 downto 0);
             nstart : in std_logic;
@@ -73,6 +75,7 @@ architecture behavioral of SPEC_TST is
             deinterlace_DLY : in std_logic_vector(3 downto 0);
             AVG_DLY : in std_logic_vector(3 downto 0);
             index_array : in vector_of_std_logic_vector6(9 downto 0);
+            index_array_notch :   IN    vector_of_std_logic_vector6(9 downto 0);
 
             -- Outputs
             ce_out : out std_logic;
@@ -104,6 +107,17 @@ begin
             corr_array(7)      <= "000000";
             corr_array(8)      <= "000000";
             corr_array(9)      <= "000000";
+            
+            notch_array(0)      <= "100001";
+            notch_array(1)      <= "001000";
+            notch_array(2)      <= "000000";
+            notch_array(3)      <= "000000";
+            notch_array(4)      <= "000000";
+            notch_array(5)      <= "000000";
+            notch_array(6)      <= "000000";
+            notch_array(7)      <= "000000";
+            notch_array(8)      <= "000000";
+            notch_array(9)      <= "000000";
             wait for ( SYSCLK_PERIOD * 10 );
             
             NSYSRESET <= '0';
@@ -167,7 +181,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg => "00" & x"02",
+            Navg_notch  =>  "00" & x"02",
+            Navg_main   =>  "00" & x"08",
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',
@@ -178,6 +193,7 @@ begin
             AVG_DLY => (others=> '0'),
             
             index_array => corr_array,
+            index_array_notch => corr_array,
 
             -- Outputs
             ce_out =>  open,
