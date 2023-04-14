@@ -22,6 +22,7 @@ use ieee.numeric_std.all;
 
 entity average_stage1_signed is
     GENERIC(
+        notch                             : boolean := false;
         navg_max                          : integer range 1 to 20 := 20;
         bins                              : integer := 2047
     );
@@ -64,8 +65,8 @@ architecture architecture_average_stage1_signed of average_stage1_signed is
     --constant one_s                        : std_logic_vector(0 downto 0) := "1";
     constant one_u                        : unsigned(20 downto 0) := to_unsigned(1, 21);
     
-    signal index_top                      : integer range 31 to 31 + navg_max;
-    signal index_bottom                   : integer range 0 to navg_max;
+    --signal index_top                      : integer range 31 to 31 + navg_max;
+    signal shift_num                      : integer range 0 to navg_max;
     
     type state_type is (S_IDLE,
         S_READ_DATA,
@@ -95,7 +96,9 @@ begin
         R_DATA => read_data
         );
 
-    process (clk) begin
+    process (clk) 
+        variable sum_shifted : signed(51 downto 0) := (others=>'0');
+        begin
         if (rising_edge(clk)) then
             if (reset = '1') then
                 write_en <= '0';
@@ -105,6 +108,7 @@ begin
                 index <= to_unsigned(bins, index'length);
                 count_s <= (others=>'0');
                 sum <= (others=>'0');
+                sum_shifted := (others=>'0');
                 first_time <= '1';
                 navg_count <= to_unsigned(0, navg_count'length);
                 outpk <= x"00000000";
@@ -171,15 +175,21 @@ begin
                         end if;
                     end if;
                     
-                    index_top <= integer(31) + to_integer(unsigned(navg));
-                    index_bottom <= integer(0) + to_integer(unsigned(navg));
+                    if (notch) then
+                        --index_top <= integer(31) + to_integer(shift_right(unsigned(navg), 1));
+                        shift_num <= integer(0) + to_integer(shift_right(unsigned(navg), 1));
+                    else
+                        --index_top <= integer(31) + to_integer(unsigned(navg));
+                        shift_num <= integer(0) + to_integer(unsigned(navg));
+                    end if;
 
                 when S_READ_DATA =>
                     write_en <= '1';
                     
                     if (navg_count >= navg_num - 1) then
                         write_data <= to_signed(0, write_data'length);
-                        outpk <= std_logic_vector(sum(index_top downto index_bottom));
+                        sum_shifted := shift_right(sum, shift_num);
+                        outpk <= std_logic_vector(sum_shifted(51) & sum_shifted(30 downto 0));
                         outbin <= count_s(10 downto 0);
                         ce_out <= '1';
                         ready_out <= '1';
@@ -233,7 +243,8 @@ begin
                     write_en <= '1';
                     
                     if (navg_count >= navg_num - 1) then
-                        outpk <= std_logic_vector(sum(index_top downto index_bottom));
+                        sum_shifted := shift_right(sum, shift_num);
+                        outpk <= std_logic_vector(sum_shifted(51) & sum_shifted(30 downto 0));
                         outbin <= count_s(10 downto 0);
                         ce_out <= '1';
                         ready_out <= '1';

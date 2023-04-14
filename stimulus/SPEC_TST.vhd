@@ -97,7 +97,7 @@ begin
         if ( vhdl_initial ) then
             -- Assert Reset
             NSYSRESET <= '1';
-            corr_array(0)      <= "100001";
+            corr_array(0)      <= "011101";
             corr_array(1)      <= "001000";
             corr_array(2)      <= "000000";
             corr_array(3)      <= "000000";
@@ -108,7 +108,7 @@ begin
             corr_array(8)      <= "000000";
             corr_array(9)      <= "000000";
             
-            notch_array(0)      <= "100001";
+            notch_array(0)      <= "011101";
             notch_array(1)      <= "001000";
             notch_array(2)      <= "000000";
             notch_array(3)      <= "000000";
@@ -182,7 +182,7 @@ begin
             reset => NSYSRESET,
             clk_enable => '1',
             Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"08",
+            Navg_main   =>  "00" & x"03",
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',

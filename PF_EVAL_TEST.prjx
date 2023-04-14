@@ -844,8 +844,8 @@ SIZE="9381"
 ENDFILE
 VALUE "<project>/hdl/average_stage1_signed.vhd,hdl"
 STATE="utd"
-TIME="1681419783"
-SIZE="11781"
+TIME="1681506027"
+SIZE="12408"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
 STATE="utd"
@@ -854,13 +854,13 @@ SIZE="12765"
 ENDFILE
 VALUE "<project>/hdl/correlate_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1681329711"
-SIZE="14782"
+TIME="1681497543"
+SIZE="14765"
 ENDFILE
 VALUE "<project>/hdl/correlate_operation.vhd,hdl"
 STATE="utd"
-TIME="1681393067"
-SIZE="5549"
+TIME="1681506032"
+SIZE="5732"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt.vhd,hdl"
 STATE="utd"
@@ -1119,8 +1119,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1681420315"
-SIZE="33009"
+TIME="1681497804"
+SIZE="33164"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1182,9 +1182,14 @@ STATE="utd"
 TIME="1681332276"
 SIZE="39251"
 ENDFILE
+VALUE "<project>/simulation/presynth_simulation.log,log"
+STATE="utd"
+TIME="1681505401"
+SIZE="21482"
+ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1681335219"
+TIME="1681420623"
 SIZE="13040"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
@@ -1196,11 +1201,6 @@ VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
 TIME="1681332275"
 SIZE="172838"
-ENDFILE
-VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
-STATE="utd"
-TIME="1681420559"
-SIZE="30504"
 ENDFILE
 VALUE "<project>/simulation/testbench_presynth_simulation.log,log"
 STATE="utd"
@@ -1229,8 +1229,8 @@ SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1681420522"
-SIZE="6634"
+TIME="1681506316"
+SIZE="6811"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -1239,22 +1239,22 @@ SIZE="2708"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.so,so"
 STATE="utd"
-TIME="1681336910"
+TIME="1681393602"
 SIZE="251"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm"
 STATE="ood"
-TIME="1681336902"
+TIME="1681393594"
 SIZE="19560036"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1681335469"
-SIZE="16992"
+TIME="1681393603"
+SIZE="17971"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1681336906"
+TIME="1681393598"
 SIZE="28344"
 ENDFILE
 VALUE "<project>/synthesis/synwork/layer0.so,so"
@@ -2760,8 +2760,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/SynplifyPro/bin/synplify_pro"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -4015,9 +4015,9 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 HDL;stimulus/SPEC_TST.vhd;0
-HDL;hdl/LuSEE_PF_EVAL.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;hdl/average_stage1_signed.vhd;0
+HDL;hdl/correlate_operation.vhd;0
 ACTIVEVIEW;stimulus/SPEC_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
@@ -4103,6 +4103,9 @@ SUBBLOCK "TWDLROM_3_1::work","hdl/TWDLROM_3_1.vhd","FALSE","FALSE"
 SUBBLOCK "TWDLROM_5_1::work","hdl/TWDLROM_5_1.vhd","FALSE","FALSE"
 SUBBLOCK "TWDLROM_7_1::work","hdl/TWDLROM_7_1.vhd","FALSE","FALSE"
 SUBBLOCK "TWDLROM_9_1::work","hdl/TWDLROM_9_1.vhd","FALSE","FALSE"
+ENDLIST
+LIST "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
+SUBBLOCK "PF_TPSRAM_C0::work","component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v","TRUE","FALSE"
 ENDLIST
 LIST "Complex4Multiply_generic::work","hdl/Complex4Multiply_generic.vhd","FALSE","FALSE"
 SUBBLOCK "Multiply_generic::work","hdl/Multiply_generic.vhd","FALSE","FALSE"
@@ -4369,6 +4372,7 @@ LIST "spectrometer_fixpt::work","hdl/spectrometer_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
 SUBBLOCK "correlate_fixpt::work","hdl/correlate_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "deinterlace_instance_12_fixpt::work","hdl/deinterlace_instance_12_fixpt.vhd","FALSE","FALSE"
+SUBBLOCK "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
 SUBBLOCK "sfft_fixpt::work","hdl/sfft_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "weight_fold_instance_1_fixpt::work","hdl/weight_fold_instance_1_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "weight_streamer_fixpt::work","hdl/weight_streamer_fixpt.vhd","FALSE","FALSE"

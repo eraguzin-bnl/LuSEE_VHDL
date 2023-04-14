@@ -132,7 +132,6 @@ ARCHITECTURE rtl OF correlate_fixpt IS
   SIGNAL bin_s6                           : std_logic_vector(12 DOWNTO 0);
   SIGNAL bin_s7                           : std_logic_vector(12 DOWNTO 0);
   SIGNAL bin_s8                           : std_logic_vector(12 DOWNTO 0);
-  SIGNAL fft_ready_s1                     : std_logic;
 
 BEGIN
     process (clk) begin
@@ -144,7 +143,9 @@ BEGIN
                 bin_s4 <= (others=>'0');
                 bin_s5 <= (others=>'0');
                 bin_s6 <= (others=>'0');
-                fft_ready_s1 <= '0';
+                bin_s7 <= (others=>'0');
+                bin_s8 <= (others=>'0');
+                bin_out <= (others=>'0');
             else
                 -- 5 delays for the multiplication in Multiply_generic_32
                 -- 3 delays for the correlate_operation delay
@@ -157,7 +158,6 @@ BEGIN
                 bin_s7 <= bin_s6;
                 bin_s8 <= bin_s7;
                 bin_out <= bin_s8;
-                --fft_ready_out <= fft_ready_s1;
             end if;
         end if;
     end process;

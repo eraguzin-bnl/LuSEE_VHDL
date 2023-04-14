@@ -151,7 +151,8 @@ vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli $1/li
 add wave /SPEC_TST/*
 add wave /spec_tst/spectrometer_fixpt_0/sample1
 add wave /spec_tst/spectrometer_fixpt_0/sample2
-add wave /spec_tst/spectrometer_fixpt_0/Navg
+add wave /spec_tst/spectrometer_fixpt_0/Navg_notch
+add wave /spec_tst/spectrometer_fixpt_0/Navg_main
 add wave /spec_tst/spectrometer_fixpt_0/pks
 add wave /spec_tst/spectrometer_fixpt_0/outbin
 add wave /spec_tst/spectrometer_fixpt_0/ready

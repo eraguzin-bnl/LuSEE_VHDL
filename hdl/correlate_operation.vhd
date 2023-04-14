@@ -49,9 +49,9 @@ architecture architecture_correlate_operation of correlate_operation is
     SIGNAL product_2_signed     : signed(63 DOWNTO 0);
     SIGNAL product_2_cast       : signed(64 DOWNTO 0);
     SIGNAL result               : signed(64 DOWNTO 0);
-    SIGNAL test_slice           : signed(64 DOWNTO 0);
+    --SIGNAL test_slice           : signed(64 DOWNTO 0);
     SIGNAL slice                : integer range 0 to 33;
-    SIGNAL signed_output        : signed(31 DOWNTO 0);
+    --SIGNAL signed_output        : signed(31 DOWNTO 0);
     SIGNAL ready_out1           : std_logic;
     SIGNAL ready_out2           : std_logic;
     SIGNAL or_out               : std_logic;
@@ -106,7 +106,10 @@ begin
     
     error <= error_s;
     
-    process (clk) begin
+    process (clk) 
+        variable result_shifted : signed(64 DOWNTO 0) := (others=>'0');
+        variable test_slice     : signed(64 DOWNTO 0) := (others=>'0');
+        begin
         if (rising_edge(clk)) then
             if (rstb = '1') then
                 or_out <= '0';
@@ -115,26 +118,25 @@ begin
                 result <= (others=>'0');
                 error_s <= '0';
                 o_m <= (others=>'0');
-                signed_output <= (others=>'0');
+                result_shifted := (others=>'0');
+                test_slice := (others=>'0');
             else
                 if (operation = '0') then
                     result <= product_1_cast - product_2_cast;
                 else
                     result <= product_1_cast + product_2_cast;
                 end if;
-                slice <= to_integer(unsigned(index));
                 or_out <= ready_out1 or ready_out2;
                 or_out2 <= or_out;
                 valid_out <= or_out2;
-                
+                slice <= to_integer(unsigned(index));
                 if (or_out = '1') then
                     -- If line below is commented, it's a sticky error flag, if not, it will reflect the output each cycle
                     --error_s <= '0';
+                    result_shifted := shift_right(result, slice);
+                    o_m <= std_logic_vector(result_shifted(64) & result_shifted(30 DOWNTO 0));
                     
-                    signed_output <= result(64) & result(slice + 30 DOWNTO slice);
-                    o_m <= std_logic_vector(signed_output);
-                    
-                    test_slice <= shift_right(result, slice + 31);
+                    test_slice := shift_right(result, slice + 31);
                     -- Will be one cycle later than output
                     -- First check to see if number is negative
                     if (test_slice(64) = '1') then

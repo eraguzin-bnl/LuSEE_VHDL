@@ -427,15 +427,17 @@ BEGIN
     end process;
     
     notch_average_ch1_real : entity work.average_stage1_signed
+    generic map(
+      notch => true)
     PORT map
         (clk                 => clk,
         reset                => blk_reset,
         clk_enable           => clk_enable,
 
-        P                    => ch1_val_re_s1,
-        count                => bin_s1,
+        P                    => ch1_val_re,
+        count                => bin,
         navg                 => Navg_notch,
-        ready_in             => fft_ready_s1,
+        ready_in             => fft_ready,
         
         subtract             => (others=>'0'),
         subtract_bin         => (others=>'0'),
@@ -449,15 +451,17 @@ BEGIN
         );
 
     notch_average_ch1_imag : entity work.average_stage1_signed
+    generic map(
+      notch => true)
     PORT map
         (clk                 => clk,
         reset                => blk_reset,
         clk_enable           => clk_enable,
 
-        P                    => ch1_val_im_s1,
-        count                => bin_s1,
+        P                    => ch1_val_im,
+        count                => bin,
         navg                 => Navg_notch,
-        ready_in             => fft_ready_s1,
+        ready_in             => fft_ready,
         
         subtract             => (others=>'0'),
         subtract_bin         => (others=>'0'),
@@ -471,15 +475,17 @@ BEGIN
         );
     
     notch_average_ch2_real : entity work.average_stage1_signed
+    generic map(
+      notch => true)
     PORT map
         (clk                 => clk,
         reset                => blk_reset,
         clk_enable           => clk_enable,
 
-        P                    => ch2_val_re_s1,
-        count                => bin_s1,
+        P                    => ch2_val_re,
+        count                => bin,
         navg                 => Navg_notch,
-        ready_in             => fft_ready_s1,
+        ready_in             => fft_ready,
         
         subtract             => (others=>'0'),
         subtract_bin         => (others=>'0'),
@@ -493,15 +499,17 @@ BEGIN
         );
     
     notch_average_ch2_imag : entity work.average_stage1_signed
+    generic map(
+      notch => true)
     PORT map
         (clk                 => clk,
         reset                => blk_reset,
         clk_enable           => clk_enable,
 
-        P                    => ch2_val_im_s1,
-        count                => bin_s1,
+        P                    => ch2_val_im,
+        count                => bin,
         navg                 => Navg_notch,
-        ready_in             => fft_ready_s1,
+        ready_in             => fft_ready,
         
         subtract             => (others=>'0'),
         subtract_bin         => (others=>'0'),
@@ -637,6 +645,8 @@ BEGIN
     end process;  
 
 average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
+    generic map(
+      notch => false)
     PORT map
         (clk                 => clk,
         reset                => blk_reset,
@@ -647,9 +657,9 @@ average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
         navg                 => Navg_main,
         ready_in             => fft_delay_s,
         
-        subtract             => signed(A1_s_notch),
-        subtract_bin         => bin_delay_s_notch,
-        subtract_ready       => fft_delay_s_notch,
+        subtract             => signed(A1_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
         subtract_error       => open,
         
         ce_out               => ce_out_s1,
