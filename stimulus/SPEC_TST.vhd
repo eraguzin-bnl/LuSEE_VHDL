@@ -24,8 +24,14 @@
 -- Author: <Name>
 --
 --------------------------------------------------------------------------------
-
-
+--Tried to use these methods of reading binary file:
+--http://www.ece.ualberta.ca/~elliott/ee552/studentAppNotes/2000_w/vhdl/BinaryFileTestbenching/binary.html
+--https://electronics.stackexchange.com/questions/258964/can-vhdl-read-binary-files-i-e-non-text-files
+--https://stackoverflow.com/questions/14173652/how-can-i-read-binary-data-in-vhdl-modelsim-whithout-using-special-binary-format
+--Was getting this error:
+--https://support.xilinx.com/s/question/0D52E00006hpYSSSA2/vhdl-standard-read-procedure?language=en_US
+--Even after uncommenting std_logic_textio and commenting textio.all
+--So I have to use characters to read byte data from the file
 library ieee;
 use ieee.std_logic_1164.all;
 USE IEEE.numeric_std.ALL;
@@ -33,7 +39,8 @@ USE work.spectrometer_fixpt_pkg.ALL;
 
 --For reading file
 LIBRARY STD;
-USE STD.textio.ALL;
+--USE STD.textio.ALL;
+--use ieee.std_logic_textio.all;
 
 entity SPEC_TST is
 end SPEC_TST;
@@ -136,38 +143,46 @@ begin
 
     -- Data source for adc
       c_re_fileread: PROCESS
-        FILE fp: TEXT;
+        type two_byte_file is file of character;
+        file sky_100 : two_byte_file;
+        file sky_pf_100 : two_byte_file;
         VARIABLE file_status: std_logic := '0';
-        VARIABLE l: LINE;
-        VARIABLE read_data: std_logic_vector(31 DOWNTO 0);
-        VARIABLE sample1_v: std_logic_vector(13 DOWNTO 0);
-        VARIABLE sample2_v: std_logic_vector(13 DOWNTO 0);
+        --VARIABLE l: LINE;
+        VARIABLE read_data: character;
+        VARIABLE read_data2: character;
+        VARIABLE read_data3: character;
+        VARIABLE read_data4: character;
+        VARIABLE sample1_v: std_logic_vector(15 DOWNTO 0);
+        VARIABLE sample2_v: std_logic_vector(15 DOWNTO 0);
         
 
       BEGIN
       wait for SYSCLK_PERIOD;
         IF (file_status = '0') THEN
             report "Opening file";
-            file_open(fp, "data_fixed.txt", read_mode);
+            file_open(sky_100, "sky_100.bin", read_mode);
+            file_open(sky_pf_100, "sky_pf_100.bin", read_mode);
             file_status := '1';
         END IF;
         
-        IF NSYSRESET = '0' AND NOT ENDFILE(fp) THEN
+        IF NSYSRESET = '0' AND NOT ENDFILE(sky_100) THEN
         --report "reading line ";
-          READLINE(fp, l);
-          HREAD(l, read_data);
-          sample1_v := read_data(29 downto 16);
-          sample2_v := read_data(13 downto 0);
-          sample1 <= sample1_v;
-          sample2 <= sample2_v;
+          READ(sky_100, read_data3);
+          READ(sky_100, read_data4);
+          READ(sky_pf_100, read_data);
+          READ(sky_pf_100, read_data2);
+          sample1_v := std_logic_vector(to_unsigned(character'pos(read_data),8)) & std_logic_vector(to_unsigned(character'pos(read_data2),8));
+          sample2_v := std_logic_vector(to_unsigned(character'pos(read_data3),8)) & std_logic_vector(to_unsigned(character'pos(read_data4),8));
+          sample1 <= sample1_v(5 downto 0) & sample1_v(15 downto 8);
+          sample2 <= sample2_v(5 downto 0) & sample2_v(15 downto 8);
           --report "value is " & to_hex_string(read_data);
           --report "sample1v is " & to_hex_string(sample1_v);
           --report "sample2v is " & to_hex_string(sample2_v);
         END IF;
         
-        IF ENDFILE(fp) THEN
+        IF ENDFILE(sky_100) THEN
           report "VHDL --> Sample input file ended, restarting";
-          file_close(fp);
+          file_close(sky_100);
           file_status := '0';
         END IF;
         

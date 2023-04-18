@@ -1119,7 +1119,7 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1681497804"
+TIME="1681852220"
 SIZE="33164"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
@@ -1179,28 +1179,28 @@ SIZE="575"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1681332276"
-SIZE="39251"
+TIME="1681510174"
+SIZE="38754"
 ENDFILE
 VALUE "<project>/simulation/presynth_simulation.log,log"
 STATE="utd"
-TIME="1681505401"
-SIZE="21482"
+TIME="1681852244"
+SIZE="11594"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1681420623"
+TIME="1681504610"
 SIZE="13040"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1681332159"
-SIZE="14587"
+TIME="1681505618"
+SIZE="14643"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
-TIME="1681332275"
-SIZE="172838"
+TIME="1681510174"
+SIZE="202093"
 ENDFILE
 VALUE "<project>/simulation/testbench_presynth_simulation.log,log"
 STATE="utd"
@@ -1229,8 +1229,8 @@ SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1681506316"
-SIZE="6811"
+TIME="1681852953"
+SIZE="8144"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -1239,22 +1239,22 @@ SIZE="2708"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.so,so"
 STATE="utd"
-TIME="1681393602"
+TIME="1681509571"
 SIZE="251"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm"
 STATE="ood"
-TIME="1681393594"
-SIZE="19560036"
+TIME="1681509563"
+SIZE="20217646"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1681393603"
-SIZE="17971"
+TIME="1681509848"
+SIZE="16992"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1681393598"
+TIME="1681509567"
 SIZE="28344"
 ENDFILE
 VALUE "<project>/synthesis/synwork/layer0.so,so"
@@ -2690,7 +2690,7 @@ VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/runall_vhdl.do
 ENDLIST
 ENDLIST
 LIST SimulationOptions
-UseAutomaticDoFile=true
+UseAutomaticDoFile=false
 IncludeWaveDo=false
 Type=max
 RunTime=1000ns
@@ -4014,10 +4014,9 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;stimulus/SPEC_TST.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;hdl/average_stage1_signed.vhd;0
-HDL;hdl/correlate_operation.vhd;0
+HDL;stimulus/SPEC_TST.vhd;0
 ACTIVEVIEW;stimulus/SPEC_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
