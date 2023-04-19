@@ -262,6 +262,7 @@ SIGNAL  sfft_DLY                          : std_logic_vector(3 DOWNTO 0);
 SIGNAL  deinterlace_DLY                   : std_logic_vector(3 DOWNTO 0); 
 SIGNAL  AVG_DLY                           : std_logic_vector(3 DOWNTO 0);
 
+SIGNAL  notch_en                          : std_logic;
 SIGNAL  corr_array                        : vector_of_std_logic_vector6(9 downto 0);
 SIGNAL  notch_array                       : vector_of_std_logic_vector6(9 downto 0);
 
@@ -313,6 +314,8 @@ begin
     sfft_DLY           <= reg10_p(11 downto 8);  
     deinterlace_DLY    <= reg10_p(15 downto 12);  
     AVG_DLY            <= reg10_p(19 downto 16);  
+    
+    notch_en           <= reg19_p(0);
 
     corr_array(0)      <= reg20_p(5 downto 0);
     corr_array(1)      <= reg20_p(11 downto 6);
@@ -589,6 +592,7 @@ port MAP (
               deinterlace_DLY   => deinterlace_DLY, 
               AVG_DLY           => AVG_DLY,  
               
+              notch_en          => notch_en,
               index_array       => corr_array,
               index_array_notch => notch_array
               

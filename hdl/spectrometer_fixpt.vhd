@@ -51,12 +51,13 @@ ENTITY spectrometer_fixpt IS
         sample2                           :   IN    std_logic_vector(13 DOWNTO 0);  -- sfix14
         
         nstart                            :   IN    std_logic;
-        Streamer_DLY                      : IN std_logic_vector(3 DOWNTO 0); 
-        weight_fold_DLY                   : IN std_logic_vector(3 DOWNTO 0); 
-        sfft_DLY                          : IN std_logic_vector(3 DOWNTO 0);  
-        deinterlace_DLY                   : IN std_logic_vector(3 DOWNTO 0); 
-        AVG_DLY                           : IN std_logic_vector(3 DOWNTO 0); 
+        Streamer_DLY                      :   IN    std_logic_vector(3 DOWNTO 0); 
+        weight_fold_DLY                   :   IN    std_logic_vector(3 DOWNTO 0); 
+        sfft_DLY                          :   IN    std_logic_vector(3 DOWNTO 0);  
+        deinterlace_DLY                   :   IN    std_logic_vector(3 DOWNTO 0); 
+        AVG_DLY                           :   IN    std_logic_vector(3 DOWNTO 0); 
         
+        notch_en                          :   IN    std_logic;
         index_array                       :   IN    vector_of_std_logic_vector6(9 downto 0);
         index_array_notch                 :   IN    vector_of_std_logic_vector6(9 downto 0);
         
@@ -92,8 +93,8 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL w4_s3                                :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
   
  
- SIGNAL val1                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
- SIGNAL val2                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL val1                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL val2                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  
  SIGNAL val1_s1                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL val2_s1                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
@@ -101,39 +102,39 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL val2_s2                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
   
  
- SIGNAL fft_val_r                       :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
- SIGNAL fft_val_i                       :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
- SIGNAL fft_valid                       :   std_logic;
+ SIGNAL fft_val_r                            :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL fft_val_i                            :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL fft_valid                            :   std_logic;
  
- SIGNAL fft_val_r_s1                       :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
- SIGNAL fft_val_i_s1                       :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
- SIGNAL fft_valid_s1                       :   std_logic;
+ SIGNAL fft_val_r_s1                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL fft_val_i_s1                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL fft_valid_s1                         :   std_logic;
  
- SIGNAL fft_val_r_s2                       :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
- SIGNAL fft_val_i_s2                       :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
- SIGNAL fft_valid_s2                       :   std_logic;
+ SIGNAL fft_val_r_s2                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL fft_val_i_s2                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL fft_valid_s2                         :   std_logic;
  
- SIGNAL test0                               : signed(31 DOWNTO 0);
- SIGNAL test1                               : signed(32 DOWNTO 0);
- SIGNAL test2                               : signed(31 DOWNTO 0);
+ SIGNAL test0                                :   signed(31 DOWNTO 0);
+ SIGNAL test1                                :   signed(32 DOWNTO 0);
+ SIGNAL test2                                :   signed(31 DOWNTO 0);
   
- SIGNAL ch1_val_re                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL ch1_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL ch2_val_re                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL ch2_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL bin                               :      std_logic_vector(12 DOWNTO 0);  -- ufix13
- SIGNAL fft_ready                         :       std_logic;
+ SIGNAL ch1_val_re                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+ SIGNAL ch1_val_im                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+ SIGNAL ch2_val_re                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+ SIGNAL ch2_val_im                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+ SIGNAL bin                                  :   std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL fft_ready                            :   std_logic;
   
- SIGNAL ch1_val_re_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL ch1_val_im_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL ch2_val_re_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL ch2_val_im_s1                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
- SIGNAL bin_s1                               :      std_logic_vector(12 DOWNTO 0);  -- ufix13
- SIGNAL fft_ready_s1                         :      std_logic;
- SIGNAL bin_delay                            :      std_logic_vector(12 DOWNTO 0);  -- ufix13
- SIGNAL fft_ready_delay                      :      std_logic;
- SIGNAL bin_delay_s                          :      std_logic_vector(12 DOWNTO 0);  -- ufix13
- SIGNAL fft_delay_s                          :      std_logic;
+ SIGNAL ch1_val_re_s1                        :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+ SIGNAL ch1_val_im_s1                        :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+ SIGNAL ch2_val_re_s1                        :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+ SIGNAL ch2_val_im_s1                        :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+ SIGNAL bin_s1                               :   std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL fft_ready_s1                         :   std_logic;
+ SIGNAL bin_delay                            :   std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL fft_ready_delay                      :   std_logic;
+ SIGNAL bin_delay_s                          :   std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL fft_delay_s                          :   std_logic;
   
   
  SIGNAL ce_out_s1                            :   std_logic;
@@ -141,115 +142,118 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL outbin_s1                            :   std_logic_vector(10 DOWNTO 0);  -- ufix11
  SIGNAL ready_s1                             :   std_logic;
  
- SIGNAL blk_reset                           : std_logic; 
- SIGNAL nstart_r                            : std_logic; 
+ SIGNAL blk_reset                            :   std_logic; 
+ SIGNAL nstart_r                             :   std_logic; 
  
- SIGNAL Streamer_en                         : std_logic_vector(3 DOWNTO 0); 
- SIGNAL weight_fold_en                      : std_logic_vector(3 DOWNTO 0); 
- SIGNAL sfft_en                             : std_logic_vector(3 DOWNTO 0);  
+ SIGNAL Streamer_en                          :   std_logic_vector(3 DOWNTO 0); 
+ SIGNAL weight_fold_en                       :   std_logic_vector(3 DOWNTO 0); 
+ SIGNAL sfft_en                              :   std_logic_vector(3 DOWNTO 0);  
 
     
- SIGNAL Streamer_DLYr                      : std_logic_vector(3 DOWNTO 0); 
- SIGNAL weight_fold_DLYr                   : std_logic_vector(3 DOWNTO 0); 
- SIGNAL sfft_DLYr                          : std_logic_vector(3 DOWNTO 0);  
- SIGNAL deinterlace_DLYr                   : std_logic_vector(3 DOWNTO 0); 
- SIGNAL AVG_DLYr                           : std_logic_vector(3 DOWNTO 0); 
+ SIGNAL Streamer_DLYr                        :   std_logic_vector(3 DOWNTO 0); 
+ SIGNAL weight_fold_DLYr                     :   std_logic_vector(3 DOWNTO 0); 
+ SIGNAL sfft_DLYr                            :   std_logic_vector(3 DOWNTO 0);  
+ SIGNAL deinterlace_DLYr                     :   std_logic_vector(3 DOWNTO 0); 
+ SIGNAL AVG_DLYr                             :   std_logic_vector(3 DOWNTO 0); 
  
- SIGNAL ch1_notch_real                    : std_logic_vector(31 DOWNTO 0);
- SIGNAL ch1_notch_real_outbin             : std_logic_vector(10 DOWNTO 0);  -- ufix11
- SIGNAL ch1_notch_real_ready              : std_logic;
- SIGNAL ch1_notch_real_ce                 : std_logic;
+ SIGNAL notch_ready                          :   std_logic;
  
- SIGNAL ch1_notch_imag                    : std_logic_vector(31 DOWNTO 0);
- SIGNAL ch1_notch_imag_outbin             : std_logic_vector(10 DOWNTO 0);  -- ufix11
- SIGNAL ch1_notch_imag_ready              : std_logic;
- SIGNAL ch1_notch_imag_ce                 : std_logic;
+ SIGNAL ch1_notch_real                       :   std_logic_vector(31 DOWNTO 0);
+ SIGNAL ch1_notch_real_outbin                :   std_logic_vector(10 DOWNTO 0);  -- ufix11
+ SIGNAL ch1_notch_real_ready                 :   std_logic;
+ SIGNAL ch1_notch_real_ce                    :   std_logic;
  
- SIGNAL ch2_notch_real                    : std_logic_vector(31 DOWNTO 0);
- SIGNAL ch2_notch_real_outbin             : std_logic_vector(10 DOWNTO 0);  -- ufix11
- SIGNAL ch2_notch_real_ready              : std_logic;
- SIGNAL ch2_notch_real_ce                 : std_logic;
+ SIGNAL ch1_notch_imag                       :   std_logic_vector(31 DOWNTO 0);
+ SIGNAL ch1_notch_imag_outbin                :   std_logic_vector(10 DOWNTO 0);  -- ufix11
+ SIGNAL ch1_notch_imag_ready                 :   std_logic;
+ SIGNAL ch1_notch_imag_ce                    :   std_logic;
  
- SIGNAL ch2_notch_imag                    : std_logic_vector(31 DOWNTO 0);
- SIGNAL ch2_notch_imag_outbin             : std_logic_vector(10 DOWNTO 0);  -- ufix11
- SIGNAL ch2_notch_imag_ready              : std_logic;
- SIGNAL ch2_notch_imag_ce                 : std_logic;
+ SIGNAL ch2_notch_real                       :   std_logic_vector(31 DOWNTO 0);
+ SIGNAL ch2_notch_real_outbin                :   std_logic_vector(10 DOWNTO 0);  -- ufix11
+ SIGNAL ch2_notch_real_ready                 :   std_logic;
+ SIGNAL ch2_notch_real_ce                    :   std_logic;
  
- SIGNAL bin_delay_notch                   : std_logic_vector(12 DOWNTO 0);  -- ufix13
- SIGNAL fft_ready_delay_notch             : std_logic;
- SIGNAL bin_delay_s_notch                 : std_logic_vector(12 DOWNTO 0);  -- ufix13
- SIGNAL fft_delay_s_notch                 : std_logic;
+ SIGNAL ch2_notch_imag                       :   std_logic_vector(31 DOWNTO 0);
+ SIGNAL ch2_notch_imag_outbin                :   std_logic_vector(10 DOWNTO 0);  -- ufix11
+ SIGNAL ch2_notch_imag_ready                 :   std_logic;
+ SIGNAL ch2_notch_imag_ce                    :   std_logic;
  
- SIGNAL A1                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A2                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A3                                : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL A4                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL X12R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X12I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X13R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X13I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X14R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X14I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X23R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X23I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X24R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X24I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X34R                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X34I                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL bin_delay_notch                      :   std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL fft_ready_delay_notch                :   std_logic;
+ SIGNAL bin_delay_s_notch                    :   std_logic_vector(12 DOWNTO 0);  -- ufix13
+ SIGNAL fft_delay_s_notch                    :   std_logic;
  
- SIGNAL A1_s                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A2_s                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A3_s                                : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL A4_s                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL X12R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X12I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X13R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X13I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X14R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X14I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X23R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X23I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X24R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X24I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X34R_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X34I_s                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL A1                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A2                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A3                                   :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL A4                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL X12R                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X12I                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X13R                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X13I                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X14R                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X14I                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X23R                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X23I                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X24R                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X24I                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X34R                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X34I                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
  
- SIGNAL A1_notch                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A2_notch                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A3_notch                                : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL A4_notch                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL X12R_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X12I_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X13R_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X13I_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X14R_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X14I_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X23R_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X23I_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X24R_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X24I_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X34R_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X34I_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL A1_s                                 :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A2_s                                 :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A3_s                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL A4_s                                 :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL X12R_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X12I_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X13R_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X13I_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X14R_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X14I_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X23R_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X23I_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X24R_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X24I_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X34R_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X34I_s                               :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
  
- SIGNAL A1_s_notch                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A2_s_notch                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A3_s_notch                                : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL A4_s_notch                                : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL X12R_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X12I_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X13R_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X13I_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X14R_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X14I_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X23R_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X23I_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X24R_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X24I_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X34R_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X34I_s_notch                              : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
-
+ SIGNAL A1_notch                             :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A2_notch                             :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A3_notch                             :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL A4_notch                             :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL X12R_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X12I_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X13R_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X13I_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X14R_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X14I_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X23R_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X23I_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X24R_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X24I_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X34R_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X34I_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ 
+ SIGNAL A1_s_notch                           :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A2_s_notch                           :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL A3_s_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL A4_s_notch                           :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+ SIGNAL X12R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X12I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X13R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X13I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X14R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X14I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X23R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X23I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X24R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X24I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
+ SIGNAL X34R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
+ SIGNAL X34I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
     
 BEGIN
+    notch_ready <= notch_en and fft_ready;
+    
     process (clk) begin
         if (rising_edge(clk)) then
             nstart_r            <= nstart and (not resetr) ;
@@ -437,7 +441,7 @@ BEGIN
         P                    => ch1_val_re,
         count                => bin,
         navg                 => Navg_notch,
-        ready_in             => fft_ready,
+        ready_in             => notch_ready,
         
         subtract             => (others=>'0'),
         subtract_bin         => (others=>'0'),
@@ -461,7 +465,7 @@ BEGIN
         P                    => ch1_val_im,
         count                => bin,
         navg                 => Navg_notch,
-        ready_in             => fft_ready,
+        ready_in             => notch_ready,
         
         subtract             => (others=>'0'),
         subtract_bin         => (others=>'0'),
@@ -485,7 +489,7 @@ BEGIN
         P                    => ch2_val_re,
         count                => bin,
         navg                 => Navg_notch,
-        ready_in             => fft_ready,
+        ready_in             => notch_ready,
         
         subtract             => (others=>'0'),
         subtract_bin         => (others=>'0'),
@@ -509,7 +513,7 @@ BEGIN
         P                    => ch2_val_im,
         count                => bin,
         navg                 => Navg_notch,
-        ready_in             => fft_ready,
+        ready_in             => notch_ready,
         
         subtract             => (others=>'0'),
         subtract_bin         => (others=>'0'),

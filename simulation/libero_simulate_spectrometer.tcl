@@ -7,7 +7,10 @@
 #Get all directory values
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-puts "TCL --> Welcome to Eric's Matlab Libero Setup TCL script!"
+puts "TCL --> Welcome to Eric's LuSEE Libero Setup TCL script!"
+
+
+
 set libero_location [lindex $argv 0]
 set libero_root1 [file dirname $libero_location]
 set libero_root [file dirname $libero_root1]
@@ -21,6 +24,20 @@ puts "TCL --> Libero location is $libero_location"
 puts "TCL --> Libero root is $libero_root"
 puts "TCL --> Project location is $project_location"
 puts "TCL --> Project name is $project_name"
+
+for {set i 0} {$i < $argc} {incr i} {
+    #puts "arg is [lindex $argv $i]"
+    if {$i > 2} {
+        puts "TCL --> Will simulate and save VHDL test [lindex $argv $i]"
+        #set vhdl_tests([expr $i-3]) [lindex $argv $i]
+        lappend vhdl_tests [lindex $argv $i]
+    }
+}
+#puts "TCL --> $vhdl_tests"
+#for {set i 0} {$i < [expr $argc - 3]} {incr i} {
+#    puts "TCL --> VHDL Test $i to simulate and save is $vhdl_tests($i)"
+#}
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Libero operations, create the project
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -42,8 +59,8 @@ puts "TCL --> Preparing test"
 set_modelsim_options -tb_module_name "SPEC_TST"
 set_modelsim_options -use_automatic_do_file 0
 set_modelsim_options -user_do_file "$project_location/simulation/run_LuSEE.do"
-set_modelsim_options -do_file_args "$libero_root $project_location"
-#save_project
+set_modelsim_options -do_file_args "$libero_root $project_location $vhdl_tests"
+save_project
 
 puts "TCL --> Running simulation (May take over a minute)..."
 #Run specific tools

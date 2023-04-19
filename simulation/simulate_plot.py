@@ -33,7 +33,7 @@ class LuSEE_Integrated_Simulator:
 
         print("Python --> Running Libero for Simulation")
         subprocess.run([libero_location, "script:libero_simulate_spectrometer.tcl",
-                        f"script_args:{libero_location} {project_location} {project_file}",
+                        f"script_args:{libero_location} {project_location} {project_file} spectrometer_fixpt_0 spectrometer_fixpt_1",
                         "logfile:make_libero.log"])
 
         print("Python --> Simulation finished")

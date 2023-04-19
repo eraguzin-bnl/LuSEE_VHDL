@@ -889,8 +889,8 @@ SIZE="3459"
 ENDFILE
 VALUE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 STATE="utd"
-TIME="1681420097"
-SIZE="18570"
+TIME="1681917705"
+SIZE="18713"
 ENDFILE
 VALUE "<project>/hdl/LuSEE_Pkg.vhd,hdl"
 STATE="utd"
@@ -1119,8 +1119,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1681852220"
-SIZE="33164"
+TIME="1681917834"
+SIZE="33579"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1179,28 +1179,28 @@ SIZE="575"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1681510174"
-SIZE="38754"
+TIME="1681942178"
+SIZE="38726"
 ENDFILE
 VALUE "<project>/simulation/presynth_simulation.log,log"
 STATE="utd"
-TIME="1681852244"
-SIZE="11594"
+TIME="1681942178"
+SIZE="222703"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1681504610"
+TIME="1681851026"
 SIZE="13040"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1681505618"
-SIZE="14643"
+TIME="1681942441"
+SIZE="20615"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
-TIME="1681510174"
-SIZE="202093"
+TIME="1681934683"
+SIZE="416530"
 ENDFILE
 VALUE "<project>/simulation/testbench_presynth_simulation.log,log"
 STATE="utd"
@@ -1229,8 +1229,8 @@ SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1681852953"
-SIZE="8144"
+TIME="1681920244"
+SIZE="9051"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -2700,7 +2700,7 @@ EntityName=SPEC_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do
 DoFileName2=wave.do
-DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL
+DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL spectrometer_fixpt_0 spectrometer_fixpt_1
 DisplayDUTWave=false
 LogAllSignals=false
 DisablePulseFiltering=false
@@ -2769,7 +2769,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=" -l SPEC_TST_presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -4013,11 +4013,6 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-ORIENTATION;HORIZONTAL
-HDL;hdl/spectrometer_fixpt.vhd;0
-HDL;hdl/average_stage1_signed.vhd;0
-HDL;stimulus/SPEC_TST.vhd;0
-ACTIVEVIEW;stimulus/SPEC_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

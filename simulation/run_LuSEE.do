@@ -1,6 +1,42 @@
-echo "Here we are in Eric's LuSEE DO file"
-echo $1
-echo $2
+echo "Here we are in Eric's LuSEE Libero DO file"
+echo "Do --> Libero system library is $1"
+echo "Do --> Project directory is $2"
+
+# argv comes in as the terminal command from Libero (when started by the command line. Starting simulator through GUI gives different initial command)
+# -- -l presynth_simulation.log -c -do {do /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do /usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL spec0 spec1}
+
+# So argv[0] is --, argv[1] is -1, argv[2] is presynth_simulation.log and so on. So first I just grab the 5th index, which is the actual incoming arguments
+
+quietly set actual_command [lindex $argv 5]
+#quietly set actual_command $argv[0]
+#echo "$actual_command"
+quietly set command_split [split $actual_command " "]
+#echo "$command_split"
+#foreach i $command_split {
+#   echo $i
+#   }
+
+# Now we have something like
+# do /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do /usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL spec0 spec1
+# do is first, then the 3 arguments with directory locations. So the 4th index is the variable number of VHDL blocks argument (spec0 in this case)
+# We want to take all the arguments from 4 on and make them an array
+
+quietly set num_arguments [llength $command_split]
+#echo "$num_arguments"
+
+for {set i 4} {$i < $num_arguments} {incr i} {
+#   echo $i
+#   echo "Do --> Will simulate and save VHDL test [lindex $command_split $i]"
+   set vhdl_tests([expr $i-4]) [lindex $command_split $i]
+   #lappend vhdl_tests [lindex $command_split $i]
+}
+
+quietly set num_tests [array size vhdl_tests]
+echo "Do --> There are $num_tests VHDL tests"
+
+for {set i 0} {$i < $num_tests} {incr i} {
+   echo "Do -->  VHDL Test $i to simulate and save is $vhdl_tests($i)"
+}
 
 quietly set ACTELLIBNAME PolarFire
 quietly set PROJECT_DIR $2
@@ -156,61 +192,113 @@ add wave /spec_tst/spectrometer_fixpt_0/Navg_main
 add wave /spec_tst/spectrometer_fixpt_0/pks
 add wave /spec_tst/spectrometer_fixpt_0/outbin
 add wave /spec_tst/spectrometer_fixpt_0/ready
+add wave /spec_tst/spectrometer_fixpt_0/average_signed_instance_P1_fixpt_inst/ready_in
 
-quietly set strobe Low
-quietly set strobe_log Low
-quietly set count 0
+add wave /spec_tst/spectrometer_fixpt_1/sample1
+add wave /spec_tst/spectrometer_fixpt_1/sample2
+add wave /spec_tst/spectrometer_fixpt_1/Navg_notch
+add wave /spec_tst/spectrometer_fixpt_1/Navg_main
+add wave /spec_tst/spectrometer_fixpt_1/pks
+add wave /spec_tst/spectrometer_fixpt_1/outbin
+add wave /spec_tst/spectrometer_fixpt_1/ready
+add wave /spec_tst/spectrometer_fixpt_1/average_signed_instance_P1_fixpt_inst/ready_in
 
-when {/spec_tst/spectrometer_fixpt_0/average_signed_instance_P1_fixpt_inst/ready_in = 1} {
-   if {$strobe_log eq "Low"} {
-      set strobe_log High
-      echo "Another batch of data coming in from sfft and correlate"
-   }
-}
+#https://www.microsemi.com/document-portal/doc_view/136364-modelsim-me-10-4c-command-reference-manual-for-libero-soc-v11-7
+#I loop through each of the desired VHDL implementations and use the 'when' command to tag certain signals to give feedback for when they change
+#Specifically I want to know how many batches of data are getting sent into averager, when the notch is subtracting, and when the averager is finished
+#The first set of data is junk, so I wait until the second output from averager
+#Because of how the 'when' statement works, the condition has to be given with the double quotes so that it can include a variable
+#The expression is also difficult. If you give it the way it says in the manual with curly brackets, you can't have it evaluate the index (i) during the first pass, so that there's a difference between each VHDL block
 
-when {/spec_tst/spectrometer_fixpt_0/average_signed_instance_P1_fixpt_inst/ready_in = 0} {
-   if {$strobe_log eq "High"} {
-      set strobe_log Low
-   }
-}
+#For example, I need to have all my variables I use to track things be arrays. So VHDL block 0 gets strobe(0), VHDL block 1 gets strobe(1), etc...
+#I am looping through the for loop with 'i' as my varaible to set things up
+#But when you want to do something based on that in the `when` command expression, like `set sfft_log($i) High`, the $i cannot be evaluated when it's in that when expression, Modelsim's syntax doesn't allow for it.
+#After setting up the loop, i is its last assigned number forever. When the when statements get called, it doesn't have a local variable, everything in here is a global variable
+#So I needed set a, b, c, etc... separately, make sure that the variables I want evaluated during the loop are evaluated. Then use that entire command as a string (a, b, c) as the expression that the `when` statement runs
 
-when {/spec_tst/spectrometer_fixpt_0/ready = 1} {
-   if {$strobe eq "Low"} {
-      echo "Averager out ready is 1"
-      set strobe High
+for {set i 0} {$i < $num_tests} {incr i} {
+   echo "Do -->  Setting up $vhdl_tests($i)"
 
-      #Can't find a simple way to do regular damn addition in ModelSim's DO files
-      set count [expr $count + 1]
+   quietly set strobe($i) Low
+   quietly set sfft_log($i) Low
+   quietly set notch_log($i) Low
+   quietly set averager_count($i) 0
+   quietly set sfft_count($i) 0
+   quietly set notch_count($i) 0
 
-      if {$count == 2} {
-         echo "Averager out ready rose for the second time, recording in VCD file"
-
-         vcd file spec_test.vcd
-         vcd add /spec_tst/*
-         vcd add /spec_tst/spectrometer_fixpt_0/sample1
-         vcd add /spec_tst/spectrometer_fixpt_0/sample2
-         vcd add /spec_tst/spectrometer_fixpt_0/Navg
-         vcd add /spec_tst/spectrometer_fixpt_0/pks
-         vcd add /spec_tst/spectrometer_fixpt_0/outbin
-         vcd add /spec_tst/spectrometer_fixpt_0/ready
+   set a "if {\$sfft_log($i) eq \"Low\"} {
+         set sfft_log($i) High
+         set sfft_count($i) \[expr \$sfft_count($i) + 1\]
+         echo \"Another batch of data coming in from $vhdl_tests($i)'s sfft and correlate, #\$sfft_count($i)\"
       }
-   }
-}
+   "
+   when "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/ready_in = 1" $a
 
-when {/spec_tst/spectrometer_fixpt_0/ready = 0} {
-   if {$strobe eq "High"} {
-      echo "Averager out ready is 0"
-      set strobe Low
-
-      if {$count == 2} {
-         echo "Averager out ready fell for the second time, finishing simulation"
-         vcd flush
-         stop
+   set b "if {\$sfft_log($i) eq \"High\"} {
+         set sfft_log($i) Low
       }
-   }
+   "
+   when "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/ready_in = 0" $b
+
+   set c "if {\$notch_log($i) eq \"Low\"} {
+         set notch_log($i) High
+         set notch_count($i) \[expr \$notch_count($i) + 1\]
+         echo \"Notch is subtracting from $vhdl_tests($i)'s current running average in averager, #\$notch_count($i)\"
+      }
+   "
+   when "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/subtract_ready = 1" $c
+
+   set d  "if {\$notch_log($i) eq \"High\"} {
+         set notch_log($i) Low
+      }
+   "
+   when "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/subtract_ready = 0" $d
+
+   set e "if {\$strobe($i) eq \"Low\"} {
+         echo \"$vhdl_tests($i)'s averager out ready is 1\"
+         set strobe($i) High
+
+         #Can't find a simple way to do regular damn addition in ModelSim's DO files
+         set averager_count($i) \[expr \$averager_count($i) + 1\]
+
+         if {\$averager_count($i) == 2} {
+            echo \"$vhdl_tests($i)'s averager out ready rose for the second time, recording in VCD file\"
+
+            vcd files $vhdl_tests($i).vcd
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/*
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample1
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample2
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Navg_notch
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Navg_main
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Streamer_DLY
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/weight_fold_DLY
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sfft_DLY
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/notch_en
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array_notch
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/pks
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/outbin
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/ready
+         }
+      }
+   "
+   echo "$e"
+   when "/spec_tst/$vhdl_tests($i)/ready = 1" $e
+
+   set f "if {\$strobe($i) eq \"High\"} {
+         echo \"$vhdl_tests($i)'s averager out ready is 0\"
+         set strobe($i) Low
+
+         if {\$averager_count($i) == 2} {
+            echo \"$vhdl_tests($i)'s averager out ready fell for the second time, finishing simulation\"
+            vcd flush
+            stop
+         }
+      }
+   "
+   when "/spec_tst/$vhdl_tests($i)/ready = 0" $f
 }
-
-
+quietly set i 0
 run -all
 vcd flush
 exit

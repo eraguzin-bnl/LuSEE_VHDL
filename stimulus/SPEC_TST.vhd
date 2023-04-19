@@ -81,6 +81,7 @@ architecture behavioral of SPEC_TST is
             sfft_DLY : in std_logic_vector(3 downto 0);
             deinterlace_DLY : in std_logic_vector(3 downto 0);
             AVG_DLY : in std_logic_vector(3 downto 0);
+            notch_en : in std_logic;
             index_array : in vector_of_std_logic_vector6(9 downto 0);
             index_array_notch :   IN    vector_of_std_logic_vector6(9 downto 0);
 
@@ -196,17 +197,50 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"03",
+            Navg_notch  =>  "00" & x"01",
+            Navg_main   =>  "00" & x"02",
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',
-            Streamer_DLY => (others=> '0'),
-            weight_fold_DLY => (others=> '0'),
-            sfft_DLY => (others=> '0'),
+            Streamer_DLY => x"0",
+            weight_fold_DLY => x"0",
+            sfft_DLY => x"0",
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
             
+            notch_en    => '1',
+            index_array => corr_array,
+            index_array_notch => corr_array,
+
+            -- Outputs
+            ce_out =>  open,
+            pks => pks_val,
+            outbin => open,
+            ready =>  open
+
+            -- Inouts
+
+        );
+        
+    spectrometer_fixpt_1 : spectrometer_fixpt
+        -- port map
+        port map( 
+            -- Inputs
+            clk => SYSCLK,
+            reset => NSYSRESET,
+            clk_enable => '1',
+            Navg_notch  =>  "00" & x"01",
+            Navg_main   =>  "00" & x"02",
+            sample1 => sample1,
+            sample2 => sample2,
+            nstart => '1',
+            Streamer_DLY => x"2",
+            weight_fold_DLY => x"2",
+            sfft_DLY => x"3",
+            deinterlace_DLY => (others=> '0'),
+            AVG_DLY => (others=> '0'),
+            
+            notch_en    => '0',
             index_array => corr_array,
             index_array_notch => corr_array,
 
