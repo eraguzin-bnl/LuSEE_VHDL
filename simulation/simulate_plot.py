@@ -5,6 +5,7 @@ import sys, os, json, subprocess
 from vcd.reader import TokenKind, tokenize
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
 
 class LuSEE_Integrated_Simulator:
     def __init__(self, config_file):
@@ -22,36 +23,44 @@ class LuSEE_Integrated_Simulator:
             listing['Fraction Length'] = self.json_data["Signals"][i]['Fraction Length']
             self.signals_of_interest[i] = listing
 
-    def simulate(self, config_file):
         print("Python --> Reading config file")
         with open(config_file, "r") as jsonfile:
             self.json_data = json.load(jsonfile)
 
-        libero_location = self.json_data["Libero_Location"]
-        project_location = self.json_data["Project_Location"]
-        project_file = self.json_data["Project_File"]
+        self.libero_location = self.json_data["Libero_Location"]
+        self.project_location = self.json_data["Project_Location"]
+        self.project_file = self.json_data["Project_File"]
+        self.vhdl_entities = self.json_data["vhdl_entities"]
+        self.notes = self.json_data["Notes"]
 
+    def simulate(self, config_file):
         print("Python --> Running Libero for Simulation")
-        subprocess.run([libero_location, "script:libero_simulate_spectrometer.tcl",
-                        f"script_args:{libero_location} {project_location} {project_file} spectrometer_fixpt_0 spectrometer_fixpt_1",
+        start_time = datetime.now()
+        print("Python --> Start Simulation Time:", start_time.strftime("%H:%M:%S"))
+        subprocess.run([self.libero_location, "script:libero_simulate_spectrometer.tcl",
+                        f"script_args:{self.libero_location} {self.project_location} {self.project_file} {self.vhdl_entities}",
                         "logfile:make_libero.log"])
 
         print("Python --> Simulation finished")
+        print("Python --> End Simulation Time:", datetime.now().strftime("%H:%M:%S"))
+        time_difference = datetime.now() - start_time
+        print("Python --> Simulation Duration:", str(time_difference))
 
-    def analyze_file(self):
-        if (not os.path.isfile("spec_test.vcd")):
-            sys.exit("Python --> spec_test.vcd does not exist")
+    def analyze_file(self, name):
+        if (not os.path.isfile(f"{name}.vcd")):
+            sys.exit(f"Python --> {name}.vcd does not exist")
         else:
-            print("Python --> spec_test.vcd exists")
+            print(f"Python --> {name}.vcd found")
+            self.name = name
             self.sensitivity_list = {}
             self.pairs = {}
             self.vals = {}
-            f = open("spec_test.vcd", "rb")
-            self.tokens = tokenize(f)
             self.top = None
             self.time = 0
             self.prev_time = 0
             self.plot_num = 0
+            f = open(f"{name}.vcd", "rb")
+            self.tokens = tokenize(f)
 
     def header(self):
         for num,i in enumerate(self.tokens):
@@ -186,6 +195,13 @@ class LuSEE_Integrated_Simulator:
         print("Python --> Done with VCD body")
 
     def plot(self):
+        navg_main = 2**int(self.vals["Navg_main"]['y'][0])
+        navg_notch = 2**int(self.vals["Navg_notch"]['y'][0])
+        notch_en = int(self.vals["notch_en"]['y'][0])
+
+        title = f"{self.name}_{self.notes}"
+        filename = f"{self.name}_notch_en_{notch_en}_navg_main{navg_main}_navg_notch{navg_notch}_{self.notes}"
+
         self.plot_num = 0
         total_bins = len(self.vals["outbin"]['y'])
 
@@ -206,8 +222,8 @@ class LuSEE_Integrated_Simulator:
 
         fig, ax = plt.subplots()
 
-        title = self.signals_of_interest["pks0"]["Title"]
-        fig.suptitle(title, fontsize = 24)
+        #title = self.signals_of_interest["pks0"]["Title"]
+        fig.suptitle(title, fontsize = 20)
         yaxis = self.signals_of_interest["pks0"]["Y-axis"]
         ax.set_ylabel(yaxis, fontsize=14)
         ax.set_yscale('log')
@@ -219,7 +235,7 @@ class LuSEE_Integrated_Simulator:
         if not (os.path.exists(plot_path)):
             os.makedirs(plot_path)
 
-        fig.savefig (os.path.join(plot_path, f"plot{self.plot_num}.jpg"))
+        fig.savefig (os.path.join(plot_path, f"{filename}.jpg"))
         #np.save(os.path.join(plot_path, f"data{self.plot_num}"), x, y)
         self.plot_num = self.plot_num + 1
 
@@ -228,7 +244,9 @@ class LuSEE_Integrated_Simulator:
 if __name__ == "__main__":
     x = LuSEE_Integrated_Simulator(sys.argv[1])
     x.simulate(sys.argv[1])
-    x.analyze_file()
-    x.header()
-    x.body()
-    x.plot()
+    blocks = x.vhdl_entities.split()
+    for i in blocks:
+        x.analyze_file(i)
+        x.header()
+        x.body()
+        x.plot()

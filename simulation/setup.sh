@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo "LuSEE --> Setting up LuSEE VHDL simulation environment"
 python3 -m venv ./venv
 echo "LuSEE --> Python venv setup"

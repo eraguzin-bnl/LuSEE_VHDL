@@ -1,30 +1,32 @@
 {"Libero_Location": "/usr/local/microchip/Libero_SoC_v2022.3/Libero/bin64/libero",
-"Project_Location": "/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/PF_EVAL_TEST",
+"Project_Location": "/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL",
 "Project_File": "PF_EVAL_TEST.prjx",
+"vhdl_entities": "spec_notch_lowavg spec_nonotch_lowavg spec_notch_highavg",
+"Notes": "sky_pf_100_A1",
 "Signals":
     {"pks0": {
-        "Title": "Peaks0",
+        "Title": "Pks0",
         "Y-axis": "bin counts",
         "Signedness": "unsigned",
         "Word Length": 32,
         "Fraction Length": 0
         },
     "pks1": {
-        "Title": "Peaks1",
+        "Title": "Pks1",
         "Y-axis": "bin counts",
         "Signedness": "unsigned",
         "Word Length": 32,
         "Fraction Length": 0
         },
     "pks2": {
-        "Title": "Peaks2",
+        "Title": "Pks2",
         "Y-axis": "bin counts",
         "Signedness": "unsigned",
         "Word Length": 32,
         "Fraction Length": 0
         },
     "pks3": {
-        "Title": "Peaks3",
+        "Title": "Pks3",
         "Y-axis": "bin counts",
         "Signedness": "unsigned",
         "Word Length": 32,
@@ -55,7 +57,28 @@
         "Title": "Sample 2",
         "Y-axis": "Amplitude",
         "Signedness": "unsigned",
+        "Word Length": 14,
+        "Fraction Length": 0
+    },
+    "notch_en": {
+        "Title": "notch_en",
+        "Y-axis": "Amplitude",
+        "Signedness": "unsigned",
         "Word Length": 1,
+        "Fraction Length": 0
+    },
+    "Navg_notch": {
+        "Title": "Navg_notch",
+        "Y-axis": "Amplitude",
+        "Signedness": "unsigned",
+        "Word Length": 10,
+        "Fraction Length": 0
+    },
+    "Navg_main": {
+        "Title": "Navg_main",
+        "Y-axis": "Amplitude",
+        "Signedness": "unsigned",
+        "Word Length": 10,
         "Fraction Length": 0
     }
  }

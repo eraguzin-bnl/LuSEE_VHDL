@@ -1179,13 +1179,13 @@ SIZE="575"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1681942178"
-SIZE="38726"
+TIME="1682008338"
+SIZE="38829"
 ENDFILE
 VALUE "<project>/simulation/presynth_simulation.log,log"
 STATE="utd"
-TIME="1681942178"
-SIZE="222703"
+TIME="1682008858"
+SIZE="30047"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
@@ -1194,8 +1194,28 @@ SIZE="13040"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1681942441"
-SIZE="20615"
+TIME="1682008007"
+SIZE="21501"
+ENDFILE
+VALUE "<project>/simulation/spectrometer_fixpt_0.vcd,vcd"
+STATE="utd"
+TIME="1682009373"
+SIZE="73728"
+ENDFILE
+VALUE "<project>/simulation/spectrometer_fixpt_1.vcd,vcd"
+STATE="utd"
+TIME="1682009636"
+SIZE="65536"
+ENDFILE
+VALUE "<project>/simulation/spec_nonotch_lowavg.vcd,vcd"
+STATE="utd"
+TIME="1682019426"
+SIZE="32768"
+ENDFILE
+VALUE "<project>/simulation/spec_notch_lowavg.vcd,vcd"
+STATE="utd"
+TIME="1682018986"
+SIZE="32768"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
@@ -1227,10 +1247,15 @@ STATE="utd"
 TIME="1681227960"
 SIZE="8160"
 ENDFILE
+VALUE "<project>/stimulus/NOTCH_TST.vhd,tb_hdl"
+STATE="utd"
+TIME="1682024198"
+SIZE="18332"
+ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1681920244"
-SIZE="9051"
+TIME="1682021683"
+SIZE="9913"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -4013,6 +4038,11 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+HDL;stimulus/SPEC_TST.vhd;0
+HDL;stimulus/NOTCH_TST.vhd;0
+HDL;hdl/spectrometer_fixpt.vhd;0
+ACTIVEVIEW;stimulus/NOTCH_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

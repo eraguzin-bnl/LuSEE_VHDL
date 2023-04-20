@@ -62,7 +62,8 @@ set_modelsim_options -user_do_file "$project_location/simulation/run_LuSEE.do"
 set_modelsim_options -do_file_args "$libero_root $project_location $vhdl_tests"
 save_project
 
-puts "TCL --> Running simulation (May take over a minute)..."
+puts "TCL --> Running simulation..."
+puts "TCL --> May take some time. Run 'tail -F $project_location/simulation/presynth_simulation.log' in a new terminal for real time updates"
 #Run specific tools
 #https://onlinedocs.microchip.com/pr/GUID-FABC58FF-E2CC-4557-BA80-9C03AAFAA2D2-en-US-6/index.html?GUID-177689DE-CA56-4BB8-A64A-47C05C26F071
 run_tool -name {SIM_PRESYNTH}

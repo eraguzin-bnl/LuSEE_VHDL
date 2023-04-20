@@ -47,7 +47,7 @@ end SPEC_TST;
 
 architecture behavioral of SPEC_TST is
 
-    constant SYSCLK_PERIOD : time := 100 ns; -- 10MHZ
+    constant SYSCLK_PERIOD : time := 10 ns; -- 100MHZ
 
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
@@ -190,39 +190,7 @@ begin
       END PROCESS c_re_fileread;
 
     -- Instantiate Unit Under Test:  spectrometer_fixpt
-    spectrometer_fixpt_0 : spectrometer_fixpt
-        -- port map
-        port map( 
-            -- Inputs
-            clk => SYSCLK,
-            reset => NSYSRESET,
-            clk_enable => '1',
-            Navg_notch  =>  "00" & x"01",
-            Navg_main   =>  "00" & x"02",
-            sample1 => sample1,
-            sample2 => sample2,
-            nstart => '1',
-            Streamer_DLY => x"0",
-            weight_fold_DLY => x"0",
-            sfft_DLY => x"0",
-            deinterlace_DLY => (others=> '0'),
-            AVG_DLY => (others=> '0'),
-            
-            notch_en    => '1',
-            index_array => corr_array,
-            index_array_notch => corr_array,
-
-            -- Outputs
-            ce_out =>  open,
-            pks => pks_val,
-            outbin => open,
-            ready =>  open
-
-            -- Inouts
-
-        );
-        
-    spectrometer_fixpt_1 : spectrometer_fixpt
+    spec_notch_lowavg : spectrometer_fixpt
         -- port map
         port map( 
             -- Inputs
@@ -240,7 +208,71 @@ begin
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
             
+            notch_en    => '1',
+            index_array => corr_array,
+            index_array_notch => corr_array,
+
+            -- Outputs
+            ce_out =>  open,
+            pks => pks_val,
+            outbin => open,
+            ready =>  open
+
+            -- Inouts
+
+        );
+        
+    spec_nonotch_lowavg : spectrometer_fixpt
+        -- port map
+        port map( 
+            -- Inputs
+            clk => SYSCLK,
+            reset => NSYSRESET,
+            clk_enable => '1',
+            Navg_notch  =>  "00" & x"01",
+            Navg_main   =>  "00" & x"03",
+            sample1 => sample1,
+            sample2 => sample2,
+            nstart => '1',
+            Streamer_DLY => x"2",
+            weight_fold_DLY => x"2",
+            sfft_DLY => x"3",
+            deinterlace_DLY => (others=> '0'),
+            AVG_DLY => (others=> '0'),
+            
             notch_en    => '0',
+            index_array => corr_array,
+            index_array_notch => corr_array,
+
+            -- Outputs
+            ce_out =>  open,
+            pks => pks_val,
+            outbin => open,
+            ready =>  open
+
+            -- Inouts
+
+        );
+        
+    spec_notch_highavg : spectrometer_fixpt
+        -- port map
+        port map( 
+            -- Inputs
+            clk => SYSCLK,
+            reset => NSYSRESET,
+            clk_enable => '1',
+            Navg_notch  =>  "00" & x"04",
+            Navg_main   =>  "00" & x"06",
+            sample1 => sample1,
+            sample2 => sample2,
+            nstart => '1',
+            Streamer_DLY => x"2",
+            weight_fold_DLY => x"2",
+            sfft_DLY => x"3",
+            deinterlace_DLY => (others=> '0'),
+            AVG_DLY => (others=> '0'),
+            
+            notch_en    => '1',
             index_array => corr_array,
             index_array_notch => corr_array,
 

@@ -185,23 +185,6 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli $1/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
 
 add wave /SPEC_TST/*
-add wave /spec_tst/spectrometer_fixpt_0/sample1
-add wave /spec_tst/spectrometer_fixpt_0/sample2
-add wave /spec_tst/spectrometer_fixpt_0/Navg_notch
-add wave /spec_tst/spectrometer_fixpt_0/Navg_main
-add wave /spec_tst/spectrometer_fixpt_0/pks
-add wave /spec_tst/spectrometer_fixpt_0/outbin
-add wave /spec_tst/spectrometer_fixpt_0/ready
-add wave /spec_tst/spectrometer_fixpt_0/average_signed_instance_P1_fixpt_inst/ready_in
-
-add wave /spec_tst/spectrometer_fixpt_1/sample1
-add wave /spec_tst/spectrometer_fixpt_1/sample2
-add wave /spec_tst/spectrometer_fixpt_1/Navg_notch
-add wave /spec_tst/spectrometer_fixpt_1/Navg_main
-add wave /spec_tst/spectrometer_fixpt_1/pks
-add wave /spec_tst/spectrometer_fixpt_1/outbin
-add wave /spec_tst/spectrometer_fixpt_1/ready
-add wave /spec_tst/spectrometer_fixpt_1/average_signed_instance_P1_fixpt_inst/ready_in
 
 #https://www.microsemi.com/document-portal/doc_view/136364-modelsim-me-10-4c-command-reference-manual-for-libero-soc-v11-7
 #I loop through each of the desired VHDL implementations and use the 'when' command to tag certain signals to give feedback for when they change
@@ -216,6 +199,8 @@ add wave /spec_tst/spectrometer_fixpt_1/average_signed_instance_P1_fixpt_inst/re
 #After setting up the loop, i is its last assigned number forever. When the when statements get called, it doesn't have a local variable, everything in here is a global variable
 #So I needed set a, b, c, etc... separately, make sure that the variables I want evaluated during the loop are evaluated. Then use that entire command as a string (a, b, c) as the expression that the `when` statement runs
 
+#I gave each when breakpoint labels so that they could be deactivated once they were done and not clog up the output or accidentally print to file again. So when they're finished, they get deactivated
+
 for {set i 0} {$i < $num_tests} {incr i} {
    echo "Do -->  Setting up $vhdl_tests($i)"
 
@@ -225,44 +210,46 @@ for {set i 0} {$i < $num_tests} {incr i} {
    quietly set averager_count($i) 0
    quietly set sfft_count($i) 0
    quietly set notch_count($i) 0
+   quietly set stop_request($i) 0
+   quietly set time_print 0
 
    set a "if {\$sfft_log($i) eq \"Low\"} {
          set sfft_log($i) High
          set sfft_count($i) \[expr \$sfft_count($i) + 1\]
-         echo \"Another batch of data coming in from $vhdl_tests($i)'s sfft and correlate, #\$sfft_count($i)\"
+         echo \"\[expr \$now/1000000\] us --> Another batch of data coming in from $vhdl_tests($i)'s sfft and correlate, #\$sfft_count($i)\"
       }
    "
-   when "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/ready_in = 1" $a
+   when -label "a_$i" "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/ready_in = 1" $a
 
    set b "if {\$sfft_log($i) eq \"High\"} {
          set sfft_log($i) Low
       }
    "
-   when "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/ready_in = 0" $b
+   when -label "b_$i" "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/ready_in = 0" $b
 
    set c "if {\$notch_log($i) eq \"Low\"} {
          set notch_log($i) High
          set notch_count($i) \[expr \$notch_count($i) + 1\]
-         echo \"Notch is subtracting from $vhdl_tests($i)'s current running average in averager, #\$notch_count($i)\"
+         echo \"\[expr \$now/1000000\] us --> Notch is subtracting from $vhdl_tests($i)'s current running average in averager, #\$notch_count($i)\"
       }
    "
-   when "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/subtract_ready = 1" $c
+   when -label "c_$i" "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/subtract_ready = 1" $c
 
    set d  "if {\$notch_log($i) eq \"High\"} {
          set notch_log($i) Low
       }
    "
-   when "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/subtract_ready = 0" $d
+   when -label "d_$i" "/spec_tst/$vhdl_tests($i)/average_signed_instance_P1_fixpt_inst/subtract_ready = 0" $d
 
    set e "if {\$strobe($i) eq \"Low\"} {
-         echo \"$vhdl_tests($i)'s averager out ready is 1\"
+         echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready is 1\"
          set strobe($i) High
 
          #Can't find a simple way to do regular damn addition in ModelSim's DO files
          set averager_count($i) \[expr \$averager_count($i) + 1\]
 
          if {\$averager_count($i) == 2} {
-            echo \"$vhdl_tests($i)'s averager out ready rose for the second time, recording in VCD file\"
+            echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready rose for the second time, recording in VCD file\"
 
             vcd files $vhdl_tests($i).vcd
             vcd add -file $vhdl_tests($i).vcd /spec_tst/*
@@ -274,31 +261,52 @@ for {set i 0} {$i < $num_tests} {incr i} {
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/weight_fold_DLY
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sfft_DLY
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/notch_en
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array_notch
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array(0)
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array_notch(0)
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/pks
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/outbin
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/ready
          }
       }
    "
-   echo "$e"
-   when "/spec_tst/$vhdl_tests($i)/ready = 1" $e
+   when -label "e_$i" "/spec_tst/$vhdl_tests($i)/ready = 1" $e
 
    set f "if {\$strobe($i) eq \"High\"} {
-         echo \"$vhdl_tests($i)'s averager out ready is 0\"
+         echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready is 0\"
          set strobe($i) Low
 
          if {\$averager_count($i) == 2} {
-            echo \"$vhdl_tests($i)'s averager out ready fell for the second time, finishing simulation\"
-            vcd flush
-            stop
+            echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready fell for the second time, requesting to finish simulation\"
+            vcd off $vhdl_tests($i).vcd
+            vcd flush $vhdl_tests($i).vcd
+            set stop_request($i) 1
+            nowhen \"a_$i\"
+            nowhen \"b_$i\"
+            nowhen \"c_$i\"
+            nowhen \"d_$i\"
+            nowhen \"e_$i\"
+            nowhen \"f_$i\"
+
+            echo \"\[expr \$now/1000000\] us --> Checking to see if other blocks are ready to stop\"
+            set off High
+            for {set j 0} {\$j < $num_tests} {incr j} {
+               if {\$stop_request(\$j) == 0} {
+                  echo \"\[expr \$now/1000000\] us --> Block \$j is still running\"
+                  set off Low
+               }
+            }
+            echo \"\[expr \$now/1000000\] us --> Off is \$off\"
+            if {\$off eq \"High\"} {
+               echo \"\[expr \$now/1000000\] us --> All blocks are finished, ending simulation\"
+               stop
+            }
          }
       }
    "
-   when "/spec_tst/$vhdl_tests($i)/ready = 0" $f
+   echo "$f"
+   when -label "f_$i" "/spec_tst/$vhdl_tests($i)/ready = 0" $f
 }
 quietly set i 0
 run -all
-vcd flush
+#vcd flush
 exit
