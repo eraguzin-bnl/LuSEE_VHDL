@@ -154,7 +154,6 @@ class LuSEE_Integrated_Simulator:
                         self.vals[j]['modified'] = False
 
             #Each line after the time indicates a changed value. See if the changed value is one that is tracked
-            #If it's an
             elif (i.kind is TokenKind.CHANGE_SCALAR):
                 id_code = i.scalar_change.id_code
                 if id_code in self.sensitivity_list:
@@ -164,7 +163,7 @@ class LuSEE_Integrated_Simulator:
                     bit = sublist[id_code]
                     value = i.scalar_change.value
                     #Update most recent value of that array for that bit with the specified value
-                    if (value == 'x' or value == '0'):  #Is there a better way to deal with don't cares?
+                    if (value == '0'):  #Is there a better way to deal with don't cares?
                         val = 0
                         if (bit == None):
                             previous_val = val
@@ -173,18 +172,25 @@ class LuSEE_Integrated_Simulator:
                             inverse_mask = 1 << bit
                             mask = ~inverse_mask
                             previous_val = previous_val & mask
-                    else:
+                    elif (value == '1'):
                         val = 1
                         if (bit == None):
                             previous_val = val
                         else:
                             #To add a 1, simple to use OR
                             previous_val = previous_val | (val << bit)
+                    else:
+                        print(f"Python --> WARNING: Value for {signal} at time {self.time} is {value}")
 
                     #Keep this value in case the next line has the next bit of the array
                     #Mark it so that this value gets saved at the end of the time tick
                     self.vals[signal]['last_val'] = previous_val
                     self.vals[signal]['modified'] = True
+
+            elif (i.kind is TokenKind.DUMPOFF):
+                #For some reason with ModelSim, after you do a `vcd flush` to get the file to disk, it gives final values to every variable as "don't know" or X.
+                #So ignore everything after the `vcd flush` command
+                break
 
         #After the file is done, add the last value as the final time tick
         #It helps with analysis later
@@ -208,7 +214,7 @@ class LuSEE_Integrated_Simulator:
         x = []
         y = []
         time_record = []
-        for i in range(total_bins):
+        for i in range(total_bins - 1):
             x.append(self.vals["outbin"]['y'][i] / 2048 * 100 / 2)
             time = self.vals["outbin"]['x'][i]
 
@@ -230,7 +236,8 @@ class LuSEE_Integrated_Simulator:
         ax.set_xlabel('MHz', fontsize=14)
         ax.ticklabel_format(style='plain', useOffset=False, axis='x')
         ax.plot(x, y)
-
+        #print(x)
+        #print(y)
         plot_path = os.path.join(os.getcwd(), "plots")
         if not (os.path.exists(plot_path)):
             os.makedirs(plot_path)

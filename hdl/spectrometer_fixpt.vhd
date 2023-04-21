@@ -62,7 +62,10 @@ ENTITY spectrometer_fixpt IS
         index_array_notch                 :   IN    vector_of_std_logic_vector6(9 downto 0);
         
         ce_out                            :   OUT   std_logic;
-        pks                               :   OUT   vector_of_std_logic_vector32(0 TO 3);  -- sfix32_E18 [4]
+        pks0                              :   OUT   std_logic_vector(31 DOWNTO 0);
+        pks1                              :   OUT   std_logic_vector(31 DOWNTO 0);
+        pks2                              :   OUT   std_logic_vector(31 DOWNTO 0);
+        pks3                              :   OUT   std_logic_vector(31 DOWNTO 0);
         outbin                            :   OUT   std_logic_vector(10 DOWNTO 0);  -- ufix11
         ready                             :   OUT   std_logic
         );
@@ -138,7 +141,10 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
   
   
  SIGNAL ce_out_s1                            :   std_logic;
- SIGNAL pks_s1                               :   vector_of_std_logic_vector32(0 TO 3);  -- sfix32_E18 [4]
+ SIGNAL pks_s1_0                             :   std_logic_vector(31 DOWNTO 0);
+ SIGNAL pks_s1_1                             :   std_logic_vector(31 DOWNTO 0);
+ SIGNAL pks_s1_2                             :   std_logic_vector(31 DOWNTO 0);
+ SIGNAL pks_s1_3                             :   std_logic_vector(31 DOWNTO 0);
  SIGNAL outbin_s1                            :   std_logic_vector(10 DOWNTO 0);  -- ufix11
  SIGNAL ready_s1                             :   std_logic;
  
@@ -667,42 +673,30 @@ average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
         subtract_error       => open,
         
         ce_out               => ce_out_s1,
-        outpk                => pks_s1(0),
+        outpk                => pks_s1_0,
         outbin               => outbin_s1,
         ready_out            => ready_s1
         );
-
-   --average_instance_P1_fixpt_inst2 : average_instance_P1_fixpt
-  --PORT map
-        --( clk                => clk,
-        --reset                => blk_reset,
-        --clk_enable           => clk_enable ,
-        --
-        --
-        --ch1_val_re           => ch2_val_re_s1,
-        --ch1_val_im           => ch2_val_im_s1,
-        --ch2_val_re           => ch2_val_re_s1,
-        --ch2_val_im           => ch2_val_im_s1,
-        --count                => bin_s1,
-        ----navg               => Navg_main,
-        --ready_in             => fft_ready_s1,
---
-        --ce_out               => open,
-        --outpk                => pks_s1(1),
-        --outbin               => open,
-        --ready_out            => open
-        --);
         
     process (clk) begin
         if (rising_edge(clk)) then
-
-            ce_out               <= ce_out_s1;
-            pks(0)               <= pks_s1(0);
-            pks(1)               <= pks_s1(1);
-            pks(2)               <= pks_s1(0);
-            pks(3)               <= pks_s1(1);
-            outbin               <= outbin_s1;
-            ready                <= ready_s1;
+            if (reset = '1') then
+                ce_out    <= '0';
+                pks0 <= (others=>'0');
+                pks1 <= (others=>'0');
+                pks2 <= (others=>'0');
+                pks3 <= (others=>'0');
+                outbin    <= (others=>'0');
+                ready     <= '0';
+            else
+                ce_out               <= ce_out_s1;
+                pks0                 <= pks_s1_0;
+                pks1                 <= pks_s1_1;
+                pks2                 <= pks_s1_2;
+                pks3                 <= pks_s1_3;
+                outbin               <= outbin_s1;
+                ready                <= ready_s1;
+            end if;
         end if;
     end process;
 END rtl;

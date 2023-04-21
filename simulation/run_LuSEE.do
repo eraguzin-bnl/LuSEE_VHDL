@@ -184,8 +184,6 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 
 vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli $1/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
 
-add wave /SPEC_TST/*
-
 #https://www.microsemi.com/document-portal/doc_view/136364-modelsim-me-10-4c-command-reference-manual-for-libero-soc-v11-7
 #I loop through each of the desired VHDL implementations and use the 'when' command to tag certain signals to give feedback for when they change
 #Specifically I want to know how many batches of data are getting sent into averager, when the notch is subtracting, and when the averager is finished
@@ -252,7 +250,6 @@ for {set i 0} {$i < $num_tests} {incr i} {
             echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready rose for the second time, recording in VCD file\"
 
             vcd files $vhdl_tests($i).vcd
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/*
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample1
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample2
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Navg_notch
@@ -263,7 +260,7 @@ for {set i 0} {$i < $num_tests} {incr i} {
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/notch_en
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array(0)
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array_notch(0)
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/pks
+            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/pks0
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/outbin
             vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/ready
          }

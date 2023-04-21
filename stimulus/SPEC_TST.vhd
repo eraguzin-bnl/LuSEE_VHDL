@@ -64,38 +64,6 @@ architecture behavioral of SPEC_TST is
     SIGNAL corr_array         : vector_of_std_logic_vector6(9 downto 0);
     SIGNAL notch_array        : vector_of_std_logic_vector6(9 downto 0);
 
-    component spectrometer_fixpt
-        -- ports
-        port( 
-            -- Inputs
-            clk : in std_logic;
-            reset : in std_logic;
-            clk_enable : in std_logic;
-            Navg_notch :   IN    std_logic_vector(9 DOWNTO 0);  -- sfix14
-            Navg_main  :   IN    std_logic_vector(9 DOWNTO 0);  -- sfix14
-            sample1 : in std_logic_vector(13 downto 0);
-            sample2 : in std_logic_vector(13 downto 0);
-            nstart : in std_logic;
-            Streamer_DLY : in std_logic_vector(3 downto 0);
-            weight_fold_DLY : in std_logic_vector(3 downto 0);
-            sfft_DLY : in std_logic_vector(3 downto 0);
-            deinterlace_DLY : in std_logic_vector(3 downto 0);
-            AVG_DLY : in std_logic_vector(3 downto 0);
-            notch_en : in std_logic;
-            index_array : in vector_of_std_logic_vector6(9 downto 0);
-            index_array_notch :   IN    vector_of_std_logic_vector6(9 downto 0);
-
-            -- Outputs
-            ce_out : out std_logic;
-            pks    : out vector_of_std_logic_vector32(0 TO 3);
-            outbin : out std_logic_vector(10 downto 0);
-            ready : out std_logic
-
-            -- Inouts
-
-        );
-    end component;
-
 begin
 
     process
@@ -190,15 +158,15 @@ begin
       END PROCESS c_re_fileread;
 
     -- Instantiate Unit Under Test:  spectrometer_fixpt
-    spec_notch_lowavg : spectrometer_fixpt
+    spec_notch_lowavg : entity work.spectrometer_fixpt
         -- port map
         port map( 
             -- Inputs
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"01",
-            Navg_main   =>  "00" & x"02",
+            Navg_notch  =>  "00" & x"02",
+            Navg_main   =>  "00" & x"04",
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',
@@ -214,7 +182,10 @@ begin
 
             -- Outputs
             ce_out =>  open,
-            pks => pks_val,
+            pks0 => open,
+            pks1 => open,
+            pks2 => open,
+            pks3 => open,
             outbin => open,
             ready =>  open
 
@@ -222,15 +193,15 @@ begin
 
         );
         
-    spec_nonotch_lowavg : spectrometer_fixpt
+    spec_nonotch_lowavg : entity work.spectrometer_fixpt
         -- port map
         port map( 
             -- Inputs
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"01",
-            Navg_main   =>  "00" & x"03",
+            Navg_notch  =>  "00" & x"02",
+            Navg_main   =>  "00" & x"04",
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',
@@ -246,7 +217,10 @@ begin
 
             -- Outputs
             ce_out =>  open,
-            pks => pks_val,
+            pks0 => open,
+            pks1 => open,
+            pks2 => open,
+            pks3 => open,
             outbin => open,
             ready =>  open
 
@@ -254,7 +228,7 @@ begin
 
         );
         
-    spec_notch_highavg : spectrometer_fixpt
+    spec_notch_highavg : entity work.spectrometer_fixpt
         -- port map
         port map( 
             -- Inputs
@@ -278,7 +252,10 @@ begin
 
             -- Outputs
             ce_out =>  open,
-            pks => pks_val,
+            pks0 => open,
+            pks1 => open,
+            pks2 => open,
+            pks3 => open,
             outbin => open,
             ready =>  open
 

@@ -247,7 +247,11 @@ SIGNAL	FIFO_RST        :  STD_LOGIC;
 
 SIGNAL  Start_Spectrometer_data     : STD_LOGIC;   
 SIGNAL  ce_out              :  std_logic;
-SIGNAL  pks                :  vector_of_std_logic_vector32(0 TO 3); -- sfix32_E18 [4]
+SIGNAL  pks                 : vector_of_std_logic_vector32(3 downto 0);
+SIGNAL  pks0                :  std_logic_vector(31 DOWNTO 0);
+SIGNAL  pks1                :  std_logic_vector(31 DOWNTO 0);
+SIGNAL  pks2                :  std_logic_vector(31 DOWNTO 0);
+SIGNAL  pks3                :  std_logic_vector(31 DOWNTO 0);
 SIGNAL  outbin             :  std_logic_vector(10 DOWNTO 0);  -- ufix11
 SIGNAL  ready               :  std_logic;
 
@@ -289,7 +293,10 @@ begin
     
     ADC_CLK_MISC_IO <=  clk_100MHz_out; -- clk_50MHz;  -- clk_100MHz_out; --
     
-    
+    pks(0)             <= pks0;
+    pks(1)             <= pks1;
+    pks(2)             <= pks2;
+    pks(3)             <= pks3;
 
     SW_ADC_reset       <= reg2_p(1);
     ADC_REG_START      <= reg2_p(0);
@@ -581,7 +588,10 @@ port MAP (
               ce_out      => ce_out,
               Navg_notch  =>  Navg_notch,
               Navg_main   =>  Navg_main,
-              pks         => pks,  -- sfix32_E14 [4]
+              pks0        => pks0,
+              pks1        => pks1,
+              pks2        => pks2,
+              pks3        => pks3,
               outbin      => outbin,  -- ufix12
               ready       => ready,
             

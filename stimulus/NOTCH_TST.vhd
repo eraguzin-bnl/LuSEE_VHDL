@@ -49,6 +49,11 @@ architecture behavioral of NOTCH_TST is
     
     SIGNAL start_bin           : std_logic := '0';
     SIGNAL bin                 : unsigned(12 DOWNTO 0) := to_unsigned(1, 13);
+    SIGNAL fft_ready           : std_logic := '0';
+    SIGNAL ch1_val_re                       :   std_logic_vector(31 DOWNTO 0);
+    SIGNAL ch1_val_im                       :   std_logic_vector(31 DOWNTO 0);
+    SIGNAL ch2_val_re                       :   std_logic_vector(31 DOWNTO 0);
+    SIGNAL ch2_val_im                       :   std_logic_vector(31 DOWNTO 0);
     
     SIGNAL ch1_notch_real                       :   std_logic_vector(31 DOWNTO 0);
     SIGNAL ch1_notch_real_outbin                :   std_logic_vector(10 DOWNTO 0);  -- ufix11
@@ -130,6 +135,13 @@ architecture behavioral of NOTCH_TST is
     SIGNAL fft_ready_delay                      :   std_logic;
     SIGNAL bin_delay_s                          :   std_logic_vector(12 DOWNTO 0);  -- ufix13
     SIGNAL fft_delay_s                          :   std_logic;
+    
+    SIGNAL bin_delay_notch                      :   std_logic_vector(12 DOWNTO 0);  -- ufix13
+    SIGNAL fft_ready_delay_notch                :   std_logic;
+    SIGNAL ce_out_s1                            :   std_logic;
+    SIGNAL outbin_s1                            :   std_logic_vector(12 DOWNTO 0);
+    SIGNAL ready_s1                             :   std_logic;
+    SIGNAL pks                                  :   std_logic_vector(31 DOWNTO 0);
  
 begin
 
@@ -183,6 +195,18 @@ begin
 
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
+    
+    process (clk) begin
+        if (rising_edge(clk)) then
+
+            ch1_val_re_s1           <= ch1_val_re;
+            ch1_val_im_s1           <= ch1_val_im;
+            ch2_val_re_s1           <= ch2_val_re;
+            ch2_val_im_s1           <= ch2_val_im;
+            bin_s1                  <= std_logic_vector(bin);
+            fft_ready_s1            <= fft_ready;
+        end if;
+    end process;
 
     -- Instantiate Unit Under Test:  LuSEE_PF_EVAL
     notch_average_ch1_real : entity work.average_stage1_signed
@@ -194,7 +218,7 @@ begin
         clk_enable           => '1',
 
         P                    => ch1_val_re,
-        count                => bin,
+        count                => bin_s1,
         navg                 => Navg_notch,
         ready_in             => notch_ready,
         
@@ -218,7 +242,7 @@ begin
         clk_enable           => '1',
 
         P                    => ch1_val_im,
-        count                => bin,
+        count                => bin_s1,
         navg                 => Navg_notch,
         ready_in             => notch_ready,
         
@@ -242,7 +266,7 @@ begin
         clk_enable           => '1',
 
         P                    => ch2_val_re,
-        count                => bin,
+        count                => bin_s1,
         navg                 => Navg_notch,
         ready_in             => notch_ready,
         
@@ -266,7 +290,7 @@ begin
         clk_enable           => '1',
 
         P                    => ch2_val_im,
-        count                => bin,
+        count                => bin_s1,
         navg                 => Navg_notch,
         ready_in             => notch_ready,
         
@@ -399,7 +423,7 @@ begin
             subtract_error       => open,
             
             ce_out               => ce_out_s1,
-            outpk                => pks_s1(0),
+            outpk                => pks,
             outbin               => outbin_s1,
             ready_out            => ready_s1
             );

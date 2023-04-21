@@ -889,8 +889,8 @@ SIZE="3459"
 ENDFILE
 VALUE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 STATE="utd"
-TIME="1681917705"
-SIZE="18713"
+TIME="1682096251"
+SIZE="19157"
 ENDFILE
 VALUE "<project>/hdl/LuSEE_Pkg.vhd,hdl"
 STATE="utd"
@@ -1119,8 +1119,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1681917834"
-SIZE="33579"
+TIME="1682096251"
+SIZE="33634"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1179,43 +1179,38 @@ SIZE="575"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1682008338"
-SIZE="38829"
-ENDFILE
-VALUE "<project>/simulation/presynth_simulation.log,log"
-STATE="utd"
-TIME="1682008858"
-SIZE="30047"
+TIME="1682098460"
+SIZE="39390"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1681851026"
+TIME="1682096097"
 SIZE="13040"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1682008007"
-SIZE="21501"
+TIME="1682092398"
+SIZE="21092"
 ENDFILE
 VALUE "<project>/simulation/spectrometer_fixpt_0.vcd,vcd"
 STATE="utd"
-TIME="1682009373"
-SIZE="73728"
+TIME="1682010516"
+SIZE="416987"
 ENDFILE
 VALUE "<project>/simulation/spectrometer_fixpt_1.vcd,vcd"
 STATE="utd"
-TIME="1682009636"
-SIZE="65536"
+TIME="1682010785"
+SIZE="420079"
 ENDFILE
 VALUE "<project>/simulation/spec_nonotch_lowavg.vcd,vcd"
 STATE="utd"
-TIME="1682019426"
-SIZE="32768"
+TIME="1682098459"
+SIZE="212893"
 ENDFILE
 VALUE "<project>/simulation/spec_notch_lowavg.vcd,vcd"
 STATE="utd"
-TIME="1682018986"
-SIZE="32768"
+TIME="1682098459"
+SIZE="209369"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
@@ -1249,13 +1244,13 @@ SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/NOTCH_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1682024198"
-SIZE="18332"
+TIME="1682095615"
+SIZE="19565"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1682021683"
-SIZE="9913"
+TIME="1682096669"
+SIZE="8937"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -2725,7 +2720,7 @@ EntityName=SPEC_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do
 DoFileName2=wave.do
-DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL spectrometer_fixpt_0 spectrometer_fixpt_1
+DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL spec_notch_lowavg spec_nonotch_lowavg spec_notch_highavg
 DisplayDUTWave=false
 LogAllSignals=false
 DisablePulseFiltering=false
@@ -2794,8 +2789,8 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=""
-BATCH=0
+PARAM="-l presynth_simulation.log -c"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -4038,11 +4033,6 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-ORIENTATION;HORIZONTAL
-HDL;stimulus/SPEC_TST.vhd;0
-HDL;stimulus/NOTCH_TST.vhd;0
-HDL;hdl/spectrometer_fixpt.vhd;0
-ACTIVEVIEW;stimulus/NOTCH_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
@@ -4459,6 +4449,11 @@ SUBBLOCK "sfft_fixpt::work","hdl/sfft_fixpt.vhd","FALSE","FALSE"
 ENDLIST
 LIST "MULT32_TST::work","stimulus/MULT32_TST.vhd","FALSE","TRUE"
 SUBBLOCK "Multiply_generic32::work","hdl/Multiply_generic_32.vhd","FALSE","FALSE"
+ENDLIST
+LIST "NOTCH_TST::work","stimulus/NOTCH_TST.vhd","FALSE","TRUE"
+SUBBLOCK "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
+SUBBLOCK "correlate_fixpt::work","hdl/correlate_fixpt.vhd","FALSE","FALSE"
+SUBBLOCK "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SPEC_TST::work","stimulus/SPEC_TST.vhd","FALSE","TRUE"
 SUBBLOCK "spectrometer_fixpt::work","hdl/spectrometer_fixpt.vhd","FALSE","FALSE"
