@@ -844,7 +844,7 @@ SIZE="9381"
 ENDFILE
 VALUE "<project>/hdl/average_stage1_signed.vhd,hdl"
 STATE="utd"
-TIME="1681506027"
+TIME="1682452899"
 SIZE="12408"
 ENDFILE
 VALUE "<project>/hdl/Complex4Multiply_generic.vhd,hdl"
@@ -854,13 +854,13 @@ SIZE="12765"
 ENDFILE
 VALUE "<project>/hdl/correlate_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1681497543"
-SIZE="14765"
+TIME="1682535133"
+SIZE="15104"
 ENDFILE
 VALUE "<project>/hdl/correlate_operation.vhd,hdl"
 STATE="utd"
-TIME="1681506032"
-SIZE="5732"
+TIME="1682436691"
+SIZE="5619"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt.vhd,hdl"
 STATE="utd"
@@ -1119,8 +1119,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1682096251"
-SIZE="33634"
+TIME="1682536390"
+SIZE="33771"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1177,20 +1177,95 @@ STATE="utd"
 TIME="1678978149"
 SIZE="575"
 ENDFILE
+VALUE "<project>/simulation/a_spec_nonotch_nopf.vcd,vcd"
+STATE="utd"
+TIME="1682540830"
+SIZE="171764"
+ENDFILE
+VALUE "<project>/simulation/a_spec_nonotch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682540830"
+SIZE="171711"
+ENDFILE
+VALUE "<project>/simulation/a_spec_notch_nopf.vcd,vcd"
+STATE="utd"
+TIME="1682540830"
+SIZE="171672"
+ENDFILE
+VALUE "<project>/simulation/a_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682540830"
+SIZE="199156"
+ENDFILE
+VALUE "<project>/simulation/divide16.log,log"
+STATE="utd"
+TIME="1682525746"
+SIZE="318019"
+ENDFILE
+VALUE "<project>/simulation/divide16_spec_nonotch_nopf.vcd,vcd"
+STATE="utd"
+TIME="1682525746"
+SIZE="169748"
+ENDFILE
+VALUE "<project>/simulation/divide16_spec_nonotch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682525746"
+SIZE="167223"
+ENDFILE
+VALUE "<project>/simulation/divide16_spec_notch_nopf.vcd,vcd"
+STATE="utd"
+TIME="1682525746"
+SIZE="216009"
+ENDFILE
+VALUE "<project>/simulation/divide16_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682525746"
+SIZE="223705"
+ENDFILE
+VALUE "<project>/simulation/gui_log.log,log"
+STATE="utd"
+TIME="1682545357"
+SIZE="592299"
+ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1682098460"
-SIZE="39390"
+TIME="1682564376"
+SIZE="39704"
+ENDFILE
+VALUE "<project>/simulation/nnotch4.log,log"
+STATE="utd"
+TIME="1682545361"
+SIZE="308070"
+ENDFILE
+VALUE "<project>/simulation/nnotch4_spec_nonotch_nopf.vcd,vcd"
+STATE="utd"
+TIME="1682545360"
+SIZE="212789"
+ENDFILE
+VALUE "<project>/simulation/nnotch4_spec_nonotch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682545360"
+SIZE="208944"
+ENDFILE
+VALUE "<project>/simulation/nnotch4_spec_notch_nopf.vcd,vcd"
+STATE="utd"
+TIME="1682545360"
+SIZE="211233"
+ENDFILE
+VALUE "<project>/simulation/nnotch4_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682545360"
+SIZE="240484"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1682096097"
-SIZE="13040"
+TIME="1682531346"
+SIZE="13043"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1682092398"
-SIZE="21092"
+TIME="1682525197"
+SIZE="22765"
 ENDFILE
 VALUE "<project>/simulation/spectrometer_fixpt_0.vcd,vcd"
 STATE="utd"
@@ -1204,23 +1279,63 @@ SIZE="420079"
 ENDFILE
 VALUE "<project>/simulation/spec_nonotch_lowavg.vcd,vcd"
 STATE="utd"
-TIME="1682098459"
+TIME="1682100406"
 SIZE="212893"
+ENDFILE
+VALUE "<project>/simulation/spec_nonotch_nopf.vcd,vcd"
+STATE="utd"
+TIME="1682564375"
+SIZE="97"
+ENDFILE
+VALUE "<project>/simulation/spec_nonotch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682564375"
+SIZE="97"
+ENDFILE
+VALUE "<project>/simulation/spec_notch_highavg.vcd,vcd"
+STATE="utd"
+TIME="1682105402"
+SIZE="205299"
 ENDFILE
 VALUE "<project>/simulation/spec_notch_lowavg.vcd,vcd"
 STATE="utd"
-TIME="1682098459"
+TIME="1682100406"
 SIZE="209369"
+ENDFILE
+VALUE "<project>/simulation/spec_notch_nopf.vcd,vcd"
+STATE="utd"
+TIME="1682564375"
+SIZE="97"
+ENDFILE
+VALUE "<project>/simulation/spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682564375"
+SIZE="97"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
 STATE="utd"
 TIME="1681934683"
 SIZE="416530"
 ENDFILE
+VALUE "<project>/simulation/test.log,log"
+STATE="utd"
+TIME="1682540830"
+SIZE="403843"
+ENDFILE
+VALUE "<project>/simulation/test2.log,log"
+STATE="utd"
+TIME="1682523004"
+SIZE="4724"
+ENDFILE
 VALUE "<project>/simulation/testbench_presynth_simulation.log,log"
 STATE="utd"
 TIME="1679414487"
 SIZE="17799"
+ENDFILE
+VALUE "<project>/simulation/test_3.log,log"
+STATE="utd"
+TIME="1682524558"
+SIZE="310979"
 ENDFILE
 VALUE "<project>/stimulus/ADS4245_tst.vhd,tb_hdl"
 STATE="utd"
@@ -1244,13 +1359,13 @@ SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/NOTCH_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1682095615"
-SIZE="19565"
+TIME="1682531285"
+SIZE="20794"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1682096669"
-SIZE="8937"
+TIME="1682545483"
+SIZE="10333"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -2720,7 +2835,7 @@ EntityName=SPEC_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do
 DoFileName2=wave.do
-DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL spec_notch_lowavg spec_nonotch_lowavg spec_notch_highavg
+DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL now16 spec_notch_pf spec_notch_nopf spec_nonotch_pf spec_nonotch_nopf
 DisplayDUTWave=false
 LogAllSignals=false
 DisablePulseFiltering=false
@@ -2789,8 +2904,8 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM="-l presynth_simulation.log -c"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -4033,6 +4148,10 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+HDL;stimulus/SPEC_TST.vhd;0
+StartPage;StartPage;0
+ACTIVEVIEW;stimulus/SPEC_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

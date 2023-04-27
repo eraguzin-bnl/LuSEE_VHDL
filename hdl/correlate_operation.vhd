@@ -55,7 +55,6 @@ architecture architecture_correlate_operation of correlate_operation is
     SIGNAL ready_out1           : std_logic;
     SIGNAL ready_out2           : std_logic;
     SIGNAL or_out               : std_logic;
-    SIGNAL or_out2              : std_logic;
     SIGNAL error_s              : std_logic;
     CONSTANT error_ones         : signed(64 downto 0) := (others=>'1');
     CONSTANT error_zeroes       : signed(64 downto 0) := (others=>'0');
@@ -113,7 +112,6 @@ begin
         if (rising_edge(clk)) then
             if (rstb = '1') then
                 or_out <= '0';
-                or_out2 <= '0';
                 valid_out <= '0';
                 result <= (others=>'0');
                 error_s <= '0';
@@ -127,8 +125,7 @@ begin
                     result <= product_1_cast + product_2_cast;
                 end if;
                 or_out <= ready_out1 or ready_out2;
-                or_out2 <= or_out;
-                valid_out <= or_out2;
+                valid_out <= or_out;
                 slice <= to_integer(unsigned(index));
                 if (or_out = '1') then
                     -- If line below is commented, it's a sticky error flag, if not, it will reflect the output each cycle

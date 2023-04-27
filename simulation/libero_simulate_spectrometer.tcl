@@ -16,6 +16,7 @@ set libero_root1 [file dirname $libero_location]
 set libero_root [file dirname $libero_root1]
 set project_location [lindex $argv 1]
 set project_file [lindex $argv 2]
+set log_file [lindex $argv 3]
 set project_file_path "$project_location/$project_file"
 set project_name [file rootname $project_file]
 set test_file "$project_location/stimulus/SPEC_TST.vhd"
@@ -24,10 +25,11 @@ puts "TCL --> Libero location is $libero_location"
 puts "TCL --> Libero root is $libero_root"
 puts "TCL --> Project location is $project_location"
 puts "TCL --> Project name is $project_name"
+puts "TCL --> Log file is $log_file"
 
 for {set i 0} {$i < $argc} {incr i} {
     #puts "arg is [lindex $argv $i]"
-    if {$i > 2} {
+    if {$i > 3} {
         puts "TCL --> Will simulate and save VHDL test [lindex $argv $i]"
         #set vhdl_tests([expr $i-3]) [lindex $argv $i]
         lappend vhdl_tests [lindex $argv $i]
@@ -59,11 +61,11 @@ puts "TCL --> Preparing test"
 set_modelsim_options -tb_module_name "SPEC_TST"
 set_modelsim_options -use_automatic_do_file 0
 set_modelsim_options -user_do_file "$project_location/simulation/run_LuSEE.do"
-set_modelsim_options -do_file_args "$libero_root $project_location $vhdl_tests"
+set_modelsim_options -do_file_args "$libero_root $project_location $log_file $vhdl_tests"
 save_project
 
 puts "TCL --> Running simulation..."
-puts "TCL --> May take some time. Run 'tail -F $project_location/simulation/presynth_simulation.log' in a new terminal for real time updates"
+puts "TCL --> May take some time. Run 'tail -F $project_location/simulation/$log_file.log' in a new terminal for real time updates"
 #Run specific tools
 #https://onlinedocs.microchip.com/pr/GUID-FABC58FF-E2CC-4557-BA80-9C03AAFAA2D2-en-US-6/index.html?GUID-177689DE-CA56-4BB8-A64A-47C05C26F071
 run_tool -name {SIM_PRESYNTH}

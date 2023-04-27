@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
 class LuSEE_Integrated_Simulator:
-    def __init__(self, config_file):
+    def __init__(self, config_file, log_file):
         print("Python --> Welcome to the LuSEE Integrated Simulator")
         with open(config_file, "r") as jsonfile:
             self.json_data = json.load(jsonfile)
@@ -32,13 +32,14 @@ class LuSEE_Integrated_Simulator:
         self.project_file = self.json_data["Project_File"]
         self.vhdl_entities = self.json_data["vhdl_entities"]
         self.notes = self.json_data["Notes"]
+        self.log_file = log_file
 
     def simulate(self, config_file):
         print("Python --> Running Libero for Simulation")
         start_time = datetime.now()
         print("Python --> Start Simulation Time:", start_time.strftime("%H:%M:%S"))
         subprocess.run([self.libero_location, "script:libero_simulate_spectrometer.tcl",
-                        f"script_args:{self.libero_location} {self.project_location} {self.project_file} {self.vhdl_entities}",
+                        f"script_args:{self.libero_location} {self.project_location} {self.project_file} {self.log_file} {self.vhdl_entities}",
                         "logfile:make_libero.log"])
 
         print("Python --> Simulation finished")
@@ -136,6 +137,7 @@ class LuSEE_Integrated_Simulator:
                         fraction_length = self.signals_of_interest[j]['Fraction Length']
 
                         if (signedness == 'signed'):
+                            #If first digit is one, it's a negative number in two's complement
                             if (((lv >> (word_length - 1)) & 0x1) == 1):
                                 new_val = (lv - (1 << word_length)) /(2**fraction_length)
                                 x.append(self.prev_time)
@@ -214,7 +216,7 @@ class LuSEE_Integrated_Simulator:
         x = []
         y = []
         time_record = []
-        for i in range(total_bins - 1):
+        for i in range(total_bins):
             x.append(self.vals["outbin"]['y'][i] / 2048 * 100 / 2)
             time = self.vals["outbin"]['x'][i]
 
@@ -236,8 +238,9 @@ class LuSEE_Integrated_Simulator:
         ax.set_xlabel('MHz', fontsize=14)
         ax.ticklabel_format(style='plain', useOffset=False, axis='x')
         ax.plot(x, y)
-        #print(x)
-        #print(y)
+#        print(x)
+#        print(y)
+        ax.set_xlim([0,0.5])
         plot_path = os.path.join(os.getcwd(), "plots")
         if not (os.path.exists(plot_path)):
             os.makedirs(plot_path)
@@ -249,11 +252,13 @@ class LuSEE_Integrated_Simulator:
         plt.show()
 
 if __name__ == "__main__":
-    x = LuSEE_Integrated_Simulator(sys.argv[1])
-    x.simulate(sys.argv[1])
+    if len(sys.argv) < 3:
+        sys.exit(f"Error: You need to supply a config file and a unique name for this test as the 2 arguments! You had {len(sys.argv)-1} arguments!")
+    x = LuSEE_Integrated_Simulator(sys.argv[1],sys.argv[2])
+#    x.simulate(sys.argv[1])
     blocks = x.vhdl_entities.split()
     for i in blocks:
-        x.analyze_file(i)
+        x.analyze_file(f"{sys.argv[2]}_{i}")
         x.header()
         x.body()
         x.plot()

@@ -146,6 +146,17 @@ BEGIN
                 bin_s7 <= (others=>'0');
                 bin_s8 <= (others=>'0');
                 bin_out <= (others=>'0');
+                
+                error_0 <= '0';
+                error_1 <= '0';
+                error_2 <= '0';
+                error_3 <= '0';
+                error_4 <= '0';
+                error_5 <= '0';
+                error_6 <= '0';
+                error_7 <= '0';
+                error_8 <= '0';
+                error_9 <= '0';
             else
                 -- 5 delays for the multiplication in Multiply_generic_32
                 -- 3 delays for the correlate_operation delay
@@ -156,8 +167,8 @@ BEGIN
                 bin_s5 <= bin_s4;
                 bin_s6 <= bin_s5;
                 bin_s7 <= bin_s6;
-                bin_s8 <= bin_s7;
-                bin_out <= bin_s8;
+                --bin_s8 <= bin_s7;
+                bin_out <= bin_s7;
             end if;
         end if;
     end process;

@@ -1,11 +1,12 @@
 echo "Here we are in Eric's LuSEE Libero DO file"
+echo "Do --> argv is $argv"
 echo "Do --> Libero system library is $1"
 echo "Do --> Project directory is $2"
 
 # argv comes in as the terminal command from Libero (when started by the command line. Starting simulator through GUI gives different initial command)
-# -- -l presynth_simulation.log -c -do {do /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do /usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL spec0 spec1}
+# -- -l presynth_simulation.log -c -do {do /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do /usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL outlog spec_notch_pf spec_notch_nopf spec_nonotch_pf spec_nonotch_nopf}
 
-# So argv[0] is --, argv[1] is -1, argv[2] is presynth_simulation.log and so on. So first I just grab the 5th index, which is the actual incoming arguments
+# So argv[0] is --, argv[1] is -1, argv[2] is presynth_simulation.log and so on. So first I just grab the 5th index, which is the actual incoming arguments (including another 'do')
 
 quietly set actual_command [lindex $argv 5]
 #quietly set actual_command $argv[0]
@@ -24,10 +25,10 @@ quietly set command_split [split $actual_command " "]
 quietly set num_arguments [llength $command_split]
 #echo "$num_arguments"
 
-for {set i 4} {$i < $num_arguments} {incr i} {
+for {set i 5} {$i < $num_arguments} {incr i} {
 #   echo $i
 #   echo "Do --> Will simulate and save VHDL test [lindex $command_split $i]"
-   set vhdl_tests([expr $i-4]) [lindex $command_split $i]
+   set vhdl_tests([expr $i-5]) [lindex $command_split $i]
    #lappend vhdl_tests [lindex $command_split $i]
 }
 
@@ -40,6 +41,10 @@ for {set i 0} {$i < $num_tests} {incr i} {
 
 quietly set ACTELLIBNAME PolarFire
 quietly set PROJECT_DIR $2
+quietly set LIBERO_DIR $1
+#The log file is the 3rd argument
+echo "Do --> Log file is $3.log"
+quietly set log_file $3
 
 if {[file exists presynth/_info]} {
    echo "INFO: Simulation library presynth already exists"
@@ -48,7 +53,7 @@ if {[file exists presynth/_info]} {
    vlib presynth
 }
 vmap presynth presynth
-vmap PolarFire "$1/lib/modelsimpro/precompiled/vlog/polarfire"
+vmap PolarFire "${LIBERO_DIR}/lib/modelsimpro/precompiled/vlog/polarfire"
 if {[file exists COREUART_LIB/_info]} {
    echo "INFO: Simulation library COREUART_LIB already exists"
 } else {
@@ -182,7 +187,7 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/sfft_fixpt_pkg.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_streamer_fixpt_pkg.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 
-vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB  -t 1ps -pli $1/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
+vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB -l "${log_file}.log" -t 1ps -pli ${LIBERO_DIR}/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.SPEC_TST
 
 #https://www.microsemi.com/document-portal/doc_view/136364-modelsim-me-10-4c-command-reference-manual-for-libero-soc-v11-7
 #I loop through each of the desired VHDL implementations and use the 'when' command to tag certain signals to give feedback for when they change
@@ -210,6 +215,8 @@ for {set i 0} {$i < $num_tests} {incr i} {
    quietly set notch_count($i) 0
    quietly set stop_request($i) 0
    quietly set time_print 0
+   quietly set notch_error($i) Low
+   quietly set main_error($i) Low
 
    set a "if {\$sfft_log($i) eq \"Low\"} {
          set sfft_log($i) High
@@ -250,32 +257,34 @@ for {set i 0} {$i < $num_tests} {incr i} {
             echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready rose for the second time, recording in VCD file\"
 
             vcd files $vhdl_tests($i).vcd
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample1
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample2
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Navg_notch
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Navg_main
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Streamer_DLY
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/weight_fold_DLY
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sfft_DLY
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/notch_en
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array(0)
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array_notch(0)
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/pks0
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/outbin
-            vcd add -file $vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/ready
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample1
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample2
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Navg_notch
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Navg_main
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Streamer_DLY
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/weight_fold_DLY
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sfft_DLY
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/notch_en
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array(0)
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array_notch(0)
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/pks0
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/outbin
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/ready
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/error_notch
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/error_main
          }
       }
    "
    when -label "e_$i" "/spec_tst/$vhdl_tests($i)/ready = 1" $e
-
+   #echo "$e"
    set f "if {\$strobe($i) eq \"High\"} {
          echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready is 0\"
          set strobe($i) Low
 
          if {\$averager_count($i) == 2} {
             echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready fell for the second time, requesting to finish simulation\"
-            vcd off $vhdl_tests($i).vcd
-            vcd flush $vhdl_tests($i).vcd
+            vcd off ${log_file}_$vhdl_tests($i).vcd
+            vcd flush ${log_file}_$vhdl_tests($i).vcd
             set stop_request($i) 1
             nowhen \"a_$i\"
             nowhen \"b_$i\"
@@ -300,8 +309,34 @@ for {set i 0} {$i < $num_tests} {incr i} {
          }
       }
    "
-   echo "$f"
+   #echo "$f"
    when -label "f_$i" "/spec_tst/$vhdl_tests($i)/ready = 0" $f
+
+   set g "if {\$notch_error($i) eq \"Low\"} {
+         set notch_error($i) High
+         echo \"\[expr \$now/1000000\] us --> Notch error from $vhdl_tests($i)'s notch correlator has triggered!\"
+      }
+   "
+   when -label "g_$i" "/spec_tst/$vhdl_tests($i)/correlate_fixpt_notch/error_0 = 1" $g
+
+   set h "if {\$notch_error($i) eq \"High\"} {
+         set notch_error($i) Low
+      }
+   "
+   when -label "h_$i" "/spec_tst/$vhdl_tests($i)/correlate_fixpt_notch/error_0 = 0" $h
+
+   set j "if {\$main_error($i) eq \"Low\"} {
+         set main_error($i) High
+         echo \"\[expr \$now/1000000\] us --> Main error from $vhdl_tests($i)'s signal correlator has triggered!\"
+      }
+   "
+   when -label "j_$i" "/spec_tst/$vhdl_tests($i)/correlate_fixpt_main/error_0 = 1" $j
+
+   set k "if {\$main_error($i) eq \"High\"} {
+         set main_error($i) Low
+      }
+   "
+   when -label "k_$i" "/spec_tst/$vhdl_tests($i)/correlate_fixpt_main/error_0 = 0" $k
 }
 quietly set i 0
 run -all

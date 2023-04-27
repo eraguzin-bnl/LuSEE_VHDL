@@ -189,6 +189,9 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL bin_delay_s_notch                    :   std_logic_vector(12 DOWNTO 0);  -- ufix13
  SIGNAL fft_delay_s_notch                    :   std_logic;
  
+ SIGNAL error_notch			     :   std_logic_vector(9 DOWNTO 0);
+ SIGNAL error_main 			     :   std_logic_vector(9 DOWNTO 0);
+ 
  SIGNAL A1                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
  SIGNAL A2                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
  SIGNAL A3                                   :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
@@ -566,7 +569,7 @@ BEGIN
         X34R                    => X34R_notch,
         X34I                    => X34I_notch,
         bin_out                 => bin_delay_notch,
-        error_out               => open,
+        error_out               => error_notch,
         fft_ready_out           => fft_ready_delay_notch
         );
         
@@ -627,7 +630,7 @@ BEGIN
         X34R                    => X34R,
         X34I                    => X34I,
         bin_out                 => bin_delay,
-        error_out               => open,
+        error_out               => error_main,
         fft_ready_out           => fft_ready_delay
         );
         

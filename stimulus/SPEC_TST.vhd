@@ -73,7 +73,7 @@ begin
         if ( vhdl_initial ) then
             -- Assert Reset
             NSYSRESET <= '1';
-            corr_array(0)      <= "011101";
+            corr_array(0)      <= "000000";
             corr_array(1)      <= "001000";
             corr_array(2)      <= "000000";
             corr_array(3)      <= "000000";
@@ -84,7 +84,7 @@ begin
             corr_array(8)      <= "000000";
             corr_array(9)      <= "000000";
             
-            notch_array(0)      <= "011101";
+            notch_array(0)      <= "000000";
             notch_array(1)      <= "001000";
             notch_array(2)      <= "000000";
             notch_array(3)      <= "000000";
@@ -142,8 +142,10 @@ begin
           READ(sky_pf_100, read_data2);
           sample1_v := std_logic_vector(to_unsigned(character'pos(read_data),8)) & std_logic_vector(to_unsigned(character'pos(read_data2),8));
           sample2_v := std_logic_vector(to_unsigned(character'pos(read_data3),8)) & std_logic_vector(to_unsigned(character'pos(read_data4),8));
+          
           sample1 <= sample1_v(5 downto 0) & sample1_v(15 downto 8);
           sample2 <= sample2_v(5 downto 0) & sample2_v(15 downto 8);
+          
           --report "value is " & to_hex_string(read_data);
           --report "sample1v is " & to_hex_string(sample1_v);
           --report "sample2v is " & to_hex_string(sample2_v);
@@ -158,15 +160,17 @@ begin
       END PROCESS c_re_fileread;
 
     -- Instantiate Unit Under Test:  spectrometer_fixpt
-    spec_notch_lowavg : entity work.spectrometer_fixpt
+    spec_notch_pf : entity work.spectrometer_fixpt
         -- port map
         port map( 
             -- Inputs
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"04",
+            Navg_notch  =>  "00" & x"04",
+            Navg_main   =>  "00" & x"07",
+            --sample1 => x"0" & sample1(13 downto 4),
+            --sample2 => x"0" & sample2(13 downto 4),
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',
@@ -193,15 +197,54 @@ begin
 
         );
         
-    spec_nonotch_lowavg : entity work.spectrometer_fixpt
+    spec_notch_nopf : entity work.spectrometer_fixpt
         -- port map
         port map( 
             -- Inputs
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"04",
+            Navg_notch  =>  "00" & x"04",
+            Navg_main   =>  "00" & x"07",
+            --sample1 => x"0" & sample2(13 downto 4),
+            --sample2 => x"0" & sample1(13 downto 4),
+            sample1 => sample2,
+            sample2 => sample1,
+            nstart => '1',
+            Streamer_DLY => x"2",
+            weight_fold_DLY => x"2",
+            sfft_DLY => x"3",
+            deinterlace_DLY => (others=> '0'),
+            AVG_DLY => (others=> '0'),
+            
+            notch_en    => '1',
+            index_array => corr_array,
+            index_array_notch => corr_array,
+
+            -- Outputs
+            ce_out =>  open,
+            pks0 => open,
+            pks1 => open,
+            pks2 => open,
+            pks3 => open,
+            outbin => open,
+            ready =>  open
+
+            -- Inouts
+
+        );
+        
+    spec_nonotch_pf : entity work.spectrometer_fixpt
+        -- port map
+        port map( 
+            -- Inputs
+            clk => SYSCLK,
+            reset => NSYSRESET,
+            clk_enable => '1',
+            Navg_notch  =>  "00" & x"04",
+            Navg_main   =>  "00" & x"07",
+            --sample1 => x"0" & sample1(13 downto 4),
+            --sample2 => x"0" & sample2(13 downto 4),
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',
@@ -228,7 +271,7 @@ begin
 
         );
         
-    spec_notch_highavg : entity work.spectrometer_fixpt
+    spec_nonotch_nopf : entity work.spectrometer_fixpt
         -- port map
         port map( 
             -- Inputs
@@ -236,9 +279,11 @@ begin
             reset => NSYSRESET,
             clk_enable => '1',
             Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"06",
-            sample1 => sample1,
-            sample2 => sample2,
+            Navg_main   =>  "00" & x"07",
+            --sample1 => x"0" & sample2(13 downto 4),
+            --sample2 => x"0" & sample1(13 downto 4),
+            sample1 => sample2,
+            sample2 => sample1,
             nstart => '1',
             Streamer_DLY => x"2",
             weight_fold_DLY => x"2",
@@ -246,7 +291,7 @@ begin
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
             
-            notch_en    => '1',
+            notch_en    => '0',
             index_array => corr_array,
             index_array_notch => corr_array,
 

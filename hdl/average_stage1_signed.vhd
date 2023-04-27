@@ -144,7 +144,7 @@ begin
                     if (ready_in = '1') then
                         if (count = bins_s) then
                             state <= S_READ_DATA;
-                            read_address <= std_logic_vector(index-1);
+                            read_address <= std_logic_vector(index-3);
                             index <= unsigned(count(11 downto 0)) - 1;
                             count_s <= count;
                             -- Need to differentiate for first time because RAM could have junk values

@@ -39,21 +39,28 @@ architecture behavioral of NOTCH_TST is
     constant SYSCLK_PERIOD : time := 10 ns; -- 100MHZ
 
     signal SYSCLK : std_logic := '0';
-    signal NSYSRESET : std_logic := '0';
+    signal NSYSRESET : std_logic := '1';
     
     SIGNAL sample1             : std_logic_vector(13 DOWNTO 0);
     SIGNAL sample2             : std_logic_vector(13 DOWNTO 0);
     
-    signal Navg_notch          : std_logic_vector(10 downto 0) := "00" & x"01";
-    signal Navg_main           : std_logic_vector(10 downto 0) := "00" & x"01";
+    signal Navg_notch          : std_logic_vector(9 downto 0) := "00" & x"02";
+    signal Navg_main           : std_logic_vector(9 downto 0) := "00" & x"03";
     
     SIGNAL start_bin           : std_logic := '0';
-    SIGNAL bin                 : unsigned(12 DOWNTO 0) := to_unsigned(1, 13);
-    SIGNAL fft_ready           : std_logic := '0';
-    SIGNAL ch1_val_re                       :   std_logic_vector(31 DOWNTO 0);
-    SIGNAL ch1_val_im                       :   std_logic_vector(31 DOWNTO 0);
-    SIGNAL ch2_val_re                       :   std_logic_vector(31 DOWNTO 0);
-    SIGNAL ch2_val_im                       :   std_logic_vector(31 DOWNTO 0);
+    SIGNAL bin                 : unsigned(12 DOWNTO 0) := to_unsigned(2500, 13);
+    SIGNAL fft_ready           : std_logic := '1';
+    SIGNAL ch1_val_re                       :   std_logic_vector(31 DOWNTO 0) := x"00e00010";
+    SIGNAL ch1_real                         :   unsigned(31 downto 0) := x"00000b10";
+    SIGNAL ch1_val_im                       :   std_logic_vector(31 DOWNTO 0) := x"00e00010";
+    SIGNAL ch1_im                           :   unsigned(31 downto 0) := x"00000b10";
+    SIGNAL ch2_val_re                       :   std_logic_vector(31 DOWNTO 0) := x"00e00010";
+    SIGNAL ch2_val_im                       :   std_logic_vector(31 DOWNTO 0) := x"00e00010";
+    
+    SIGNAL ch1_val_re_s1                       :   std_logic_vector(31 DOWNTO 0);
+    SIGNAL ch1_val_im_s1                       :   std_logic_vector(31 DOWNTO 0);
+    SIGNAL ch2_val_re_s1                       :   std_logic_vector(31 DOWNTO 0);
+    SIGNAL ch2_val_im_s1                       :   std_logic_vector(31 DOWNTO 0);
     
     SIGNAL ch1_notch_real                       :   std_logic_vector(31 DOWNTO 0);
     SIGNAL ch1_notch_real_outbin                :   std_logic_vector(10 DOWNTO 0);  -- ufix11
@@ -77,6 +84,7 @@ architecture behavioral of NOTCH_TST is
 
     SIGNAL corr_array                           : vector_of_std_logic_vector6(9 downto 0);
     SIGNAL notch_array                          : vector_of_std_logic_vector6(9 downto 0);
+    SIGNAL notch_ready                          :   std_logic  := '1';
     
     SIGNAL A1                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
     SIGNAL A2                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
@@ -96,6 +104,7 @@ architecture behavioral of NOTCH_TST is
     SIGNAL X34I                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
 
     SIGNAL A1_s                                 :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+    SIGNAL A1_s2                                :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
     SIGNAL A2_s                                 :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
     SIGNAL A3_s                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
     SIGNAL A4_s                                 :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
@@ -135,11 +144,13 @@ architecture behavioral of NOTCH_TST is
     SIGNAL fft_ready_delay                      :   std_logic;
     SIGNAL bin_delay_s                          :   std_logic_vector(12 DOWNTO 0);  -- ufix13
     SIGNAL fft_delay_s                          :   std_logic;
+    SIGNAL bin_delay_s2                         :   std_logic_vector(12 DOWNTO 0);  -- ufix13
+    SIGNAL fft_delay_s2                         :   std_logic;
     
     SIGNAL bin_delay_notch                      :   std_logic_vector(12 DOWNTO 0);  -- ufix13
     SIGNAL fft_ready_delay_notch                :   std_logic;
     SIGNAL ce_out_s1                            :   std_logic;
-    SIGNAL outbin_s1                            :   std_logic_vector(12 DOWNTO 0);
+    SIGNAL outbin_s1                            :   std_logic_vector(10 DOWNTO 0);
     SIGNAL ready_s1                             :   std_logic;
     SIGNAL pks                                  :   std_logic_vector(31 DOWNTO 0);
  
@@ -152,8 +163,8 @@ begin
     begin
         if ( vhdl_initial ) then
             -- Assert Reset
-            NSYSRESET <= '0';
-            corr_array(0)      <= "011101";
+            NSYSRESET <= '1';
+            corr_array(0)      <= "000000";
             corr_array(1)      <= "001000";
             corr_array(2)      <= "000000";
             corr_array(3)      <= "000000";
@@ -164,7 +175,7 @@ begin
             corr_array(8)      <= "000000";
             corr_array(9)      <= "000000";
             
-            notch_array(0)      <= "011101";
+            notch_array(0)      <= "000000";
             notch_array(1)      <= "001000";
             notch_array(2)      <= "000000";
             notch_array(3)      <= "000000";
@@ -177,7 +188,7 @@ begin
             
             wait for ( SYSCLK_PERIOD * 10 );
             start_bin <= '1';
-            NSYSRESET <= '1';
+            NSYSRESET <= '0';
             wait;
         end if;
     end process;
@@ -185,10 +196,16 @@ begin
     process (SYSCLK) begin
         if (rising_edge(SYSCLK)) then
             if (start_bin <= '1') then
-                bin <= bin + 1;
-                if (bin = 2048) then
-                    bin <= to_unsigned(1, bin'length);
+                bin <= bin - 1;
+                ch1_real <= ch1_real - 3;
+                ch1_im <= ch1_im - 6;
+                if (bin < 1) then
+                    bin <= to_unsigned(2500, bin'length);
+                    ch1_real <= to_unsigned(8, ch1_real'length);
+                    ch1_im <= to_unsigned(15, ch1_im'length);
                 end if;
+                
+                
             end if;
         end if;
     end process;
@@ -196,11 +213,11 @@ begin
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
     
-    process (clk) begin
-        if (rising_edge(clk)) then
+    process (SYSCLK) begin
+        if (rising_edge(SYSCLK)) then
 
-            ch1_val_re_s1           <= ch1_val_re;
-            ch1_val_im_s1           <= ch1_val_im;
+            ch1_val_re_s1           <= std_logic_vector(ch1_real);
+            ch1_val_im_s1           <= std_logic_vector(ch1_im);
             ch2_val_re_s1           <= ch2_val_re;
             ch2_val_im_s1           <= ch2_val_im;
             bin_s1                  <= std_logic_vector(bin);
@@ -217,8 +234,8 @@ begin
         reset                => NSYSRESET,
         clk_enable           => '1',
 
-        P                    => ch1_val_re,
-        count                => bin_s1,
+        P                    => std_logic_vector(ch1_real),
+        count                => std_logic_vector(bin),
         navg                 => Navg_notch,
         ready_in             => notch_ready,
         
@@ -241,8 +258,8 @@ begin
         reset                => NSYSRESET,
         clk_enable           => '1',
 
-        P                    => ch1_val_im,
-        count                => bin_s1,
+        P                    => std_logic_vector(ch1_im),
+        count                => std_logic_vector(bin),
         navg                 => Navg_notch,
         ready_in             => notch_ready,
         
@@ -348,7 +365,7 @@ begin
       size => 32)
     PORT map
     (   clk                     => SYSCLK,
-        reset                   => blk_reset,
+        reset                   => NSYSRESET,
         bin_in                  => bin_s1,
         fft_ready_in            => fft_ready_s1,
         ch1_val_re              => ch1_val_re_s1,
