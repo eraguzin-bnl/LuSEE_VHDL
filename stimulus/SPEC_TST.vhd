@@ -60,6 +60,7 @@ architecture behavioral of SPEC_TST is
 
     SIGNAL sample1             : std_logic_vector(13 DOWNTO 0);
     SIGNAL sample2             : std_logic_vector(13 DOWNTO 0);
+    SIGNAL sample3             : std_logic_vector(13 DOWNTO 0);
     
     SIGNAL corr_array         : vector_of_std_logic_vector6(9 downto 0);
     SIGNAL notch_array        : vector_of_std_logic_vector6(9 downto 0);
@@ -73,7 +74,7 @@ begin
         if ( vhdl_initial ) then
             -- Assert Reset
             NSYSRESET <= '1';
-            corr_array(0)      <= "000000";
+            corr_array(0)      <= "011101";
             corr_array(1)      <= "001000";
             corr_array(2)      <= "000000";
             corr_array(3)      <= "000000";
@@ -84,7 +85,7 @@ begin
             corr_array(8)      <= "000000";
             corr_array(9)      <= "000000";
             
-            notch_array(0)      <= "000000";
+            notch_array(0)      <= "011101";
             notch_array(1)      <= "001000";
             notch_array(2)      <= "000000";
             notch_array(3)      <= "000000";
@@ -115,6 +116,7 @@ begin
         type two_byte_file is file of character;
         file sky_100 : two_byte_file;
         file sky_pf_100 : two_byte_file;
+        file comb : two_byte_file;
         VARIABLE file_status: std_logic := '0';
         --VARIABLE l: LINE;
         VARIABLE read_data: character;
@@ -123,6 +125,9 @@ begin
         VARIABLE read_data4: character;
         VARIABLE sample1_v: std_logic_vector(15 DOWNTO 0);
         VARIABLE sample2_v: std_logic_vector(15 DOWNTO 0);
+        VARIABLE read_data5: character;
+        VARIABLE read_data6: character;
+        VARIABLE comb_v: std_logic_vector(15 DOWNTO 0);
         
 
       BEGIN
@@ -131,6 +136,7 @@ begin
             report "Opening file";
             file_open(sky_100, "sky_100.bin", read_mode);
             file_open(sky_pf_100, "sky_pf_100.bin", read_mode);
+            file_open(comb, "drifting_comb.bin", read_mode);
             file_status := '1';
         END IF;
         
@@ -140,11 +146,15 @@ begin
           READ(sky_100, read_data4);
           READ(sky_pf_100, read_data);
           READ(sky_pf_100, read_data2);
+          --READ(comb, read_data5);
+          --READ(comb, read_data6);
           sample1_v := std_logic_vector(to_unsigned(character'pos(read_data),8)) & std_logic_vector(to_unsigned(character'pos(read_data2),8));
           sample2_v := std_logic_vector(to_unsigned(character'pos(read_data3),8)) & std_logic_vector(to_unsigned(character'pos(read_data4),8));
+          --comb_v := std_logic_vector(to_unsigned(character'pos(read_data5),8)) & std_logic_vector(to_unsigned(character'pos(read_data6),8));
           
           sample1 <= sample1_v(5 downto 0) & sample1_v(15 downto 8);
           sample2 <= sample2_v(5 downto 0) & sample2_v(15 downto 8);
+          --sample3 <= comb_v(5 downto 0) & comb_v(15 downto 8);
           
           --report "value is " & to_hex_string(read_data);
           --report "sample1v is " & to_hex_string(sample1_v);
@@ -154,8 +164,15 @@ begin
         IF ENDFILE(sky_100) THEN
           report "VHDL --> Sample input file ended, restarting";
           file_close(sky_100);
+          file_close(sky_pf_100);
           file_status := '0';
         END IF;
+        
+        --IF ENDFILE(comb) THEN
+          --report "VHDL --> Comb input file ended, restarting";
+          --file_close(comb);
+          --file_status := '0';
+        --END IF;
         
       END PROCESS c_re_fileread;
 
@@ -167,8 +184,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
+            Navg_notch  =>  "00" & x"02",
+            Navg_main   =>  "00" & x"02",
             --sample1 => x"0" & sample1(13 downto 4),
             --sample2 => x"0" & sample2(13 downto 4),
             sample1 => sample1,
@@ -204,8 +221,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
+            Navg_notch  =>  "00" & x"02",
+            Navg_main   =>  "00" & x"02",
             --sample1 => x"0" & sample2(13 downto 4),
             --sample2 => x"0" & sample1(13 downto 4),
             sample1 => sample2,
@@ -241,8 +258,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
+            Navg_notch  =>  "00" & x"02",
+            Navg_main   =>  "00" & x"02",
             --sample1 => x"0" & sample1(13 downto 4),
             --sample2 => x"0" & sample2(13 downto 4),
             sample1 => sample1,
@@ -278,8 +295,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
+            Navg_notch  =>  "00" & x"02",
+            Navg_main   =>  "00" & x"02",
             --sample1 => x"0" & sample2(13 downto 4),
             --sample2 => x"0" & sample1(13 downto 4),
             sample1 => sample2,

@@ -122,6 +122,17 @@ ARCHITECTURE rtl OF correlate_fixpt IS
   SIGNAL error_7                           : std_logic;
   SIGNAL error_8                           : std_logic;
   SIGNAL error_9                           : std_logic;
+  
+  SIGNAL error_0_s                           : std_logic;
+  SIGNAL error_1_s                           : std_logic;
+  SIGNAL error_2_s                           : std_logic;
+  SIGNAL error_3_s                           : std_logic;
+  SIGNAL error_4_s                           : std_logic;
+  SIGNAL error_5_s                           : std_logic;
+  SIGNAL error_6_s                           : std_logic;
+  SIGNAL error_7_s                           : std_logic;
+  SIGNAL error_8_s                           : std_logic;
+  SIGNAL error_9_s                           : std_logic;
   --SIGNAL error_s                          : std_logic_vector(9 DOWNTO 0);
   
   SIGNAL bin_s1                           : std_logic_vector(12 DOWNTO 0);
@@ -169,6 +180,17 @@ BEGIN
                 bin_s7 <= bin_s6;
                 --bin_s8 <= bin_s7;
                 bin_out <= bin_s7;
+                
+                error_0 <= error_0_s;
+                error_1 <= error_1_s;
+                error_2 <= error_2_s;
+                error_3 <= error_3_s;
+                error_4 <= error_4_s;
+                error_5 <= error_5_s;
+                error_6 <= error_6_s;
+                error_7 <= error_7_s;
+                error_8 <= error_8_s;
+                error_9 <= error_9_s;
             end if;
         end if;
     end process;
@@ -217,7 +239,7 @@ BEGIN
             valid_out => fft_ready_out,
 
             -- Outputs
-            error => error_0,
+            error => error_0_s,
             o_m => A1_tmp
         );
         
@@ -241,7 +263,7 @@ BEGIN
             valid_out => open,
 
             -- Outputs
-            error => error_1,
+            error => error_1_s,
             o_m => A2_tmp
         );
         
@@ -265,7 +287,7 @@ BEGIN
             valid_out => open,
 
             -- Outputs
-            error => error_2,
+            error => error_2_s,
             o_m => A3_tmp
         );
         
@@ -289,7 +311,7 @@ BEGIN
             valid_out => open,
 
             -- Outputs
-            error => error_3,
+            error => error_3_s,
             o_m => A4_tmp
         );
         
@@ -313,7 +335,7 @@ BEGIN
             valid_out => open,
 
             -- Outputs
-            error => error_4,
+            error => error_4_s,
             o_m => X12R_tmp
         );
         
@@ -337,7 +359,7 @@ BEGIN
         valid_out => open,
 
         -- Outputs
-        error => error_5,
+        error => error_5_s,
         o_m => X12I_tmp
     );
 

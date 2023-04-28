@@ -216,7 +216,7 @@ class LuSEE_Integrated_Simulator:
         x = []
         y = []
         time_record = []
-        for i in range(total_bins):
+        for i in range(total_bins-1):
             x.append(self.vals["outbin"]['y'][i] / 2048 * 100 / 2)
             time = self.vals["outbin"]['x'][i]
 
@@ -240,12 +240,84 @@ class LuSEE_Integrated_Simulator:
         ax.plot(x, y)
 #        print(x)
 #        print(y)
-        ax.set_xlim([0,0.5])
+        ax.set_xlim([0,1])
         plot_path = os.path.join(os.getcwd(), "plots")
         if not (os.path.exists(plot_path)):
             os.makedirs(plot_path)
 
         fig.savefig (os.path.join(plot_path, f"{filename}.jpg"))
+        #np.save(os.path.join(plot_path, f"data{self.plot_num}"), x, y)
+        self.plot_num = self.plot_num + 1
+
+        plt.show()
+
+    def plot_experimental(self, blocks):
+        print(blocks)
+
+        x.analyze_file(f"{sys.argv[2]}_{blocks[0]}")
+        x.header()
+        x.body()
+
+        total_bins = len(self.vals["outbin"]['y'])
+
+        x_notch = []
+        y_notch = []
+        time_record = []
+        for i in range(total_bins-1):
+            x_notch.append(self.vals["outbin"]['y'][i] / 2048 * 100 / 2)
+            time = self.vals["outbin"]['x'][i]
+
+            try:
+                val_index = self.vals["pks0"]['x'].index(time)
+                successful_time = time
+            except ValueError:
+                val_index = self.vals["pks0"]['x'].index(successful_time)
+
+            y_notch.append(self.vals["pks0"]['y'][val_index])
+
+        x.analyze_file(f"{sys.argv[2]}_{blocks[1]}")
+        x.header()
+        x.body()
+
+        total_bins = len(self.vals["outbin"]['y'])
+
+        x_none = []
+        y_none = []
+        time_record = []
+        for i in range(total_bins-1):
+            x_none.append(self.vals["outbin"]['y'][i] / 2048 * 100 / 2)
+            time = self.vals["outbin"]['x'][i]
+
+            try:
+                val_index = self.vals["pks0"]['x'].index(time)
+                successful_time = time
+            except ValueError:
+                val_index = self.vals["pks0"]['x'].index(successful_time)
+
+            y_none.append(self.vals["pks0"]['y'][val_index])
+
+        fig, ax = plt.subplots()
+
+        #title = self.signals_of_interest["pks0"]["Title"]
+        fig.suptitle("Comb test", fontsize = 20)
+        yaxis = self.signals_of_interest["pks0"]["Y-axis"]
+        ax.set_ylabel(yaxis, fontsize=14)
+#        ax.set_yscale('log')
+        ax.set_xlabel('MHz', fontsize=14)
+        ax.ticklabel_format(style='plain', useOffset=False, axis='x')
+        none, = ax.plot(x_none, y_none)
+        notch, = ax.plot(x_notch, y_notch)
+        none.set_label('Regular')
+        notch.set_label("Notch Filter")
+        ax.legend()
+#        print(x)
+#        print(y)
+        ax.set_xlim([0,1])
+        plot_path = os.path.join(os.getcwd(), "plots")
+        if not (os.path.exists(plot_path)):
+            os.makedirs(plot_path)
+
+        fig.savefig (os.path.join(plot_path, f"comb_test.jpg"))
         #np.save(os.path.join(plot_path, f"data{self.plot_num}"), x, y)
         self.plot_num = self.plot_num + 1
 
@@ -257,6 +329,8 @@ if __name__ == "__main__":
     x = LuSEE_Integrated_Simulator(sys.argv[1],sys.argv[2])
 #    x.simulate(sys.argv[1])
     blocks = x.vhdl_entities.split()
+#    x.plot_experimental(blocks)
+#    sys.exit()
     for i in blocks:
         x.analyze_file(f"{sys.argv[2]}_{i}")
         x.header()

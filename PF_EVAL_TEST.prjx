@@ -854,8 +854,8 @@ SIZE="12765"
 ENDFILE
 VALUE "<project>/hdl/correlate_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1682535133"
-SIZE="15104"
+TIME="1682623430"
+SIZE="16096"
 ENDFILE
 VALUE "<project>/hdl/correlate_operation.vhd,hdl"
 STATE="utd"
@@ -1177,6 +1177,11 @@ STATE="utd"
 TIME="1678978149"
 SIZE="575"
 ENDFILE
+VALUE "<project>/simulation/array16.log,log"
+STATE="utd"
+TIME="1682694069"
+SIZE="594940"
+ENDFILE
 VALUE "<project>/simulation/a_spec_nonotch_nopf.vcd,vcd"
 STATE="utd"
 TIME="1682540830"
@@ -1196,6 +1201,41 @@ VALUE "<project>/simulation/a_spec_notch_pf.vcd,vcd"
 STATE="utd"
 TIME="1682540830"
 SIZE="199156"
+ENDFILE
+VALUE "<project>/simulation/comb1.log,log"
+STATE="utd"
+TIME="1682610957"
+SIZE="305809"
+ENDFILE
+VALUE "<project>/simulation/comb1_spec_nonotch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682610957"
+SIZE="155259"
+ENDFILE
+VALUE "<project>/simulation/comb1_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682610957"
+SIZE="155185"
+ENDFILE
+VALUE "<project>/simulation/comb2.log,log"
+STATE="utd"
+TIME="1682622425"
+SIZE="302374"
+ENDFILE
+VALUE "<project>/simulation/comb3.log,log"
+STATE="utd"
+TIME="1682626737"
+SIZE="306267"
+ENDFILE
+VALUE "<project>/simulation/comb3_spec_nonotch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682626737"
+SIZE="84492"
+ENDFILE
+VALUE "<project>/simulation/comb3_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682626737"
+SIZE="84478"
 ENDFILE
 VALUE "<project>/simulation/divide16.log,log"
 STATE="utd"
@@ -1229,8 +1269,8 @@ SIZE="592299"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1682564376"
-SIZE="39704"
+TIME="1682649478"
+SIZE="39734"
 ENDFILE
 VALUE "<project>/simulation/nnotch4.log,log"
 STATE="utd"
@@ -1257,15 +1297,30 @@ STATE="utd"
 TIME="1682545360"
 SIZE="240484"
 ENDFILE
+VALUE "<project>/simulation/now16.log,log"
+STATE="utd"
+TIME="1682624345"
+SIZE="887435"
+ENDFILE
+VALUE "<project>/simulation/now16array.log,log"
+STATE="utd"
+TIME="1682708510"
+SIZE="305001"
+ENDFILE
+VALUE "<project>/simulation/now16array_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682707968"
+SIZE="206146"
+ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1682531346"
+TIME="1682630679"
 SIZE="13043"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1682525197"
-SIZE="22765"
+TIME="1682624325"
+SIZE="22866"
 ENDFILE
 VALUE "<project>/simulation/spectrometer_fixpt_0.vcd,vcd"
 STATE="utd"
@@ -1289,7 +1344,7 @@ SIZE="97"
 ENDFILE
 VALUE "<project>/simulation/spec_nonotch_pf.vcd,vcd"
 STATE="utd"
-TIME="1682564375"
+TIME="1682610957"
 SIZE="97"
 ENDFILE
 VALUE "<project>/simulation/spec_notch_highavg.vcd,vcd"
@@ -1309,7 +1364,7 @@ SIZE="97"
 ENDFILE
 VALUE "<project>/simulation/spec_notch_pf.vcd,vcd"
 STATE="utd"
-TIME="1682564375"
+TIME="1682610957"
 SIZE="97"
 ENDFILE
 VALUE "<project>/simulation/spec_test.vcd,vcd"
@@ -1319,8 +1374,8 @@ SIZE="416530"
 ENDFILE
 VALUE "<project>/simulation/test.log,log"
 STATE="utd"
-TIME="1682540830"
-SIZE="403843"
+TIME="1682708488"
+SIZE="319873"
 ENDFILE
 VALUE "<project>/simulation/test2.log,log"
 STATE="utd"
@@ -1336,6 +1391,11 @@ VALUE "<project>/simulation/test_3.log,log"
 STATE="utd"
 TIME="1682524558"
 SIZE="310979"
+ENDFILE
+VALUE "<project>/simulation/test_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1682693839"
+SIZE="206146"
 ENDFILE
 VALUE "<project>/stimulus/ADS4245_tst.vhd,tb_hdl"
 STATE="utd"
@@ -1364,8 +1424,8 @@ SIZE="20794"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1682545483"
-SIZE="10333"
+TIME="1682708526"
+SIZE="11129"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -2835,7 +2895,7 @@ EntityName=SPEC_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do
 DoFileName2=wave.do
-DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL now16 spec_notch_pf spec_notch_nopf spec_nonotch_pf spec_nonotch_nopf
+DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL now16array spec_notch_pf spec_notch_nopf spec_nonotch_pf spec_nonotch_nopf
 DisplayDUTWave=false
 LogAllSignals=false
 DisablePulseFiltering=false
@@ -2904,8 +2964,8 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=""
-BATCH=0
+PARAM="-l presynth_simulation.log -c"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -4148,10 +4208,6 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-ORIENTATION;HORIZONTAL
-HDL;stimulus/SPEC_TST.vhd;0
-StartPage;StartPage;0
-ACTIVEVIEW;stimulus/SPEC_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

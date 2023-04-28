@@ -256,7 +256,7 @@ for {set i 0} {$i < $num_tests} {incr i} {
          if {\$averager_count($i) == 2} {
             echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready rose for the second time, recording in VCD file\"
 
-            vcd files $vhdl_tests($i).vcd
+            vcd files ${log_file}_$vhdl_tests($i).vcd
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample1
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sample2
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/Navg_notch
@@ -314,12 +314,14 @@ for {set i 0} {$i < $num_tests} {incr i} {
 
    set g "if {\$notch_error($i) eq \"Low\"} {
          set notch_error($i) High
-         echo \"\[expr \$now/1000000\] us --> Notch error from $vhdl_tests($i)'s notch correlator has triggered!\"
+         echo \"\[expr \$now/1000000\] us --> Notch error from $vhdl_tests($i)'s notch correlator has triggered! Ending simulation!\"
+         stop
       }
    "
    when -label "g_$i" "/spec_tst/$vhdl_tests($i)/correlate_fixpt_notch/error_0 = 1" $g
 
-   set h "if {\$notch_error($i) eq \"High\"} {
+   set h "
+         if {\$notch_error($i) eq \"High\"} {
          set notch_error($i) Low
       }
    "
@@ -327,9 +329,11 @@ for {set i 0} {$i < $num_tests} {incr i} {
 
    set j "if {\$main_error($i) eq \"Low\"} {
          set main_error($i) High
-         echo \"\[expr \$now/1000000\] us --> Main error from $vhdl_tests($i)'s signal correlator has triggered!\"
+         echo \"\[expr \$now/1000000\] us --> Main error from $vhdl_tests($i)'s signal correlator has triggered! Ending simulation!\"
+         stop
       }
    "
+   echo "$j"
    when -label "j_$i" "/spec_tst/$vhdl_tests($i)/correlate_fixpt_main/error_0 = 1" $j
 
    set k "if {\$main_error($i) eq \"High\"} {
