@@ -265,8 +265,8 @@ for {set i 0} {$i < $num_tests} {incr i} {
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/weight_fold_DLY
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/sfft_DLY
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/notch_en
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array(0)
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/index_array_notch(0)
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/correlate_fixpt_notch/index_array
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/correlate_fixpt_main/index_array
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/pks0
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/outbin
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /spec_tst/$vhdl_tests($i)/ready

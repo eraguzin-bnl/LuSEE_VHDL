@@ -249,7 +249,7 @@ class LuSEE_Integrated_Simulator:
         #np.save(os.path.join(plot_path, f"data{self.plot_num}"), x, y)
         self.plot_num = self.plot_num + 1
 
-        plt.show()
+#        plt.show()
 
     def plot_experimental(self, blocks):
         print(blocks)
@@ -312,7 +312,7 @@ class LuSEE_Integrated_Simulator:
         ax.legend()
 #        print(x)
 #        print(y)
-        ax.set_xlim([0,1])
+#        ax.set_xlim([0,1])
         plot_path = os.path.join(os.getcwd(), "plots")
         if not (os.path.exists(plot_path)):
             os.makedirs(plot_path)
@@ -327,7 +327,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 3:
         sys.exit(f"Error: You need to supply a config file and a unique name for this test as the 2 arguments! You had {len(sys.argv)-1} arguments!")
     x = LuSEE_Integrated_Simulator(sys.argv[1],sys.argv[2])
-#    x.simulate(sys.argv[1])
+    x.simulate(sys.argv[1])
     blocks = x.vhdl_entities.split()
 #    x.plot_experimental(blocks)
 #    sys.exit()

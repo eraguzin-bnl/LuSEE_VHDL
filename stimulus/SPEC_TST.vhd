@@ -74,7 +74,7 @@ begin
         if ( vhdl_initial ) then
             -- Assert Reset
             NSYSRESET <= '1';
-            corr_array(0)      <= "011101";
+            corr_array(0)      <= "011111";
             corr_array(1)      <= "001000";
             corr_array(2)      <= "000000";
             corr_array(3)      <= "000000";
@@ -85,7 +85,7 @@ begin
             corr_array(8)      <= "000000";
             corr_array(9)      <= "000000";
             
-            notch_array(0)      <= "011101";
+            notch_array(0)      <= "011111";
             notch_array(1)      <= "001000";
             notch_array(2)      <= "000000";
             notch_array(3)      <= "000000";
@@ -152,8 +152,8 @@ begin
           sample2_v := std_logic_vector(to_unsigned(character'pos(read_data3),8)) & std_logic_vector(to_unsigned(character'pos(read_data4),8));
           --comb_v := std_logic_vector(to_unsigned(character'pos(read_data5),8)) & std_logic_vector(to_unsigned(character'pos(read_data6),8));
           
-          sample1 <= sample1_v(5 downto 0) & sample1_v(15 downto 8);
-          sample2 <= sample2_v(5 downto 0) & sample2_v(15 downto 8);
+          sample1 <= sample1_v(7 downto 0) & sample1_v(15 downto 10);
+          sample2 <= sample2_v(7 downto 0) & sample2_v(15 downto 10);
           --sample3 <= comb_v(5 downto 0) & comb_v(15 downto 8);
           
           --report "value is " & to_hex_string(read_data);
@@ -184,8 +184,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"02",
+            Navg_notch  =>  "00" & x"04",
+            Navg_main   =>  "00" & x"07",
             --sample1 => x"0" & sample1(13 downto 4),
             --sample2 => x"0" & sample2(13 downto 4),
             sample1 => sample1,
@@ -221,8 +221,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"02",
+            Navg_notch  =>  "00" & x"04",
+            Navg_main   =>  "00" & x"07",
             --sample1 => x"0" & sample2(13 downto 4),
             --sample2 => x"0" & sample1(13 downto 4),
             sample1 => sample2,
@@ -258,8 +258,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"02",
+            Navg_notch  =>  "00" & x"04",
+            Navg_main   =>  "00" & x"07",
             --sample1 => x"0" & sample1(13 downto 4),
             --sample2 => x"0" & sample2(13 downto 4),
             sample1 => sample1,
@@ -295,8 +295,8 @@ begin
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"02",
+            Navg_notch  =>  "00" & x"04",
+            Navg_main   =>  "00" & x"07",
             --sample1 => x"0" & sample2(13 downto 4),
             --sample2 => x"0" & sample1(13 downto 4),
             sample1 => sample2,
