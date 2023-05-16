@@ -57,8 +57,9 @@ read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_V
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/UART_IO.vhd}
 read_verilog -mode system_verilog {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0_0/PF_TPSRAM_C0_PF_TPSRAM_C0_0_PF_TPSRAM.v}
 read_verilog -mode system_verilog {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_C0/PF_TPSRAM_C0.v}
-read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/average_stage1.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/average_stage1_signed.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/Multiply_generic_32.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/correlate_operation.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/correlate_fixpt.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/SimpleDualPortRAM_generic_block.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/deinterlace_instance_12_fixpt.vhd}

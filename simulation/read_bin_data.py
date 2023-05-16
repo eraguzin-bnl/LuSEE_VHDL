@@ -8,6 +8,7 @@ with open("sky_100.bin", mode="rb") as data_file:
     data_bin = data_file.read()
 
 file_size = len(data_bin)
+print(file_size)
 formatter = f"<{int(file_size/2)}h"
 print(formatter)
 data = struct.unpack(formatter, data_bin)

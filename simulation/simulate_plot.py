@@ -38,7 +38,7 @@ class LuSEE_Integrated_Simulator:
         print("Python --> Running Libero for Simulation")
         start_time = datetime.now()
         print("Python --> Start Simulation Time:", start_time.strftime("%H:%M:%S"))
-        subprocess.run([self.libero_location, "script:libero_simulate_spectrometer.tcl",
+        subprocess.run([self.libero_location, "script:libero_simulate_spectrometer_raw.tcl",
                         f"script_args:{self.libero_location} {self.project_location} {self.project_file} {self.log_file} {self.vhdl_entities}",
                         "logfile:make_libero.log"])
 
@@ -240,7 +240,7 @@ class LuSEE_Integrated_Simulator:
         ax.plot(x, y)
 #        print(x)
 #        print(y)
-        ax.set_xlim([0,1])
+#        ax.set_xlim([0,1])
         plot_path = os.path.join(os.getcwd(), "plots")
         if not (os.path.exists(plot_path)):
             os.makedirs(plot_path)

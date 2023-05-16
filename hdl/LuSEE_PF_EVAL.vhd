@@ -267,6 +267,7 @@ SIGNAL  deinterlace_DLY                   : std_logic_vector(3 DOWNTO 0);
 SIGNAL  AVG_DLY                           : std_logic_vector(3 DOWNTO 0);
 
 SIGNAL  notch_en                          : std_logic;
+SIGNAL  subtract_error                    : std_logic;
 SIGNAL  corr_array                        : vector_of_std_logic_vector6(9 downto 0);
 SIGNAL  notch_array                       : vector_of_std_logic_vector6(9 downto 0);
 
@@ -293,10 +294,10 @@ begin
     
     ADC_CLK_MISC_IO <=  clk_100MHz_out; -- clk_50MHz;  -- clk_100MHz_out; --
     
-    pks(0)             <= pks0;
-    pks(1)             <= pks1;
-    pks(2)             <= pks2;
-    pks(3)             <= pks3;
+    pks(0)             <= pks3;
+    pks(1)             <= pks2;
+    pks(2)             <= pks1;
+    pks(3)             <= pks0;
 
     SW_ADC_reset       <= reg2_p(1);
     ADC_REG_START      <= reg2_p(0);
@@ -604,7 +605,8 @@ port MAP (
               
               notch_en          => notch_en,
               index_array       => corr_array,
-              index_array_notch => notch_array
+              index_array_notch => notch_array,
+              subtract_error    => subtract_error
               
               );     
     

@@ -80,6 +80,10 @@ ARCHITECTURE rtl OF correlate_fixpt IS
   SIGNAL ch4_val_re_signed                : signed(31 DOWNTO 0);  -- sfix32_En7
   SIGNAL ch4_val_im_signed                : signed(31 DOWNTO 0);  -- sfix32_En7
   SIGNAL A1_tmp                           : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+  SIGNAL A1_tst1                          : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+  SIGNAL A1_tst2                          : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+  SIGNAL A1_tst3                          : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
+  SIGNAL A1_tst4                          : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
   SIGNAL A2_tmp                           : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
   SIGNAL A3_tmp                           : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
   SIGNAL A4_tmp                           : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
@@ -362,8 +366,23 @@ BEGIN
         error => error_5_s,
         o_m => X12I_tmp
     );
+    
+  process (clk) begin
+        if (rising_edge(clk)) then
+            if (reset = '1') then
+                A1_tst2 <= (others=>'0');
+                A1_tst3 <= (others=>'0');
+                A1_tst4 <= (others=>'0');
+            else
+                A1_tst2               <= A1_tmp;
+                A1_tst3               <= std_logic_vector(A1_tmp);
+                A1_tst4               <= std_logic_vector(A1_tst2);
+            end if;
+        end if;
+    end process;
 
   A1 <= std_logic_vector(A1_tmp);
+  A1_tst1 <= A1_tmp;
   A2 <= std_logic_vector(A2_tmp);
   A3 <= std_logic_vector(A3_tmp);
   A4 <= std_logic_vector(A4_tmp);

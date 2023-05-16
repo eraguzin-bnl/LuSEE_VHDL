@@ -60,6 +60,7 @@ ENTITY spectrometer_fixpt IS
         notch_en                          :   IN    std_logic;
         index_array                       :   IN    vector_of_std_logic_vector6(9 downto 0);
         index_array_notch                 :   IN    vector_of_std_logic_vector6(9 downto 0);
+        subtract_error                    :   OUT   std_logic;
         
         ce_out                            :   OUT   std_logic;
         pks0                              :   OUT   std_logic_vector(31 DOWNTO 0);
@@ -191,6 +192,7 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  
  SIGNAL error_notch			     :   std_logic_vector(9 DOWNTO 0);
  SIGNAL error_main 			     :   std_logic_vector(9 DOWNTO 0);
+ SIGNAL subtract_error_s                     :   std_logic;
  
  SIGNAL A1                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
  SIGNAL A2                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
@@ -673,7 +675,7 @@ average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
         subtract             => signed(A1_notch),
         subtract_bin         => bin_delay_notch,
         subtract_ready       => fft_ready_delay_notch,
-        subtract_error       => open,
+        subtract_error       => subtract_error_s,
         
         ce_out               => ce_out_s1,
         outpk                => pks_s1_0,
@@ -699,6 +701,7 @@ average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
                 pks3                 <= pks_s1_3;
                 outbin               <= outbin_s1;
                 ready                <= ready_s1;
+                subtract_error       <= subtract_error_s;
             end if;
         end if;
     end process;
