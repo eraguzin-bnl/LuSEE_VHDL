@@ -214,6 +214,8 @@ SIGNAL	reg49_p 		:  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	reg50_p 		:  STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 SIGNAL	reg3_p_i 		:  STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL	reg13_p_i 		:  STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL	reg12_p_i 		:  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	SW_ADC_reset    :  STD_LOGIC;
 SIGNAL	ADC_REG_START   :  STD_LOGIC;
 SIGNAL	ADC_REG_ADDR    :  STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -246,14 +248,10 @@ SIGNAL	FIFO_RST        :  STD_LOGIC;
 
 
 SIGNAL  Start_Spectrometer_data     : STD_LOGIC;   
-SIGNAL  ce_out              :  std_logic;
-SIGNAL  pks                 : vector_of_std_logic_vector32(3 downto 0);
-SIGNAL  pks0                :  std_logic_vector(31 DOWNTO 0);
-SIGNAL  pks1                :  std_logic_vector(31 DOWNTO 0);
-SIGNAL  pks2                :  std_logic_vector(31 DOWNTO 0);
-SIGNAL  pks3                :  std_logic_vector(31 DOWNTO 0);
-SIGNAL  outbin             :  std_logic_vector(10 DOWNTO 0);  -- ufix11
-SIGNAL  ready               :  std_logic;
+SIGNAL  ce_out_s                      : std_logic_vector(15 DOWNTO 0);
+SIGNAL  pks_s                         : vector_of_std_logic_vector32(15 downto 0);
+SIGNAL  outbin_s                      : vector_of_std_logic_vector11(15 downto 0);
+SIGNAL  ready_s                       : std_logic_vector(15 DOWNTO 0);
 
 SIGNAL  Navg_notch       :      std_logic_vector(9 DOWNTO 0);  -- sfix14
 SIGNAL  Navg_main        :      std_logic_vector(9 DOWNTO 0);  -- sfix14
@@ -267,9 +265,11 @@ SIGNAL  deinterlace_DLY                   : std_logic_vector(3 DOWNTO 0);
 SIGNAL  AVG_DLY                           : std_logic_vector(3 DOWNTO 0);
 
 SIGNAL  notch_en                          : std_logic;
-SIGNAL  subtract_error                    : std_logic;
-SIGNAL  corr_array                        : vector_of_std_logic_vector6(9 downto 0);
-SIGNAL  notch_array                       : vector_of_std_logic_vector6(9 downto 0);
+SIGNAL  error_subtract_s                  : std_logic_vector(15 DOWNTO 0);
+SIGNAL  error_main_s                      : std_logic_vector(15 DOWNTO 0);
+SIGNAL  error_notch_s                     : std_logic_vector(15 DOWNTO 0);
+SIGNAL  corr_array                        : vector_of_std_logic_vector5(15 downto 0);
+SIGNAL  notch_array                       : vector_of_std_logic_vector5(15 downto 0);
 
 begin
    
@@ -293,11 +293,6 @@ begin
     
     
     ADC_CLK_MISC_IO <=  clk_100MHz_out; -- clk_50MHz;  -- clk_100MHz_out; --
-    
-    pks(0)             <= pks3;
-    pks(1)             <= pks2;
-    pks(2)             <= pks1;
-    pks(3)             <= pks0;
 
     SW_ADC_reset       <= reg2_p(1);
     ADC_REG_START      <= reg2_p(0);
@@ -314,38 +309,58 @@ begin
     Mode_sel           <= reg6_p(7 downto 0);   
     FIFO_RST           <= not reg7_p(0);    
     Navg_notch         <= reg8_p(9 downto 0);  
-    Navg_main          <= reg11_p(9 downto 0);  
+      
     
     nstart             <= reg9_p(0);  
     Streamer_DLY       <= reg10_p(3 downto 0);  
     weight_fold_DLY    <= reg10_p(7 downto 4);  
     sfft_DLY           <= reg10_p(11 downto 8);  
     deinterlace_DLY    <= reg10_p(15 downto 12);  
-    AVG_DLY            <= reg10_p(19 downto 16);  
+    AVG_DLY            <= reg10_p(19 downto 16); 
+    Navg_main          <= reg11_p(9 downto 0); 
+    
+    reg13_p_i           <= error_main_s & error_notch_s;
+    reg12_p_i           <= x"0000" & error_subtract_s;
     
     notch_en           <= reg19_p(0);
 
-    corr_array(0)      <= reg20_p(5 downto 0);
-    corr_array(1)      <= reg20_p(11 downto 6);
-    corr_array(2)      <= reg20_p(17 downto 12);
-    corr_array(3)      <= reg20_p(23 downto 18);
-    corr_array(4)      <= reg20_p(29 downto 24);
-    corr_array(5)      <= reg21_p(5 downto 0);
-    corr_array(6)      <= reg21_p(11 downto 6);
-    corr_array(7)      <= reg21_p(17 downto 12);
-    corr_array(8)      <= reg21_p(23 downto 18);
-    corr_array(9)      <= reg21_p(29 downto 24);
+    corr_array(0)      <= reg20_p(4 downto 0);
+    corr_array(1)      <= reg20_p(9 downto 5);
+    corr_array(2)      <= reg20_p(14 downto 10);
+    corr_array(3)      <= reg20_p(19 downto 15);
+    corr_array(4)      <= reg20_p(24 downto 20);
+    corr_array(5)      <= reg20_p(29 downto 25);
     
-    notch_array(0)      <= reg22_p(5 downto 0);
-    notch_array(1)      <= reg22_p(11 downto 6);
-    notch_array(2)      <= reg22_p(17 downto 12);
-    notch_array(3)      <= reg22_p(23 downto 18);
-    notch_array(4)      <= reg22_p(29 downto 24);
-    notch_array(5)      <= reg23_p(5 downto 0);
-    notch_array(6)      <= reg23_p(11 downto 6);
-    notch_array(7)      <= reg23_p(17 downto 12);
-    notch_array(8)      <= reg23_p(23 downto 18);
-    notch_array(9)      <= reg23_p(29 downto 24);
+    corr_array(6)      <= reg21_p(4 downto 0);
+    corr_array(7)      <= reg21_p(9 downto 5);
+    corr_array(8)      <= reg21_p(14 downto 10);
+    corr_array(9)      <= reg21_p(19 downto 15);
+    corr_array(10)     <= reg21_p(24 downto 20);
+    corr_array(11)     <= reg21_p(29 downto 25);
+    
+    corr_array(12)     <= reg22_p(4 downto 0);
+    corr_array(13)     <= reg22_p(9 downto 5);
+    corr_array(14)     <= reg22_p(14 downto 10);
+    corr_array(15)     <= reg22_p(19 downto 15);
+    
+    notch_array(0)      <= reg23_p(4 downto 0);
+    notch_array(1)      <= reg23_p(9 downto 5);
+    notch_array(2)      <= reg23_p(14 downto 10);
+    notch_array(3)      <= reg23_p(19 downto 15);
+    notch_array(4)      <= reg23_p(24 downto 20);
+    notch_array(5)      <= reg23_p(29 downto 25);
+    
+    notch_array(6)      <= reg24_p(4 downto 0);
+    notch_array(7)      <= reg24_p(9 downto 5);
+    notch_array(8)      <= reg24_p(14 downto 10);
+    notch_array(9)      <= reg24_p(19 downto 15);
+    notch_array(10)     <= reg24_p(24 downto 20);
+    notch_array(11)     <= reg24_p(29 downto 25);
+    
+    notch_array(12)     <= reg25_p(4 downto 0);
+    notch_array(13)     <= reg25_p(9 downto 5);
+    notch_array(14)     <= reg25_p(14 downto 10);
+    notch_array(15)     <= reg25_p(19 downto 15);
     
 LED_DIMMER_s_0 : LED_DIMMER_s
     port map( 
@@ -384,10 +399,10 @@ port map (
 
     Start_Spectrometer_data => Start_Spectrometer_data,
     
-    ce_out             => ce_out,
-    pks                => pks, 
-    outbin             => outbin,
-    ready              => ready,  
+    ce_out             => ce_out_s(0),
+    pks                => pks_s(3 DOWNTO 0), 
+    outbin             => outbin_s(0),
+    ready              => ready_s(0),  
     
     Start_UART_data    => Start_UART_data,
     Num_Samples        => Num_Samples,
@@ -442,8 +457,8 @@ PORT MAP(	    nrst 		      => nRESET_SYS,
 				reg9_i 	    => reg9_p,
 				reg10_i 	=> reg10_p,
 				reg11_i 	=> reg11_p,
-				reg12_i 	=> reg12_p,
-				reg13_i 	=> reg13_p,
+				reg12_i 	=> reg12_p_i,
+                reg13_i 	=> reg13_p_i,
 				reg14_i 	=> reg14_p,
 				reg15_i 	=> reg15_p,
 				reg16_i 	=> reg16_p,				
@@ -584,30 +599,29 @@ port MAP (
     PORT MAP( clk         => ADC_S_CLK, 
               reset       => RESET_SYS,
               clk_enable  => '1',
-              sample1     => ADC_DATA_A_s,
-              sample2     => ADC_DATA_B_s,
-              ce_out      => ce_out,
               Navg_notch  =>  Navg_notch,
               Navg_main   =>  Navg_main,
-              pks0        => pks0,
-              pks1        => pks1,
-              pks2        => pks2,
-              pks3        => pks3,
-              outbin      => outbin,  -- ufix12
-              ready       => ready,
-            
+              sample1     => ADC_DATA_A_s,
+              sample2     => ADC_DATA_B_s,
+              
               nstart            => nstart,  
               Streamer_DLY      => Streamer_DLY,   
               weight_fold_DLY   => weight_fold_DLY, 
               sfft_DLY          => sfft_DLY,  
               deinterlace_DLY   => deinterlace_DLY, 
-              AVG_DLY           => AVG_DLY,  
+              AVG_DLY           => AVG_DLY,
               
               notch_en          => notch_en,
               index_array       => corr_array,
               index_array_notch => notch_array,
-              subtract_error    => subtract_error
+              error_main        => error_main_s,
+              error_notch       => error_notch_s,
+              error_subtract    => error_subtract_s,
               
+              ce_out      => ce_out_s,
+              pks         => pks_s,
+              outbin      => outbin_s,
+              ready       => ready_s
               );     
     
 

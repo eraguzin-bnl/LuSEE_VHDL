@@ -33,7 +33,7 @@ port (
     m1_2       : in  std_logic_vector(31 downto 0);
     m2_1       : in  std_logic_vector(31 downto 0);
     m2_2       : in  std_logic_vector(31 downto 0);
-    index      : in  std_logic_vector(5 downto 0);
+    index      : in  std_logic_vector(4 downto 0);
     o_m        : out std_logic_vector(31 downto 0);
     
     valid_in   : in std_logic;

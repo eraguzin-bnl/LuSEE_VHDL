@@ -39,7 +39,7 @@ port (
     Start_Spectrometer_data     : IN  STD_LOGIC;   
     
     ce_out             : IN   std_logic;
-    pks                : IN   vector_of_std_logic_vector32(0 TO 3);  -- sfix32_E18 [4]
+    pks                : IN   vector_of_std_logic_vector32(3 DOWNTO 0);  -- sfix32_E18 [4]
     outbin             : IN   std_logic_vector(10 DOWNTO 0);  -- ufix11
     ready              : IN   std_logic;
     

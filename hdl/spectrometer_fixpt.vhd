@@ -58,20 +58,18 @@ ENTITY spectrometer_fixpt IS
         AVG_DLY                           :   IN    std_logic_vector(3 DOWNTO 0); 
         
         notch_en                          :   IN    std_logic;
-        index_array                       :   IN    vector_of_std_logic_vector6(9 downto 0);
-        index_array_notch                 :   IN    vector_of_std_logic_vector6(9 downto 0);
-        subtract_error                    :   OUT   std_logic;
+        index_array                       :   IN    vector_of_std_logic_vector5(15 downto 0);
+        index_array_notch                 :   IN    vector_of_std_logic_vector5(15 downto 0);
+        error_main                        :   OUT   std_logic_vector(15 DOWNTO 0);
+        error_notch                       :   OUT   std_logic_vector(15 DOWNTO 0);
+        error_subtract                    :   OUT   std_logic_vector(15 DOWNTO 0); 
         
-        ce_out                            :   OUT   std_logic;
-        pks0                              :   OUT   std_logic_vector(31 DOWNTO 0);
-        pks1                              :   OUT   std_logic_vector(31 DOWNTO 0);
-        pks2                              :   OUT   std_logic_vector(31 DOWNTO 0);
-        pks3                              :   OUT   std_logic_vector(31 DOWNTO 0);
-        outbin                            :   OUT   std_logic_vector(10 DOWNTO 0);  -- ufix11
-        ready                             :   OUT   std_logic
+        ce_out                            :   OUT   std_logic_vector(15 DOWNTO 0);
+        pks                               :   OUT   vector_of_std_logic_vector32(15 downto 0);
+        outbin                            :   OUT   vector_of_std_logic_vector11(15 downto 0);
+        ready                             :   OUT   std_logic_vector(15 DOWNTO 0)
         );
 END spectrometer_fixpt;
-
 
 ARCHITECTURE rtl OF spectrometer_fixpt IS
 
@@ -95,7 +93,6 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL w2_s3                                :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
  SIGNAL w3_s3                                :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
  SIGNAL w4_s3                                :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
-  
  
  SIGNAL val1                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL val2                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
@@ -104,7 +101,6 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL val2_s1                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL val1_s2                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL val2_s2                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
-  
  
  SIGNAL fft_val_r                            :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL fft_val_i                            :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
@@ -117,18 +113,18 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL fft_val_r_s2                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL fft_val_i_s2                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL fft_valid_s2                         :   std_logic;
- 
+
  SIGNAL test0                                :   signed(31 DOWNTO 0);
  SIGNAL test1                                :   signed(32 DOWNTO 0);
  SIGNAL test2                                :   signed(31 DOWNTO 0);
-  
+
  SIGNAL ch1_val_re                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch1_val_im                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_re                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_im                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL bin                                  :   std_logic_vector(12 DOWNTO 0);  -- ufix13
  SIGNAL fft_ready                            :   std_logic;
-  
+
  SIGNAL ch1_val_re_s1                        :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch1_val_im_s1                        :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
  SIGNAL ch2_val_re_s1                        :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
@@ -139,15 +135,6 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL fft_ready_delay                      :   std_logic;
  SIGNAL bin_delay_s                          :   std_logic_vector(12 DOWNTO 0);  -- ufix13
  SIGNAL fft_delay_s                          :   std_logic;
-  
-  
- SIGNAL ce_out_s1                            :   std_logic;
- SIGNAL pks_s1_0                             :   std_logic_vector(31 DOWNTO 0);
- SIGNAL pks_s1_1                             :   std_logic_vector(31 DOWNTO 0);
- SIGNAL pks_s1_2                             :   std_logic_vector(31 DOWNTO 0);
- SIGNAL pks_s1_3                             :   std_logic_vector(31 DOWNTO 0);
- SIGNAL outbin_s1                            :   std_logic_vector(10 DOWNTO 0);  -- ufix11
- SIGNAL ready_s1                             :   std_logic;
  
  SIGNAL blk_reset                            :   std_logic; 
  SIGNAL nstart_r                             :   std_logic; 
@@ -156,7 +143,6 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL weight_fold_en                       :   std_logic_vector(3 DOWNTO 0); 
  SIGNAL sfft_en                              :   std_logic_vector(3 DOWNTO 0);  
 
-    
  SIGNAL Streamer_DLYr                        :   std_logic_vector(3 DOWNTO 0); 
  SIGNAL weight_fold_DLYr                     :   std_logic_vector(3 DOWNTO 0); 
  SIGNAL sfft_DLYr                            :   std_logic_vector(3 DOWNTO 0);  
@@ -187,12 +173,6 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  
  SIGNAL bin_delay_notch                      :   std_logic_vector(12 DOWNTO 0);  -- ufix13
  SIGNAL fft_ready_delay_notch                :   std_logic;
- SIGNAL bin_delay_s_notch                    :   std_logic_vector(12 DOWNTO 0);  -- ufix13
- SIGNAL fft_delay_s_notch                    :   std_logic;
- 
- SIGNAL error_notch			     :   std_logic_vector(9 DOWNTO 0);
- SIGNAL error_main 			     :   std_logic_vector(9 DOWNTO 0);
- SIGNAL subtract_error_s                     :   std_logic;
  
  SIGNAL A1                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
  SIGNAL A2                                   :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
@@ -244,23 +224,6 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL X24I_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
  SIGNAL X34R_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
  SIGNAL X34I_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- 
- SIGNAL A1_s_notch                           :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A2_s_notch                           :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL A3_s_notch                           :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL A4_s_notch                           :   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
- SIGNAL X12R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X12I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X13R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X13I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X14R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X14I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X23R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X23I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X24R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X24I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
- SIGNAL X34R_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
- SIGNAL X34I_s_notch                         :   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
     
 BEGIN
     notch_ready <= notch_en and fft_ready;
@@ -574,29 +537,6 @@ BEGIN
         error_out               => error_notch,
         fft_ready_out           => fft_ready_delay_notch
         );
-        
-    process (clk) begin
-        if (rising_edge(clk)) then
-            A1_s_notch                      <= A1_notch;
-            A2_s_notch                      <= A2_notch;
-            A3_s_notch                      <= A3_notch;
-            A4_s_notch                      <= A4_notch;
-            X12R_s_notch                    <= X12R_notch;
-            X12I_s_notch                    <= X12I_notch;
-            X13R_s_notch                    <= X13R_notch;
-            X13I_s_notch                    <= X13I_notch;
-            X14R_s_notch                    <= X14R_notch;
-            X14I_s_notch                    <= X14I_notch;
-            X23R_s_notch                    <= X23R_notch;
-            X23I_s_notch                    <= X23I_notch;
-            X24R_s_notch                    <= X24R_notch;
-            X24I_s_notch                    <= X24I_notch;
-            X34R_s_notch                    <= X34R_notch;
-            X34I_s_notch                    <= X34I_notch;
-            bin_delay_s_notch               <= bin_delay_notch;
-            fft_delay_s_notch               <= fft_ready_delay_notch;
-        end if;
-    end process;  
     
     correlate_fixpt_main : entity work.correlate_fixpt
     generic map(
@@ -659,7 +599,7 @@ BEGIN
         end if;
     end process;  
 
-average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
+    average_signed_A1 : entity work.average_stage1_signed
     generic map(
       notch => false)
     PORT map
@@ -675,35 +615,372 @@ average_signed_instance_P1_fixpt_inst : entity work.average_stage1_signed
         subtract             => signed(A1_notch),
         subtract_bin         => bin_delay_notch,
         subtract_ready       => fft_ready_delay_notch,
-        subtract_error       => subtract_error_s,
+        subtract_error       => error_subtract(0),
         
-        ce_out               => ce_out_s1,
-        outpk                => pks_s1_0,
-        outbin               => outbin_s1,
-        ready_out            => ready_s1
+        ce_out               => ce_out(0),
+        outpk                => pks(0),
+        outbin               => outbin(0),
+        ready_out            => ready(0)
         );
         
-    process (clk) begin
-        if (rising_edge(clk)) then
-            if (reset = '1') then
-                ce_out    <= '0';
-                pks0 <= (others=>'0');
-                pks1 <= (others=>'0');
-                pks2 <= (others=>'0');
-                pks3 <= (others=>'0');
-                outbin    <= (others=>'0');
-                ready     <= '0';
-            else
-                ce_out               <= ce_out_s1;
-                pks0                 <= pks_s1_0;
-                pks1                 <= pks_s1_1;
-                pks2                 <= pks_s1_2;
-                pks3                 <= pks_s1_3;
-                outbin               <= outbin_s1;
-                ready                <= ready_s1;
-                subtract_error       <= subtract_error_s;
-            end if;
-        end if;
-    end process;
+    average_signed_A2 : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => A2_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(A2_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(1),
+        
+        ce_out               => ce_out(1),
+        outpk                => pks(1),
+        outbin               => outbin(1),
+        ready_out            => ready(1)
+        );
+        
+    average_signed_A3 : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => A3_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(A3_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(2),
+        
+        ce_out               => ce_out(2),
+        outpk                => pks(2),
+        outbin               => outbin(2),
+        ready_out            => ready(2)
+        );
+        
+    average_signed_A4 : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => A4_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(A4_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(3),
+        
+        ce_out               => ce_out(3),
+        outpk                => pks(3),
+        outbin               => outbin(3),
+        ready_out            => ready(3)
+        );
+        
+    average_signed_X12R : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X12R_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X12R_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(4),
+        
+        ce_out               => ce_out(4),
+        outpk                => pks(4),
+        outbin               => outbin(4),
+        ready_out            => ready(4)
+        );
+        
+    average_signed_X12I : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X12I_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X12I_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(5),
+        
+        ce_out               => ce_out(5),
+        outpk                => pks(5),
+        outbin               => outbin(5),
+        ready_out            => ready(5)
+        );
+        
+    average_signed_X13R : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X13R_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X13R_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(6),
+        
+        ce_out               => ce_out(6),
+        outpk                => pks(6),
+        outbin               => outbin(6),
+        ready_out            => ready(6)
+        );
+        
+    average_signed_X13I : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X13I_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X13I_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(7),
+        
+        ce_out               => ce_out(7),
+        outpk                => pks(7),
+        outbin               => outbin(7),
+        ready_out            => ready(7)
+        );
+        
+    average_signed_X14R : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X14R_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X14R_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(8),
+        
+        ce_out               => ce_out(8),
+        outpk                => pks(8),
+        outbin               => outbin(8),
+        ready_out            => ready(8)
+        );
+        
+    average_signed_X14I : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X14I_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X14I_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(9),
+        
+        ce_out               => ce_out(9),
+        outpk                => pks(9),
+        outbin               => outbin(9),
+        ready_out            => ready(9)
+        );
+        
+    average_signed_X23R : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X23R_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X23R_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(10),
+        
+        ce_out               => ce_out(10),
+        outpk                => pks(10),
+        outbin               => outbin(10),
+        ready_out            => ready(10)
+        );
+        
+    average_signed_X23I : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X23I_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X23I_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(11),
+        
+        ce_out               => ce_out(11),
+        outpk                => pks(11),
+        outbin               => outbin(11),
+        ready_out            => ready(11)
+        );
+        
+    average_signed_X24R : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X24R_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X24R_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(12),
+        
+        ce_out               => ce_out(12),
+        outpk                => pks(12),
+        outbin               => outbin(12),
+        ready_out            => ready(12)
+        );
+        
+    average_signed_X24I : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X24I_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X24I_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(13),
+        
+        ce_out               => ce_out(13),
+        outpk                => pks(13),
+        outbin               => outbin(13),
+        ready_out            => ready(13)
+        );
+        
+    average_signed_X34R : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X34R_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X34R_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(14),
+        
+        ce_out               => ce_out(14),
+        outpk                => pks(14),
+        outbin               => outbin(14),
+        ready_out            => ready(14)
+        );
+        
+    average_signed_X34I : entity work.average_stage1_signed
+    generic map(
+      notch => false)
+    PORT map
+        (clk                 => clk,
+        reset                => blk_reset,
+        clk_enable           => clk_enable,
+
+        P                    => X34I_s,
+        count                => bin_delay_s,
+        navg                 => Navg_main,
+        ready_in             => fft_delay_s,
+        
+        subtract             => signed(X34I_notch),
+        subtract_bin         => bin_delay_notch,
+        subtract_ready       => fft_ready_delay_notch,
+        subtract_error       => error_subtract(15),
+        
+        ce_out               => ce_out(15),
+        outpk                => pks(15),
+        outbin               => outbin(15),
+        ready_out            => ready(15)
+        );
 END rtl;
 

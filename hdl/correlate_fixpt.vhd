@@ -44,7 +44,7 @@ ENTITY correlate_fixpt IS
         ch3_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
         ch4_val_re                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
         ch4_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        index_array                       :   IN    vector_of_std_logic_vector6(9 downto 0);
+        index_array                       :   IN    vector_of_std_logic_vector5(15 downto 0);
         A1                                :   OUT   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
         A2                                :   OUT   std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
         A3                                :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
@@ -62,7 +62,7 @@ ENTITY correlate_fixpt IS
         X34R                              :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
         X34I                              :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
         bin_out                           :   OUT   std_logic_vector(12 DOWNTO 0);
-        error_out                         :   OUT   std_logic_vector(9 DOWNTO 0);
+        error_out                         :   OUT   std_logic_vector(15 DOWNTO 0);
         fft_ready_out                     :   OUT   std_logic
         );
 END correlate_fixpt;
@@ -100,45 +100,6 @@ ARCHITECTURE rtl OF correlate_fixpt IS
   SIGNAL X34R_tmp                         : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
   SIGNAL X34I_tmp                         : std_logic_vector(31 DOWNTO 0);  -- sfix32_E14
   
-  SIGNAL ch1_im_cast                      : signed(32 DOWNTO 0);
-  SIGNAL ch1_im_negative                  : signed(32 DOWNTO 0);
-  SIGNAL ch1_im_complement                : signed(31 DOWNTO 0);
-  
-  SIGNAL ch2_im_cast                      : signed(32 DOWNTO 0);
-  SIGNAL ch2_im_negative                  : signed(32 DOWNTO 0);
-  SIGNAL ch2_im_complement                 : signed(31 DOWNTO 0);
-  
-  SIGNAL ch3_im_cast                      : signed(32 DOWNTO 0);
-  SIGNAL ch3_im_negative                  : signed(32 DOWNTO 0);
-  SIGNAL ch3_im_complement                : signed(31 DOWNTO 0);
-  
-  SIGNAL ch4_im_cast                      : signed(32 DOWNTO 0);
-  SIGNAL ch4_im_negative                  : signed(32 DOWNTO 0);
-  SIGNAL ch4_im_complement                : signed(31 DOWNTO 0);
-  
-  SIGNAL error_0                           : std_logic;
-  SIGNAL error_1                           : std_logic;
-  SIGNAL error_2                           : std_logic;
-  SIGNAL error_3                           : std_logic;
-  SIGNAL error_4                           : std_logic;
-  SIGNAL error_5                           : std_logic;
-  SIGNAL error_6                           : std_logic;
-  SIGNAL error_7                           : std_logic;
-  SIGNAL error_8                           : std_logic;
-  SIGNAL error_9                           : std_logic;
-  
-  SIGNAL error_0_s                           : std_logic;
-  SIGNAL error_1_s                           : std_logic;
-  SIGNAL error_2_s                           : std_logic;
-  SIGNAL error_3_s                           : std_logic;
-  SIGNAL error_4_s                           : std_logic;
-  SIGNAL error_5_s                           : std_logic;
-  SIGNAL error_6_s                           : std_logic;
-  SIGNAL error_7_s                           : std_logic;
-  SIGNAL error_8_s                           : std_logic;
-  SIGNAL error_9_s                           : std_logic;
-  --SIGNAL error_s                          : std_logic_vector(9 DOWNTO 0);
-  
   SIGNAL bin_s1                           : std_logic_vector(12 DOWNTO 0);
   SIGNAL bin_s2                           : std_logic_vector(12 DOWNTO 0);
   SIGNAL bin_s3                           : std_logic_vector(12 DOWNTO 0);
@@ -146,7 +107,7 @@ ARCHITECTURE rtl OF correlate_fixpt IS
   SIGNAL bin_s5                           : std_logic_vector(12 DOWNTO 0);
   SIGNAL bin_s6                           : std_logic_vector(12 DOWNTO 0);
   SIGNAL bin_s7                           : std_logic_vector(12 DOWNTO 0);
-  SIGNAL bin_s8                           : std_logic_vector(12 DOWNTO 0);
+  --SIGNAL bin_s8                           : std_logic_vector(12 DOWNTO 0);
 
 BEGIN
     process (clk) begin
@@ -159,19 +120,8 @@ BEGIN
                 bin_s5 <= (others=>'0');
                 bin_s6 <= (others=>'0');
                 bin_s7 <= (others=>'0');
-                bin_s8 <= (others=>'0');
+                --bin_s8 <= (others=>'0');
                 bin_out <= (others=>'0');
-                
-                error_0 <= '0';
-                error_1 <= '0';
-                error_2 <= '0';
-                error_3 <= '0';
-                error_4 <= '0';
-                error_5 <= '0';
-                error_6 <= '0';
-                error_7 <= '0';
-                error_8 <= '0';
-                error_9 <= '0';
             else
                 -- 5 delays for the multiplication in Multiply_generic_32
                 -- 3 delays for the correlate_operation delay
@@ -184,17 +134,6 @@ BEGIN
                 bin_s7 <= bin_s6;
                 --bin_s8 <= bin_s7;
                 bin_out <= bin_s7;
-                
-                error_0 <= error_0_s;
-                error_1 <= error_1_s;
-                error_2 <= error_2_s;
-                error_3 <= error_3_s;
-                error_4 <= error_4_s;
-                error_5 <= error_5_s;
-                error_6 <= error_6_s;
-                error_7 <= error_7_s;
-                error_8 <= error_8_s;
-                error_9 <= error_9_s;
             end if;
         end if;
     end process;
@@ -206,27 +145,11 @@ BEGIN
     ch3_val_im_signed <= signed(ch3_val_im);
     ch4_val_re_signed <= signed(ch4_val_re);
     ch4_val_im_signed <= signed(ch4_val_im);
-    
-    ch1_im_cast <= resize(ch1_val_im_signed, 33);
-    ch1_im_negative <=  - (ch1_im_cast);
-    ch1_im_complement <= ch1_im_negative(31 DOWNTO 0);
-    
-    ch2_im_cast <= resize(ch2_val_im_signed, 33);
-    ch2_im_negative <=  - (ch2_im_cast);
-    ch2_im_complement <= ch2_im_negative(31 DOWNTO 0);
-    
-    ch3_im_cast <= resize(ch3_val_im_signed, 33);
-    ch3_im_negative <=  - (ch3_im_cast);
-    ch3_im_complement <= ch3_im_negative(31 DOWNTO 0);
-    
-    ch4_im_cast <= resize(ch4_val_im_signed, 33);
-    ch4_im_negative <=  - (ch4_im_cast);
-    ch4_im_complement <= ch4_im_negative(31 DOWNTO 0);
   
     A1_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0'
+            operation => '1'
             )
         port map(
             -- Inputs
@@ -235,7 +158,7 @@ BEGIN
             m1_1 => std_logic_vector(ch1_val_re_signed),
             m1_2 => std_logic_vector(ch1_val_re_signed),
             m2_1 => std_logic_vector(ch1_val_im_signed),
-            m2_2 => std_logic_vector(ch1_im_complement),
+            m2_2 => std_logic_vector(ch1_val_im_signed),
             index => index_array(0),
 
             --Valid
@@ -243,14 +166,14 @@ BEGIN
             valid_out => fft_ready_out,
 
             -- Outputs
-            error => error_0_s,
+            error => error_out(0),
             o_m => A1_tmp
         );
         
     A2_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0'
+            operation => '1'
             )
         port map(
             -- Inputs
@@ -259,7 +182,7 @@ BEGIN
             m1_1 => std_logic_vector(ch2_val_re_signed),
             m1_2 => std_logic_vector(ch2_val_re_signed),
             m2_1 => std_logic_vector(ch2_val_im_signed),
-            m2_2 => std_logic_vector(ch2_im_complement),
+            m2_2 => std_logic_vector(ch2_val_im_signed),
             index => index_array(1),
 
             --Valid
@@ -267,14 +190,14 @@ BEGIN
             valid_out => open,
 
             -- Outputs
-            error => error_1_s,
+            error => error_out(1),
             o_m => A2_tmp
         );
         
     A3_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0'
+            operation => '1'
             )
         port map(
             -- Inputs
@@ -283,7 +206,7 @@ BEGIN
             m1_1 => std_logic_vector(ch3_val_re_signed),
             m1_2 => std_logic_vector(ch3_val_re_signed),
             m2_1 => std_logic_vector(ch3_val_im_signed),
-            m2_2 => std_logic_vector(ch3_im_complement),
+            m2_2 => std_logic_vector(ch3_val_im_signed),
             index => index_array(2),
 
             --Valid
@@ -291,14 +214,14 @@ BEGIN
             valid_out => open,
 
             -- Outputs
-            error => error_2_s,
+            error => error_out(2),
             o_m => A3_tmp
         );
         
     A4_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0'
+            operation => '1'
             )
         port map(
             -- Inputs
@@ -307,7 +230,7 @@ BEGIN
             m1_1 => std_logic_vector(ch4_val_re_signed),
             m1_2 => std_logic_vector(ch4_val_re_signed),
             m2_1 => std_logic_vector(ch4_val_im_signed),
-            m2_2 => std_logic_vector(ch4_im_complement),
+            m2_2 => std_logic_vector(ch4_val_im_signed),
             index => index_array(3),
 
             --Valid
@@ -315,14 +238,14 @@ BEGIN
             valid_out => open,
 
             -- Outputs
-            error => error_3_s,
+            error => error_out(3),
             o_m => A4_tmp
         );
         
     X12R_corr : entity work.correlate_operation
         generic map(
             size => size,
-            operation => '0'
+            operation => '1'
             )
         port map(
             -- Inputs
@@ -331,7 +254,7 @@ BEGIN
             m1_1 => std_logic_vector(ch1_val_re_signed),
             m1_2 => std_logic_vector(ch2_val_re_signed),
             m2_1 => std_logic_vector(ch1_val_im_signed),
-            m2_2 => std_logic_vector(ch2_im_complement),
+            m2_2 => std_logic_vector(ch2_val_im_signed),
             index => index_array(4),
 
             --Valid
@@ -339,21 +262,21 @@ BEGIN
             valid_out => open,
 
             -- Outputs
-            error => error_4_s,
+            error => error_out(4),
             o_m => X12R_tmp
         );
         
     X12I_corr : entity work.correlate_operation
     generic map(
         size => size,
-        operation => '1'
+        operation => '0'
         )
     port map(
         -- Inputs
         clk => clk,
         rstb => reset,
         m1_1 => std_logic_vector(ch1_val_re_signed),
-        m1_2 => std_logic_vector(ch2_im_complement),
+        m1_2 => std_logic_vector(ch2_val_im_signed),
         m2_1 => std_logic_vector(ch1_val_im_signed),
         m2_2 => std_logic_vector(ch2_val_re_signed),
         index => index_array(5),
@@ -363,26 +286,251 @@ BEGIN
         valid_out => open,
 
         -- Outputs
-        error => error_5_s,
+        error => error_out(5),
         o_m => X12I_tmp
     );
     
-  process (clk) begin
-        if (rising_edge(clk)) then
-            if (reset = '1') then
-                A1_tst2 <= (others=>'0');
-                A1_tst3 <= (others=>'0');
-                A1_tst4 <= (others=>'0');
-            else
-                A1_tst2               <= A1_tmp;
-                A1_tst3               <= std_logic_vector(A1_tmp);
-                A1_tst4               <= std_logic_vector(A1_tst2);
-            end if;
-        end if;
-    end process;
+    X13R_corr : entity work.correlate_operation
+        generic map(
+            size => size,
+            operation => '1'
+            )
+        port map(
+            -- Inputs
+            clk => clk,
+            rstb => reset,
+            m1_1 => std_logic_vector(ch1_val_re_signed),
+            m1_2 => std_logic_vector(ch3_val_re_signed),
+            m2_1 => std_logic_vector(ch1_val_im_signed),
+            m2_2 => std_logic_vector(ch3_val_im_signed),
+            index => index_array(6),
+
+            --Valid
+            valid_in => fft_ready_in,
+            valid_out => open,
+
+            -- Outputs
+            error => error_out(6),
+            o_m => X13R_tmp
+        );
+        
+    X13I_corr : entity work.correlate_operation
+    generic map(
+        size => size,
+        operation => '0'
+        )
+    port map(
+        -- Inputs
+        clk => clk,
+        rstb => reset,
+        m1_1 => std_logic_vector(ch1_val_re_signed),
+        m1_2 => std_logic_vector(ch3_val_im_signed),
+        m2_1 => std_logic_vector(ch1_val_im_signed),
+        m2_2 => std_logic_vector(ch3_val_re_signed),
+        index => index_array(7),
+
+        --Valid
+        valid_in => fft_ready_in,
+        valid_out => open,
+
+        -- Outputs
+        error => error_out(7),
+        o_m => X13I_tmp
+    );
+    
+    X14R_corr : entity work.correlate_operation
+    generic map(
+        size => size,
+        operation => '1'
+        )
+    port map(
+        -- Inputs
+        clk => clk,
+        rstb => reset,
+        m1_1 => std_logic_vector(ch1_val_re_signed),
+        m1_2 => std_logic_vector(ch4_val_re_signed),
+        m2_1 => std_logic_vector(ch1_val_im_signed),
+        m2_2 => std_logic_vector(ch4_val_im_signed),
+        index => index_array(8),
+
+        --Valid
+        valid_in => fft_ready_in,
+        valid_out => open,
+
+        -- Outputs
+        error => error_out(8),
+        o_m => X14R_tmp
+    );
+        
+    X14I_corr : entity work.correlate_operation
+    generic map(
+        size => size,
+        operation => '0'
+        )
+    port map(
+        -- Inputs
+        clk => clk,
+        rstb => reset,
+        m1_1 => std_logic_vector(ch1_val_re_signed),
+        m1_2 => std_logic_vector(ch4_val_im_signed),
+        m2_1 => std_logic_vector(ch1_val_im_signed),
+        m2_2 => std_logic_vector(ch4_val_re_signed),
+        index => index_array(9),
+
+        --Valid
+        valid_in => fft_ready_in,
+        valid_out => open,
+
+        -- Outputs
+        error => error_out(9),
+        o_m => X14I_tmp
+    );
+    
+    X23R_corr : entity work.correlate_operation
+        generic map(
+            size => size,
+            operation => '1'
+            )
+        port map(
+            -- Inputs
+            clk => clk,
+            rstb => reset,
+            m1_1 => std_logic_vector(ch2_val_re_signed),
+            m1_2 => std_logic_vector(ch3_val_re_signed),
+            m2_1 => std_logic_vector(ch2_val_im_signed),
+            m2_2 => std_logic_vector(ch3_val_im_signed),
+            index => index_array(10),
+
+            --Valid
+            valid_in => fft_ready_in,
+            valid_out => open,
+
+            -- Outputs
+            error => error_out(10),
+            o_m => X23R_tmp
+        );
+        
+    X23I_corr : entity work.correlate_operation
+    generic map(
+        size => size,
+        operation => '0'
+        )
+    port map(
+        -- Inputs
+        clk => clk,
+        rstb => reset,
+        m1_1 => std_logic_vector(ch2_val_re_signed),
+        m1_2 => std_logic_vector(ch3_val_im_signed),
+        m2_1 => std_logic_vector(ch2_val_im_signed),
+        m2_2 => std_logic_vector(ch3_val_re_signed),
+        index => index_array(11),
+
+        --Valid
+        valid_in => fft_ready_in,
+        valid_out => open,
+
+        -- Outputs
+        error => error_out(11),
+        o_m => X23I_tmp
+    );
+    
+    X24R_corr : entity work.correlate_operation
+        generic map(
+            size => size,
+            operation => '1'
+            )
+        port map(
+            -- Inputs
+            clk => clk,
+            rstb => reset,
+            m1_1 => std_logic_vector(ch2_val_re_signed),
+            m1_2 => std_logic_vector(ch4_val_re_signed),
+            m2_1 => std_logic_vector(ch2_val_im_signed),
+            m2_2 => std_logic_vector(ch4_val_im_signed),
+            index => index_array(12),
+
+            --Valid
+            valid_in => fft_ready_in,
+            valid_out => open,
+
+            -- Outputs
+            error => error_out(12),
+            o_m => X24R_tmp
+        );
+        
+    X24I_corr : entity work.correlate_operation
+    generic map(
+        size => size,
+        operation => '0'
+        )
+    port map(
+        -- Inputs
+        clk => clk,
+        rstb => reset,
+        m1_1 => std_logic_vector(ch2_val_re_signed),
+        m1_2 => std_logic_vector(ch4_val_im_signed),
+        m2_1 => std_logic_vector(ch2_val_im_signed),
+        m2_2 => std_logic_vector(ch4_val_re_signed),
+        index => index_array(13),
+
+        --Valid
+        valid_in => fft_ready_in,
+        valid_out => open,
+
+        -- Outputs
+        error => error_out(13),
+        o_m => X24I_tmp
+    );
+    
+    X34R_corr : entity work.correlate_operation
+        generic map(
+            size => size,
+            operation => '1'
+            )
+        port map(
+            -- Inputs
+            clk => clk,
+            rstb => reset,
+            m1_1 => std_logic_vector(ch3_val_re_signed),
+            m1_2 => std_logic_vector(ch4_val_re_signed),
+            m2_1 => std_logic_vector(ch3_val_im_signed),
+            m2_2 => std_logic_vector(ch4_val_im_signed),
+            index => index_array(14),
+
+            --Valid
+            valid_in => fft_ready_in,
+            valid_out => open,
+
+            -- Outputs
+            error => error_out(14),
+            o_m => X34R_tmp
+        );
+        
+    X34I_corr : entity work.correlate_operation
+    generic map(
+        size => size,
+        operation => '0'
+        )
+    port map(
+        -- Inputs
+        clk => clk,
+        rstb => reset,
+        m1_1 => std_logic_vector(ch3_val_re_signed),
+        m1_2 => std_logic_vector(ch4_val_im_signed),
+        m2_1 => std_logic_vector(ch3_val_im_signed),
+        m2_2 => std_logic_vector(ch4_val_re_signed),
+        index => index_array(15),
+
+        --Valid
+        valid_in => fft_ready_in,
+        valid_out => open,
+
+        -- Outputs
+        error => error_out(15),
+        o_m => X34I_tmp
+    );
 
   A1 <= std_logic_vector(A1_tmp);
-  A1_tst1 <= A1_tmp;
   A2 <= std_logic_vector(A2_tmp);
   A3 <= std_logic_vector(A3_tmp);
   A4 <= std_logic_vector(A4_tmp);
@@ -398,8 +546,6 @@ BEGIN
   X24I <= std_logic_vector(X24I_tmp);
   X34R <= std_logic_vector(X34R_tmp);
   X34I <= std_logic_vector(X34I_tmp);
-  
-  error_out <= error_9 & error_8 & error_7 & error_6 & error_5 & error_4 & error_3 & error_2 & error_1 & error_0;
 
 END rtl;
 
