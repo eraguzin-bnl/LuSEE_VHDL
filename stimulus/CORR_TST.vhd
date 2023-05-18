@@ -73,7 +73,8 @@ architecture behavioral of CORR_TST is
     SIGNAL ch2_val_re                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
     SIGNAL ch2_val_im                        :      std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
     
-    SIGNAL  corr_array                        : vector_of_std_logic_vector6(9 downto 0);
+    SIGNAL  corr_array                       : vector_of_std_logic_vector5(15 downto 0);
+    SIGNAL notch_array                       : vector_of_std_logic_vector5(15 downto 0);
 
 begin
 
@@ -84,16 +85,39 @@ begin
         if ( vhdl_initial ) then
             -- Assert Reset
             NSYSRESET <= '1';
-            corr_array(0)      <= "100001";
-            corr_array(1)      <= "001000";
-            corr_array(2)      <= "000000";
-            corr_array(3)      <= "000000";
-            corr_array(4)      <= "000000";
-            corr_array(5)      <= "000000";
-            corr_array(6)      <= "000000";
-            corr_array(7)      <= "000000";
-            corr_array(8)      <= "000000";
-            corr_array(9)      <= "000000";
+            corr_array(0)      <= "11111";
+            corr_array(1)      <= "01000";
+            corr_array(2)      <= "00000";
+            corr_array(3)      <= "00000";
+            corr_array(4)      <= "00000";
+            corr_array(5)      <= "00000";
+            corr_array(6)      <= "00000";
+            corr_array(7)      <= "00000";
+            corr_array(8)      <= "00000";
+            corr_array(9)      <= "00000";
+            corr_array(10)      <= "00000";
+            corr_array(11)      <= "00000";
+            corr_array(12)      <= "00000";
+            corr_array(13)      <= "00000";
+            corr_array(14)      <= "00000";
+            corr_array(15)      <= "00000";
+            
+            notch_array(0)      <= "11111";
+            notch_array(1)      <= "01000";
+            notch_array(2)      <= "00000";
+            notch_array(3)      <= "00000";
+            notch_array(4)      <= "00000";
+            notch_array(5)      <= "00000";
+            notch_array(6)      <= "00000";
+            notch_array(7)      <= "00000";
+            notch_array(8)      <= "00000";
+            notch_array(9)      <= "00000";
+            notch_array(10)      <= "00000";
+            notch_array(11)      <= "00000";
+            notch_array(12)      <= "00000";
+            notch_array(13)      <= "00000";
+            notch_array(14)      <= "00000";
+            notch_array(15)      <= "00000";
             wait for ( SYSCLK_PERIOD * 10 );
             
             NSYSRESET <= '0';

@@ -1,6 +1,7 @@
 {"Libero_Location": "/usr/local/microchip/Libero_SoC_v2022.3/Libero/bin64/libero",
 "Project_Location": "/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL",
 "Project_File": "PF_EVAL_TEST.prjx",
+"vhdl_test": "SPEC_TST",
 "vhdl_entities": "spec_notch_lowavg spec_nonotch_lowavg spec_notch_highavg",
 "Notes": "sky_pf_100_A1",
 "Signals":

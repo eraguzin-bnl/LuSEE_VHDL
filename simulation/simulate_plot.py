@@ -30,6 +30,7 @@ class LuSEE_Integrated_Simulator:
         self.libero_location = self.json_data["Libero_Location"]
         self.project_location = self.json_data["Project_Location"]
         self.project_file = self.json_data["Project_File"]
+        self.test_file = self.json_data["vhdl_test"]
         self.vhdl_entities = self.json_data["vhdl_entities"]
         self.notes = self.json_data["Notes"]
         self.log_file = log_file
@@ -38,8 +39,8 @@ class LuSEE_Integrated_Simulator:
         print("Python --> Running Libero for Simulation")
         start_time = datetime.now()
         print("Python --> Start Simulation Time:", start_time.strftime("%H:%M:%S"))
-        subprocess.run([self.libero_location, "script:libero_simulate_spectrometer_raw.tcl",
-                        f"script_args:{self.libero_location} {self.project_location} {self.project_file} {self.log_file} {self.vhdl_entities}",
+        subprocess.run([self.libero_location, "script:libero_simulate_spectrometer.tcl",
+                        f"script_args:{self.libero_location} {self.project_location} {self.project_file} {self.log_file} {self.test_file} {self.vhdl_entities}",
                         "logfile:make_libero.log"])
 
         print("Python --> Simulation finished")

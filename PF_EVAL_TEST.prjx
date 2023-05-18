@@ -1129,8 +1129,8 @@ SIZE="1505"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_half.vhd,hdl"
 STATE="utd"
-TIME="1684179580"
-SIZE="27289"
+TIME="1684430177"
+SIZE="27273"
 ENDFILE
 VALUE "<project>/hdl/TWDLROM_11_1_array.vhd,hdl"
 STATE="utd"
@@ -1182,280 +1182,30 @@ STATE="utd"
 TIME="1678978149"
 SIZE="575"
 ENDFILE
-VALUE "<project>/simulation/array16.log,log"
-STATE="utd"
-TIME="1682713037"
-SIZE="298125"
-ENDFILE
-VALUE "<project>/simulation/avg3_2_hardware.log,log"
-STATE="utd"
-TIME="1684180500"
-SIZE="28816"
-ENDFILE
-VALUE "<project>/simulation/avg3_2_hardware_hw_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1684180499"
-SIZE="67400"
-ENDFILE
 VALUE "<project>/simulation/avg3_2_raw_samples.log,log"
 STATE="utd"
-TIME="1684190856"
-SIZE="307262"
-ENDFILE
-VALUE "<project>/simulation/avg3_2_raw_samples_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1684190855"
-SIZE="128546"
-ENDFILE
-VALUE "<project>/simulation/avg3_2_test.log,log"
-STATE="utd"
-TIME="1683902763"
-SIZE="301045"
-ENDFILE
-VALUE "<project>/simulation/avg3_2_test_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1683902763"
-SIZE="174007"
-ENDFILE
-VALUE "<project>/simulation/avg6_4_hardware.log,log"
-STATE="utd"
-TIME="1684181026"
-SIZE="40608"
-ENDFILE
-VALUE "<project>/simulation/avg6_4_hardware_hw_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1684181026"
-SIZE="70315"
-ENDFILE
-VALUE "<project>/simulation/avgs128_31.log,log"
-STATE="utd"
-TIME="1684178923"
-SIZE="298083"
-ENDFILE
-VALUE "<project>/simulation/avgs16.log,log"
-STATE="utd"
-TIME="1682714647"
-SIZE="313366"
-ENDFILE
-VALUE "<project>/simulation/avgs16_31.log,log"
-STATE="utd"
-TIME="1682719965"
-SIZE="314569"
-ENDFILE
-VALUE "<project>/simulation/avgs16_31_spec_nonotch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682719965"
-SIZE="178421"
-ENDFILE
-VALUE "<project>/simulation/avgs16_31_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682719965"
-SIZE="184179"
-ENDFILE
-VALUE "<project>/simulation/avgs16_31_spec_notch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682719965"
-SIZE="178716"
-ENDFILE
-VALUE "<project>/simulation/avgs16_31_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682719965"
-SIZE="178495"
-ENDFILE
-VALUE "<project>/simulation/avgs16_spec_nonotch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682714647"
-SIZE="196211"
-ENDFILE
-VALUE "<project>/simulation/avgs16_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682714647"
-SIZE="208101"
-ENDFILE
-VALUE "<project>/simulation/avgs16_spec_notch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682714647"
-SIZE="196179"
-ENDFILE
-VALUE "<project>/simulation/avgs16_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682714647"
-SIZE="206005"
-ENDFILE
-VALUE "<project>/simulation/a_spec_nonotch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682540830"
-SIZE="171764"
-ENDFILE
-VALUE "<project>/simulation/a_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682540830"
-SIZE="171711"
-ENDFILE
-VALUE "<project>/simulation/a_spec_notch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682540830"
-SIZE="171672"
-ENDFILE
-VALUE "<project>/simulation/a_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682540830"
-SIZE="199156"
-ENDFILE
-VALUE "<project>/simulation/comb1.log,log"
-STATE="utd"
-TIME="1682610957"
-SIZE="305809"
-ENDFILE
-VALUE "<project>/simulation/comb1_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682610957"
-SIZE="155259"
-ENDFILE
-VALUE "<project>/simulation/comb1_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682610957"
-SIZE="155185"
-ENDFILE
-VALUE "<project>/simulation/comb2.log,log"
-STATE="utd"
-TIME="1682622425"
-SIZE="302374"
-ENDFILE
-VALUE "<project>/simulation/comb3.log,log"
-STATE="utd"
-TIME="1682626737"
-SIZE="306267"
-ENDFILE
-VALUE "<project>/simulation/comb3_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682626737"
-SIZE="84492"
-ENDFILE
-VALUE "<project>/simulation/comb3_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682626737"
-SIZE="84478"
-ENDFILE
-VALUE "<project>/simulation/divide16.log,log"
-STATE="utd"
-TIME="1682525746"
-SIZE="318019"
-ENDFILE
-VALUE "<project>/simulation/divide16_spec_nonotch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682525746"
-SIZE="169748"
-ENDFILE
-VALUE "<project>/simulation/divide16_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682525746"
-SIZE="167223"
-ENDFILE
-VALUE "<project>/simulation/divide16_spec_notch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682525746"
-SIZE="216009"
-ENDFILE
-VALUE "<project>/simulation/divide16_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682525746"
-SIZE="223705"
-ENDFILE
-VALUE "<project>/simulation/gui_log.log,log"
-STATE="utd"
-TIME="1682545357"
-SIZE="592299"
+TIME="1684430148"
+SIZE="2540"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1684190857"
-SIZE="39880"
+TIME="1684429640"
+SIZE="40013"
 ENDFILE
-VALUE "<project>/simulation/nnotch4.log,log"
+VALUE "<project>/simulation/presynth_simulation.log,log"
 STATE="utd"
-TIME="1682545361"
-SIZE="308070"
-ENDFILE
-VALUE "<project>/simulation/nnotch4_spec_nonotch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682545360"
-SIZE="212789"
-ENDFILE
-VALUE "<project>/simulation/nnotch4_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682545360"
-SIZE="208944"
-ENDFILE
-VALUE "<project>/simulation/nnotch4_spec_notch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682545360"
-SIZE="211233"
-ENDFILE
-VALUE "<project>/simulation/nnotch4_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682545360"
-SIZE="240484"
-ENDFILE
-VALUE "<project>/simulation/now16.log,log"
-STATE="utd"
-TIME="1682624345"
-SIZE="887435"
-ENDFILE
-VALUE "<project>/simulation/now16array.log,log"
-STATE="utd"
-TIME="1682709233"
-SIZE="305669"
-ENDFILE
-VALUE "<project>/simulation/now16array_spec_nonotch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682709233"
-SIZE="198128"
-ENDFILE
-VALUE "<project>/simulation/now16array_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682709233"
-SIZE="210771"
-ENDFILE
-VALUE "<project>/simulation/now16array_spec_notch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682709233"
-SIZE="197706"
-ENDFILE
-VALUE "<project>/simulation/now16array_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682709233"
-SIZE="206146"
-ENDFILE
-VALUE "<project>/simulation/now16_spec_nonotch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682564375"
-SIZE="240308"
-ENDFILE
-VALUE "<project>/simulation/now16_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682564375"
-SIZE="246672"
-ENDFILE
-VALUE "<project>/simulation/now16_spec_notch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682564375"
-SIZE="239880"
-ENDFILE
-VALUE "<project>/simulation/now16_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682564375"
-SIZE="241249"
+TIME="1684430148"
+SIZE="78241"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1684254507"
-SIZE="13120"
+TIME="1684430027"
+SIZE="13132"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1682970736"
-SIZE="22897"
+TIME="1684430074"
+SIZE="23144"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE_hw.do,do"
 STATE="utd"
@@ -1464,88 +1214,8 @@ SIZE="23161"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE_raw.do,do"
 STATE="utd"
-TIME="1684189621"
-SIZE="23161"
-ENDFILE
-VALUE "<project>/simulation/spectrometer_fixpt_0.vcd,vcd"
-STATE="utd"
-TIME="1682010516"
-SIZE="416987"
-ENDFILE
-VALUE "<project>/simulation/spectrometer_fixpt_1.vcd,vcd"
-STATE="utd"
-TIME="1682010785"
-SIZE="420079"
-ENDFILE
-VALUE "<project>/simulation/spec_nonotch_lowavg.vcd,vcd"
-STATE="utd"
-TIME="1682100406"
-SIZE="212893"
-ENDFILE
-VALUE "<project>/simulation/spec_nonotch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682564375"
-SIZE="97"
-ENDFILE
-VALUE "<project>/simulation/spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682610957"
-SIZE="97"
-ENDFILE
-VALUE "<project>/simulation/spec_notch_highavg.vcd,vcd"
-STATE="utd"
-TIME="1682105402"
-SIZE="205299"
-ENDFILE
-VALUE "<project>/simulation/spec_notch_lowavg.vcd,vcd"
-STATE="utd"
-TIME="1682100406"
-SIZE="209369"
-ENDFILE
-VALUE "<project>/simulation/spec_notch_nopf.vcd,vcd"
-STATE="utd"
-TIME="1682564375"
-SIZE="97"
-ENDFILE
-VALUE "<project>/simulation/spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682610957"
-SIZE="97"
-ENDFILE
-VALUE "<project>/simulation/spec_test.vcd,vcd"
-STATE="utd"
-TIME="1681934683"
-SIZE="416530"
-ENDFILE
-VALUE "<project>/simulation/test.log,log"
-STATE="utd"
-TIME="1682711807"
-SIZE="325101"
-ENDFILE
-VALUE "<project>/simulation/test2.log,log"
-STATE="utd"
-TIME="1682523004"
-SIZE="4724"
-ENDFILE
-VALUE "<project>/simulation/testbench_presynth_simulation.log,log"
-STATE="utd"
-TIME="1679414487"
-SIZE="17799"
-ENDFILE
-VALUE "<project>/simulation/test_3.log,log"
-STATE="utd"
-TIME="1682524558"
-SIZE="310979"
-ENDFILE
-VALUE "<project>/simulation/test_spec_nonotch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682711807"
-SIZE="215223"
-ENDFILE
-VALUE "<project>/simulation/test_spec_notch_pf.vcd,vcd"
-STATE="utd"
-TIME="1682693839"
-SIZE="206146"
+TIME="1684426131"
+SIZE="23257"
 ENDFILE
 VALUE "<project>/stimulus/ADS4245_tst.vhd,tb_hdl"
 STATE="utd"
@@ -1554,8 +1224,8 @@ SIZE="3716"
 ENDFILE
 VALUE "<project>/stimulus/CORR_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1682970736"
-SIZE="8547"
+TIME="1684427664"
+SIZE="9613"
 ENDFILE
 VALUE "<project>/stimulus/FFT_TST.vhd,tb_hdl"
 STATE="utd"
@@ -1564,8 +1234,8 @@ SIZE="3219"
 ENDFILE
 VALUE "<project>/stimulus/HW_NOTCH_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1684180666"
-SIZE="7339"
+TIME="1684427823"
+SIZE="7868"
 ENDFILE
 VALUE "<project>/stimulus/MULT32_TST.vhd,tb_hdl"
 STATE="utd"
@@ -1574,8 +1244,8 @@ SIZE="8160"
 ENDFILE
 VALUE "<project>/stimulus/NOTCH_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1682970736"
-SIZE="20794"
+TIME="1684427641"
+SIZE="21310"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
@@ -1584,92 +1254,32 @@ SIZE="11331"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST_RAW.vhd,tb_hdl"
 STATE="utd"
-TIME="1684188933"
-SIZE="9989"
+TIME="1684427845"
+SIZE="10189"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
 TIME="1678978149"
 SIZE="2708"
 ENDFILE
-VALUE "<project>/synthesis/identify_spec/LuSEE_PF_EVAL.so,so"
-STATE="utd"
-TIME="1683917902"
-SIZE="265"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec/LuSEE_PF_EVAL.vm,syn_vm"
-STATE="ood"
-TIME="1683917891"
-SIZE="27700979"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
-STATE="utd"
-TIME="1683917895"
-SIZE="29378"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec/synwork/layer0.so,so"
-STATE="utd"
-TIME="1683902042"
-SIZE="154"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec_1/LuSEE_PF_EVAL.so,so"
-STATE="utd"
-TIME="1683926713"
-SIZE="267"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec_1/LuSEE_PF_EVAL.vm,syn_vm"
-STATE="ood"
-TIME="1683926703"
-SIZE="23949238"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec_1/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
-STATE="utd"
-TIME="1683926707"
-SIZE="29378"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec_1/synwork/layer0.so,so"
-STATE="utd"
-TIME="1683924786"
-SIZE="154"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec_2/LuSEE_PF_EVAL.so,so"
-STATE="utd"
-TIME="1684257535"
-SIZE="267"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec_2/LuSEE_PF_EVAL.vm,syn_vm"
-STATE="ood"
-TIME="1684257526"
-SIZE="23056857"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec_2/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
-STATE="utd"
-TIME="1684257530"
-SIZE="29378"
-ENDFILE
-VALUE "<project>/synthesis/identify_spec_2/synwork/layer0.so,so"
-STATE="utd"
-TIME="1684181631"
-SIZE="154"
-ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.so,so"
 STATE="utd"
-TIME="1683913928"
+TIME="1684353899"
 SIZE="251"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm"
 STATE="utd"
-TIME="1683913919"
-SIZE="20199518"
+TIME="1684353888"
+SIZE="26751514"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1684263365"
-SIZE="24045"
+TIME="1684353899"
+SIZE="18172"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1683913923"
+TIME="1684353893"
 SIZE="28344"
 ENDFILE
 VALUE "<project>/synthesis/synwork/layer0.so,so"
@@ -2044,11 +1654,12 @@ VALUE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/sfft_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/weight_streamer_fixpt_pkg.vhd,hdl"
+VALUE "<project>/hdl/spectrometer_half.vhd,hdl"
 ENDFILELIST
 ENDLIST
 ENDLIST 
 LIST AssociatedStimulus
-VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
+VALUE "<project>/stimulus/HW_NOTCH_TST.vhd,tb_hdl"
 ENDLIST
 LIST SynthesisConstraints
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
@@ -3157,7 +2768,7 @@ ENDLIST
 ENDLIST
 LIST AssociatedStimulus
 LIST LuSEE_PF_EVAL
-VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
+VALUE "<project>/stimulus/HW_NOTCH_TST.vhd,tb_hdl"
 ENDLIST
 LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
 VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
@@ -3241,17 +2852,17 @@ VALUE "<project>/component/work/UART_FIFO/UART_FIFO_0/mti/scripts/runall_vhdl.do
 ENDLIST
 ENDLIST
 LIST SimulationOptions
-UseAutomaticDoFile=true
+UseAutomaticDoFile=false
 IncludeWaveDo=false
 Type=max
 RunTime=1000ns
 Resolution=1ps
 VsimOpt=
-EntityName=SPEC_TST
+EntityName=HW_NOTCH_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do
 DoFileName2=wave.do
-DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL avgs128_31 spec_notch_pf spec_notch_nopf spec_nonotch_pf spec_nonotch_nopf
+DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL avg3_2_raw_samples HW_NOTCH_TST hw_notch_pf
 DisplayDUTWave=false
 LogAllSignals=false
 DisablePulseFiltering=false
@@ -3311,8 +2922,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/SynplifyPro/bin/synplify_pro"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -3320,7 +2931,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=" -l SPEC_TST_presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -4695,19 +4306,12 @@ VALUE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/sfft_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/weight_streamer_fixpt_pkg.vhd,hdl"
+VALUE "<project>/hdl/spectrometer_half.vhd,hdl"
 ENDFILELIST
 ENDLIST
 ENDLIST
 ENDLIST
 LIST OpenedFileList
-ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Synthesize:LuSEE_PF_EVAL_compile_netlist_resources.xml
-Constraint Manager;Constraint Manager;0
-HDL;hdl/ADC_UART_RDOUT.vhd;0
-HDL;hdl/LuSEE_PF_EVAL.vhd;0
-HDL;stimulus/SPEC_TST.vhd;0
-ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
