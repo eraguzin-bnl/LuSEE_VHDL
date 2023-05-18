@@ -1,8 +1,8 @@
-Navigate to the `/simulation/` directory and use
+Navigate to the simulation directory and use
 
 `./setup.sh`
 
-Fill out your own `/simulation/config.json` file and make sure you put your local locations for Libero and the LuSEE directory. This is set up to simulate the spectrometer only, using the testbench `/stimulus/SPEC_TST.vhd`
+Which should set up the virtual environment and the require Python packages. Then use the `config_example.json` file to make your own `config.json` file, or just copy it. Make sure you put your local locations for Libero and the LuSEE directory.
 
 Run like:
 
