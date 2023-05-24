@@ -148,7 +148,14 @@ SIGNAL  RD_spec_FF_bin          :  STD_LOGIC;
 
 SIGNAL  ready_s1                :  STD_LOGIC;
 SIGNAL  ready_s2                :  STD_LOGIC;
+SIGNAL  wen_off_s1              :  STD_LOGIC;
+SIGNAL  wen_off_s2              :  STD_LOGIC;
+SIGNAL  wen_off_s3              :  STD_LOGIC;
 SIGNAL  FF_spec_WE_srt          :  STD_LOGIC;
+
+SIGNAL  pks_s1                  :  vector_of_std_logic_vector32(3 DOWNTO 0);
+SIGNAL  pks_s2                  :  vector_of_std_logic_vector32(3 DOWNTO 0);
+SIGNAL  pks_s3                  :  vector_of_std_logic_vector32(3 DOWNTO 0);
 
 begin
 
@@ -176,6 +183,10 @@ begin
                 FF_spec_C_RE    <= '0'; 
                 FF_spec_D_RE    <= '0'; 
                 FF_spec_bin_RE  <= '0'; 
+                
+                pks_s1 <= pks;
+                pks_s2 <= pks_s1;
+                pks_s3 <= pks_s2;
                 
                 if (nRESET_SYS = '0') then
                     CNT_TEST <= x"00000000";
@@ -319,6 +330,9 @@ begin
             if (rising_edge(ADC_S_CLK)) then
                 if (nRESET_SYS = '0') then
                     FF_spec_WE_srt <= '0';
+                    wen_off_s1 <= '0';
+                    wen_off_s2 <= '0';
+                    wen_off_s3 <= '0';
                 elsif ((Start_Spectrometer_data_s1 = '1') and  (Start_Spectrometer_data_s2 = '0')) then
                     FF_spec_WE_srt <= '1';
                 end if;
@@ -328,10 +342,20 @@ begin
                 elsif ((ready_s1  = '1') and  (ready_s2  = '0')) then
                     FF_spec_WE <= FF_spec_WE_srt;
                 end if;
-   
-                if(FF_spec_FULL = '1') then
+                
+                wen_off_s2 <= wen_off_s1;
+                wen_off_s3 <= wen_off_s2;
+                
+                if(outbin = "000" & x"01") then
+                    wen_off_s1 <= '1';
+                end if;
+                
+                if(wen_off_s2 = '1') then
                     FF_spec_WE <= '0';
                     FF_spec_WE_srt <= '0';
+                    wen_off_s1 <= '0';
+                    wen_off_s2 <= '0';
+                    wen_off_s3 <= '0';
                 end if;
             end if;
        end process;  
@@ -341,7 +365,7 @@ begin
 COREFIFO_Spectrometer_A_inst :  entity work.COREFIFO_Spectrometer
     port MAP(
         -- Inputs
-        DATA         =>  pks(0),
+        DATA         => pks_s3(0),
         RCLOCK       => sys_clk,
         RE           => FF_spec_A_RE,
         RRESET_N     => nRESET_SYS and FIFO_RST,
@@ -356,7 +380,7 @@ COREFIFO_Spectrometer_A_inst :  entity work.COREFIFO_Spectrometer
 COREFIFO_Spectrometer_B_inst :  entity work.COREFIFO_Spectrometer
     port MAP(
         -- Inputs
-        DATA         =>  pks(1),
+        DATA         => pks_s3(1),
         RCLOCK       => sys_clk,
         RE           => FF_spec_B_RE,
         RRESET_N     => nRESET_SYS and FIFO_RST,
@@ -372,7 +396,7 @@ COREFIFO_Spectrometer_B_inst :  entity work.COREFIFO_Spectrometer
 COREFIFO_Spectrometer_C_inst :  entity work.COREFIFO_Spectrometer
     port MAP(
         -- Inputs
-        DATA         =>  pks(2),
+        DATA         => pks_s3(2),
         RCLOCK       => sys_clk,
         RE           => FF_spec_C_RE,
         RRESET_N     => nRESET_SYS and FIFO_RST,
@@ -388,7 +412,7 @@ COREFIFO_Spectrometer_C_inst :  entity work.COREFIFO_Spectrometer
 COREFIFO_Spectrometer_D_inst :  entity work.COREFIFO_Spectrometer
     port MAP(
         -- Inputs
-        DATA         => pks(3),
+        DATA         => pks_s3(3),
         RCLOCK       => sys_clk,
         RE           => FF_spec_D_RE,
         RRESET_N     => nRESET_SYS and FIFO_RST,
