@@ -43,6 +43,7 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
+--Note that whatever bit representation the values come in as, there's an extra implied 0 at the end of the output
 ENTITY deinterlace_instance_12_fixpt IS
   PORT( clk                               :   IN    std_logic;
         reset                             :   IN    std_logic;
@@ -51,10 +52,10 @@ ENTITY deinterlace_instance_12_fixpt IS
         fft_val_im                        :   IN    std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
         fft_valid                         :   IN    std_logic;
         ce_out                            :   OUT   std_logic;
-        ch1_val_re                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch1_val_im                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_re                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
-        ch2_val_im                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En7
+        ch1_val_re                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En8
+        ch1_val_im                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En8
+        ch2_val_re                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En8
+        ch2_val_im                        :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En8
         bin                               :   OUT   std_logic_vector(12 DOWNTO 0);  -- ufix13
         ready                             :   OUT   std_logic
         );
@@ -94,11 +95,27 @@ ARCHITECTURE rtl OF deinterlace_instance_12_fixpt IS
     signal fft_valid_s                    : std_logic;
     signal fft_val_re_s                   : signed(31 downto 0);
     signal fft_val_im_s                   : signed(31 downto 0);
+    signal fft_val_re_s1                  : signed(31 downto 0);
+    signal fft_val_im_s1                  : signed(31 downto 0);
+
     signal count                          : integer range 0 to 4095;
     signal bin_s                          : integer range 0 to 4096;
+
+    signal fft_val_im_resize              : signed(32 downto 0);
+    signal fft_val_im_neg                 : signed(32 downto 0);
+    signal fft_val_im_conj                : signed(31 downto 0);
+    signal fft_val_im_conj_s1             : signed(31 downto 0);
+
+    signal ready_s1                       : std_logic;
+    signal ready_s2                       : std_logic;
     
     signal fft_val_b_re                   : signed(31 downto 0);
     signal fft_val_b_im                   : signed(31 downto 0);
+
+    signal fft_val_sum_re                 : signed(32 downto 0);
+    signal fft_val_sum_im                 : signed(32 downto 0);
+    signal fft_val_dif_re                 : signed(32 downto 0);
+    signal fft_val_dif_im                 : signed(32 downto 0);
 
 BEGIN
     real_buffer : PF_TPSRAM_C1
@@ -120,6 +137,11 @@ BEGIN
         W_DATA => write_data_im,
         R_DATA => read_data_im
         );
+
+    fft_val_im_resize <= resize(ch1_val_im_signed, 33);
+    fft_val_im_neg <=  - (fft_val_im_resize);
+    fft_val_im_conj <= fft_val_im_neg(31 DOWNTO 0);
+
     process (clk)
     begin
     if (rising_edge(clk)) then
@@ -136,6 +158,8 @@ BEGIN
             bin_s <= 1;
             fft_val_b_re <= (others=>'0');
             fft_val_b_im <= (others=>'0');
+            ready_s1 <= '0';
+            ready_s2 <= '0';
         else
             fft_valid_s <= fft_valid;
             fft_val_re_s <= signed(fft_val_re);
@@ -163,22 +187,44 @@ BEGIN
             else
                 write_en_re <= '0';
                 write_en_im <= '0';
+                fft_val_re_s1 <= fft_val_re_s;
+                fft_val_im_s1 <= fft_val_im_s;
                 fft_val_b_re <= read_data_re;
                 fft_val_b_im <= read_data_im;
+                fft_val_im_conj_s1 <= fft_val_im_conj;
             end if;
             
             bin <= std_logic_vector(to_unsigned(bin_s,bin'length));
-            ch1_val_re <= std_logic_vector(fft_val_b_re);
-            ch1_val_im <= std_logic_vector(fft_val_b_im);
+
+            --ch1_val_re <= std_logic_vector(fft_val_b_re);
+            --ch1_val_im <= std_logic_vector(fft_val_b_im);
             
-            ch2_val_re <= std_logic_vector(fft_val_b_re);
-            ch2_val_im <= std_logic_vector(fft_val_b_im);
+            --ch2_val_re <= std_logic_vector(fft_val_b_re);
+            --ch2_val_im <= std_logic_vector(fft_val_b_im);
             
             if ((fft_valid_s = '1') and (count > 2048)) then
-                ready <= '1';
+                ready_s1 <= '1';
+                fft_val_sum_re <= fft_val_b_re + fft_val_re_s1;
+                fft_val_sum_im <= fft_val_b_im + fft_val_im_conj_s1;
+                fft_val_dif_re <= fft_val_b_re - fft_val_re_s1;
+                fft_val_dif_im <= fft_val_b_im - fft_val_im_conj_s1;
             else
-                ready <= '0';
+                ready_s1 <= '0';
+                fft_val_sum_re <= (others=>'0');
+                fft_val_sum_im <= (others=>'0');
+                fft_val_dif_re <= (others=>'0');
+                fft_val_dif_im <= (others=>'0');
             end if;
+            -- All sums and differences are 33 bits, because of the addition and subtraction, they may have overflowed by 1 bit
+            -- So to componsate for that I shift right, and then we need to account that the output of this block has an extra implied 0 in the fixed point representation
+            -- Because real part of ch1 and imaginary part of ch2 needs to be divided by 2 anyway for the algorithm, they are shifted twice
+            ch1_val_re <= resize(shift_right(fft_val_sum_re, int(2)), 32);
+            ch1_val_im <= resize(shift_right(fft_val_sum_im, int(1)), 32);
+            ch2_val_re <= resize(shift_right(fft_val_dif_re, int(1)), 32);
+            ch2_val_im <= resize(shift_right(fft_val_dif_im, int(2)), 32);
+
+            ready_s2 <= ready_s1;
+            ready <= ready_s2;
         end if;
     end if;
     end process;
