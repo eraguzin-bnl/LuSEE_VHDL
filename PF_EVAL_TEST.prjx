@@ -1672,7 +1672,7 @@ VALUE "<project>/hdl/weight_streamer_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/spectrometer_half.vhd,hdl"
 ENDFILELIST
 ENDLIST
-ENDLIST 
+ENDLIST
 LIST AssociatedStimulus
 VALUE "<project>/stimulus/HW_NOTCH_TST.vhd,tb_hdl"
 ENDLIST
