@@ -365,7 +365,7 @@ begin
 COREFIFO_Spectrometer_A_inst :  entity work.COREFIFO_Spectrometer
     port MAP(
         -- Inputs
-        DATA         => pks_s3(0),
+        DATA         => pks_s2(0),
         RCLOCK       => sys_clk,
         RE           => FF_spec_A_RE,
         RRESET_N     => nRESET_SYS and FIFO_RST,
@@ -380,7 +380,7 @@ COREFIFO_Spectrometer_A_inst :  entity work.COREFIFO_Spectrometer
 COREFIFO_Spectrometer_B_inst :  entity work.COREFIFO_Spectrometer
     port MAP(
         -- Inputs
-        DATA         => pks_s3(1),
+        DATA         => pks_s2(1),
         RCLOCK       => sys_clk,
         RE           => FF_spec_B_RE,
         RRESET_N     => nRESET_SYS and FIFO_RST,
@@ -396,7 +396,7 @@ COREFIFO_Spectrometer_B_inst :  entity work.COREFIFO_Spectrometer
 COREFIFO_Spectrometer_C_inst :  entity work.COREFIFO_Spectrometer
     port MAP(
         -- Inputs
-        DATA         => pks_s3(2),
+        DATA         => pks_s2(2),
         RCLOCK       => sys_clk,
         RE           => FF_spec_C_RE,
         RRESET_N     => nRESET_SYS and FIFO_RST,
@@ -412,7 +412,7 @@ COREFIFO_Spectrometer_C_inst :  entity work.COREFIFO_Spectrometer
 COREFIFO_Spectrometer_D_inst :  entity work.COREFIFO_Spectrometer
     port MAP(
         -- Inputs
-        DATA         => pks_s3(3),
+        DATA         => pks_s2(3),
         RCLOCK       => sys_clk,
         RE           => FF_spec_D_RE,
         RRESET_N     => nRESET_SYS and FIFO_RST,

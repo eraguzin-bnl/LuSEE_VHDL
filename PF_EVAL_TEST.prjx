@@ -813,7 +813,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1684951034"
+TIME="1685023084"
 SIZE="2401"
 ENDFILE
 VALUE "<project>/constraint/user.sdc,sdc"
@@ -824,7 +824,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>/hdl/ADC_UART_RDOUT.vhd,hdl"
 STATE="utd"
-TIME="1684951025"
+TIME="1685025132"
 SIZE="17473"
 ENDFILE
 VALUE "<project>/hdl/ADS4245_CNTL.vhd,hdl"
@@ -864,7 +864,7 @@ SIZE="5619"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1684780908"
+TIME="1685022826"
 SIZE="22895"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt_pkg.vhd,hdl"
@@ -4328,13 +4328,13 @@ ENDLIST
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;hdl/LuSEE_PF_EVAL.vhd;0
-HDL;hdl/ADC_UART_RDOUT.vhd;0
-Constraint Manager;Constraint Manager;0
 Reports;Reports;0
 ReportsCurrentItem;Run Programming Action:LuSEE_PF_EVAL_PROGRAM.log
+HDL;hdl/ADC_UART_RDOUT.vhd;0
+HDL;hdl/LuSEE_PF_EVAL.vhd;0
+Constraint Manager;Constraint Manager;0
 StartPage;StartPage;0
-ACTIVEVIEW;hdl/ADC_UART_RDOUT.vhd
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
