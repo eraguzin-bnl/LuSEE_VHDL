@@ -95,22 +95,30 @@ ARCHITECTURE rtl OF deinterlace_instance_12_fixpt IS
     signal fft_valid_s                    : std_logic;
     signal fft_val_re_s                   : signed(31 downto 0);
     signal fft_val_im_s                   : signed(31 downto 0);
-    signal fft_val_re_s1                  : signed(31 downto 0);
+    signal fft_val_re_s1                  : signed(32 downto 0);
+    signal fft_val_re_s2                  : signed(32 downto 0);
+    signal fft_val_re_s3                  : signed(32 downto 0);
     signal fft_val_im_s1                  : signed(31 downto 0);
 
     signal count                          : integer range 0 to 4095;
-    signal bin_s                          : integer range 0 to 4096;
+    signal bin_s1                         : integer range 0 to 4096;
+    signal bin_s2                         : integer range 0 to 4096;
+    signal bin_s3                         : integer range 0 to 4096;
+    signal bin_s4                         : integer range 0 to 4096;
+    signal bin_s5                         : integer range 0 to 4096;
 
     signal fft_val_im_resize              : signed(32 downto 0);
     signal fft_val_im_neg                 : signed(32 downto 0);
-    signal fft_val_im_conj                : signed(31 downto 0);
-    signal fft_val_im_conj_s1             : signed(31 downto 0);
+    signal fft_val_im_conj                : signed(32 downto 0);
+    signal fft_val_im_conj_s1             : signed(32 downto 0);
 
     signal ready_s1                       : std_logic;
     signal ready_s2                       : std_logic;
+    signal ready_s3                       : std_logic;
+    signal ready_s4                       : std_logic;
     
-    signal fft_val_b_re                   : signed(31 downto 0);
-    signal fft_val_b_im                   : signed(31 downto 0);
+    signal fft_val_b_re                   : signed(32 downto 0);
+    signal fft_val_b_im                   : signed(32 downto 0);
 
     signal fft_val_sum_re                 : signed(32 downto 0);
     signal fft_val_sum_im                 : signed(32 downto 0);
@@ -138,10 +146,6 @@ BEGIN
         R_DATA => read_data_im
         );
 
-    fft_val_im_resize <= resize(ch1_val_im_signed, 33);
-    fft_val_im_neg <=  - (fft_val_im_resize);
-    fft_val_im_conj <= fft_val_im_neg(31 DOWNTO 0);
-
     process (clk)
     begin
     if (rising_edge(clk)) then
@@ -155,11 +159,35 @@ BEGIN
             read_address_re <= (others=>'0');
             read_address_im <= (others=>'0');
             count <= 0;
-            bin_s <= 1;
+            bin_s1 <= 1;
+            bin_s2 <= 0;
+            bin_s3 <= 0;
+            bin_s4 <= 0;
+            bin_s5 <= 0;
             fft_val_b_re <= (others=>'0');
             fft_val_b_im <= (others=>'0');
             ready_s1 <= '0';
             ready_s2 <= '0';
+            ready_s3 <= '0';
+            ready_s4 <= '0';
+            
+            fft_valid_s         <= '0';
+            fft_val_re_s        <= (others=>'0');
+            fft_val_im_s        <= (others=>'0');
+            fft_val_re_s1       <= (others=>'0');
+            fft_val_re_s2       <= (others=>'0');
+            fft_val_re_s3       <= (others=>'0');
+            --fft_val_im_s1       <= (others=>'0');
+            
+            fft_val_im_resize  <= (others=>'0');
+            fft_val_im_neg     <= (others=>'0');
+            fft_val_im_conj    <= (others=>'0');
+            fft_val_im_conj_s1 <= (others=>'0');
+
+            fft_val_sum_re                 <= (others=>'0');
+            fft_val_sum_im                 <= (others=>'0');
+            fft_val_dif_re                 <= (others=>'0');
+            fft_val_dif_im                 <= (others=>'0');
         else
             fft_valid_s <= fft_valid;
             fft_val_re_s <= signed(fft_val_re);
@@ -172,29 +200,43 @@ BEGIN
                 end if;
             end if;
             
-            bin_s <= 4095 - count;
-            read_address_re <= std_logic_vector(to_unsigned(bin_s,read_address_re'length));
-            read_address_im <= std_logic_vector(to_unsigned(bin_s,read_address_im'length));
+            bin_s1 <= 4095 - count;
+            read_address_re <= std_logic_vector(to_unsigned(bin_s1,read_address_re'length));
+            read_address_im <= std_logic_vector(to_unsigned(bin_s1,read_address_im'length));
             if (count < 2048) then
                 write_address_re <= std_logic_vector(to_unsigned(count + 1,write_address_re'length));
                 write_address_im <= std_logic_vector(to_unsigned(count + 1,write_address_im'length));
                 write_data_re <= fft_val_re_s;
                 write_data_im <= fft_val_im_s;
-                write_en_re <= '1';
-                write_en_im <= '1';
+                if (fft_valid_s = '1') then
+                    write_en_re <= '1';
+                    write_en_im <= '1';
+                else
+                    write_en_re <= '0';
+                    write_en_im <= '0';
+                end if;
                 fft_val_b_re <= (others=>'0');
                 fft_val_b_im <= (others=>'0');
             else
                 write_en_re <= '0';
                 write_en_im <= '0';
-                fft_val_re_s1 <= fft_val_re_s;
-                fft_val_im_s1 <= fft_val_im_s;
-                fft_val_b_re <= read_data_re;
-                fft_val_b_im <= read_data_im;
-                fft_val_im_conj_s1 <= fft_val_im_conj;
             end if;
             
-            bin <= std_logic_vector(to_unsigned(bin_s,bin'length));
+            fft_val_re_s1 <= resize(fft_val_re_s, 33);
+            fft_val_re_s2 <= fft_val_re_s1;
+            fft_val_re_s3 <= fft_val_re_s2;
+            --fft_val_im_s1 <= fft_val_im_s;
+            fft_val_b_re <= resize(read_data_re, 33);
+            fft_val_b_im <= resize(read_data_im, 33);
+            fft_val_im_resize <= resize(fft_val_im_s, 33);
+            fft_val_im_conj <=  - (fft_val_im_resize);
+            fft_val_im_conj_s1 <= fft_val_im_conj;
+            
+            bin_s2 <= bin_s1;
+            bin_s3 <= bin_s2;
+            bin_s4 <= bin_s3;
+            bin_s5 <= bin_s4;
+            bin <= std_logic_vector(to_unsigned(bin_s5,bin'length));
 
             --ch1_val_re <= std_logic_vector(fft_val_b_re);
             --ch1_val_im <= std_logic_vector(fft_val_b_im);
@@ -202,29 +244,36 @@ BEGIN
             --ch2_val_re <= std_logic_vector(fft_val_b_re);
             --ch2_val_im <= std_logic_vector(fft_val_b_im);
             
+            --ch1_val = 0.5*(fft_val_b+conj(fft_val));
+            --ch2_val = complex(0,-0.5)*(fft_val_b-conj(fft_val));
+            --If you do FOIL with the complex multiplication for ch2, you'll see how this shakes out
+            --Rather than add another negation I swapped the subtraction order for fft_val_dif_re
+            
+            fft_val_sum_re <= fft_val_b_re + fft_val_re_s3;
+            fft_val_sum_im <= fft_val_b_im + fft_val_im_conj_s1;
+            fft_val_dif_re <= fft_val_re_s3 - fft_val_b_re;
+            fft_val_dif_im <= fft_val_b_im - fft_val_im_conj_s1;
             if ((fft_valid_s = '1') and (count > 2048)) then
                 ready_s1 <= '1';
-                fft_val_sum_re <= fft_val_b_re + fft_val_re_s1;
-                fft_val_sum_im <= fft_val_b_im + fft_val_im_conj_s1;
-                fft_val_dif_re <= fft_val_b_re - fft_val_re_s1;
-                fft_val_dif_im <= fft_val_b_im - fft_val_im_conj_s1;
+                
             else
                 ready_s1 <= '0';
-                fft_val_sum_re <= (others=>'0');
-                fft_val_sum_im <= (others=>'0');
-                fft_val_dif_re <= (others=>'0');
-                fft_val_dif_im <= (others=>'0');
+                --fft_val_sum_re <= (others=>'0');
+                --fft_val_sum_im <= (others=>'0');
+                --fft_val_dif_re <= (others=>'0');
+                --fft_val_dif_im <= (others=>'0');
             end if;
-            -- All sums and differences are 33 bits, because of the addition and subtraction, they may have overflowed by 1 bit
-            -- So to componsate for that I shift right, and then we need to account that the output of this block has an extra implied 0 in the fixed point representation
-            -- Because real part of ch1 and imaginary part of ch2 needs to be divided by 2 anyway for the algorithm, they are shifted twice
-            ch1_val_re <= resize(shift_right(fft_val_sum_re, int(2)), 32);
-            ch1_val_im <= resize(shift_right(fft_val_sum_im, int(1)), 32);
-            ch2_val_re <= resize(shift_right(fft_val_dif_re, int(1)), 32);
-            ch2_val_im <= resize(shift_right(fft_val_dif_im, int(2)), 32);
+            --Complex multiplication means that the ch2 outputs swap becaues it's multiplied by -0.5j
+            ch1_val_re <= std_logic_vector(resize(shift_right(fft_val_sum_re, integer(1)), 32));
+            ch1_val_im <= std_logic_vector(resize(shift_right(fft_val_sum_im, integer(1)), 32));
+            ch2_val_re <= std_logic_vector(resize(shift_right(fft_val_dif_im, integer(1)), 32));
+            ch2_val_im <= std_logic_vector(resize(shift_right(fft_val_dif_re, integer(1)), 32));
 
             ready_s2 <= ready_s1;
-            ready <= ready_s2;
+            ready_s3 <= ready_s2;
+            ready_s4 <= ready_s3;
+            ready <= ready_s4;
+            ce_out <= ready_s4;
         end if;
     end if;
     end process;

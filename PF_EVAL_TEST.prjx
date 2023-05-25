@@ -839,7 +839,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1684961939"
+TIME="1685027392"
 SIZE="2401"
 ENDFILE
 VALUE "<project>/constraint/user.sdc,sdc"
@@ -850,7 +850,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>/hdl/ADC_UART_RDOUT.vhd,hdl"
 STATE="utd"
-TIME="1684961939"
+TIME="1685027392"
 SIZE="16504"
 ENDFILE
 VALUE "<project>/hdl/ADS4245_CNTL.vhd,hdl"
@@ -890,8 +890,8 @@ SIZE="5619"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1684966969"
-SIZE="10097"
+TIME="1685042671"
+SIZE="12154"
 ENDFILE
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -915,7 +915,7 @@ SIZE="3459"
 ENDFILE
 VALUE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 STATE="utd"
-TIME="1684353167"
+TIME="1685039273"
 SIZE="20001"
 ENDFILE
 VALUE "<project>/hdl/LuSEE_Pkg.vhd,hdl"
@@ -925,13 +925,13 @@ SIZE="1006"
 ENDFILE
 VALUE "<project>/hdl/Multiply_generic.vhd,hdl"
 STATE="utd"
-TIME="1678978149"
-SIZE="6069"
+TIME="1685045990"
+SIZE="6513"
 ENDFILE
 VALUE "<project>/hdl/Multiply_generic_32.vhd,hdl"
 STATE="utd"
-TIME="1681227960"
-SIZE="5147"
+TIME="1685045925"
+SIZE="5324"
 ENDFILE
 VALUE "<project>/hdl/PF_RESET.vhd.vhd,hdl"
 STATE="utd"
@@ -1145,7 +1145,7 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1684343815"
+TIME="1685039248"
 SIZE="41855"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
@@ -1220,8 +1220,8 @@ SIZE="40013"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1684780973"
-SIZE="13124"
+TIME="1685032898"
+SIZE="13328"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
@@ -1270,12 +1270,12 @@ SIZE="21310"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1684344265"
+TIME="1685039319"
 SIZE="11331"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST_RAW.vhd,tb_hdl"
 STATE="utd"
-TIME="1684427845"
+TIME="1685039302"
 SIZE="10189"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
@@ -1295,7 +1295,7 @@ SIZE="26710373"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1684951157"
+TIME="1685025252"
 SIZE="20577"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
@@ -1912,6 +1912,10 @@ VALUE "<project>/synthesis/LuSEE_PF_EVAL_sdc.sdc,syn_sdc"
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.vhd,syn_hdl"
 ENDUsed_File_List
 ENDLIST
+ENDLIST
+LIST synthesis_implementations
+VALUE "synthesis"
+VALUE "synthesis_1"
 ENDLIST
 ENDLIST
 LIST "sfft_fixpt::work"
@@ -2943,7 +2947,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="/usr/local/microchip/Libero_SoC_v2022.3/ModelSimPro/modeltech/linuxacoem/vsim"
-PARAM=""
+PARAM=" -l SPEC_TST_presynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -4316,11 +4320,12 @@ ENDLIST
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;hdl/average_stage1_signed.vhd;0
+Reports;Reports;0
+ReportsCurrentItem;Place and Route:LuSEE_PF_EVAL_layout_log.log
+HDL;hdl/Multiply_generic_32.vhd;0
+HDL;hdl/Multiply_generic.vhd;0
 HDL;hdl/deinterlace_instance_12_fixpt.vhd;0
-HDL;hdl/spectrometer_fixpt.vhd;0
-StartPage;StartPage;0
-ACTIVEVIEW;hdl/deinterlace_instance_12_fixpt.vhd
+ACTIVEVIEW;hdl/Multiply_generic_32.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

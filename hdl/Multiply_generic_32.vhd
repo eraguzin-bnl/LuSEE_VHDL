@@ -77,59 +77,59 @@ begin
 
     --test_out <= std_logic_vector(test_out_s);
 
-    p_mult : process(i_clk,i_rstb)
+    p_mult : process(i_clk)
     begin
-      if(i_rstb='1') then
-        p_ma_mid      <= (others=>(others=>'0'));
-        p_ma_lo       <= (others=>(others=>'0'));
-        p_mb_mid      <= (others=>(others=>'0'));
-        p_mb_lo       <= (others=>(others=>'0'));
-        
-        p_m1          <= (others=>(others=>'0'));
-        p_m3          <= (others=>'0');
+        if(rising_edge(i_clk)) then
+            if(i_rstb='1') then
+                p_ma_mid      <= (others=>(others=>'0'));
+                p_ma_lo       <= (others=>(others=>'0'));
+                p_mb_mid      <= (others=>(others=>'0'));
+                p_mb_lo       <= (others=>(others=>'0'));
 
-        r_m1          <= (others=>'0');
-        r_m2          <= (others=>'0');
-        r_m3          <= (others=>'0');
-        r_m4          <= (others=>'0');
-        
-        valid_s1      <= '0';
-        valid_s2      <= '0';
-        valid_s3      <= '0';
-        valid_s4      <= '0';
-        valid_s5      <= '0';
-        valid_out     <= '0';
-        
-      elsif(rising_edge(i_clk)) then
-        p_ma_mid      <= signed(i_ma(size - 1 downto 17)) & p_ma_mid(0 to p_ma_mid'length-2);
-        p_ma_lo       <= signed(i_ma(16 downto 0)) & p_ma_lo(0 to p_ma_lo'length-2);
+                p_m1          <= (others=>(others=>'0'));
+                p_m3          <= (others=>'0');
 
-        p_mb_mid      <= signed(i_mb(size - 1 downto 17)) & p_mb_mid(0 to p_mb_mid'length-2);
-        p_mb_lo       <= signed(i_mb(16 downto 0)) & p_mb_lo(0 to p_mb_lo'length-2);
+                r_m1          <= (others=>'0');
+                r_m2          <= (others=>'0');
+                r_m3          <= (others=>'0');
+                r_m4          <= (others=>'0');
 
-        r_p1          <= signed('0' & p_ma_lo(0)) * signed('0' & p_mb_lo(0));
-        r_p2          <= signed('0' & p_ma_lo(1)) * p_mb_mid(1);
-        r_p3          <= p_ma_mid(2) * signed('0' & p_mb_lo(2));
-        r_p4          <= p_ma_mid(3) * p_mb_mid(3);
+                valid_s1      <= '0';
+                valid_s2      <= '0';
+                valid_s3      <= '0';
+                valid_s4      <= '0';
+                valid_s5      <= '0';
+                valid_out     <= '0';
+            else
+                p_ma_mid      <= signed(i_ma(size - 1 downto 17)) & p_ma_mid(0 to p_ma_mid'length-2);
+                p_ma_lo       <= signed(i_ma(16 downto 0)) & p_ma_lo(0 to p_ma_lo'length-2);
 
-        r_m1          <= r_p1;
-        r_m2          <= r_p2 + r_m1(34 downto 17);
-        r_m3          <= r_p3 + r_m2;
-        r_m4          <= r_p4 + r_m3(size downto 17);
+                p_mb_mid      <= signed(i_mb(size - 1 downto 17)) & p_mb_mid(0 to p_mb_mid'length-2);
+                p_mb_lo       <= signed(i_mb(16 downto 0)) & p_mb_lo(0 to p_mb_lo'length-2);
 
-        p_m1          <= r_m1(16 downto 0) & p_m1(0 to p_m1'length-2);
-        p_m3          <= r_m3(16 downto 0);
-        
-        --test_out_s    <= signed(test_a) * signed(test_b);
-        
-        valid_s1      <= valid_in;
-        valid_s2      <= valid_s1;
-        valid_s3      <= valid_s2;
-        valid_s4      <= valid_s3;
-        valid_s5      <= valid_s4;
-        valid_out     <= valid_s5;
-        
-      end if;
+                r_p1          <= signed('0' & p_ma_lo(0)) * signed('0' & p_mb_lo(0));
+                r_p2          <= signed('0' & p_ma_lo(1)) * p_mb_mid(1);
+                r_p3          <= p_ma_mid(2) * signed('0' & p_mb_lo(2));
+                r_p4          <= p_ma_mid(3) * p_mb_mid(3);
+
+                r_m1          <= r_p1;
+                r_m2          <= r_p2 + r_m1(34 downto 17);
+                r_m3          <= r_p3 + r_m2;
+                r_m4          <= r_p4 + r_m3(size downto 17);
+
+                p_m1          <= r_m1(16 downto 0) & p_m1(0 to p_m1'length-2);
+                p_m3          <= r_m3(16 downto 0);
+                
+                --test_out_s    <= signed(test_a) * signed(test_b);
+                
+                valid_s1      <= valid_in;
+                valid_s2      <= valid_s1;
+                valid_s3      <= valid_s2;
+                valid_s4      <= valid_s3;
+                valid_s5      <= valid_s4;
+                valid_out     <= valid_s5;
+            end if;
+        end if;
     end process p_mult;
 
 end rtl;
