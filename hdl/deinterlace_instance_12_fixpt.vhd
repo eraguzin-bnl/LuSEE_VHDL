@@ -76,10 +76,6 @@ ARCHITECTURE rtl OF deinterlace_instance_12_fixpt IS
         );
     end component;
 
-  -- Component Configuration Statements
- -- FOR ALL : SimpleDualPortRAM_generic_block
- --   USE ENTITY work.SimpleDualPortRAM_generic_block(rtl);
-
   -- Signals
 	signal read_address_re                : std_logic_vector(12 downto 0);
     signal write_address_re               : std_logic_vector(11 downto 0);
@@ -222,6 +218,9 @@ BEGIN
                 write_en_im <= '0';
             end if;
             
+            --These operations need to start being done when the incoming fft_valid is high
+            --But because of pipelining, they need to continue past when fft_valid goes low
+            --To simplify it at this stage, I just have them all running constantly
             fft_val_re_s1 <= resize(fft_val_re_s, 33);
             fft_val_re_s2 <= fft_val_re_s1;
             fft_val_re_s3 <= fft_val_re_s2;
@@ -249,6 +248,9 @@ BEGIN
             --If you do FOIL with the complex multiplication for ch2, you'll see how this shakes out
             --Rather than add another negation I swapped the subtraction order for fft_val_dif_re
             
+            --These operations need to start being done when the incoming fft_valid is high
+            --But because of pipelining, they need to continue past when fft_valid goes low
+            --To simplify it at this stage, I just have them all running constantly
             fft_val_sum_re <= fft_val_b_re + fft_val_re_s3;
             fft_val_sum_im <= fft_val_b_im + fft_val_im_conj_s1;
             fft_val_dif_re <= fft_val_re_s3 - fft_val_b_re;

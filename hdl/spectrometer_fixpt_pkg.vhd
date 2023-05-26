@@ -14,6 +14,7 @@ USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
 PACKAGE spectrometer_fixpt_pkg IS
+  TYPE vector_of_signed14 IS ARRAY (NATURAL RANGE <>) OF signed(13 DOWNTO 0);
   TYPE vector_of_signed32 IS ARRAY (NATURAL RANGE <>) OF signed(31 DOWNTO 0);
   TYPE vector_of_signed34 IS ARRAY (NATURAL RANGE <>) OF signed(33 DOWNTO 0);
   TYPE vector_of_signed36 IS ARRAY (NATURAL RANGE <>) OF signed(35 DOWNTO 0);
@@ -21,6 +22,7 @@ PACKAGE spectrometer_fixpt_pkg IS
   TYPE vector_of_signed40 IS ARRAY (NATURAL RANGE <>) OF signed(39 DOWNTO 0);
   TYPE vector_of_signed42 IS ARRAY (NATURAL RANGE <>) OF signed(41 DOWNTO 0);
   TYPE vector_of_std_logic_vector32 IS ARRAY (NATURAL RANGE <>) OF std_logic_vector(31 DOWNTO 0);
+  TYPE vector_of_std_logic_vector14 IS ARRAY (NATURAL RANGE <>) OF std_logic_vector(13 DOWNTO 0);
   TYPE vector_of_std_logic_vector11 IS ARRAY (NATURAL RANGE <>) OF std_logic_vector(10 DOWNTO 0);
   TYPE vector_of_std_logic_vector6 IS ARRAY (NATURAL RANGE <>) OF std_logic_vector(5 DOWNTO 0);
   TYPE vector_of_std_logic_vector5 IS ARRAY (NATURAL RANGE <>) OF std_logic_vector(4 DOWNTO 0);
