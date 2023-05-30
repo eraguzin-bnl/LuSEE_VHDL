@@ -81,6 +81,16 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
     signal read_counter                   : integer range 0 to 4095;
     signal weights_s1                     : vector_of_std_logic_vector32(3 downto 0);
     
+    signal weight_fold_raw                : vector_of_std_logic_vector46(3 downto 0);
+    signal weight_fold_trim               : vector_of_signed34(3 downto 0);
+    signal val_full                       : signed(33 downto 0);
+    signal val_trim                       : std_logic_vector(31 downto 0);
+    signal valid_in                       : std_logic_vector(3 downto 0);
+    signal valid_out                      : std_logic_vector(3 downto 0);
+    signal block_valid_s1                 : std_logic;
+    signal block_valid_s2                 : std_logic;
+    signal block_valid_s3                 : std_logic;
+    
     BEGIN
     
     generate_ram: for ii in 0 to 3 generate
@@ -94,6 +104,26 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             R_DATA => read_data(ii)
         );
     end generate generate_ram;
+    
+    generate_mult: for ii in 0 to 3 generate
+        mult : entity work.Multiply_generic17
+        generic map(
+            size => 14)
+        port map(
+            -- Inputs
+            i_clk => clk,
+            i_rstb => reset,
+            i_ma => std_logic_vector(read_data_s1(ii)),
+            i_mb => weights_s1(ii),
+
+            --Valid
+            valid_in => valid_in(ii),
+            valid_out => valid_out(ii),
+
+            -- Outputs
+            o_m => weight_fold_raw(ii)
+        );
+    end generate generate_mult;
 
     process (clk)
     begin
@@ -108,8 +138,15 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             --read_data <= (others=>(others=>'0'));
             read_data_s1 <= (others=>(others=>'0'));
             weights_s1 <= (others=>(others=>'0'));
-            
+            --weight_fold_raw <= (others=>(others=>'0'));
+            --weight_fold_trim <= (others=>(others=>'0'));
+            valid_in <= (others=>'0');
+            block_valid_s1 <= '0';
+            block_valid_s2 <= '0';
+            block_valid_s3 <= '0';
+            val_full <= (others=>'0');
         else
+            valid_in <= (others=>'1');
             if (ndx = 4095) then
                 ndx <= 0;
                 if (bndx = 3) then
@@ -152,6 +189,22 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
                     write_en <= "0000";	
                     read_data_s1(0) <= signed(sample_1); 
             end case;
+            
+            block_valid_s2 <= block_valid_s1;
+            block_valid_s3 <= block_valid_s2;
+            ce_out <= block_valid_s3;
+            if (valid_out = "1111") then
+                block_valid_s1 <= '1';
+                weight_fold_trim(0) <= resize(signed(weight_fold_raw(0)), 34);
+                weight_fold_trim(1) <= resize(signed(weight_fold_raw(1)), 34);
+                weight_fold_trim(2) <= resize(signed(weight_fold_raw(2)), 34);
+                weight_fold_trim(3) <= resize(signed(weight_fold_raw(3)), 34);
+                val_full <= weight_fold_trim(3) + weight_fold_trim(2) + weight_fold_trim(1) + weight_fold_trim(0);
+                val_out <= std_logic_vector(resize(val_full, 32));
+            else
+                block_valid_s1 <= '0';
+            end if;
+        
         end if;
     end if;
     end process;

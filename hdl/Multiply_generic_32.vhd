@@ -23,7 +23,7 @@ port (
 end Multiply_generic32;
 
 architecture rtl of Multiply_generic32 is
---  A[34:17] x 2^17 + A[16:0]) x (B[34:17] x 2^17 + B[16:0]) =
+-- (A[34:17] x 2^17 + A[16:0]) x (B[34:17] x 2^17 + B[16:0]) =
 -- (A[33:17] x B[33:17] * 2^34 +
 -- (A[16:0] x B[31:17] + A[33:17] x B[16:0]) * 2^17 +
 -- (A[16:0] x B[16:0])
@@ -73,7 +73,7 @@ begin
 
     o_m(out_size downto 34)  <= std_logic_vector(r_m4(out_size - 34 downto 0));
     o_m(33 downto 17)        <= std_logic_vector(p_m3);
-    o_m(16 downto  0)        <= std_logic_vector(p_m1(2));
+    o_m(16 downto 0)        <= std_logic_vector(p_m1(2));
 
     --test_out <= std_logic_vector(test_out_s);
 
@@ -89,6 +89,11 @@ begin
                 p_m1          <= (others=>(others=>'0'));
                 p_m3          <= (others=>'0');
 
+                r_p1          <= (others=>'0');
+                r_p2          <= (others=>'0');
+                r_p3          <= (others=>'0');
+                r_p4          <= (others=>'0');
+                
                 r_m1          <= (others=>'0');
                 r_m2          <= (others=>'0');
                 r_m3          <= (others=>'0');

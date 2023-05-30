@@ -28,8 +28,24 @@
 </file>
 </fileSet>
 <fileSet fileSetId="ANY_SIMULATION_FILESET">
+<file>
+<name>PF_TPSRAM_WEIGHT_FOLD_PF_TPSRAM_WEIGHT_FOLD_0_PF_TPSRAM_R0C0.mem</name>
+<userFileType>MEM</userFileType>
+</file>
+<file>
+<name>PF_TPSRAM_WEIGHT_FOLD_PF_TPSRAM_WEIGHT_FOLD_0_PF_TPSRAM_R0C1.mem</name>
+<userFileType>MEM</userFileType>
+</file>
+<file>
+<name>PF_TPSRAM_WEIGHT_FOLD_PF_TPSRAM_WEIGHT_FOLD_0_PF_TPSRAM_R0C2.mem</name>
+<userFileType>MEM</userFileType>
+</file>
 </fileSet>
 <fileSet fileSetId="OTHER_FILESET">
+<file>
+<name>PF_TPSRAM_WEIGHT_FOLD_PF_TPSRAM_WEIGHT_FOLD_0_PF_TPSRAM.shx</name>
+<userFileType>Other</userFileType>
+</file>
 </fileSet>
 </fileSets>
 </component>

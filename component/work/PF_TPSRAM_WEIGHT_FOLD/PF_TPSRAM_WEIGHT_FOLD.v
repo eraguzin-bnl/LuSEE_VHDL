@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 26 15:22:01 2023
+// Created by SmartDesign Tue May 30 17:24:40 2023
 // Version: 2022.3 2022.3.0.8
 //////////////////////////////////////////////////////////////////////
 
@@ -30,7 +30,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_TPSRAM:1.1.108} -component
 "DATA_OUT_PN:R_DATA"  \
 "ECC:0"  \
 "IMPORT_FILE:"  \
-"INIT_RAM:F"  \
+"INIT_RAM:T"  \
 "LPM_HINT:0"  \
 "LPMTYPE:LPM_RAM"  \
 "PMODE2:1"  \

@@ -72,7 +72,7 @@ begin
     o_m(out_size downto 51)  <= std_logic_vector(r_m6(15 + remaining downto 0));
     o_m(50 downto 34)        <= std_logic_vector(p_m5(0));
     o_m(33 downto 17)        <= std_logic_vector(p_m3(2));
-    o_m(16 downto  0)        <= std_logic_vector(p_m1(4));
+    o_m(16 downto 0)        <= std_logic_vector(p_m1(4));
 
     --test_out <= std_logic_vector(test_out_s);
 
@@ -88,11 +88,21 @@ begin
                 
                 p_m1          <= (others=>(others=>'0'));
                 p_m3          <= (others=>(others=>'0'));
+                p_m5          <= (others=>(others=>'0'));
 
+                r_p1          <= (others=>'0');
+                r_p2          <= (others=>'0');
+                r_p3          <= (others=>'0');
+                r_p4          <= (others=>'0');
+                r_p5          <= (others=>'0');
+                r_p6          <= (others=>'0');
+                
                 r_m1          <= (others=>'0');
                 r_m2          <= (others=>'0');
                 r_m3          <= (others=>'0');
                 r_m4          <= (others=>'0');
+                r_m5          <= (others=>'0');
+                r_m6          <= (others=>'0');
                 
                 valid_s1      <= '0';
                 valid_s2      <= '0';

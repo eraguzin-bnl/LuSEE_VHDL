@@ -60,7 +60,7 @@ LPM_HINT                        : 0
 Device                          : 300
 RAM Type                        : Two Port
 Optimized for                   : Speed
-Initialize RAM                  : False
+Initialize RAM                  : True
 Clocks                          : Single Read/Write Clock
 Byte Enables                    : No
 Read Pipeline A                 : No
