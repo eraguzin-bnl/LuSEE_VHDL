@@ -77,16 +77,15 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
     
     signal ndx                            : integer range 0 to 4095;
     signal bndx                           : integer range 0 to 3;
-    
     signal read_counter                   : integer range 0 to 4095;
-    signal weights_s1                     : vector_of_std_logic_vector32(3 downto 0);
     
+    signal weights_s1                     : vector_of_std_logic_vector32(3 downto 0);
     signal weight_fold_raw                : vector_of_std_logic_vector46(3 downto 0);
-    signal weight_fold_trim               : vector_of_signed34(3 downto 0);
-    signal val_full                       : signed(33 downto 0);
-    signal val_trim                       : std_logic_vector(31 downto 0);
+    signal weight_fold_trim               : vector_of_signed48(3 downto 0);
+    signal val_full                       : signed(47 downto 0);
     signal valid_in                       : std_logic_vector(3 downto 0);
     signal valid_out                      : std_logic_vector(3 downto 0);
+    
     signal block_valid_s1                 : std_logic;
     signal block_valid_s2                 : std_logic;
     signal block_valid_s3                 : std_logic;
@@ -135,11 +134,8 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             write_en <= "0000";
             write_address <= (others=>'0');
             write_data <= (others=>'0');
-            --read_data <= (others=>(others=>'0'));
             read_data_s1 <= (others=>(others=>'0'));
             weights_s1 <= (others=>(others=>'0'));
-            --weight_fold_raw <= (others=>(others=>'0'));
-            --weight_fold_trim <= (others=>(others=>'0'));
             valid_in <= (others=>'0');
             block_valid_s1 <= '0';
             block_valid_s2 <= '0';
@@ -195,18 +191,21 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             ce_out <= block_valid_s3;
             if (valid_out = "1111") then
                 block_valid_s1 <= '1';
-                weight_fold_trim(0) <= resize(signed(weight_fold_raw(0)), 34);
-                weight_fold_trim(1) <= resize(signed(weight_fold_raw(1)), 34);
-                weight_fold_trim(2) <= resize(signed(weight_fold_raw(2)), 34);
-                weight_fold_trim(3) <= resize(signed(weight_fold_raw(3)), 34);
+                --Adds 2 bits to account for overflow in addition
+                weight_fold_trim(0) <= resize(signed(weight_fold_raw(0)), 48);
+                weight_fold_trim(1) <= resize(signed(weight_fold_raw(1)), 48);
+                weight_fold_trim(2) <= resize(signed(weight_fold_raw(2)), 48);
+                weight_fold_trim(3) <= resize(signed(weight_fold_raw(3)), 48);
                 val_full <= weight_fold_trim(3) + weight_fold_trim(2) + weight_fold_trim(1) + weight_fold_trim(0);
-                val_out <= std_logic_vector(resize(val_full, 32));
+                --Original algorithm shifts 13 bits, found empirically by looking at output
+                val_out <= std_logic_vector(resize(shift_right(val_full, 13), 32));
             else
                 block_valid_s1 <= '0';
+                weight_fold_trim <= (others=>(others=>'0'));
+                val_full <= (others=>'0');
+                val_out <= (others=>'0');
             end if;
-        
         end if;
     end if;
     end process;
 END rtl;
-

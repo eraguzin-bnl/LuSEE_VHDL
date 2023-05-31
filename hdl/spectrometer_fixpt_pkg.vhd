@@ -21,6 +21,7 @@ PACKAGE spectrometer_fixpt_pkg IS
   TYPE vector_of_signed38 IS ARRAY (NATURAL RANGE <>) OF signed(37 DOWNTO 0);
   TYPE vector_of_signed40 IS ARRAY (NATURAL RANGE <>) OF signed(39 DOWNTO 0);
   TYPE vector_of_signed42 IS ARRAY (NATURAL RANGE <>) OF signed(41 DOWNTO 0);
+  TYPE vector_of_signed48 IS ARRAY (NATURAL RANGE <>) OF signed(47 DOWNTO 0);
   TYPE vector_of_std_logic_vector46 IS ARRAY (NATURAL RANGE <>) OF std_logic_vector(45 DOWNTO 0);
   TYPE vector_of_std_logic_vector34 IS ARRAY (NATURAL RANGE <>) OF std_logic_vector(33 DOWNTO 0);
   TYPE vector_of_std_logic_vector32 IS ARRAY (NATURAL RANGE <>) OF std_logic_vector(31 DOWNTO 0);

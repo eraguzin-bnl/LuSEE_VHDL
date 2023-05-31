@@ -865,7 +865,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1685050629"
+TIME="1685551459"
 SIZE="2401"
 ENDFILE
 VALUE "<project>/constraint/user.sdc,sdc"
@@ -1181,8 +1181,8 @@ SIZE="41855"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
-TIME="1685479330"
-SIZE="1877"
+TIME="1685550618"
+SIZE="1955"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_half.vhd,hdl"
 STATE="utd"
@@ -1226,8 +1226,8 @@ SIZE="11893"
 ENDFILE
 VALUE "<project>/hdl/weight_fold_instance_1_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1685481097"
-SIZE="8221"
+TIME="1685555592"
+SIZE="8287"
 ENDFILE
 VALUE "<project>/hdl/weight_streamer_fixpt.vhd,hdl"
 STATE="utd"
@@ -1269,7 +1269,7 @@ PARENT="<project>/component/work/PF_TPSRAM_WEIGHT_FOLD/PF_TPSRAM_WEIGHT_FOLD_0/P
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1685477602"
+TIME="1685481888"
 SIZE="13672"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
@@ -1286,11 +1286,6 @@ VALUE "<project>/simulation/run_LuSEE_raw.do,do"
 STATE="utd"
 TIME="1684426131"
 SIZE="23257"
-ENDFILE
-VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
-STATE="utd"
-TIME="1685481140"
-SIZE="29008"
 ENDFILE
 VALUE "<project>/stimulus/ADS4245_tst.vhd,tb_hdl"
 STATE="utd"
@@ -1969,6 +1964,10 @@ VALUE "<project>/synthesis/LuSEE_PF_EVAL_sdc.sdc,syn_sdc"
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.vhd,syn_hdl"
 ENDUsed_File_List
 ENDLIST
+ENDLIST
+LIST synthesis_implementations
+VALUE "synthesis"
+VALUE "synthesis_1"
 ENDLIST
 ENDLIST
 LIST "PF_TPSRAM_WEIGHT_FOLD_PF_TPSRAM_WEIGHT_FOLD_0_PF_TPSRAM::work"
@@ -4389,10 +4388,9 @@ ENDLIST
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Pre-Synthesis Simulate:SPEC_TST_presynth_simulation.log
 HDL;hdl/Multiply_generic_17.vhd;0
 HDL;hdl/weight_fold_instance_1_fixpt.vhd;0
+HDL;hdl/correlate_operation.vhd;0
 HDL;hdl/spectrometer_fixpt_pkg.vhd;0
 ACTIVEVIEW;hdl/weight_fold_instance_1_fixpt.vhd
 ENDLIST
