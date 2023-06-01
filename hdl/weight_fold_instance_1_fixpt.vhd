@@ -188,7 +188,7 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             
             block_valid_s2 <= block_valid_s1;
             block_valid_s3 <= block_valid_s2;
-            ce_out <= block_valid_s3;
+            ce_out <= block_valid_s2;
             if (valid_out = "1111") then
                 block_valid_s1 <= '1';
                 --Adds 2 bits to account for overflow in addition
