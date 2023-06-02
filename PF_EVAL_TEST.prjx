@@ -1176,8 +1176,8 @@ SIZE="2940"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1685039248"
-SIZE="41855"
+TIME="1685710551"
+SIZE="42196"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1246,8 +1246,8 @@ SIZE="25958"
 ENDFILE
 VALUE "<project>/simulation/FIRST_HALF_TST_presynth_simulation.log,log"
 STATE="utd"
-TIME="1685656351"
-SIZE="29008"
+TIME="1685710578"
+SIZE="31044"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
@@ -1274,8 +1274,8 @@ PARENT="<project>/component/work/PF_TPSRAM_WEIGHT_FOLD/PF_TPSRAM_WEIGHT_FOLD_0/P
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1685562826"
-SIZE="13040"
+TIME="1685656412"
+SIZE="13766"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
@@ -1309,8 +1309,8 @@ SIZE="3219"
 ENDFILE
 VALUE "<project>/stimulus/FIRST_HALF_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1685656323"
-SIZE="15271"
+TIME="1685713201"
+SIZE="18133"
 ENDFILE
 VALUE "<project>/stimulus/HW_NOTCH_TST.vhd,tb_hdl"
 STATE="utd"
@@ -4396,10 +4396,10 @@ ENDLIST
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;stimulus/FIRST_HALF_TST.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
 HDL;hdl/weight_fold_instance_1_fixpt.vhd;0
-ACTIVEVIEW;stimulus/FIRST_HALF_TST.vhd
+HDL;stimulus/FIRST_HALF_TST.vhd;0
+ACTIVEVIEW;hdl/spectrometer_fixpt.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"

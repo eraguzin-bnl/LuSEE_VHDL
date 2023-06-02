@@ -247,16 +247,6 @@ begin
           READLINE(w3_file, w3_l);
           READLINE(w4_file, w4_l);
           
-          READLINE(fft_valid_file, fft_valid_l);
-          READLINE(fft_val_r_file, fft_val_r_l);
-          READLINE(fft_val_i_file, fft_val_i_l);
-          READLINE(fft_ready_file, fft_ready_l);
-          READLINE(ch1_val_re_file, ch1_val_re_l);
-          READLINE(ch1_val_im_file, ch1_val_im_l);
-          READLINE(ch2_val_re_file, ch2_val_re_l);
-          READLINE(ch2_val_im_file, ch2_val_im_l);
-          READLINE(bin_file, bin_l);
-          
           HREAD(sample1_l, sample1_v);
           HREAD(sample2_l, sample2_v);
           HREAD(w1_l, w1_v);
@@ -264,21 +254,36 @@ begin
           HREAD(w3_l, w3_v);
           HREAD(w4_l, w4_v);
           
-          HREAD(fft_valid_l, fft_valid_v);
-          HREAD(fft_val_r_l, fft_val_r_v);
-          HREAD(fft_val_i_l, fft_val_i_v);
-          HREAD(fft_ready_l, fft_ready_v);
-          HREAD(ch1_val_re_l, ch1_val_re_v);
-          HREAD(ch1_val_im_l, ch1_val_im_v);
-          HREAD(ch2_val_re_l, ch2_val_re_v);
-          HREAD(ch2_val_im_l, ch2_val_im_v);
-          HREAD(bin_l, bin_v);
-          
           if ((loop_num = 0) or (loop_num > 7)) then
               READLINE(val1_file, val1_l);
               READLINE(val2_file, val2_l);
+              
+              READLINE(fft_valid_file, fft_valid_l);
+              READLINE(fft_val_r_file, fft_val_r_l);
+              READLINE(fft_val_i_file, fft_val_i_l);
+          
               HREAD(val1_l, val1_v);
               HREAD(val2_l, val2_v);
+              
+              HREAD(fft_valid_l, fft_valid_v);
+              HREAD(fft_val_r_l, fft_val_r_v);
+              HREAD(fft_val_i_l, fft_val_i_v);
+          end if;
+          
+          if ((loop_num = 0) or (loop_num > 12)) then
+              READLINE(fft_ready_file, fft_ready_l);
+              READLINE(ch1_val_re_file, ch1_val_re_l);
+              READLINE(ch1_val_im_file, ch1_val_im_l);
+              READLINE(ch2_val_re_file, ch2_val_re_l);
+              READLINE(ch2_val_im_file, ch2_val_im_l);
+              READLINE(bin_file, bin_l);
+              
+              HREAD(fft_ready_l, fft_ready_v);
+              HREAD(ch1_val_re_l, ch1_val_re_v);
+              HREAD(ch1_val_im_l, ch1_val_im_v);
+              HREAD(ch2_val_re_l, ch2_val_re_v);
+              HREAD(ch2_val_im_l, ch2_val_im_v);
+              HREAD(bin_l, bin_v);
           end if;
           
           sample1 <= sample1_v;
@@ -309,14 +314,65 @@ begin
             if (val1 /= val1_v) then
                 REPORT "Error in val1: Expected " & to_hstring(val1_v) & (" Actual " & to_hstring(val1))
                 SEVERITY ERROR;
-            else
-                REPORT "val1: Expected " & to_hstring(val1_v) & (" Actual " & to_hstring(val1))
-                SEVERITY NOTE;
             end if;
             
             if (val2 /= val2_v) then
                 REPORT "Error in val2: Expected " & to_hstring(val2_v) & (" Actual " & to_hstring(val2))
                 SEVERITY ERROR;
+            end if;
+            
+            if (fft_valid /= fft_valid_v(0)) then
+                REPORT "Error in fft_valid: Expected " & to_hstring(fft_valid_v) & (" Actual " & std_logic'image(fft_valid))
+                SEVERITY ERROR;
+            end if;
+            
+            if (fft_val_r /= fft_val_r_v) then
+                REPORT "Error in fft_val_r: Expected " & to_hstring(fft_val_r_v) & (" Actual " & to_hstring(fft_val_r))
+                SEVERITY ERROR;
+            end if;
+            
+            if (fft_val_i /= fft_val_i_v) then
+                REPORT "Error in fft_val_i: Expected " & to_hstring(fft_val_i_v) & (" Actual " & to_hstring(fft_val_i))
+                SEVERITY ERROR;
+            end if;
+            
+            if (fft_ready /= fft_ready_v(0)) then
+                REPORT "Error in fft_ready: Expected " & to_hstring(fft_ready_v) & (" Actual " & std_logic'image(fft_ready))
+                SEVERITY ERROR;
+            end if;
+            
+            if (ch1_val_re /= ch1_val_re_v) then
+                REPORT "Error in ch1_val_re: Expected " & to_hstring(ch1_val_re_v) & (" Actual " & to_hstring(ch1_val_re))
+                SEVERITY ERROR;
+            --else
+                --REPORT "Well would you look at that for ch1_val_re: Expected " & to_hstring(ch1_val_re_v) & (" Actual " & to_hstring(ch1_val_re))
+                --SEVERITY NOTE;
+            end if;
+            
+            if (ch1_val_im /= ch1_val_im_v) then
+                REPORT "Error in ch1_val_im: Expected " & to_hstring(ch1_val_im_v) & (" Actual " & to_hstring(ch1_val_im))
+                SEVERITY ERROR;
+            --else
+                --REPORT "Well would you look at that for ch1_val_im: Expected " & to_hstring(ch1_val_im_v) & (" Actual " & to_hstring(ch1_val_im))
+                --SEVERITY NOTE;
+            end if;
+            
+            if (ch2_val_re /= ch2_val_re_v) then
+                REPORT "Error in ch2_val_re: Expected " & to_hstring(ch2_val_re_v) & (" Actual " & to_hstring(ch2_val_re))
+                SEVERITY ERROR;
+            end if;
+            
+            if (ch2_val_im /= ch2_val_im_v) then
+                REPORT "Error in ch2_val_im: Expected " & to_hstring(ch2_val_im_v) & (" Actual " & to_hstring(ch2_val_im))
+                SEVERITY ERROR;
+            end if;
+            
+            if (bin /= bin_v) then
+                REPORT "Error in bin: Expected " & to_hstring(bin_v) & (" Actual " & to_hstring(bin))
+                SEVERITY ERROR;
+            --else
+                --REPORT "Well would you look at that for bin: Expected " & to_hstring(bin_v) & (" Actual " & to_hstring(bin))
+                --SEVERITY NOTE;
             end if;
         END IF;
         
@@ -352,7 +408,7 @@ begin
             nstart => '1',
             Streamer_DLY => x"2",
             weight_fold_DLY => x"2",
-            sfft_DLY => x"3",
+            sfft_DLY => x"A",
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
             

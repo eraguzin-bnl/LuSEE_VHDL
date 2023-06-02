@@ -96,6 +96,9 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  
  SIGNAL val1                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL val2                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL weight_stream_valid                  :   std_logic;
+ SIGNAL weight_stream_valid_s1               :   std_logic;
+ SIGNAL weight_stream_valid_s2               :   std_logic;
  
  SIGNAL val1_s1                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL val2_s1                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
@@ -253,6 +256,9 @@ BEGIN
             sfft_en(2)          <= sfft_en(1);
             sfft_en(3)          <= sfft_en(2);
             
+            weight_stream_valid_s2 <= weight_stream_valid_s1;
+            weight_stream_valid_s1 <= weight_stream_valid;
+            
         end if;
     end process;
 
@@ -315,7 +321,7 @@ BEGIN
             w3                   => w3_s2,
             w4                   => w4_s2,
 
-            ce_out               => open,
+            ce_out               => weight_stream_valid,
             val_out              => val1
             );
 
@@ -351,7 +357,7 @@ BEGIN
     sfft_fixpt_inst : entity work.sfft_fixpt
         PORT map
             ( clk                => clk,
-            reset                => not sfft_en(0) ,
+            reset                => not weight_stream_valid_s2 ,
             clk_enable           => clk_enable   ,
             c_re                 => val1_s2,
             c_im                 => val2_s2,
