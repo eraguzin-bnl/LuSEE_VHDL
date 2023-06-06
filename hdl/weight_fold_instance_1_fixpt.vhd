@@ -140,7 +140,10 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             block_valid_s1 <= '0';
             block_valid_s2 <= '0';
             block_valid_s3 <= '0';
+            weight_fold_trim <= (others=>(others=>'0'));
             val_full <= (others=>'0');
+            val_out <= (others=>'0');
+            ce_out <= '0';
         else
             valid_in <= (others=>'1');
             if (ndx = 4095) then

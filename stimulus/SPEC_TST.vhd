@@ -222,8 +222,7 @@ begin
             -- Inouts
 
         );
-        
-    spec_notch_nopf : entity work.spectrometer_fixpt
+    spec_notch_nopf : entity work.spectrometer_fixpt_old
         -- port map
         port map( 
             -- Inputs
@@ -234,8 +233,8 @@ begin
             Navg_main   =>  "00" & x"07",
             --sample1 => x"0" & sample2(13 downto 4),
             --sample2 => x"0" & sample1(13 downto 4),
-            sample1 => sample2,
-            sample2 => sample1,
+            sample1 => sample1,
+            sample2 => sample2,
             nstart => '1',
             Streamer_DLY => x"2",
             weight_fold_DLY => x"2",
@@ -256,73 +255,4 @@ begin
             -- Inouts
 
         );
-        
-    spec_nonotch_pf : entity work.spectrometer_fixpt
-        -- port map
-        port map( 
-            -- Inputs
-            clk => SYSCLK,
-            reset => NSYSRESET,
-            clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
-            --sample1 => x"0" & sample1(13 downto 4),
-            --sample2 => x"0" & sample2(13 downto 4),
-            sample1 => sample1,
-            sample2 => sample2,
-            nstart => '1',
-            Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
-            sfft_DLY => x"3",
-            deinterlace_DLY => (others=> '0'),
-            AVG_DLY => (others=> '0'),
-            
-            notch_en    => '0',
-            index_array => corr_array,
-            index_array_notch => corr_array,
-
-            -- Outputs
-            ce_out =>  open,
-            pks => open,
-            outbin => open,
-            ready =>  open
-
-            -- Inouts
-
-        );
-        
-    spec_nonotch_nopf : entity work.spectrometer_fixpt
-        -- port map
-        port map( 
-            -- Inputs
-            clk => SYSCLK,
-            reset => NSYSRESET,
-            clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
-            --sample1 => x"0" & sample2(13 downto 4),
-            --sample2 => x"0" & sample1(13 downto 4),
-            sample1 => sample2,
-            sample2 => sample1,
-            nstart => '1',
-            Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
-            sfft_DLY => x"3",
-            deinterlace_DLY => (others=> '0'),
-            AVG_DLY => (others=> '0'),
-            
-            notch_en    => '0',
-            index_array => corr_array,
-            index_array_notch => corr_array,
-
-            -- Outputs
-            ce_out =>  open,
-            pks => open,
-            outbin => open,
-            ready =>  open
-
-            -- Inouts
-
-        );
-
 end behavioral;

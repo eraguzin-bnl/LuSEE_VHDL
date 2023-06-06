@@ -253,6 +253,16 @@ SIGNAL  pks_s                         : vector_of_std_logic_vector32(15 downto 0
 SIGNAL  outbin_s                      : vector_of_std_logic_vector11(15 downto 0);
 SIGNAL  ready_s                       : std_logic_vector(15 DOWNTO 0);
 
+SIGNAL  ce_out_old                      : std_logic_vector(15 DOWNTO 0);
+SIGNAL  pks_old                         : vector_of_std_logic_vector32(15 downto 0);
+SIGNAL  outbin_old                      : vector_of_std_logic_vector11(15 downto 0);
+SIGNAL  ready_old                       : std_logic_vector(15 DOWNTO 0);
+
+SIGNAL  ce_out_new                      : std_logic_vector(15 DOWNTO 0);
+SIGNAL  pks_new                         : vector_of_std_logic_vector32(15 downto 0);
+SIGNAL  outbin_new                      : vector_of_std_logic_vector11(15 downto 0);
+SIGNAL  ready_new                       : std_logic_vector(15 DOWNTO 0);
+
 SIGNAL  Navg_notch       :      std_logic_vector(9 DOWNTO 0);  -- sfix14
 SIGNAL  Navg_main        :      std_logic_vector(9 DOWNTO 0);  -- sfix14
 
@@ -273,6 +283,17 @@ SIGNAL  notch_array                       : vector_of_std_logic_vector5(15 downt
 
 begin
    
+    ce_out_s <= ce_out_new when reg14_p(0) = '1' else
+                ce_out_old;
+                
+    pks_s <= pks_new when reg14_p(0) = '1' else
+                pks_old;
+                
+    outbin_s <= outbin_new when reg14_p(0) = '1' else
+                outbin_old;
+                
+    ready_s <= ready_new when reg14_p(0) = '1' else
+                ready_old;
  
     PF_RESET_inst : entity work.PF_RESET
     port map(
@@ -618,10 +639,39 @@ port MAP (
               error_notch       => error_notch_s,
               error_subtract    => error_subtract_s,
               
-              ce_out      => ce_out_s,
-              pks         => pks_s,
-              outbin      => outbin_s,
-              ready       => ready_s
+              ce_out      => ce_out_new,
+              pks         => pks_new,
+              outbin      => outbin_new,
+              ready       => ready_new
+              );     
+              
+    spectrometer_fixpt_old_inst : entity  work.spectrometer_fixpt_old
+    PORT MAP( clk         => ADC_S_CLK, 
+              reset       => RESET_SYS,
+              clk_enable  => '1',
+              Navg_notch  =>  Navg_notch,
+              Navg_main   =>  Navg_main,
+              sample1     => ADC_DATA_A_s,
+              sample2     => ADC_DATA_B_s,
+              
+              nstart            => nstart,  
+              Streamer_DLY      => Streamer_DLY,   
+              weight_fold_DLY   => weight_fold_DLY, 
+              sfft_DLY          => sfft_DLY,  
+              deinterlace_DLY   => deinterlace_DLY, 
+              AVG_DLY           => AVG_DLY,
+              
+              notch_en          => notch_en,
+              index_array       => corr_array,
+              index_array_notch => notch_array,
+              error_main        => open,
+              error_notch       => open,
+              error_subtract    => open,
+              
+              ce_out      => ce_out_old,
+              pks         => pks_old,
+              outbin      => outbin_old,
+              ready       => ready_old
               );     
     
 

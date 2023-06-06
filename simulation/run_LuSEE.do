@@ -192,6 +192,7 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_streamer_fixpt_p
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/spectrometer_half.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/HW_NOTCH_TST.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST_RAW.vhd"
 
 vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB -l "${log_file}.log" -t 1ps -pli ${LIBERO_DIR}/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth."$test_file"
 
@@ -271,17 +272,17 @@ for {set i 0} {$i < $num_tests} {incr i} {
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/weight_fold_DLY
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/sfft_DLY
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/notch_en
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/correlate_fixpt_notch/index_array
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/correlate_fixpt_main/index_array
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/pks0
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/outbin
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/ready
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/correlate_fixpt_notch/index_array(0)
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/correlate_fixpt_main/index_array(0)
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/pks(0)
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/outbin(0)
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/ready(0)
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/error_notch
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/error_main
          }
       }
    "
-   when -label "e_$i" "/$test_file/$vhdl_tests($i)/ready = 1" $e
+   when -label "e_$i" "/$test_file/$vhdl_tests($i)/ready(0) = 1" $e
    #echo "$e"
    set f "if {\$strobe($i) eq \"High\"} {
          echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready is 0\"
@@ -316,7 +317,7 @@ for {set i 0} {$i < $num_tests} {incr i} {
       }
    "
    #echo "$f"
-   when -label "f_$i" "/$test_file/$vhdl_tests($i)/ready = 0" $f
+   when -label "f_$i" "/$test_file/$vhdl_tests($i)/ready(0) = 0" $f
 
    set g "if {\$notch_error($i) eq \"Low\"} {
          set notch_error($i) High
