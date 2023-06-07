@@ -52,11 +52,20 @@ architecture behavioral of SPEC_TST is
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
     
-    signal pks_val             : vector_of_std_logic_vector32(0 TO 3);
+    signal ce_out              : std_logic_vector(15 DOWNTO 0);
+    signal pks_val             : vector_of_std_logic_vector32(15 downto 0);
+    signal outbin              : vector_of_std_logic_vector11(15 downto 0);
+    signal ready               : std_logic_vector(15 DOWNTO 0);
+    
     signal pks0                : std_logic_vector(31 downto 0);
     signal pks1                : std_logic_vector(31 downto 0);
     signal pks2                : std_logic_vector(31 downto 0);
     signal pks3                : std_logic_vector(31 downto 0);
+    
+    signal outbin0             : std_logic_vector(10 downto 0);
+    signal outbin1             : std_logic_vector(10 downto 0);
+    signal outbin2             : std_logic_vector(10 downto 0);
+    signal outbin3             : std_logic_vector(10 downto 0);
 
     SIGNAL sample1             : std_logic_vector(13 DOWNTO 0);
     SIGNAL sample2             : std_logic_vector(13 DOWNTO 0);
@@ -64,8 +73,25 @@ architecture behavioral of SPEC_TST is
     
     SIGNAL corr_array         : vector_of_std_logic_vector5(15 downto 0);
     SIGNAL notch_array        : vector_of_std_logic_vector5(15 downto 0);
+    
+    signal val1_new            : std_logic_vector(31 downto 0);
+    signal val1_new_s1         : std_logic_vector(31 downto 0);
+    signal val1_org            : std_logic_vector(31 downto 0);
+    signal val1_org_s1         : std_logic_vector(31 downto 0);
+    signal val1_org_s2         : std_logic_vector(31 downto 0);
+    signal val1_org_s3         : std_logic_vector(31 downto 0);
+    signal val1_org_s4         : std_logic_vector(31 downto 0);
+    signal val1_org_s5         : std_logic_vector(31 downto 0);
+    signal val1_org_s6         : std_logic_vector(31 downto 0);
+    signal val1_org_s7         : std_logic_vector(31 downto 0);
+    signal val1_org_s8         : std_logic_vector(31 downto 0);
+    signal val1_org_s9         : std_logic_vector(31 downto 0);
+    signal val1_org_s10         : std_logic_vector(31 downto 0);
 
 begin
+
+    val1_new <= <<signal .SPEC_TST.spec_notch_pf.val1 : std_logic_vector(31 downto 0)>>;
+    val1_org <= <<signal .SPEC_TST.spec_notch_nopf.val1 : std_logic_vector(31 downto 0)>>;
 
     process
         variable vhdl_initial : BOOLEAN := TRUE;
@@ -110,6 +136,12 @@ begin
             wait for ( SYSCLK_PERIOD * 10 );
             
             NSYSRESET <= '0';
+            --wait;
+            wait for ( SYSCLK_PERIOD * 10000 );
+            NSYSRESET <= '1';
+            wait for ( SYSCLK_PERIOD * 10 );
+            
+            NSYSRESET <= '0';
             wait;
         end if;
     end process;
@@ -119,10 +151,30 @@ begin
     
     --Needs to be split up so that ModelSim can see them
     pks0 <= pks_val(0);
-    pks1 <= pks_val(1);
-    pks2 <= pks_val(2);
-    pks3 <= pks_val(3);
-
+    
+    outbin0 <= outbin(0);
+    
+    --Check weight fold difference
+    wf_proc: PROCESS
+    BEGIN
+        wait for SYSCLK_PERIOD;
+        val1_new_s1 <= val1_new;
+        
+        val1_org_s1 <= val1_org;
+        val1_org_s2 <= val1_org_s1;
+        val1_org_s3 <= val1_org_s2;
+        val1_org_s4 <= val1_org_s3;
+        val1_org_s5 <= val1_org_s4;
+        val1_org_s6 <= val1_org_s5;
+        val1_org_s7 <= val1_org_s6;
+        val1_org_s8 <= val1_org_s7;
+        val1_org_s9 <= val1_org_s8;
+        val1_org_s10 <= val1_org_s9;
+        if (val1_org_s10 /= val1_new_s1) then
+            REPORT "Error in val1 output"
+            SEVERITY ERROR;
+        end if;
+    end process;
     -- Data source for adc
       c_re_fileread: PROCESS
         type two_byte_file is file of character;
@@ -204,7 +256,7 @@ begin
             sample2 => sample2,
             nstart => '1',
             Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
+            weight_fold_DLY => x"3",
             sfft_DLY => x"3",
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
@@ -237,7 +289,7 @@ begin
             sample2 => sample2,
             nstart => '1',
             Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
+            weight_fold_DLY => x"3",
             sfft_DLY => x"3",
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
@@ -248,7 +300,7 @@ begin
 
             -- Outputs
             ce_out =>  open,
-            pks => open,
+            pks => pks_val,
             outbin => open,
             ready =>  open
 

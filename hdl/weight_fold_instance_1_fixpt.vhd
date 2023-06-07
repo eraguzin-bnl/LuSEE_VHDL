@@ -74,16 +74,24 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
     signal write_address                  : std_logic_vector(11 downto 0);
     signal read_data                      : vector_of_signed14(3 downto 0);
     signal read_data_s1                   : vector_of_signed14(3 downto 0);
+    signal read_data_s2                   : vector_of_signed14(3 downto 0);
+    signal read_data_s3                   : vector_of_signed14(3 downto 0);
     
     signal ndx                            : integer range 0 to 4095;
     signal bndx                           : integer range 0 to 3;
+    signal bndx_s1                        : integer range 0 to 3;
+    signal bndx_s2                        : integer range 0 to 3;
     signal read_counter                   : integer range 0 to 4095;
     
     signal weights_s1                     : vector_of_std_logic_vector32(3 downto 0);
+    signal weights_s2                     : vector_of_std_logic_vector32(3 downto 0);
+    signal weights_s3                     : vector_of_std_logic_vector32(3 downto 0);
     signal weight_fold_raw                : vector_of_std_logic_vector46(3 downto 0);
     signal weight_fold_trim               : vector_of_signed48(3 downto 0);
     signal val_full                       : signed(47 downto 0);
     signal valid_in                       : std_logic_vector(3 downto 0);
+    signal valid_in_s1                    : std_logic_vector(3 downto 0);
+    signal valid_in_s2                    : std_logic_vector(3 downto 0);
     signal valid_out                      : std_logic_vector(3 downto 0);
     
     signal block_valid_s1                 : std_logic;
@@ -96,7 +104,7 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
         RAM : PF_TPSRAM_WEIGHT_FOLD
         PORT MAP( 
             CLK => clk,
-            R_ADDR => std_logic_vector(to_unsigned(read_counter, write_address'length)),
+            R_ADDR => std_logic_vector(to_unsigned(ndx, write_address'length)),
             W_EN => write_en(ii),
             W_ADDR => write_address,
             W_DATA => write_data,
@@ -112,11 +120,11 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             -- Inputs
             i_clk => clk,
             i_rstb => reset,
-            i_ma => std_logic_vector(read_data_s1(ii)),
-            i_mb => weights_s1(ii),
+            i_ma => std_logic_vector(read_data_s3(ii)),
+            i_mb => weights_s3(ii),
 
             --Valid
-            valid_in => valid_in(ii),
+            valid_in => valid_in_s2(ii),
             valid_out => valid_out(ii),
 
             -- Outputs
@@ -130,13 +138,21 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
         if (reset = '1') then
             ndx <= 0;
             bndx <= 0;
+            bndx_s1 <= 0;
+            bndx_s2 <= 0;
             read_counter <= 2;
             write_en <= "0000";
             write_address <= (others=>'0');
             write_data <= (others=>'0');
             read_data_s1 <= (others=>(others=>'0'));
+            read_data_s2 <= (others=>(others=>'0'));
+            read_data_s3 <= (others=>(others=>'0'));
             weights_s1 <= (others=>(others=>'0'));
+            weights_s2 <= (others=>(others=>'0'));
+            weights_s3 <= (others=>(others=>'0'));
             valid_in <= (others=>'0');
+            valid_in_s1 <= (others=>'0');
+            valid_in_s2 <= (others=>'0');
             block_valid_s1 <= '0';
             block_valid_s2 <= '0';
             block_valid_s3 <= '0';
@@ -146,6 +162,8 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             ce_out <= '0';
         else
             valid_in <= (others=>'1');
+            valid_in_s1 <= valid_in;
+            valid_in_s2 <= valid_in_s1;
             if (ndx = 4095) then
                 ndx <= 0;
                 if (bndx = 3) then
@@ -157,6 +175,9 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
                 ndx <= ndx + 1;
             end if;
             
+            bndx_s1 <= bndx;
+            bndx_s2 <= bndx_s1;
+            
             if (read_counter = 4095) then
                 read_counter <= 0;
             else
@@ -166,11 +187,44 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             weights_s1(1) <= w2;
             weights_s1(2) <= w3;
             weights_s1(3) <= w4;
+            weights_s2 <= weights_s1;
+            weights_s3 <= weights_s2;
             
             write_data <= signed(sample_1);
             write_address <= std_logic_vector(to_unsigned(ndx, write_address'length));
             
             read_data_s1 <= read_data;
+            read_data_s2 <= read_data_s1;
+            read_data_s3 <= read_data_s2;
+            
+            case bndx_s2 is
+                when 0 =>
+                    read_data_s1(0) <= signed(sample_1);
+                    read_data_s3(1) <= read_data(1);
+                    read_data_s3(2) <= read_data(2);
+                    read_data_s3(3) <= read_data(3);
+                when 1 =>
+                    read_data_s1(1) <= signed(sample_1);
+                    read_data_s3(0) <= read_data(0);
+                    read_data_s3(2) <= read_data(2);
+                    read_data_s3(3) <= read_data(3);
+                when 2 =>
+                    read_data_s1(2) <= signed(sample_1);
+                    read_data_s3(0) <= read_data(0);
+                    read_data_s3(1) <= read_data(1);
+                    read_data_s3(3) <= read_data(3);
+                when 3 =>
+                    read_data_s1(3) <= signed(sample_1);
+                    read_data_s3(0) <= read_data(0);
+                    read_data_s3(1) <= read_data(1);
+                    read_data_s3(2) <= read_data(2);
+                when others =>
+                    read_data_s1(0) <= signed(sample_1);
+                    read_data_s3(1) <= read_data(1);
+                    read_data_s3(2) <= read_data(2);
+                    read_data_s3(3) <= read_data(3);
+            end case;
+            
             case bndx is
                 when 0 =>
                     write_en <= "0001";
@@ -185,8 +239,8 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
                     write_en <= "1000";
                     read_data_s1(3) <= signed(sample_1);
                 when others =>		
-                    write_en <= "0000";	
-                    read_data_s1(0) <= signed(sample_1); 
+                    write_en <= "0000";
+                    read_data_s1(0) <= signed(sample_1);
             end case;
             
             block_valid_s2 <= block_valid_s1;
