@@ -5,6 +5,7 @@ COREUART_LIB = COREUART_LIB
 presynth = presynth
 COREFIFO_LIB = COREFIFO_LIB
 
+
 [vcom]
 VHDL93 = 1
 

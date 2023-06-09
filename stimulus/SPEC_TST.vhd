@@ -90,8 +90,8 @@ architecture behavioral of SPEC_TST is
 
 begin
 
-    val1_new <= <<signal .SPEC_TST.spec_notch_pf.val1 : std_logic_vector(31 downto 0)>>;
-    val1_org <= <<signal .SPEC_TST.spec_notch_nopf.val1 : std_logic_vector(31 downto 0)>>;
+    --val1_new <= <<signal .SPEC_TST.spec_notch_pf.val1 : std_logic_vector(31 downto 0)>>;
+    --val1_org <= <<signal .SPEC_TST.spec_notch_nopf.val1 : std_logic_vector(31 downto 0)>>;
 
     process
         variable vhdl_initial : BOOLEAN := TRUE;
@@ -135,11 +135,11 @@ begin
             notch_array(15)      <= "00000";
             wait for ( SYSCLK_PERIOD * 10 );
             
-            NSYSRESET <= '0';
+            --NSYSRESET <= '0';
             --wait;
-            wait for ( SYSCLK_PERIOD * 10000 );
-            NSYSRESET <= '1';
-            wait for ( SYSCLK_PERIOD * 10 );
+            --wait for ( SYSCLK_PERIOD * 10000 );
+            --NSYSRESET <= '1';
+            --wait for ( SYSCLK_PERIOD * 10 );
             
             NSYSRESET <= '0';
             wait;
@@ -249,7 +249,7 @@ begin
             reset => NSYSRESET,
             clk_enable => '1',
             Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"03",
+            Navg_main   =>  "00" & x"02",
             --sample1 => x"0" & sample1(13 downto 4),
             --sample2 => x"0" & sample2(13 downto 4),
             sample1 => sample1,
@@ -261,7 +261,7 @@ begin
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
             
-            notch_en    => '1',
+            notch_en    => '0',
             index_array => corr_array,
             index_array_notch => corr_array,
 
@@ -274,7 +274,7 @@ begin
             -- Inouts
 
         );
-    spec_notch_nopf : entity work.spectrometer_fixpt_old
+    spec_old : entity work.spectrometer_fixpt_old
         -- port map
         port map( 
             -- Inputs

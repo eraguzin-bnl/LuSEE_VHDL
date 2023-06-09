@@ -886,7 +886,7 @@ SIZE="8930"
 ENDFILE
 VALUE "<project>/hdl/average_instance_P1_fixpt.vhd,hdl"
 STATE="utd"
-TIME="1678978149"
+TIME="1686248311"
 SIZE="35367"
 ENDFILE
 VALUE "<project>/hdl/average_stage1.vhd,hdl"
@@ -1186,8 +1186,8 @@ SIZE="42196"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_old.vhd,hdl"
 STATE="utd"
-TIME="1685800570"
-SIZE="42218"
+TIME="1686328686"
+SIZE="19044"
 ENDFILE
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 STATE="utd"
@@ -1259,20 +1259,75 @@ STATE="utd"
 TIME="1684430231"
 SIZE="25958"
 ENDFILE
-VALUE "<project>/simulation/delete_this.vcd,vcd"
+VALUE "<project>/simulation/back_to_sample.log,log"
 STATE="utd"
-TIME="1685736800"
-SIZE="145"
+TIME="1686328579"
+SIZE="868"
+ENDFILE
+VALUE "<project>/simulation/back_to_sample_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1686329111"
+SIZE="12288"
+ENDFILE
+VALUE "<project>/simulation/back_to_sample_spec_old.vcd,vcd"
+STATE="utd"
+TIME="1686329110"
+SIZE="12288"
+ENDFILE
+VALUE "<project>/simulation/emi_clean_7MHz.log,log"
+STATE="utd"
+TIME="1686331680"
+SIZE="868"
+ENDFILE
+VALUE "<project>/simulation/emi_clean_7MHz_notch.log,log"
+STATE="utd"
+TIME="1686333230"
+SIZE="116389"
+ENDFILE
+VALUE "<project>/simulation/emi_clean_7MHz_notch_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1686333702"
+SIZE="24576"
+ENDFILE
+VALUE "<project>/simulation/emi_clean_7MHz_notch_spec_old.vcd,vcd"
+STATE="utd"
+TIME="1686333702"
+SIZE="24576"
+ENDFILE
+VALUE "<project>/simulation/emi_clean_7MHz_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1686332141"
+SIZE="16384"
+ENDFILE
+VALUE "<project>/simulation/emi_clean_7MHz_spec_old.vcd,vcd"
+STATE="utd"
+TIME="1686332140"
+SIZE="16384"
+ENDFILE
+VALUE "<project>/simulation/emi_noisy_5MHz.log,log"
+STATE="utd"
+TIME="1686332267"
+SIZE="868"
+ENDFILE
+VALUE "<project>/simulation/emi_noisy_5MHz_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1686332737"
+SIZE="20480"
+ENDFILE
+VALUE "<project>/simulation/emi_noisy_5MHz_spec_old.vcd,vcd"
+STATE="utd"
+TIME="1686332736"
+SIZE="20480"
 ENDFILE
 VALUE "<project>/simulation/make_libero.log,log"
 STATE="utd"
-TIME="1684429640"
-SIZE="40013"
+TIME="1686325968"
+SIZE="42191"
 ENDFILE
 VALUE "<project>/simulation/new_block_test.log,log"
 STATE="utd"
-TIME="1685718789"
-SIZE="864"
+TIME="1685729434"
+SIZE="546470"
 ENDFILE
 VALUE "<project>/simulation/PF_TPSRAM_WEIGHT_FOLD_PF_TPSRAM_WEIGHT_FOLD_0_PF_TPSRAM_R0C0.mem,sim"
 STATE="utd"
@@ -1294,18 +1349,18 @@ PARENT="<project>/component/work/PF_TPSRAM_WEIGHT_FOLD/PF_TPSRAM_WEIGHT_FOLD_0/P
 ENDFILE
 VALUE "<project>/simulation/presynth_simulation.log,log"
 STATE="utd"
-TIME="1685718777"
-SIZE="7096"
+TIME="1686328828"
+SIZE="25189"
 ENDFILE
 VALUE "<project>/simulation/run.do,do"
 STATE="utd"
-TIME="1685656412"
-SIZE="13766"
+TIME="1686325387"
+SIZE="14206"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE.do,do"
 STATE="utd"
-TIME="1685649631"
-SIZE="23144"
+TIME="1686324633"
+SIZE="23571"
 ENDFILE
 VALUE "<project>/simulation/run_LuSEE_hw.do,do"
 STATE="utd"
@@ -1317,20 +1372,40 @@ STATE="utd"
 TIME="1684426131"
 SIZE="23257"
 ENDFILE
-VALUE "<project>/simulation/SPEC_TST_RAW_presynth_simulation.log,log"
+VALUE "<project>/simulation/SPEC_TST_presynth_simulation.log,log"
 STATE="utd"
-TIME="1685740839"
-SIZE="228475"
+TIME="1686345226"
+SIZE="28256"
+ENDFILE
+VALUE "<project>/simulation/test_w_sky.log,log"
+STATE="utd"
+TIME="1686344948"
+SIZE="207865"
+ENDFILE
+VALUE "<project>/simulation/test_w_sky_spec_notch_pf.vcd,vcd"
+STATE="utd"
+TIME="1686345128"
+SIZE="8192"
+ENDFILE
+VALUE "<project>/simulation/test_w_sky_spec_old.vcd,vcd"
+STATE="utd"
+TIME="1686345128"
+SIZE="8192"
 ENDFILE
 VALUE "<project>/simulation/two_tone.log,log"
 STATE="utd"
-TIME="1685735233"
-SIZE="151943"
+TIME="1685735799"
+SIZE="152941"
 ENDFILE
 VALUE "<project>/simulation/two_tone_spec_notch_pf.vcd,vcd"
 STATE="utd"
-TIME="1685735247"
-SIZE="73728"
+TIME="1685735798"
+SIZE="102875"
+ENDFILE
+VALUE "<project>/simulation/two_tone_test.log,log"
+STATE="utd"
+TIME="1686325967"
+SIZE="217790"
 ENDFILE
 VALUE "<project>/stimulus/ADS4245_tst.vhd,tb_hdl"
 STATE="utd"
@@ -1369,13 +1444,13 @@ SIZE="21310"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
 STATE="utd"
-TIME="1686156461"
-SIZE="11656"
+TIME="1686346411"
+SIZE="11661"
 ENDFILE
 VALUE "<project>/stimulus/SPEC_TST_RAW.vhd,tb_hdl"
 STATE="utd"
-TIME="1685734194"
-SIZE="7248"
+TIME="1686334312"
+SIZE="8851"
 ENDFILE
 VALUE "<project>/stimulus/TWDL_ROM_test.vhd,tb_hdl"
 STATE="utd"
@@ -1384,37 +1459,52 @@ SIZE="2708"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.so,so"
 STATE="utd"
-TIME="1685564259"
+TIME="1685993694"
 SIZE="251"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL.vm,syn_vm"
 STATE="ood"
-TIME="1685564249"
-SIZE="26752213"
+TIME="1685993676"
+SIZE="47670846"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_syn.prj,prj"
 STATE="utd"
-TIME="1685562774"
-SIZE="19518"
+TIME="1686169095"
+SIZE="20402"
 ENDFILE
 VALUE "<project>/synthesis/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1685564253"
+TIME="1685993684"
 SIZE="28344"
 ENDFILE
 VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.so,so"
 STATE="utd"
-TIME="1685724069"
+TIME="1686164755"
 SIZE="263"
 ENDFILE
 VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm"
-STATE="utd"
-TIME="1685998236"
-SIZE="12726272"
+STATE="ood"
+TIME="1686164735"
+SIZE="53569196"
 ENDFILE
 VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1685724061"
+TIME="1686164744"
+SIZE="29378"
+ENDFILE
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.so,so"
+STATE="utd"
+TIME="1686342264"
+SIZE="263"
+ENDFILE
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm"
+STATE="utd"
+TIME="1686342241"
+SIZE="52343041"
+ENDFILE
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1686342251"
 SIZE="29378"
 ENDFILE
 VALUE "<project>/synthesis/synwork/layer0.so,so"
@@ -1796,14 +1886,14 @@ VALUE "<project>/hdl/weight_streamer_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/weight_fold_instance_1_fixpt_old.vhd,hdl"
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt_old.vhd,hdl"
+VALUE "<project>/hdl/average_instance_P1_fixpt.vhd,hdl"
 VALUE "<project>/hdl/spectrometer_fixpt_old.vhd,hdl"
 VALUE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 ENDFILELIST
 ENDLIST
 ENDLIST 
 LIST AssociatedStimulus
-VALUE "<project>/stimulus/FIRST_HALF_TST.vhd,tb_hdl"
-VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
+VALUE "<project>/stimulus/SPEC_TST_RAW.vhd,tb_hdl"
 ENDLIST
 LIST SynthesisConstraints
 VALUE "<project>/constraint/LuSEE_PF_EVAL_derived_constraints.sdc,sdc"
@@ -1821,7 +1911,9 @@ ENDLIST
 LIST ProjectState5.1
 LIST Impl1
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1846,7 +1938,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl2
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1866,7 +1960,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl3
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1886,7 +1982,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl4
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1906,7 +2004,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl5
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1926,7 +2026,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl6
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1946,7 +2048,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl7
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1966,7 +2070,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl8
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -1986,7 +2092,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl9
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -2006,7 +2114,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl10
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -2026,7 +2136,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl11
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -2039,15 +2151,17 @@ VALUE "<project>/phy_synthesis/LuSEE_PF_EVAL_palace.gcf,palace_gcf"
 VALUE "<project>/phy_synthesis/LuSEE_PF_EVAL_palace.pdc,palace_pdc"
 VALUE "<project>/phy_synthesis/LuSEE_PF_EVAL_palace.sdc,palace_sdc"
 VALUE "<project>/phy_synthesis/LuSEE_PF_EVAL_palace.vhd,palace_hdl"
-VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm"
-VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL_sdc.sdc,syn_sdc"
-VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vhd,syn_hdl"
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm"
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL_sdc.sdc,syn_sdc"
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vhd,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
 LIST synthesis_implementations
 VALUE "synthesis"
 VALUE "synthesis_1"
+VALUE "synthesis_2"
+VALUE "synthesis_3"
 ENDLIST
 ENDLIST
 LIST "PF_TPSRAM_WEIGHT_FOLD_PF_TPSRAM_WEIGHT_FOLD_0_PF_TPSRAM::work"
@@ -2924,8 +3038,7 @@ ENDLIST
 ENDLIST
 LIST AssociatedStimulus
 LIST LuSEE_PF_EVAL
-VALUE "<project>/stimulus/FIRST_HALF_TST.vhd,tb_hdl"
-VALUE "<project>/stimulus/SPEC_TST.vhd,tb_hdl"
+VALUE "<project>/stimulus/SPEC_TST_RAW.vhd,tb_hdl"
 ENDLIST
 LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
 VALUE "<project>/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd,tb_hdl"
@@ -3024,7 +3137,7 @@ EntityName=SPEC_TST
 TopInstanceName=<top>_0
 DoFileName=/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/simulation/run_LuSEE.do
 DoFileName2=wave.do
-DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL avg3_2_raw_samples HW_NOTCH_TST hw_notch_pf
+DoFileParams=/usr/local/microchip/Libero_SoC_v2022.3/Libero /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL two_tone_test SPEC_TST_RAW spec_notch_pf spec_old
 DisplayDUTWave=false
 LogAllSignals=false
 DisablePulseFiltering=false
@@ -3336,7 +3449,9 @@ ENDLIST
 LIST "LuSEE_PF_EVAL::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3361,7 +3476,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl2
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3381,7 +3498,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl3
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3401,7 +3520,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl4
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3421,7 +3542,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl5
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3441,7 +3564,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl6
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3461,7 +3586,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl7
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3481,7 +3608,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl8
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3501,7 +3630,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl9
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3521,7 +3652,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl10
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3541,7 +3674,9 @@ ENDUsed_File_List
 ENDLIST
 LIST Impl11
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>/synthesis/LuSEE_PF_EVAL.edn,syn_edn)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm)=StateFailure
+ideSYNTHESIS(<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3554,9 +3689,9 @@ VALUE "<project>/phy_synthesis/LuSEE_PF_EVAL_palace.gcf,palace_gcf"
 VALUE "<project>/phy_synthesis/LuSEE_PF_EVAL_palace.pdc,palace_pdc"
 VALUE "<project>/phy_synthesis/LuSEE_PF_EVAL_palace.sdc,palace_sdc"
 VALUE "<project>/phy_synthesis/LuSEE_PF_EVAL_palace.vhd,palace_hdl"
-VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vm,syn_vm"
-VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL_sdc.sdc,syn_sdc"
-VALUE "<project>/synthesis/synthesis_1/LuSEE_PF_EVAL.vhd,syn_hdl"
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vm,syn_vm"
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL_sdc.sdc,syn_sdc"
+VALUE "<project>/synthesis/synthesis_2/LuSEE_PF_EVAL.vhd,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
@@ -4475,6 +4610,7 @@ VALUE "<project>/hdl/weight_streamer_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/spectrometer_fixpt_pkg.vhd,hdl"
 VALUE "<project>/hdl/weight_fold_instance_1_fixpt_old.vhd,hdl"
 VALUE "<project>/hdl/deinterlace_instance_12_fixpt_old.vhd,hdl"
+VALUE "<project>/hdl/average_instance_P1_fixpt.vhd,hdl"
 VALUE "<project>/hdl/spectrometer_fixpt_old.vhd,hdl"
 VALUE "<project>/hdl/LuSEE_PF_EVAL.vhd,hdl"
 ENDFILELIST
@@ -4485,12 +4621,12 @@ LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
 ReportsCurrentItem;Run Programming Action:LuSEE_PF_EVAL_PROGRAM.log
+HDL;stimulus/SPEC_TST_RAW.vhd;0
 HDL;hdl/spectrometer_fixpt.vhd;0
-HDL;hdl/weight_fold_instance_1_fixpt.vhd;0
-HDL;stimulus/FIRST_HALF_TST.vhd;0
-HDL;hdl/average_stage1_signed.vhd;0
+HDL;hdl/LuSEE_PF_EVAL.vhd;0
+HDL;hdl/spectrometer_fixpt_old.vhd;0
 HDL;stimulus/SPEC_TST.vhd;0
-ACTIVEVIEW;hdl/average_stage1_signed.vhd
+ACTIVEVIEW;stimulus/SPEC_TST.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_UART_RDOUT::work","hdl/ADC_UART_RDOUT.vhd","FALSE","FALSE"
@@ -4741,7 +4877,6 @@ ENDLIST
 LIST "RADIX22FFT_SDF1_1::work","hdl/RADIX22FFT_SDF1_1.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator1::work","hdl/SDFCommutator1.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF1_11::work","hdl/RADIX22FFT_SDF1_11.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator11::work","hdl/SDFCommutator11.vhd","FALSE","FALSE"
@@ -4751,29 +4886,24 @@ LIST "RADIX22FFT_SDF1_3::work","hdl/RADIX22FFT_SDF1_3.vhd","FALSE","FALSE"
 SUBBLOCK "Complex4Multiply_generic::work","hdl/Complex4Multiply_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator3::work","hdl/SDFCommutator3.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF1_5::work","hdl/RADIX22FFT_SDF1_5.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator5::work","hdl/SDFCommutator5.vhd","FALSE","FALSE"
 SUBBLOCK "Complex4Multiply_generic::work","hdl/Complex4Multiply_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF1_7::work","hdl/RADIX22FFT_SDF1_7.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator7::work","hdl/SDFCommutator7.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "Complex4Multiply_generic::work","hdl/Complex4Multiply_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF1_9::work","hdl/RADIX22FFT_SDF1_9.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator9::work","hdl/SDFCommutator9.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "Complex4Multiply_generic::work","hdl/Complex4Multiply_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF2_10::work","hdl/RADIX22FFT_SDF2_10.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator10::work","hdl/SDFCommutator10.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF2_12::work","hdl/RADIX22FFT_SDF2_12.vhd","FALSE","FALSE"
@@ -4782,73 +4912,56 @@ ENDLIST
 LIST "RADIX22FFT_SDF2_2::work","hdl/RADIX22FFT_SDF2_2.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator2::work","hdl/SDFCommutator2.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF2_4::work","hdl/RADIX22FFT_SDF2_4.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator4::work","hdl/SDFCommutator4.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF2_6::work","hdl/RADIX22FFT_SDF2_6.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator6::work","hdl/SDFCommutator6.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX22FFT_SDF2_8::work","hdl/RADIX22FFT_SDF2_8.vhd","FALSE","FALSE"
 SUBBLOCK "SDFCommutator8::work","hdl/SDFCommutator8.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "RADIX2FFT_bitNatural::work","hdl/RADIX2FFT_bitNatural.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator1::work","hdl/SDFCommutator1.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator10::work","hdl/SDFCommutator10.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator11::work","hdl/SDFCommutator11.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator12::work","hdl/SDFCommutator12.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator2::work","hdl/SDFCommutator2.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator3::work","hdl/SDFCommutator3.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator4::work","hdl/SDFCommutator4.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator5::work","hdl/SDFCommutator5.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator6::work","hdl/SDFCommutator6.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator7::work","hdl/SDFCommutator7.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator8::work","hdl/SDFCommutator8.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "SDFCommutator9::work","hdl/SDFCommutator9.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "sfft_fixpt::work","hdl/sfft_fixpt.vhd","FALSE","FALSE"
@@ -4866,10 +4979,8 @@ SUBBLOCK "weight_fold_instance_1_fixpt::work","hdl/weight_fold_instance_1_fixpt.
 SUBBLOCK "weight_streamer_fixpt::work","hdl/weight_streamer_fixpt.vhd","FALSE","FALSE"
 ENDLIST
 LIST "spectrometer_fixpt_old::work","hdl/spectrometer_fixpt_old.vhd","FALSE","FALSE"
-SUBBLOCK "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
-SUBBLOCK "correlate_fixpt::work","hdl/correlate_fixpt.vhd","FALSE","FALSE"
+SUBBLOCK "average_instance_P1_fixpt::work","hdl/average_instance_P1_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "deinterlace_instance_12_fixpt_old::work","hdl/deinterlace_instance_12_fixpt_old.vhd","FALSE","FALSE"
-SUBBLOCK "average_stage1_signed::work","hdl/average_stage1_signed.vhd","FALSE","FALSE"
 SUBBLOCK "sfft_fixpt::work","hdl/sfft_fixpt.vhd","FALSE","FALSE"
 SUBBLOCK "weight_fold_instance_1_fixpt_old::work","hdl/weight_fold_instance_1_fixpt_old.vhd","FALSE","FALSE"
 SUBBLOCK "weight_streamer_fixpt::work","hdl/weight_streamer_fixpt.vhd","FALSE","FALSE"
@@ -4906,7 +5017,6 @@ SUBBLOCK "Multiply_generic17::work","hdl/Multiply_generic_17.vhd","FALSE","FALSE
 SUBBLOCK "PF_TPSRAM_WEIGHT_FOLD::work","component/work/PF_TPSRAM_WEIGHT_FOLD/PF_TPSRAM_WEIGHT_FOLD.v","TRUE","FALSE"
 ENDLIST
 LIST "weight_fold_instance_1_fixpt_old::work","hdl/weight_fold_instance_1_fixpt_old.vhd","FALSE","FALSE"
-SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 SUBBLOCK "SimpleDualPortRAM_generic::work","hdl/SimpleDualPortRAM_generic.vhd","FALSE","FALSE"
 ENDLIST
 LIST "weight_streamer_fixpt::work","hdl/weight_streamer_fixpt.vhd","FALSE","FALSE"
@@ -4959,6 +5069,7 @@ SUBBLOCK "spectrometer_fixpt_old::work","hdl/spectrometer_fixpt_old.vhd","FALSE"
 ENDLIST
 LIST "SPEC_TST_RAW::work","stimulus/SPEC_TST_RAW.vhd","FALSE","TRUE"
 SUBBLOCK "spectrometer_fixpt::work","hdl/spectrometer_fixpt.vhd","FALSE","FALSE"
+SUBBLOCK "spectrometer_fixpt_old::work","hdl/spectrometer_fixpt_old.vhd","FALSE","FALSE"
 ENDLIST
 LIST "testbench::work","component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/TB.vhd","FALSE","TRUE"
 SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_COREFIFO::corefifo_lib","component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd","FALSE","FALSE"
