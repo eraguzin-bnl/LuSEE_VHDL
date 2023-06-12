@@ -57,6 +57,7 @@ ENTITY spectrometer_fixpt IS
         deinterlace_DLY                   :   IN    std_logic_vector(3 DOWNTO 0); 
         AVG_DLY                           :   IN    std_logic_vector(3 DOWNTO 0); 
         
+        weight_fold_shift                 :   IN    std_logic_vector(4 DOWNTO 0);
         notch_en                          :   IN    std_logic;
         index_array                       :   IN    vector_of_std_logic_vector5(15 downto 0);
         index_array_notch                 :   IN    vector_of_std_logic_vector5(15 downto 0);
@@ -320,7 +321,7 @@ BEGIN
             w2                   => w2_s2,
             w3                   => w3_s2,
             w4                   => w4_s2,
-
+            val_division         => weight_fold_shift,
             ce_out               => weight_stream_valid,
             val_out              => val1
             );
@@ -335,7 +336,7 @@ BEGIN
             w2                   => w2_s3,
             w3                   => w3_s3,
             w4                   => w4_s3,
-         
+            val_division         => weight_fold_shift,
             ce_out               => open,
             val_out              => val2
             );
@@ -354,6 +355,7 @@ BEGIN
         end if;
     end process;
    
+    --FFT is unchanged from Matlab generated block except multiplier was replaced by our custom pipelined multiplier
     sfft_fixpt_inst : entity work.sfft_fixpt
         PORT map
             ( clk                => clk,

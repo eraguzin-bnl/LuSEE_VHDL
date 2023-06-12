@@ -411,7 +411,7 @@ begin
             sfft_DLY => x"A",
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
-            
+            weight_fold_shift => "0" & x"D",
             notch_en    => '1',
             index_array => corr_array,
             index_array_notch => corr_array,

@@ -631,7 +631,7 @@ port MAP (
               sfft_DLY          => sfft_DLY,  
               deinterlace_DLY   => deinterlace_DLY, 
               AVG_DLY           => AVG_DLY,
-              
+              weight_fold_shift => "0" & x"D",
               notch_en          => notch_en,
               index_array       => corr_array,
               index_array_notch => notch_array,

@@ -200,6 +200,7 @@ begin
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
             
+            weight_fold_shift => "0" & x"D",
             notch_en    => '0',
             index_array => corr_array,
             index_array_notch => corr_array,

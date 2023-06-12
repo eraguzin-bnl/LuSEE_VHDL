@@ -7,9 +7,9 @@
 --
 -- Description: 
 --
--- This will be a mid-level block that takes in the 4 multiplicands, assuming the conjugates have already been taken in the block above.
+-- This is a mid-level block that takes in the 4 multiplicands, assuming the conjugates have already been accounted for in the block above.
 -- This will deal with the bit sizes and send them to a deeper block for the multiplications
--- It will then subtract the products and send the result back up
+-- It will then add/subtract the products and send the result back up
 --
 -- Targeted device: <Family::PolarFire> <Die::MPF300T> <Package::FCG1152>
 -- Author: Eric Raguzin
@@ -49,9 +49,7 @@ architecture architecture_correlate_operation of correlate_operation is
     SIGNAL product_2_signed     : signed(63 DOWNTO 0);
     SIGNAL product_2_cast       : signed(64 DOWNTO 0);
     SIGNAL result               : signed(64 DOWNTO 0);
-    --SIGNAL test_slice           : signed(64 DOWNTO 0);
     SIGNAL slice                : integer range 0 to 33;
-    --SIGNAL signed_output        : signed(31 DOWNTO 0);
     SIGNAL ready_out1           : std_logic;
     SIGNAL ready_out2           : std_logic;
     SIGNAL or_out               : std_logic;
@@ -60,7 +58,8 @@ architecture architecture_correlate_operation of correlate_operation is
     CONSTANT error_zeroes       : signed(64 downto 0) := (others=>'0');
 
 begin
-
+    --Custom made 32 x 32 bit pipelined multipliers
+    --Valid out matches when o_m is valid
     mult1 : entity work.Multiply_generic32
         generic map(
             size => size)
@@ -97,13 +96,15 @@ begin
             o_m => product_2
         );
         
+    --Products are turned to signed values and resized
+    --Because they may be added (account for carry bit)
     product_1_signed <= signed(product_1);
     product_2_signed <= signed(product_2);
     
-    product_1_cast <= resize(product_1_signed, 65);
-    product_2_cast <= resize(product_2_signed, 65);
+    product_1_cast   <= resize(product_1_signed, 65);
+    product_2_cast   <= resize(product_2_signed, 65);
     
-    error <= error_s;
+    error            <= error_s;
     
     process (clk) 
         variable result_shifted : signed(64 DOWNTO 0) := (others=>'0');
@@ -111,28 +112,35 @@ begin
         begin
         if (rising_edge(clk)) then
             if (rstb = '1') then
-                or_out <= '0';
-                valid_out <= '0';
-                result <= (others=>'0');
-                error_s <= '0';
-                o_m <= (others=>'0');
-                result_shifted := (others=>'0');
-                test_slice := (others=>'0');
+                or_out           <= '0';
+                valid_out        <= '0';
+                result           <= (others=>'0');
+                error_s          <= '0';
+                o_m              <= (others=>'0');
+                result_shifted   := (others=>'0');
+                test_slice       := (others=>'0');
             else
+                --In accordance with the math behind the correlation, we can either choose to add or subtract these products:
+                --https://docs.google.com/document/d/1Lwyd6R5K137iAEkU46W6g1r_I-K36TcrstWcGuUA1Do/edit
                 if (operation = '0') then
-                    result <= product_1_cast - product_2_cast;
+                    result       <= product_1_cast - product_2_cast;
                 else
-                    result <= product_1_cast + product_2_cast;
+                    result       <= product_1_cast + product_2_cast;
                 end if;
-                or_out <= ready_out1 or ready_out2;
-                valid_out <= or_out;
+                
+                --This value is how many bits to shift the result right by
+                --The result could potentially be 65 bits long and we need to return a 32 bit value
+                --If the value truly does use the full size, then we want to shift it 33 bits to keep the MSBs
+                --If the MSB of the value is in bit 18, we can just take the lower 32 bits
+                --It's up to the user or microcontroller to monitor the output and decide
                 slice <= to_integer(unsigned(index));
                 if (or_out = '1') then
                     -- If line below is commented, it's a sticky error flag, if not, it will reflect the output each cycle
                     --error_s <= '0';
                     result_shifted := shift_right(result, slice);
-                    o_m <= std_logic_vector(result_shifted(64) & result_shifted(30 DOWNTO 0));
+                    o_m <= std_logic_vector(result_shifted(31 DOWNTO 0));
                     
+                    --Checks to make an error flag that will show if we didn't shift enough and left some MSBs with value leftoever
                     test_slice := shift_right(result, slice + 31);
                     -- Will be one cycle later than output
                     -- First check to see if number is negative
@@ -148,6 +156,10 @@ begin
                         end if;
                     end if;
                 end if;
+                
+                --Pipelined valid flag output
+                or_out <= ready_out1 or ready_out2;
+                valid_out <= or_out;
             end if;
         end if;        
     end process;

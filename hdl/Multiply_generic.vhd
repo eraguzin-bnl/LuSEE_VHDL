@@ -1,7 +1,8 @@
 library ieee ;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+--Eric Raguzin
+--Custom pipelined multiplier block for 42 x 32 bit multiplication
 entity Multiply_generic is
 generic(
   a_size : integer := 42

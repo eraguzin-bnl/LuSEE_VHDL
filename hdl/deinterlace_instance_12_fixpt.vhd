@@ -43,7 +43,12 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
---Note that whatever bit representation the values come in as, there's an extra implied 0 at the end of the output
+--This block takes in data from the FFT. The complex FFT took in channel 1 and 2 as its real and imaginary
+--This block needs to take the output and decouple it to ch1_re, ch1_im, ch2_re, ch2-im
+--4096 values will come in. We want to add/subtract value 2049 + 2047, 2050 + 2046, etc...
+--So I save the first 2048 values in a RAM block and then read it out as the corresponding
+--Sample from the second half is coming in so we can do the operation on it
+
 ENTITY deinterlace_instance_12_fixpt IS
   PORT( clk                               :   IN    std_logic;
         reset                             :   IN    std_logic;
@@ -97,11 +102,11 @@ ARCHITECTURE rtl OF deinterlace_instance_12_fixpt IS
     signal fft_val_im_s1                  : signed(31 downto 0);
 
     signal count                          : integer range 0 to 4095;
-    signal bin_s1                         : integer range 0 to 4096;
-    signal bin_s2                         : integer range 0 to 4096;
-    signal bin_s3                         : integer range 0 to 4096;
-    signal bin_s4                         : integer range 0 to 4096;
-    signal bin_s5                         : integer range 0 to 4096;
+    signal bin_s1                         : integer range 0 to 4095;
+    signal bin_s2                         : integer range 0 to 4095;
+    signal bin_s3                         : integer range 0 to 4095;
+    signal bin_s4                         : integer range 0 to 4095;
+    signal bin_s5                         : integer range 0 to 4095;
 
     signal fft_val_im_resize              : signed(32 downto 0);
     signal fft_val_im_neg                 : signed(32 downto 0);
@@ -122,162 +127,169 @@ ARCHITECTURE rtl OF deinterlace_instance_12_fixpt IS
     signal fft_val_dif_im                 : signed(32 downto 0);
 
 BEGIN
+--The two RAM blocks for the real and imaginary inputs from the FFT
+--RAM blocks have pipelining enabled at the IP core level
+--So after clocking in a read address, the appropriate read data will
+--come out 2 clock cycles later
     real_buffer : PF_TPSRAM_C1
     PORT MAP( 
-        CLK => clk,
-        R_ADDR => read_address_re(10 downto 0),
-        W_EN => write_en_re,
-        W_ADDR => write_address_re(10 downto 0),
-        W_DATA => write_data_re,
-        R_DATA => read_data_re
+        CLK       => clk,
+        R_ADDR    => read_address_re(10 downto 0),
+        W_EN      => write_en_re,
+        W_ADDR    => write_address_re(10 downto 0),
+        W_DATA    => write_data_re,
+        R_DATA    => read_data_re
         );
         
     imag_buffer : PF_TPSRAM_C1
     PORT MAP( 
-        CLK => clk,
-        R_ADDR => read_address_im(10 downto 0),
-        W_EN => write_en_im,
-        W_ADDR => write_address_im(10 downto 0),
-        W_DATA => write_data_im,
-        R_DATA => read_data_im
+        CLK       => clk,
+        R_ADDR    => read_address_im(10 downto 0),
+        W_EN      => write_en_im,
+        W_ADDR    => write_address_im(10 downto 0),
+        W_DATA    => write_data_im,
+        R_DATA    => read_data_im
         );
 
     process (clk)
     begin
     if (rising_edge(clk)) then
         if (reset = '1') then
-            write_en_re <= '0';
-            write_en_im <= '0';
-            write_address_re <= (others=>'0');
-            write_address_im <= (others=>'0');
-            write_data_re <= (others=>'0');
-            write_data_im <= (others=>'0');
-            read_address_re <= (others=>'0');
-            read_address_im <= (others=>'0');
-            count <= 0;
-            bin_s1 <= 1;
-            bin_s2 <= 0;
-            bin_s3 <= 0;
-            bin_s4 <= 0;
-            bin_s5 <= 0;
-            fft_val_b_re <= (others=>'0');
-            fft_val_b_im <= (others=>'0');
-            ready_s1 <= '0';
-            ready_s2 <= '0';
-            ready_s3 <= '0';
-            ready_s4 <= '0';
+            write_en_re              <= '0';
+            write_en_im              <= '0';
+            write_address_re         <= (others=>'0');
+            write_address_im         <= (others=>'0');
+            write_data_re            <= (others=>'0');
+            write_data_im            <= (others=>'0');
+            read_address_re          <= (others=>'0');
+            read_address_im          <= (others=>'0');
+            count                    <= 0;
+            bin_s1                   <= 1;
+            bin_s2                   <= 0;
+            bin_s3                   <= 0;
+            bin_s4                   <= 0;
+            bin_s5                   <= 0;
+            fft_val_b_re             <= (others=>'0');
+            fft_val_b_im             <= (others=>'0');
+            ready_s1                 <= '0';
+            ready_s2                 <= '0';
+            ready_s3                 <= '0';
+            ready_s4                 <= '0';
             
-            fft_valid_s         <= '0';
-            fft_val_re_s        <= (others=>'0');
-            fft_val_im_s        <= (others=>'0');
-            fft_val_re_s1       <= (others=>'0');
-            fft_val_re_s2       <= (others=>'0');
-            fft_val_re_s3       <= (others=>'0');
-            --fft_val_im_s1       <= (others=>'0');
+            fft_valid_s              <= '0';
+            fft_val_re_s             <= (others=>'0');
+            fft_val_im_s             <= (others=>'0');
+            fft_val_re_s1            <= (others=>'0');
+            fft_val_re_s2            <= (others=>'0');
+            fft_val_re_s3            <= (others=>'0');
             
-            fft_val_im_resize  <= (others=>'0');
-            fft_val_im_neg     <= (others=>'0');
-            fft_val_im_conj    <= (others=>'0');
-            fft_val_im_conj_s1 <= (others=>'0');
+            fft_val_im_resize        <= (others=>'0');
+            fft_val_im_neg           <= (others=>'0');
+            fft_val_im_conj          <= (others=>'0');
+            fft_val_im_conj_s1       <= (others=>'0');
 
-            fft_val_sum_re                 <= (others=>'0');
-            fft_val_sum_im                 <= (others=>'0');
-            fft_val_dif_re                 <= (others=>'0');
-            fft_val_dif_im                 <= (others=>'0');
+            fft_val_sum_re           <= (others=>'0');
+            fft_val_sum_im           <= (others=>'0');
+            fft_val_dif_re           <= (others=>'0');
+            fft_val_dif_im           <= (others=>'0');
         else
-            fft_valid_s <= fft_valid;
-            fft_val_re_s <= signed(fft_val_re);
-            fft_val_im_s <= signed(fft_val_im);
+            --Pipeline the input and only do these things if the valid flag is high
+            fft_valid_s    <= fft_valid;
+            fft_val_re_s   <= signed(fft_val_re);
+            fft_val_im_s   <= signed(fft_val_im);
             if (fft_valid_s = '1') then
                 if (count = 4095) then
-                    count <= 0;
+                    count  <= 0;
                 else
-                    count <= count + 1;
+                    count  <= count + 1;
                 end if;
             end if;
             
-            bin_s1 <= 4095 - count;
-            read_address_re <= std_logic_vector(to_unsigned(bin_s1,read_address_re'length));
-            read_address_im <= std_logic_vector(to_unsigned(bin_s1,read_address_im'length));
+            --bin is the index used for the read address of the RAM block
+            --So it's really only relevant when the incoming count passes 2048, then it will be the lower
+            --index going down. So that it can be a clean expression, I just always have it being calculated like this.
+            --Since it's a 12 bit value and the read address only ends up using 11 bits, the values above 2048 are not used anyway
+            --And it will just read out values from other addresses
+            bin_s1                 <= 4095 - count;
+            read_address_re        <= std_logic_vector(to_unsigned(bin_s1,read_address_re'length));
+            read_address_im        <= std_logic_vector(to_unsigned(bin_s1,read_address_im'length));
             if (count < 2048) then
-                write_address_re <= std_logic_vector(to_unsigned(count + 1,write_address_re'length));
-                write_address_im <= std_logic_vector(to_unsigned(count + 1,write_address_im'length));
-                write_data_re <= fft_val_re_s;
-                write_data_im <= fft_val_im_s;
+                write_address_re   <= std_logic_vector(to_unsigned(count + 1,write_address_re'length));
+                write_address_im   <= std_logic_vector(to_unsigned(count + 1,write_address_im'length));
+                write_data_re      <= fft_val_re_s;
+                write_data_im      <= fft_val_im_s;
                 if (fft_valid_s = '1') then
-                    write_en_re <= '1';
-                    write_en_im <= '1';
+                    write_en_re    <= '1';
+                    write_en_im    <= '1';
                 else
-                    write_en_re <= '0';
-                    write_en_im <= '0';
+                    write_en_re    <= '0';
+                    write_en_im    <= '0';
                 end if;
-                fft_val_b_re <= (others=>'0');
-                fft_val_b_im <= (others=>'0');
+                fft_val_b_re       <= (others=>'0');
+                fft_val_b_im       <= (others=>'0');
             else
-                write_en_re <= '0';
-                write_en_im <= '0';
+                write_en_re        <= '0';
+                write_en_im        <= '0';
             end if;
             
             --These operations need to start being done when the incoming fft_valid is high
             --But because of pipelining, they need to continue past when fft_valid goes low
-            --To simplify it at this stage, I just have them all running constantly
-            fft_val_re_s1 <= resize(fft_val_re_s, 33);
-            fft_val_re_s2 <= fft_val_re_s1;
-            fft_val_re_s3 <= fft_val_re_s2;
-            --fft_val_im_s1 <= fft_val_im_s;
-            fft_val_b_re <= resize(read_data_re, 33);
-            fft_val_b_im <= resize(read_data_im, 33);
-            fft_val_im_resize <= resize(fft_val_im_s, 33);
-            fft_val_im_conj <=  - (fft_val_im_resize);
-            fft_val_im_conj_s1 <= fft_val_im_conj;
+            --To simplify it at this stage, because pipelining may change, I just have them all running constantly
+            fft_val_re_s1          <= resize(fft_val_re_s, 33);
+            fft_val_b_re           <= resize(read_data_re, 33);
+            fft_val_b_im           <= resize(read_data_im, 33);
+            fft_val_im_resize      <= resize(fft_val_im_s, 33);
             
-            bin_s2 <= bin_s1;
-            bin_s3 <= bin_s2;
-            bin_s4 <= bin_s3;
-            bin_s5 <= bin_s4;
-            bin <= std_logic_vector(to_unsigned(bin_s5,bin'length));
-
-            --ch1_val_re <= std_logic_vector(fft_val_b_re);
-            --ch1_val_im <= std_logic_vector(fft_val_b_im);
+            --The fft_val_b values that come from the pipelined RAM block have a 2 cycle delay
+            --So those 2 cycles are pipelined with the incoming value as well to match up for the addition/subtraction below
+            --Might as well split up the conjugate operation to be safer with timing
+            fft_val_re_s2          <= fft_val_re_s1;
+            fft_val_re_s3          <= fft_val_re_s2;
             
-            --ch2_val_re <= std_logic_vector(fft_val_b_re);
-            --ch2_val_im <= std_logic_vector(fft_val_b_im);
+            fft_val_im_conj        <=  - (fft_val_im_resize);
+            fft_val_im_conj_s1     <= fft_val_im_conj;
             
+            --The algorithm from Matlab is below:
             --ch1_val = 0.5*(fft_val_b+conj(fft_val));
             --ch2_val = complex(0,-0.5)*(fft_val_b-conj(fft_val));
             --If you do FOIL with the complex multiplication for ch2, you'll see how this shakes out
-            --Rather than add another negation I swapped the subtraction order for fft_val_dif_re
+            --real(fft_val_b) - real(fft_val) X complex(0,-1) = -im(fft_val_b) - (-im(fft_val)) =
+            --im(fft_val) - im(fft_val_b)
+            --Rather than add another negation I swapped the subtraction order for fft_val_dif_re and it's mathematically equivalent
+            --And I account for the multiplication by 0.5 and the fact that it's imaginary now rather than real below
+            fft_val_sum_re        <= fft_val_b_re + fft_val_re_s3;
+            fft_val_sum_im        <= fft_val_b_im + fft_val_im_conj_s1;
+            fft_val_dif_re        <= fft_val_re_s3 - fft_val_b_re;
+            fft_val_dif_im        <= fft_val_b_im - fft_val_im_conj_s1;
             
-            --These operations need to start being done when the incoming fft_valid is high
-            --But because of pipelining, they need to continue past when fft_valid goes low
-            --To simplify it at this stage, I just have them all running constantly
-            fft_val_sum_re <= fft_val_b_re + fft_val_re_s3;
-            fft_val_sum_im <= fft_val_b_im + fft_val_im_conj_s1;
-            fft_val_dif_re <= fft_val_re_s3 - fft_val_b_re;
-            fft_val_dif_im <= fft_val_b_im - fft_val_im_conj_s1;
+            --Then the values need to be divided by 2. Simple bit shift to the right
+            --Complex multiplication means that the ch2 real and imag outputs swap becaues it's multiplied by -0.5j.
+            --Check with FOIL!
+            ch1_val_re            <= std_logic_vector(resize(shift_right(fft_val_sum_re, integer(1)), 32));
+            ch1_val_im            <= std_logic_vector(resize(shift_right(fft_val_sum_im, integer(1)), 32));
+            ch2_val_re            <= std_logic_vector(resize(shift_right(fft_val_dif_im, integer(1)), 32));
+            ch2_val_im            <= std_logic_vector(resize(shift_right(fft_val_dif_re, integer(1)), 32));
+            
+            --The two pipelines because of the RAM block and then all the math are accounted for here for the block outputs
+            bin_s2                <= bin_s1;
+            bin_s3                <= bin_s2;
+            bin_s4                <= bin_s3;
+            bin_s5                <= bin_s4;
+            bin                   <= std_logic_vector(to_unsigned(bin_s5,bin'length));
+            
+            --Values and bin outputs of the block can be whatever, the next block will only take them in if the 'ready' flag is high
+            --So this pipeline should only start when valid data is coming in and valid data will be coming out at the end of it
             if ((fft_valid_s = '1') and (count > 2048)) then
-                ready_s1 <= '1';
-                
+                ready_s1          <= '1';
             else
-                ready_s1 <= '0';
-                --fft_val_sum_re <= (others=>'0');
-                --fft_val_sum_im <= (others=>'0');
-                --fft_val_dif_re <= (others=>'0');
-                --fft_val_dif_im <= (others=>'0');
+                ready_s1          <= '0';
             end if;
-            --Complex multiplication means that the ch2 outputs swap becaues it's multiplied by -0.5j
-            ch1_val_re <= std_logic_vector(resize(shift_right(fft_val_sum_re, integer(1)), 32));
-            ch1_val_im <= std_logic_vector(resize(shift_right(fft_val_sum_im, integer(1)), 32));
-            ch2_val_re <= std_logic_vector(resize(shift_right(fft_val_dif_im, integer(1)), 32));
-            ch2_val_im <= std_logic_vector(resize(shift_right(fft_val_dif_re, integer(1)), 32));
-
-            ready_s2 <= ready_s1;
-            ready_s3 <= ready_s2;
-            ready_s4 <= ready_s3;
-            ready <= ready_s4;
-            ce_out <= ready_s4;
+            ready_s2              <= ready_s1;
+            ready_s3              <= ready_s2;
+            ready_s4              <= ready_s3;
+            ready                 <= ready_s4;
+            ce_out                <= ready_s4;
         end if;
     end if;
     end process;
-
 END rtl;
