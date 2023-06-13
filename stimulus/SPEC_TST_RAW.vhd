@@ -51,6 +51,7 @@ architecture behavioral of SPEC_TST_RAW is
 
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
+    signal RESETRAM : std_logic := '0';
     
     signal pks_val             : vector_of_std_logic_vector32(15 downto 0);
     signal outbin_out              : vector_of_std_logic_vector11(15 downto 0);
@@ -118,6 +119,15 @@ begin
             wait for ( SYSCLK_PERIOD * 10 );
             
             NSYSRESET <= '0';
+            
+            wait for ( 200000 ns );
+            NSYSRESET <= '1';
+            wait for ( SYSCLK_PERIOD );
+            RESETRAM <= '1';
+            
+            wait for ( SYSCLK_PERIOD * 5000 );
+            NSYSRESET <= '0';
+            RESETRAM <= '0';
             wait;
         end if;
     end process;
@@ -194,11 +204,7 @@ begin
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',
-            Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
-            sfft_DLY => x"3",
-            deinterlace_DLY => (others=> '0'),
-            AVG_DLY => (others=> '0'),
+            reset_ram => RESETRAM,
             
             weight_fold_shift => "0" & x"D",
             notch_en    => '0',

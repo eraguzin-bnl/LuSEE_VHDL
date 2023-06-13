@@ -126,6 +126,7 @@ begin
                 ce_out            <= '0';
                 ready_out         <= '0';
                 subtract_error    <= '0';
+                state <= S_IDLE;
             else
                 navg_s <= navg;
                 --Average input shifts a value of 0x1 a certain amount of bits as specified by the user

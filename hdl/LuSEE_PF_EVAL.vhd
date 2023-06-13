@@ -280,6 +280,8 @@ SIGNAL  error_main_s                      : std_logic_vector(15 DOWNTO 0);
 SIGNAL  error_notch_s                     : std_logic_vector(15 DOWNTO 0);
 SIGNAL  corr_array                        : vector_of_std_logic_vector5(15 downto 0);
 SIGNAL  notch_array                       : vector_of_std_logic_vector5(15 downto 0);
+SIGNAL  weight_fold_shift                 : std_logic_vector(4 DOWNTO 0);
+SIGNAL  reset_ram                         : std_logic;
 
 begin
    
@@ -339,6 +341,9 @@ begin
     deinterlace_DLY    <= reg10_p(15 downto 12);  
     AVG_DLY            <= reg10_p(19 downto 16); 
     Navg_main          <= reg11_p(9 downto 0); 
+    
+    reset_ram          <= reg17_p(0);
+    weight_fold_shift  <= reg18_p(4 downto 0); 
     
     reg13_p_i           <= error_main_s & error_notch_s;
     reg12_p_i           <= x"0000" & error_subtract_s;
@@ -626,12 +631,8 @@ port MAP (
               sample2     => ADC_DATA_B_s,
               
               nstart            => nstart,  
-              Streamer_DLY      => Streamer_DLY,   
-              weight_fold_DLY   => weight_fold_DLY, 
-              sfft_DLY          => sfft_DLY,  
-              deinterlace_DLY   => deinterlace_DLY, 
-              AVG_DLY           => AVG_DLY,
-              weight_fold_shift => "0" & x"D",
+              reset_ram         => reset_ram,
+              weight_fold_shift => weight_fold_shift,
               notch_en          => notch_en,
               index_array       => corr_array,
               index_array_notch => notch_array,
@@ -645,34 +646,34 @@ port MAP (
               ready       => ready_new
               );     
               
-    spectrometer_fixpt_old_inst : entity  work.spectrometer_fixpt_old
-    PORT MAP( clk         => ADC_S_CLK, 
-              reset       => RESET_SYS,
-              clk_enable  => '1',
-              Navg_notch  =>  Navg_notch,
-              Navg_main   =>  Navg_main,
-              sample1     => ADC_DATA_A_s,
-              sample2     => ADC_DATA_B_s,
-              
-              nstart            => nstart,  
-              Streamer_DLY      => Streamer_DLY,   
-              weight_fold_DLY   => weight_fold_DLY, 
-              sfft_DLY          => sfft_DLY,  
-              deinterlace_DLY   => deinterlace_DLY, 
-              AVG_DLY           => AVG_DLY,
-              
-              notch_en          => notch_en,
-              index_array       => corr_array,
-              index_array_notch => notch_array,
-              error_main        => open,
-              error_notch       => open,
-              error_subtract    => open,
-              
-              ce_out      => ce_out_old,
-              pks         => pks_old,
-              outbin      => outbin_old,
-              ready       => ready_old
-              );     
+    --spectrometer_fixpt_old_inst : entity  work.spectrometer_fixpt_old
+    --PORT MAP( clk         => ADC_S_CLK, 
+              --reset       => RESET_SYS,
+              --clk_enable  => '1',
+              --Navg_notch  =>  Navg_notch,
+              --Navg_main   =>  Navg_main,
+              --sample1     => ADC_DATA_A_s,
+              --sample2     => ADC_DATA_B_s,
+              --
+              --nstart            => nstart,  
+              --Streamer_DLY      => Streamer_DLY,   
+              --weight_fold_DLY   => weight_fold_DLY, 
+              --sfft_DLY          => sfft_DLY,  
+              --deinterlace_DLY   => deinterlace_DLY, 
+              --AVG_DLY           => AVG_DLY,
+              --
+              --notch_en          => notch_en,
+              --index_array       => corr_array,
+              --index_array_notch => notch_array,
+              --error_main        => open,
+              --error_notch       => open,
+              --error_subtract    => open,
+              --
+              --ce_out      => ce_out_old,
+              --pks         => pks_old,
+              --outbin      => outbin_old,
+              --ready       => ready_old
+              --);     
     
 
 

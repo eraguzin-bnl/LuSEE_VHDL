@@ -99,7 +99,6 @@ ARCHITECTURE rtl OF deinterlace_instance_12_fixpt IS
     signal fft_val_re_s1                  : signed(32 downto 0);
     signal fft_val_re_s2                  : signed(32 downto 0);
     signal fft_val_re_s3                  : signed(32 downto 0);
-    signal fft_val_im_s1                  : signed(31 downto 0);
 
     signal count                          : integer range 0 to 4095;
     signal bin_s1                         : integer range 0 to 4095;
@@ -155,6 +154,13 @@ BEGIN
     begin
     if (rising_edge(clk)) then
         if (reset = '1') then
+            ch1_val_re               <= (others=>'0');
+            ch1_val_im               <= (others=>'0');
+            ch2_val_re               <= (others=>'0');
+            ch2_val_im               <= (others=>'0');
+            bin                      <= (others=>'0');
+            ready                    <= '0';
+            
             write_en_re              <= '0';
             write_en_im              <= '0';
             write_address_re         <= (others=>'0');

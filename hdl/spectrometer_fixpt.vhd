@@ -51,11 +51,7 @@ ENTITY spectrometer_fixpt IS
         sample2                           :   IN    std_logic_vector(13 DOWNTO 0);  -- sfix14
         
         nstart                            :   IN    std_logic;
-        Streamer_DLY                      :   IN    std_logic_vector(3 DOWNTO 0); 
-        weight_fold_DLY                   :   IN    std_logic_vector(3 DOWNTO 0); 
-        sfft_DLY                          :   IN    std_logic_vector(3 DOWNTO 0);  
-        deinterlace_DLY                   :   IN    std_logic_vector(3 DOWNTO 0); 
-        AVG_DLY                           :   IN    std_logic_vector(3 DOWNTO 0); 
+        reset_ram                         :   IN    std_logic;
         
         weight_fold_shift                 :   IN    std_logic_vector(4 DOWNTO 0);
         notch_en                          :   IN    std_logic;
@@ -252,7 +248,7 @@ BEGIN
     weight_streamer_fixpt_inst : entity work.weight_streamer_fixpt
         PORT map
             ( clk                => clk,
-            reset                => not streamer_start_s2,
+            reset                => not streamer_start_s2 or blk_reset,
             clk_enable           => clk_enable ,
             ce_out               => streamer_valid,
             w1                   => w1,
@@ -282,7 +278,8 @@ BEGIN
     weight_fold_instance_1_fixpt_inst1  : entity work.weight_fold_instance_1_fixpt 
         PORT map
             ( clk                => clk,
-            reset                => not streamer_valid_s2,
+            reset                => not streamer_valid_s2 or blk_reset,
+            reset_ram            => reset_ram,
             clk_enable           => clk_enable,
             sample_1             => sample1,
             w1                   => w1_s2,
@@ -297,7 +294,8 @@ BEGIN
     weight_fold_instance_1_fixpt_inst2  : entity work.weight_fold_instance_1_fixpt 
         PORT map
             ( clk                => clk,
-            reset                => not streamer_valid_s2,
+            reset                => not streamer_valid_s2 or blk_reset,
+            reset_ram            => reset_ram,
             clk_enable           => clk_enable,
             sample_1             => sample2,
             w1                   => w1_s3,
@@ -327,7 +325,7 @@ BEGIN
     sfft_fixpt_inst : entity work.sfft_fixpt
         PORT map
             ( clk                => clk,
-            reset                => not weight_stream_valid_s2 ,
+            reset                => not weight_stream_valid_s2,
             clk_enable           => clk_enable   ,
             c_re                 => val1_s2,
             c_im                 => val2_s2,
