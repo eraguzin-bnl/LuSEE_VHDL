@@ -61,7 +61,8 @@ read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_V
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/Multiply_generic_32.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/correlate_operation.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/correlate_fixpt.vhd}
-read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/SimpleDualPortRAM_generic_block.vhd}
+read_verilog -mode system_verilog {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_C1/PF_TPSRAM_C1_0/PF_TPSRAM_C1_PF_TPSRAM_C1_0_PF_TPSRAM.v}
+read_verilog -mode system_verilog {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_C1/PF_TPSRAM_C1.v}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/deinterlace_instance_12_fixpt.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/RADIX22FFT_CTRL1_1.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/RADIX22FFT_CTRL1_10.vhd}
@@ -110,9 +111,17 @@ read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_V
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/TWDLROM_9_1.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/dsphdl_FFT.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/sfft_fixpt.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/Multiply_generic_17.vhd}
+read_verilog -mode system_verilog {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_WEIGHT_FOLD/PF_TPSRAM_WEIGHT_FOLD_0/PF_TPSRAM_WEIGHT_FOLD_PF_TPSRAM_WEIGHT_FOLD_0_PF_TPSRAM.v}
+read_verilog -mode system_verilog {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_WEIGHT_FOLD/PF_TPSRAM_WEIGHT_FOLD.v}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/weight_fold_instance_1_fixpt.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/weight_streamer_fixpt.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/spectrometer_fixpt.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/average_instance_P1_fixpt.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/SimpleDualPortRAM_generic_block.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/deinterlace_instance_12_fixpt_old.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/weight_fold_instance_1_fixpt_old.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/spectrometer_fixpt_old.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/LuSEE_PF_EVAL.vhd}
 set_top_level {LuSEE_PF_EVAL}
 read_sdc -component {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/COREFIFO_C0/COREFIFO_C0_0/COREFIFO_C0_COREFIFO_C0_0_COREFIFO.sdc}

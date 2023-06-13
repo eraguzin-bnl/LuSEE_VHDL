@@ -2135,8 +2135,9 @@ PROCESS (clk, reset)
     IF reset = '1' THEN
       count_add   <= 0;
       INDEX       <= 0;
+      ce_out      <= '0';
     ELSIF clk'EVENT AND clk = '1' THEN
-  
+      ce_out      <= '1';
       IF(count_add = 4095) then
         count_add   <= 0;
         INDEX       <= INDEX + 1;

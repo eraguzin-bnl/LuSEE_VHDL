@@ -51,12 +51,21 @@ architecture behavioral of SPEC_TST_RAW is
 
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
+    signal RESETRAM : std_logic := '0';
     
-    signal pks_val             : vector_of_std_logic_vector32(0 TO 3);
+    signal pks_val             : vector_of_std_logic_vector32(15 downto 0);
+    signal outbin_out              : vector_of_std_logic_vector11(15 downto 0);
+    signal pks_val2             : vector_of_std_logic_vector32(15 downto 0);
+    signal outbin_out2              : vector_of_std_logic_vector11(15 downto 0);
     signal pks0                : std_logic_vector(31 downto 0);
     signal pks1                : std_logic_vector(31 downto 0);
     signal pks2                : std_logic_vector(31 downto 0);
     signal pks3                : std_logic_vector(31 downto 0);
+
+    signal outbin0             : std_logic_vector(10 downto 0);
+    signal outbin1             : std_logic_vector(10 downto 0);
+    signal outbin2             : std_logic_vector(10 downto 0);
+    signal outbin3             : std_logic_vector(10 downto 0);
 
     SIGNAL sample1             : std_logic_vector(13 DOWNTO 0);
     SIGNAL sample2             : std_logic_vector(13 DOWNTO 0);
@@ -110,6 +119,15 @@ begin
             wait for ( SYSCLK_PERIOD * 10 );
             
             NSYSRESET <= '0';
+            
+            wait for ( 200000 ns );
+            NSYSRESET <= '1';
+            wait for ( SYSCLK_PERIOD );
+            RESETRAM <= '1';
+            
+            wait for ( SYSCLK_PERIOD * 5000 );
+            NSYSRESET <= '0';
+            RESETRAM <= '0';
             wait;
         end if;
     end process;
@@ -119,9 +137,14 @@ begin
     
     --Needs to be split up so that ModelSim can see them
     pks0 <= pks_val(0);
-    pks1 <= pks_val(1);
+    pks1 <= pks_val2(0);
     pks2 <= pks_val(2);
     pks3 <= pks_val(3);
+
+    outbin0 <= outbin_out(0);
+    outbin1 <= outbin_out2(0);
+    outbin2 <= outbin_out(2);
+    outbin3 <= outbin_out(3);
 
     -- Data source for adc
       c_re_fileread: PROCESS
@@ -130,15 +153,15 @@ begin
         VARIABLE file_status: std_logic := '0';
         VARIABLE ch1_val_l: LINE;
         VARIABLE ch2_val_l: LINE;
-        VARIABLE ch1_val_v: std_logic_vector(31 DOWNTO 0);
-        VARIABLE ch2_val_v: std_logic_vector(31 DOWNTO 0);
+        VARIABLE ch1_val_v: std_logic_vector(15 DOWNTO 0);
+        VARIABLE ch2_val_v: std_logic_vector(15 DOWNTO 0);
 
       BEGIN
       wait for SYSCLK_PERIOD;
         IF (file_status = '0') THEN
             report "Opening file";
-            file_open(ch1_file, "sample1.txt", read_mode);
-            file_open(ch2_file, "sample2.txt", read_mode);
+            file_open(ch1_file, "7mhz_clean.txt", read_mode);
+            file_open(ch2_file, "7mhz_clean.txt", read_mode);
             file_status := '1';
         END IF;
 
@@ -175,132 +198,60 @@ begin
             reset => NSYSRESET,
             clk_enable => '1',
             Navg_notch  =>  "00" & x"02",
-            Navg_main   =>  "00" & x"03",
+            Navg_main   =>  "00" & x"02",
             --sample1 => x"0" & sample1(13 downto 4),
             --sample2 => x"0" & sample2(13 downto 4),
             sample1 => sample1,
             sample2 => sample2,
             nstart => '1',
-            Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
-            sfft_DLY => x"3",
-            deinterlace_DLY => (others=> '0'),
-            AVG_DLY => (others=> '0'),
+            reset_ram => RESETRAM,
             
-            notch_en    => '1',
-            index_array => corr_array,
-            index_array_notch => corr_array,
-
-            -- Outputs
-            ce_out =>  open,
-            pks => open,
-            outbin => open,
-            ready =>  open
-
-            -- Inouts
-
-        );
-        
-    spec_notch_nopf : entity work.spectrometer_fixpt
-        -- port map
-        port map( 
-            -- Inputs
-            clk => SYSCLK,
-            reset => NSYSRESET,
-            clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
-            --sample1 => x"0" & sample2(13 downto 4),
-            --sample2 => x"0" & sample1(13 downto 4),
-            sample1 => sample2,
-            sample2 => sample1,
-            nstart => '1',
-            Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
-            sfft_DLY => x"3",
-            deinterlace_DLY => (others=> '0'),
-            AVG_DLY => (others=> '0'),
-            
-            notch_en    => '1',
-            index_array => corr_array,
-            index_array_notch => corr_array,
-
-            -- Outputs
-            ce_out =>  open,
-            pks => open,
-            outbin => open,
-            ready =>  open
-
-            -- Inouts
-
-        );
-        
-    spec_nonotch_pf : entity work.spectrometer_fixpt
-        -- port map
-        port map( 
-            -- Inputs
-            clk => SYSCLK,
-            reset => NSYSRESET,
-            clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
-            --sample1 => x"0" & sample1(13 downto 4),
-            --sample2 => x"0" & sample2(13 downto 4),
-            sample1 => sample1,
-            sample2 => sample2,
-            nstart => '1',
-            Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
-            sfft_DLY => x"3",
-            deinterlace_DLY => (others=> '0'),
-            AVG_DLY => (others=> '0'),
-            
+            weight_fold_shift => "0" & x"D",
             notch_en    => '0',
             index_array => corr_array,
             index_array_notch => corr_array,
 
             -- Outputs
             ce_out =>  open,
-            pks => open,
-            outbin => open,
+            pks => pks_val,
+            outbin => outbin_out,
             ready =>  open
 
             -- Inouts
 
         );
-        
-    spec_nonotch_nopf : entity work.spectrometer_fixpt
+
+    spec_old : entity work.spectrometer_fixpt_old
         -- port map
-        port map( 
+        port map(
             -- Inputs
             clk => SYSCLK,
             reset => NSYSRESET,
             clk_enable => '1',
-            Navg_notch  =>  "00" & x"04",
-            Navg_main   =>  "00" & x"07",
-            --sample1 => x"0" & sample2(13 downto 4),
-            --sample2 => x"0" & sample1(13 downto 4),
-            sample1 => sample2,
-            sample2 => sample1,
+            Navg_notch  =>  "00" & x"02",
+            Navg_main   =>  "00" & x"02",
+            --sample1 => x"0" & sample1(13 downto 4),
+            --sample2 => x"0" & sample2(13 downto 4),
+            sample1 => sample1,
+            sample2 => sample2,
             nstart => '1',
-            Streamer_DLY => x"2",
-            weight_fold_DLY => x"2",
+            Streamer_DLY => x"3",
+            weight_fold_DLY => x"3",
             sfft_DLY => x"3",
             deinterlace_DLY => (others=> '0'),
             AVG_DLY => (others=> '0'),
-            
-            notch_en    => '0',
+
+            notch_en    => '1',
             index_array => corr_array,
             index_array_notch => corr_array,
 
             -- Outputs
             ce_out =>  open,
-            pks => open,
-            outbin => open,
+            pks => pks_val2,
+            outbin => outbin_out2,
             ready =>  open
 
             -- Inouts
 
         );
-
 end behavioral;

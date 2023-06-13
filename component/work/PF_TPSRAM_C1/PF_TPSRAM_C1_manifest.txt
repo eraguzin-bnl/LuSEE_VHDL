@@ -1,0 +1,12 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2022.3 (Version 2022.3.0.8)
+
+Date      :  Thu May 18 15:30:20 2023
+Project   :  /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL
+Component :  PF_TPSRAM_C1
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_C1/PF_TPSRAM_C1_0/PF_TPSRAM_C1_PF_TPSRAM_C1_0_PF_TPSRAM.v
+    /home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/component/work/PF_TPSRAM_C1/PF_TPSRAM_C1.v
+

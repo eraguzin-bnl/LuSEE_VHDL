@@ -203,7 +203,7 @@ class LuSEE_Integrated_Simulator:
 
         print("Python --> Done with VCD body")
 
-    def plot(self):
+    def plot(self, index):
         navg_main = 2**int(self.vals["Navg_main"]['y'][0])
         navg_notch = 2**int(self.vals["Navg_notch"]['y'][0])
         notch_en = int(self.vals["notch_en"]['y'][0])
@@ -212,28 +212,28 @@ class LuSEE_Integrated_Simulator:
         filename = f"{self.name}_notch_en_{notch_en}_navg_main{navg_main}_navg_notch{navg_notch}_{self.notes}"
 
         self.plot_num = 0
-        total_bins = len(self.vals["outbin"]['y'])
+        total_bins = len(self.vals[f"outbin{index}"]['y'])
 
         x = []
         y = []
         time_record = []
         for i in range(total_bins-1):
-            x.append(self.vals["outbin"]['y'][i] / 2048 * 100 / 2)
-            time = self.vals["outbin"]['x'][i]
+            x.append(self.vals[f"outbin{index}"]['y'][i] / 2048 * 100 / 2)
+            time = self.vals[f"outbin{index}"]['x'][i]
 
             try:
-                val_index = self.vals["pks0"]['x'].index(time)
+                val_index = self.vals[f"pks{index}"]['x'].index(time)
                 successful_time = time
             except ValueError:
-                val_index = self.vals["pks0"]['x'].index(successful_time)
+                val_index = self.vals[f"pks{index}"]['x'].index(successful_time)
 
-            y.append(self.vals["pks0"]['y'][val_index])
+            y.append(self.vals[f"pks{index}"]['y'][val_index])
 
         fig, ax = plt.subplots()
 
-        #title = self.signals_of_interest["pks0"]["Title"]
+        #title = self.signals_of_interest[f"pks{index}"]["Title"]
         fig.suptitle(title, fontsize = 20)
-        yaxis = self.signals_of_interest["pks0"]["Y-axis"]
+        yaxis = self.signals_of_interest[f"pks{index}"]["Y-axis"]
         ax.set_ylabel(yaxis, fontsize=14)
         ax.set_yscale('log')
         ax.set_xlabel('MHz', fontsize=14)
@@ -250,7 +250,7 @@ class LuSEE_Integrated_Simulator:
         #np.save(os.path.join(plot_path, f"data{self.plot_num}"), x, y)
         self.plot_num = self.plot_num + 1
 
-#        plt.show()
+        plt.show()
 
     def plot_experimental(self, blocks):
         print(blocks)
@@ -332,8 +332,8 @@ if __name__ == "__main__":
     blocks = x.vhdl_entities.split()
 #    x.plot_experimental(blocks)
 #    sys.exit()
-    for i in blocks:
+    for num,i in enumerate(blocks):
         x.analyze_file(f"{sys.argv[2]}_{i}")
         x.header()
         x.body()
-        x.plot()
+        x.plot(num)

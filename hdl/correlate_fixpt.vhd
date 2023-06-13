@@ -20,7 +20,13 @@
 -- Module: correlate_fixpt
 -- Source Path: correlate_fixpt
 -- Hierarchy Level: 0
--- 
+-- Eric Raguzin
+-- Adapted from Matlab generated block
+-- This block takes in the deinterlaced values from the FFT
+-- And multiplies real/imaginary values to get all desired autocorrelation and cross-correlations
+-- Because we are multipliying 32 x 32 bit numbers and adding/subtracting them
+-- Keeping track of the bit representation is important. The input to this block determines
+-- How much we divide the numbers by
 -- -------------------------------------------------------------
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
@@ -80,10 +86,6 @@ ARCHITECTURE rtl OF correlate_fixpt IS
   SIGNAL ch4_val_re_signed                : signed(31 DOWNTO 0);  -- sfix32_En7
   SIGNAL ch4_val_im_signed                : signed(31 DOWNTO 0);  -- sfix32_En7
   SIGNAL A1_tmp                           : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
-  SIGNAL A1_tst1                          : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
-  SIGNAL A1_tst2                          : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
-  SIGNAL A1_tst3                          : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
-  SIGNAL A1_tst4                          : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
   SIGNAL A2_tmp                           : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
   SIGNAL A3_tmp                           : std_logic_vector(31 DOWNTO 0);  -- sfix32_E6
   SIGNAL A4_tmp                           : std_logic_vector(31 DOWNTO 0);  -- ufix32_E15
@@ -124,7 +126,7 @@ BEGIN
                 bin_out <= (others=>'0');
             else
                 -- 5 delays for the multiplication in Multiply_generic_32
-                -- 3 delays for the correlate_operation delay
+                -- 3 delays for the correlate_operation delay (add/subtract)
                 bin_s1 <= bin_in;
                 bin_s2 <= bin_s1;
                 bin_s3 <= bin_s2;
@@ -146,6 +148,14 @@ BEGIN
     ch4_val_re_signed <= signed(ch4_val_re);
     ch4_val_im_signed <= signed(ch4_val_im);
   
+    --These block are fed in the values that correspond with the mathematical
+    --autocorrelation or cross correlation needed 
+    --Output values are sent right out of the block
+    
+    --I avoid needing to take the complement of any of the inputs in this block using the technique I wrote about here:
+    --https://docs.google.com/document/d/1Lwyd6R5K137iAEkU46W6g1r_I-K36TcrstWcGuUA1Do/edit?usp=sharing
+    
+    --This just means I need to pass a value into the generic map of each correlation telling it whether to add or subtract these.
     A1_corr : entity work.correlate_operation
         generic map(
             size => size,

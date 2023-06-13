@@ -192,6 +192,11 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_streamer_fixpt_p
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/spectrometer_half.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/HW_NOTCH_TST.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/weight_fold_instance_1_fixpt_old.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/deinterlace_instance_12_fixpt_old.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/average_instance_P1_fixpt.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/spectrometer_fixpt_old.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/SPEC_TST_RAW.vhd"
 
 vsim -L PolarFire -L presynth -L COREUART_LIB -L COREFIFO_LIB -l "${log_file}.log" -t 1ps -pli ${LIBERO_DIR}/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth."$test_file"
 
@@ -244,13 +249,13 @@ for {set i 0} {$i < $num_tests} {incr i} {
          echo \"\[expr \$now/1000000\] us --> Notch is subtracting from $vhdl_tests($i)'s current running average in averager, #\$notch_count($i)\"
       }
    "
-   when -label "c_$i" "/$test_file/$vhdl_tests($i)/average_signed_A1/subtract_ready = 1" $c
+   #when -label "c_$i" "/$test_file/$vhdl_tests($i)/average_signed_A1/subtract_ready = 1" $c
 
    set d  "if {\$notch_log($i) eq \"High\"} {
          set notch_log($i) Low
       }
    "
-   when -label "d_$i" "/$test_file/$vhdl_tests($i)/average_signed_A1/subtract_ready = 0" $d
+   #when -label "d_$i" "/$test_file/$vhdl_tests($i)/average_signed_A1/subtract_ready = 0" $d
 
    set e "if {\$strobe($i) eq \"Low\"} {
          echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready is 1\"
@@ -273,15 +278,15 @@ for {set i 0} {$i < $num_tests} {incr i} {
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/notch_en
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/correlate_fixpt_notch/index_array
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/correlate_fixpt_main/index_array
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/pks0
-            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/outbin
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/pks$i
+            vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/outbin$i
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/ready
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/error_notch
             vcd add -file ${log_file}_$vhdl_tests($i).vcd /$test_file/$vhdl_tests($i)/error_main
          }
       }
    "
-   when -label "e_$i" "/$test_file/$vhdl_tests($i)/ready = 1" $e
+   when -label "e_$i" "/$test_file/$vhdl_tests($i)/ready(0) = 1" $e
    #echo "$e"
    set f "if {\$strobe($i) eq \"High\"} {
          echo \"\[expr \$now/1000000\] us --> $vhdl_tests($i)'s averager out ready is 0\"
@@ -294,8 +299,8 @@ for {set i 0} {$i < $num_tests} {incr i} {
             set stop_request($i) 1
             nowhen \"a_$i\"
             nowhen \"b_$i\"
-            nowhen \"c_$i\"
-            nowhen \"d_$i\"
+            #nowhen \"c_$i\"
+            #nowhen \"d_$i\"
             nowhen \"e_$i\"
             nowhen \"f_$i\"
 
@@ -316,7 +321,7 @@ for {set i 0} {$i < $num_tests} {incr i} {
       }
    "
    #echo "$f"
-   when -label "f_$i" "/$test_file/$vhdl_tests($i)/ready = 0" $f
+   when -label "f_$i" "/$test_file/$vhdl_tests($i)/ready(0) = 0" $f
 
    set g "if {\$notch_error($i) eq \"Low\"} {
          set notch_error($i) High
@@ -324,14 +329,14 @@ for {set i 0} {$i < $num_tests} {incr i} {
          stop
       }
    "
-   when -label "g_$i" "/$test_file/$vhdl_tests($i)/correlate_fixpt_notch/error_out(0) = 1" $g
+   #when -label "g_$i" "/$test_file/$vhdl_tests($i)/correlate_fixpt_notch/error_out(0) = 1" $g
 
    set h "
          if {\$notch_error($i) eq \"High\"} {
          set notch_error($i) Low
       }
    "
-   when -label "h_$i" "/$test_file/$vhdl_tests($i)/correlate_fixpt_notch/error_out(0) = 0" $h
+   #when -label "h_$i" "/$test_file/$vhdl_tests($i)/correlate_fixpt_notch/error_out(0) = 0" $h
 
    set j "if {\$main_error($i) eq \"Low\"} {
          set main_error($i) High
@@ -340,13 +345,13 @@ for {set i 0} {$i < $num_tests} {incr i} {
       }
    "
    #echo "$j"
-   when -label "j_$i" "/$test_file/$vhdl_tests($i)/correlate_fixpt_main/error_out(0) = 1" $j
+   #when -label "j_$i" "/$test_file/$vhdl_tests($i)/correlate_fixpt_main/error_out(0) = 1" $j
 
    set k "if {\$main_error($i) eq \"High\"} {
          set main_error($i) Low
       }
    "
-   when -label "k_$i" "/$test_file/$vhdl_tests($i)/correlate_fixpt_main/error_out(0) = 0" $k
+   #when -label "k_$i" "/$test_file/$vhdl_tests($i)/correlate_fixpt_main/error_out(0) = 0" $k
 }
 quietly set i 0
 run -all

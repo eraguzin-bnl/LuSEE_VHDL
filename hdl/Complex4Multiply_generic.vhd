@@ -141,7 +141,8 @@ BEGIN
   --    END IF;
     END IF;
   END PROCESS intdelay_3_process;
-
+-- Eric Raguzin
+-- Added custom pipelined multiplier blocks to replace multiplication below
     mult_top_re_re : entity work.Multiply_generic(rtl)
         generic map(
             a_size => size)
@@ -227,6 +228,7 @@ BEGIN
         prod2_re <= signed(Complex4Multiply_mult2_re_pipe1);
         prod1_im <= signed(Complex4Multiply_mult1_im_pipe1);
         prod2_im <= signed(Complex4Multiply_mult2_im_pipe1);
+        --Muliplication replaced by custom blocks above
         --Complex4Multiply_mult1_re_pipe1 <= Complex4Multiply_din1_re_pipe1 * Complex4Multiply_twiddle_re_pipe1;
         --Complex4Multiply_mult2_re_pipe1 <= Complex4Multiply_din1_im_pipe1 * Complex4Multiply_twiddle_im_pipe1;
         --Complex4Multiply_mult1_im_pipe1 <= Complex4Multiply_din1_re_pipe1 * Complex4Multiply_twiddle_im_pipe1;

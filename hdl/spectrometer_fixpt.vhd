@@ -51,12 +51,9 @@ ENTITY spectrometer_fixpt IS
         sample2                           :   IN    std_logic_vector(13 DOWNTO 0);  -- sfix14
         
         nstart                            :   IN    std_logic;
-        Streamer_DLY                      :   IN    std_logic_vector(3 DOWNTO 0); 
-        weight_fold_DLY                   :   IN    std_logic_vector(3 DOWNTO 0); 
-        sfft_DLY                          :   IN    std_logic_vector(3 DOWNTO 0);  
-        deinterlace_DLY                   :   IN    std_logic_vector(3 DOWNTO 0); 
-        AVG_DLY                           :   IN    std_logic_vector(3 DOWNTO 0); 
+        reset_ram                         :   IN    std_logic;
         
+        weight_fold_shift                 :   IN    std_logic_vector(4 DOWNTO 0);
         notch_en                          :   IN    std_logic;
         index_array                       :   IN    vector_of_std_logic_vector5(15 downto 0);
         index_array_notch                 :   IN    vector_of_std_logic_vector5(15 downto 0);
@@ -74,6 +71,9 @@ END spectrometer_fixpt;
 ARCHITECTURE rtl OF spectrometer_fixpt IS
 
  SIGNAL  resetr                              :   std_logic;
+ SIGNAL streamer_start                       :   std_logic;
+ SIGNAL streamer_start_s1                    :   std_logic;
+ SIGNAL streamer_start_s2                    :   std_logic;
  SIGNAL w1                                   :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
  SIGNAL w2                                   :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
  SIGNAL w3                                   :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
@@ -96,6 +96,9 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  
  SIGNAL val1                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL val2                                 :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
+ SIGNAL weight_stream_valid                  :   std_logic;
+ SIGNAL weight_stream_valid_s1               :   std_logic;
+ SIGNAL weight_stream_valid_s2               :   std_logic;
  
  SIGNAL val1_s1                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
  SIGNAL val2_s1                              :   std_logic_vector(31 DOWNTO 0);  -- sfix32_En18
@@ -139,15 +142,9 @@ ARCHITECTURE rtl OF spectrometer_fixpt IS
  SIGNAL blk_reset                            :   std_logic; 
  SIGNAL nstart_r                             :   std_logic; 
  
- SIGNAL Streamer_en                          :   std_logic_vector(3 DOWNTO 0); 
- SIGNAL weight_fold_en                       :   std_logic_vector(3 DOWNTO 0); 
- SIGNAL sfft_en                              :   std_logic_vector(3 DOWNTO 0);  
-
- SIGNAL Streamer_DLYr                        :   std_logic_vector(3 DOWNTO 0); 
- SIGNAL weight_fold_DLYr                     :   std_logic_vector(3 DOWNTO 0); 
- SIGNAL sfft_DLYr                            :   std_logic_vector(3 DOWNTO 0);  
- SIGNAL deinterlace_DLYr                     :   std_logic_vector(3 DOWNTO 0); 
- SIGNAL AVG_DLYr                             :   std_logic_vector(3 DOWNTO 0); 
+ SIGNAL streamer_valid                       :   std_logic;
+ SIGNAL streamer_valid_s1                    :   std_logic;
+ SIGNAL streamer_valid_s2                    :   std_logic;
  
  SIGNAL notch_ready                          :   std_logic;
  
@@ -235,51 +232,25 @@ BEGIN
             
             blk_reset           <= resetr or (not nstart_r);
             
-            Streamer_DLYr       <= Streamer_DLY;
-            weight_fold_DLYr    <= weight_fold_DLY;
-            sfft_DLYr           <= sfft_DLY;  
-            deinterlace_DLYr    <= deinterlace_DLY;
-            AVG_DLYr            <= AVG_DLY;
+            streamer_start     <= nstart_r;
+            streamer_start_s1  <= streamer_start;
+            streamer_start_s2  <= streamer_start_s1;
             
-            Streamer_en(1)  <= nstart_r;
-            Streamer_en(2)  <= Streamer_en(1);
-            Streamer_en(3)  <= Streamer_en(2);
+            streamer_valid_s1 <= streamer_valid;
+            streamer_valid_s2 <= streamer_valid_s1;
             
-            weight_fold_en(1)   <= Streamer_en(0);
-            weight_fold_en(2)   <= weight_fold_en(1);
-            weight_fold_en(3)   <= weight_fold_en(2);
-            
-            sfft_en(1)          <= weight_fold_en(0);
-            sfft_en(2)          <= sfft_en(1);
-            sfft_en(3)          <= sfft_en(2);
+            weight_stream_valid_s2 <= weight_stream_valid_s1;
+            weight_stream_valid_s1 <= weight_stream_valid;
             
         end if;
     end process;
-
-    Streamer_en(0)     <= nstart_r        when (Streamer_DLYr = x"0")  else
-                       Streamer_en(1)  when (Streamer_DLYr = x"1")  else
-                       Streamer_en(2)  when (Streamer_DLYr = x"2")  else
-                       Streamer_en(3)  when (Streamer_DLYr = x"3")  else
-                       nstart_r;
-                      
-    weight_fold_en(0)  <= Streamer_en(0)     when (weight_fold_DLYr = x"0")  else
-                       weight_fold_en(1)  when (weight_fold_DLYr = x"1")  else
-                       weight_fold_en(2)  when (weight_fold_DLYr = x"2")  else
-                       weight_fold_en(3)  when (weight_fold_DLYr = x"3")  else
-                       Streamer_en(0);
-                       
-    sfft_en(0)         <= weight_fold_en(0)  when (sfft_DLYr = x"0")  else
-                       sfft_en(1)         when (sfft_DLYr = x"1")  else
-                       sfft_en(2)         when (sfft_DLYr = x"2")  else
-                       sfft_en(3)         when (sfft_DLYr = x"3")  else
-                       weight_fold_en(0);
  
     weight_streamer_fixpt_inst : entity work.weight_streamer_fixpt
         PORT map
             ( clk                => clk,
-            reset                => not Streamer_en(0),
+            reset                => not streamer_start_s2 or blk_reset,
             clk_enable           => clk_enable ,
-            ce_out               => open,
+            ce_out               => streamer_valid,
             w1                   => w1,
             w2                   => w2,
             w3                   => w3,
@@ -307,29 +278,31 @@ BEGIN
     weight_fold_instance_1_fixpt_inst1  : entity work.weight_fold_instance_1_fixpt 
         PORT map
             ( clk                => clk,
-            reset                => not weight_fold_en(0),
+            reset                => not streamer_valid_s2 or blk_reset,
+            reset_ram            => reset_ram,
             clk_enable           => clk_enable,
             sample_1             => sample1,
             w1                   => w1_s2,
             w2                   => w2_s2,
             w3                   => w3_s2,
             w4                   => w4_s2,
-
-            ce_out               => open,
+            val_division         => weight_fold_shift,
+            ce_out               => weight_stream_valid,
             val_out              => val1
             );
 
     weight_fold_instance_1_fixpt_inst2  : entity work.weight_fold_instance_1_fixpt 
         PORT map
             ( clk                => clk,
-            reset                => not weight_fold_en(0),
+            reset                => not streamer_valid_s2 or blk_reset,
+            reset_ram            => reset_ram,
             clk_enable           => clk_enable,
             sample_1             => sample2,
             w1                   => w1_s3,
             w2                   => w2_s3,
             w3                   => w3_s3,
             w4                   => w4_s3,
-         
+            val_division         => weight_fold_shift,
             ce_out               => open,
             val_out              => val2
             );
@@ -348,10 +321,11 @@ BEGIN
         end if;
     end process;
    
+    --FFT is unchanged from Matlab generated block except multiplier was replaced by our custom pipelined multiplier
     sfft_fixpt_inst : entity work.sfft_fixpt
         PORT map
             ( clk                => clk,
-            reset                => not sfft_en(0) ,
+            reset                => not weight_stream_valid_s2,
             clk_enable           => clk_enable   ,
             c_re                 => val1_s2,
             c_im                 => val2_s2,
