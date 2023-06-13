@@ -117,6 +117,7 @@ read_verilog -mode system_verilog {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/weight_fold_instance_1_fixpt.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/weight_streamer_fixpt.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/spectrometer_fixpt.vhd}
+read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/average_instance_P1_fixpt.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/SimpleDualPortRAM_generic_block.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/deinterlace_instance_12_fixpt_old.vhd}
 read_vhdl -mode vhdl_2008 {/home/eraguzin/nextcloud/LuSEE/Libero/PF_EVAL/LuSEE_VHDL/hdl/weight_fold_instance_1_fixpt_old.vhd}
