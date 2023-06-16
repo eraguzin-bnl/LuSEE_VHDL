@@ -248,7 +248,7 @@ BEGIN
     weight_streamer_fixpt_inst : entity work.weight_streamer_fixpt
         PORT map
             ( clk                => clk,
-            reset                => not streamer_start_s2 or blk_reset,
+            reset                => not streamer_start_s1 or blk_reset,
             clk_enable           => clk_enable ,
             ce_out               => streamer_valid,
             w1                   => w1,

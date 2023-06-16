@@ -646,34 +646,34 @@ port MAP (
               ready       => ready_new
               );     
               
-    --spectrometer_fixpt_old_inst : entity  work.spectrometer_fixpt_old
-    --PORT MAP( clk         => ADC_S_CLK, 
-              --reset       => RESET_SYS,
-              --clk_enable  => '1',
-              --Navg_notch  =>  Navg_notch,
-              --Navg_main   =>  Navg_main,
-              --sample1     => ADC_DATA_A_s,
-              --sample2     => ADC_DATA_B_s,
-              --
-              --nstart            => nstart,  
-              --Streamer_DLY      => Streamer_DLY,   
-              --weight_fold_DLY   => weight_fold_DLY, 
-              --sfft_DLY          => sfft_DLY,  
-              --deinterlace_DLY   => deinterlace_DLY, 
-              --AVG_DLY           => AVG_DLY,
-              --
-              --notch_en          => notch_en,
-              --index_array       => corr_array,
-              --index_array_notch => notch_array,
-              --error_main        => open,
-              --error_notch       => open,
-              --error_subtract    => open,
-              --
-              --ce_out      => ce_out_old,
-              --pks         => pks_old,
-              --outbin      => outbin_old,
-              --ready       => ready_old
-              --);     
+    spectrometer_fixpt_old_inst : entity  work.spectrometer_fixpt_old
+    PORT MAP( clk         => ADC_S_CLK, 
+              reset       => RESET_SYS,
+              clk_enable  => '1',
+              Navg_notch  =>  Navg_notch,
+              Navg_main   =>  Navg_main,
+              sample1     => ADC_DATA_A_s,
+              sample2     => ADC_DATA_B_s,
+              
+              nstart            => nstart,  
+              Streamer_DLY      => Streamer_DLY,   
+              weight_fold_DLY   => weight_fold_DLY, 
+              sfft_DLY          => sfft_DLY,  
+              deinterlace_DLY   => deinterlace_DLY, 
+              AVG_DLY           => AVG_DLY,
+              
+              notch_en          => notch_en,
+              index_array       => corr_array,
+              index_array_notch => notch_array,
+              error_main        => open,
+              error_notch       => open,
+              error_subtract    => open,
+              
+              ce_out      => ce_out_old,
+              pks         => pks_old,
+              outbin      => outbin_old,
+              ready       => ready_old
+              );     
     
 
 

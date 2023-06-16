@@ -229,12 +229,12 @@ ARCHITECTURE rtl OF weight_fold_instance_1_fixpt IS
             RAM_full_s1 <= RAM_full;
             RAM_full_s2 <= RAM_full_s1;
             if (RAM_full_s2 = '1') then
-                valid_in      <= (others=>'1');
+                valid_in_s2      <= (others=>'1');
             else
-                valid_in      <= (others=>'0');
+                valid_in_s2      <= (others=>'0');
             end if;
-            valid_in_s1   <= valid_in;
-            valid_in_s2   <= valid_in_s1;
+            --valid_in_s1   <= valid_in;
+            --valid_in_s2   <= valid_in_s1;
 
             --Because of pipelining, decisions about which RAM to write to need to be decided with the current bndx
             --And decisions about what quadrant the RAM read data came from need to be made on a 2 clock delay
