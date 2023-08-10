@@ -2128,7 +2128,41 @@ ARCHITECTURE rtl OF weight_streamer_fixpt IS
   SIGNAL w2_tmp                            : std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
   SIGNAL w3_tmp                            : std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
   SIGNAL w4_tmp                            : std_logic_vector(31 DOWNTO 0);  -- sfix32_En31
+  
+  SIGNAL placeholdera                     : std_logic_vector(12 downto 0);
+  SIGNAL placeholderb                     : std_logic_vector(12 downto 0);
+  
+  component PF_DPSRAM_C0
+    PORT ( 
+        CLK                               :   IN    std_logic;
+        A_ADDR                            :   IN    std_logic_vector(6 downto 0);
+        A_DIN                             :   IN    std_logic_vector(12 downto 0);
+        A_WEN                             :   IN    std_logic;
+        
+        B_ADDR                            :   IN    std_logic_vector(6 downto 0);
+        B_DIN                             :   IN    std_logic_vector(12 downto 0);
+        B_WEN                             :   IN    std_logic;
+        
+        A_DOUT                            :   IN    std_logic_vector(12 downto 0);
+        B_DOUT                            :   IN    std_logic_vector(12 downto 0)
+        );
+    end component;
 BEGIN
+
+cmon_work : PF_DPSRAM_C0
+    PORT MAP( 
+        CLK     => clk,
+        A_ADDR  => "0000000",
+        A_DIN   => "0000000000000",
+        A_WEN   => '0',
+        
+        B_ADDR  => "0000000",
+        B_DIN   => "0000000000000",
+        B_WEN   => '0',
+        
+        A_DOUT  => placeholdera,
+        B_DOUT  => placeholderb
+        );
 
 PROCESS (clk, reset)
   BEGIN
